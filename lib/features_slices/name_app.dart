@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:islam786/features_slices/View/Duas/duas_screen.dart';
 import 'package:islam786/features_slices/View/Duas/Bindings/dua_binding.dart';
+import 'package:islam786/features_slices/View/Duas/duas_screen.dart';
 import 'package:zi_core/zi_core_io.dart';
 import '../app_shell/app_shell_io.dart';
 

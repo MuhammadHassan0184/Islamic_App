@@ -1,36 +1,25 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:islam786/Config/Colors/app_colors.dart';
 import 'package:islam786/Utils/mediaquery_extension.dart';
+import 'package:islam786/Widgets/app_snack_bar.dart';
 import 'package:islam786/features_slices/View/Duas/Controller/dua_controller.dart';
-
 
 class TodayDuaCard extends StatelessWidget {
   final DuaController controller;
 
-  const TodayDuaCard({
-    super.key,
-    required this.controller,
-  });
+  const TodayDuaCard({super.key, required this.controller});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      padding: context.responsivePadding(
-        horizontal: 0.035,
-        vertical: 0.020,
-      ),
+      padding: context.responsivePadding(horizontal: 0.035, vertical: 0.020),
       decoration: BoxDecoration(
         color: AppColors.white,
-        borderRadius: BorderRadius.circular(
-          context.widthPct(0.035),
-        ),
-        border: Border.all(
-          color: AppColors.cardBorder,
-        ),
+        borderRadius: BorderRadius.circular(context.widthPct(0.035)),
+        border: Border.all(color: AppColors.cardBorder),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -73,7 +62,7 @@ class TodayDuaCard extends StatelessWidget {
           Directionality(
             textDirection: TextDirection.rtl,
             child: Text(
-              controller.todayDua,
+              controller.todayDua?.arabic ?? '',
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: AppColors.textPrimary,
@@ -87,10 +76,7 @@ class TodayDuaCard extends StatelessWidget {
 
           SizedBox(height: context.heightPct(0.018)),
 
-          Container(
-            height: 1,
-            color: AppColors.cardBorder,
-          ),
+          Container(height: 1, color: AppColors.cardBorder),
 
           SizedBox(height: context.heightPct(0.012)),
 
@@ -117,18 +103,10 @@ class TodayDuaCard extends StatelessWidget {
                   title: 'Share',
                   onTap: () async {
                     await Clipboard.setData(
-                      ClipboardData(
-                        text: controller.todayDua,
-                      ),
+                      ClipboardData(text: controller.todayDua?.arabic ?? ''),
                     );
 
-                    Get.snackbar(
-                      'Copied',
-                      'Dua text copied to clipboard',
-                      snackPosition: SnackPosition.BOTTOM,
-                      duration: const Duration(seconds: 2),
-                      margin: const EdgeInsets.all(12),
-                    );
+                    AppSnackbar.success('Dua copied to clipboard');
                   },
                 ),
               ),
@@ -147,13 +125,9 @@ class TodayDuaCard extends StatelessWidget {
   }) {
     return InkWell(
       onTap: onTap,
-      borderRadius: BorderRadius.circular(
-        context.widthPct(0.025),
-      ),
+      borderRadius: BorderRadius.circular(context.widthPct(0.025)),
       child: Padding(
-        padding: EdgeInsets.symmetric(
-          vertical: context.heightPct(0.006),
-        ),
+        padding: EdgeInsets.symmetric(vertical: context.heightPct(0.006)),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

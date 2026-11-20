@@ -43,6 +43,8 @@ import 'package:islam786/features_slices/View/Duas/duas_screen.dart';
 import 'package:zi_core/zi_core_io.dart';
 import 'app_shell/app_shell_io.dart';
 import 'features_slices/View/Duas/Bindings/dua_binding.dart';
+import 'features_slices/View/Duas/dua_category_screen.dart';
+import 'features_slices/View/Duas/dua_detail_screen.dart';
 
 void main() {
   ziCoreInit(beta: true);
@@ -75,6 +77,16 @@ class MyApp extends StatelessWidget {
         GetPage(
           name: '/duas',
           page: () => const DuaScreen(),
+          binding: DuaBinding(),
+        ),
+        GetPage(
+          name: '/dua-category',
+          page: () => const DuaCategoryScreen(),
+          binding: DuaBinding(),
+        ),
+        GetPage(
+          name: '/dua-detail',
+          page: () => const DuaDetailScreen(),
           binding: DuaBinding(),
         ),
       ],

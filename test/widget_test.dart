@@ -1,30 +1,37 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:islam786/main.dart';
+import 'package:islam786/Data/Models/dua_model.dart';
+import 'package:islam786/Data/Sources/asset_data_source.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+  TestWidgetsFlutterBinding.ensureInitialized();
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+  test('AssetDataSource loads the bundled daily Duas JSON', () async {
+    final records = await AssetDataSource().loadJsonList('daily_duas.json');
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+    expect(records, isNotEmpty);
+    expect(records.first['id'], isNotEmpty);
+  });
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+  test('DuaModel parses Arabic, translations, reference, and steps', () {
+    final dua = DuaModel.fromJson({
+      'id': 'dua_test',
+      'category': 'morning',
+      'title': 'Test Dua',
+      'arabic': 'اللهم',
+      'urdu': 'اے اللہ',
+      'english': 'O Allah',
+      'reference': 'Test Reference',
+      'steps': [
+        {'step_no': 1, 'title': 'Step', 'detail': 'Read sincerely'},
+      ],
+    });
+
+    expect(dua.id, 'dua_test');
+    expect(dua.category, 'morning');
+    expect(dua.arabic, 'اللهم');
+    expect(dua.urdu, 'اے اللہ');
+    expect(dua.reference, 'Test Reference');
+    expect(dua.steps, hasLength(1));
+    expect(dua.steps.first.detail, 'Read sincerely');
   });
 }

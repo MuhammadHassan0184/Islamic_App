@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:islam786/Config/Colors/app_colors.dart';
@@ -18,9 +17,7 @@ class DuaScreen extends GetView<DuaController> {
       backgroundColor: AppColors.background,
       body: Column(
         children: [
-          DuaHeader(
-            controller: controller,
-          ),
+          DuaHeader(controller: controller),
 
           Expanded(
             child: Obx(() {
@@ -37,44 +34,133 @@ class DuaScreen extends GetView<DuaController> {
   }
 
   Widget _buildCategories(BuildContext context) {
+    if (controller.isLoading.value) {
+      return const Center(child: CircularProgressIndicator());
+    }
+
+    if (controller.errorMessage.value.isNotEmpty) {
+      return Center(
+        child: Padding(
+          padding: const EdgeInsets.all(24),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Icon(Icons.cloud_off_rounded, size: 48),
+              const SizedBox(height: 12),
+              Text(
+                controller.errorMessage.value,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: AppColors.textSecondary,
+                  fontSize: context.scaledFont(14),
+                ),
+              ),
+              const SizedBox(height: 12),
+              ElevatedButton(
+                onPressed: controller.loadDuas,
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: AppColors.primary,
+                  foregroundColor: AppColors.white,
+                ),
+                child: const Text('Retry'),
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
     return ListView(
-      padding: context.responsivePadding(
-        horizontal: 0.035,
-        vertical: 0.018,
-      ),
+      padding: context.responsivePadding(horizontal: 0.035, vertical: 0.018),
       children: [
-        TodayDuaCard(
-          controller: controller,
-        ),
-
-        SizedBox(
-          height: context.heightPct(0.018),
-        ),
-
-        ...controller.categories.map(
-          (category) => Padding(
-            padding: EdgeInsets.only(
-              bottom: context.heightPct(0.012),
+        TextField(
+          onChanged: (value) => controller.searchQuery.value = value,
+          decoration: InputDecoration(
+            hintText: 'Search Duas',
+            prefixIcon: const Icon(Icons.search_rounded),
+            filled: true,
+            fillColor: AppColors.white,
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(context.widthPct(0.025)),
+              borderSide: BorderSide(color: AppColors.cardBorder),
             ),
-            child: DuaCategoryCard(
-              category: category,
-              onTap: () {
-                controller.openCategory(category);
-              },
+            enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(context.widthPct(0.025)),
+              borderSide: BorderSide(color: AppColors.cardBorder),
             ),
           ),
         ),
 
-        SizedBox(
-          height: context.heightPct(0.015),
-        ),
+        SizedBox(height: context.heightPct(0.018)),
+
+        if (controller.searchQuery.value.trim().isNotEmpty)
+          ...controller.searchResults.map(
+            (dua) => Padding(
+              padding: EdgeInsets.only(bottom: context.heightPct(0.012)),
+              child: Card(
+                margin: EdgeInsets.zero,
+                child: ListTile(
+                  contentPadding: const EdgeInsets.all(16),
+                  title: Directionality(
+                    textDirection: TextDirection.rtl,
+                    child: Text(
+                      dua.arabic,
+                      textAlign: TextAlign.right,
+                      style: const TextStyle(
+                        fontSize: 20,
+                        height: 1.8,
+                        fontFamily: 'NotoNaskhArabic',
+                      ),
+                    ),
+                  ),
+                  subtitle: Text(
+                    dua.title,
+                    style: TextStyle(color: AppColors.textSecondary),
+                  ),
+                  trailing: const Icon(Icons.chevron_right),
+                  onTap: () => Get.toNamed('/dua-detail', arguments: dua),
+                ),
+              ),
+            ),
+          )
+        else ...[
+          GestureDetector(
+            onTap: () {
+              final dua = controller.todayDua;
+              if (dua != null) {
+                Get.toNamed('/dua-detail', arguments: dua);
+              }
+            },
+            child: TodayDuaCard(controller: controller),
+          ),
+
+          SizedBox(height: context.heightPct(0.018)),
+
+          ...controller.categories.map(
+            (category) => Padding(
+              padding: EdgeInsets.only(bottom: context.heightPct(0.012)),
+              child: DuaCategoryCard(
+                category: category,
+                onTap: () {
+                  controller.openCategory(category);
+                },
+              ),
+            ),
+          ),
+        ],
+
+        SizedBox(height: context.heightPct(0.015)),
       ],
     );
   }
 
   Widget _buildFavorites(BuildContext context) {
     return Obx(() {
-      if (!controller.isTodayDuaFavorite.value) {
+      if (controller.isLoading.value) {
+        return const Center(child: CircularProgressIndicator());
+      }
+
+      if (controller.favoriteDuas.isEmpty) {
         return Center(
           child: Padding(
             padding: context.responsivePadding(
@@ -98,9 +184,7 @@ class DuaScreen extends GetView<DuaController> {
                   ),
                 ),
 
-                SizedBox(
-                  height: context.heightPct(0.020),
-                ),
+                SizedBox(height: context.heightPct(0.020)),
 
                 Text(
                   'No Favorites Yet',
@@ -111,9 +195,7 @@ class DuaScreen extends GetView<DuaController> {
                   ),
                 ),
 
-                SizedBox(
-                  height: context.heightPct(0.008),
-                ),
+                SizedBox(height: context.heightPct(0.008)),
 
                 Text(
                   'Save your favorite Duas and find them here whenever you need them.',
@@ -131,15 +213,33 @@ class DuaScreen extends GetView<DuaController> {
       }
 
       return ListView(
-        padding: context.responsivePadding(
-          horizontal: 0.035,
-          vertical: 0.018,
-        ),
-        children: [
-          TodayDuaCard(
-            controller: controller,
-          ),
-        ],
+        padding: context.responsivePadding(horizontal: 0.035, vertical: 0.018),
+        children: controller.favoriteDuas.map((dua) {
+          return Card(
+            margin: EdgeInsets.only(bottom: context.heightPct(0.012)),
+            child: ListTile(
+              contentPadding: const EdgeInsets.all(16),
+              title: Directionality(
+                textDirection: TextDirection.rtl,
+                child: Text(
+                  dua.arabic,
+                  textAlign: TextAlign.right,
+                  style: const TextStyle(
+                    fontSize: 20,
+                    height: 1.8,
+                    fontFamily: 'NotoNaskhArabic',
+                  ),
+                ),
+              ),
+              subtitle: Padding(
+                padding: const EdgeInsets.only(top: 8),
+                child: Text(dua.title),
+              ),
+              trailing: const Icon(Icons.chevron_right),
+              onTap: () => Get.toNamed('/dua-detail', arguments: dua),
+            ),
+          );
+        }).toList(),
       );
     });
   }

@@ -1,5 +1,6 @@
-
 import 'package:get/get.dart';
+import 'package:flutter/foundation.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:islam786/Widgets/app_snack_bar.dart';
 
 import 'package:islam786/Data/Models/dua_model.dart';
@@ -26,85 +27,31 @@ class DuaController extends GetxController {
 
   DuaController(this.repository);
 
-  // Existing UI state
   final RxInt selectedTab = 0.obs;
   final RxBool isTodayDuaFavorite = false.obs;
-
-  // JSON data state
   final RxList<DuaModel> duas = <DuaModel>[].obs;
+  final RxList<DuaCategory> categories = <DuaCategory>[].obs;
+  final RxList<DuaModel> favoriteDuas = <DuaModel>[].obs;
+  final RxString searchQuery = ''.obs;
   final RxBool isLoading = false.obs;
   final RxString errorMessage = ''.obs;
+  static const _favoritesKey = 'favorite_dua_ids';
+  final Set<String> _favoriteIds = {};
 
-  final String todayDua =
-      'اللَّهُمَّ إِنِّي أَعُوذُ بِكَ أَنْ أُشْرِكَ بِكَ '
-      'وَأَنَا أَعْلَمُ، وَأَسْتَغْفِرُكَ لِمَا لَا أَعْلَمُ';
+  DuaModel? get todayDua => duas.isEmpty ? null : duas.first;
 
-  // Existing categories - UI remains unchanged
-  final List<DuaCategory> categories = const [
-    DuaCategory(
-      id: 'morning_evening',
-      title: 'Morning & Evening',
-      count: 6,
-      image: 'assets/Eveningbg.jpg',
-      colorValue: 0xFF858666,
-    ),
-    DuaCategory(
-      id: 'home_family',
-      title: 'Home & Family',
-      count: 14,
-      image: 'assets/Dua_bg1.jpg',
-      colorValue: 0xFF515C61,
-    ),
-    DuaCategory(
-      id: 'food_drink',
-      title: 'Food & Drink',
-      count: 7,
-      image: 'assets/Dua_bg3.jpg',
-      colorValue: 0xFF426D86,
-    ),
-    DuaCategory(
-      id: 'joy_distress',
-      title: 'Joy & Distress',
-      count: 12,
-      image: 'assets/Dua_bg2.jpg',
-      colorValue: 0xFF71868B,
-    ),
-    DuaCategory(
-      id: 'worship',
-      title: 'Worship & Prayer',
-      count: 18,
-      image: 'assets/prayer.jpg',
-      colorValue: 0xFF668B76,
-    ),
-    DuaCategory(
-      id: 'protection',
-      title: 'Protection & Safety',
-      count: 9,
-      image: 'assets/Safety.jpg',
-      colorValue: 0xFF81749C,
-    ),
-    DuaCategory(
-      id: 'travel',
-      title: 'Travel & Journey',
-      count: 8,
-      image: 'assets/Travel.jpg',
-      colorValue: 0xFF987B63,
-    ),
-    DuaCategory(
-      id: 'daily_life',
-      title: 'Daily Life',
-      count: 11,
-      image: 'assets/daily_life.jpg',
-      colorValue: 0xFF527C72,
-    ),
-    DuaCategory(
-      id: 'forgiveness',
-      title: 'Forgiveness & Repentance',
-      count: 10,
-      image: 'assets/forgiveness.jpg',
-      colorValue: 0xFF777C9C,
-    ),
-  ];
+  List<DuaModel> get searchResults {
+    final query = searchQuery.value.trim().toLowerCase();
+    if (query.isEmpty) return duas.toList();
+
+    return duas.where((dua) {
+      return dua.title.toLowerCase().contains(query) ||
+          dua.category.toLowerCase().contains(query) ||
+          dua.urdu.toLowerCase().contains(query) ||
+          dua.english.toLowerCase().contains(query) ||
+          dua.arabic.contains(query);
+    }).toList();
+  }
 
   @override
   void onInit() {
@@ -119,20 +66,89 @@ class DuaController extends GetxController {
       errorMessage.value = '';
 
       final result = await repository.getDuas();
-
       duas.assignAll(result);
+      _buildCategories();
+      try {
+        await _loadFavorites();
+        _syncFavoriteState();
+      } catch (error, stackTrace) {
+        debugPrint('Unable to load saved Dua favorites: $error');
+        debugPrintStack(stackTrace: stackTrace);
+        AppSnackbar.info(
+          'Duas loaded, but saved favorites could not be restored.',
+        );
+      }
     } catch (e) {
-      errorMessage.value = 'Unable to load Duas. Please try again.';
+      debugPrint('Unable to load Duas: $e');
+      errorMessage.value = 'Unable to load Duas: $e';
     } finally {
       isLoading.value = false;
     }
   }
 
+  Future<void> _loadFavorites() async {
+    final prefs = await SharedPreferences.getInstance();
+    _favoriteIds
+      ..clear()
+      ..addAll(prefs.getStringList(_favoritesKey) ?? const <String>[]);
+  }
+
+  Future<void> _saveFavorites() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setStringList(_favoritesKey, _favoriteIds.toList());
+  }
+
+  void _buildCategories() {
+    const images = <String, String>{
+      'morning': 'assets/Eveningbg.jpg',
+      'guidance': 'assets/Dua_bg1.jpg',
+      'sleep': 'assets/Sleep.jpg',
+    };
+    const colors = <String, int>{
+      'morning': 0xFF858666,
+      'guidance': 0xFF515C61,
+      'sleep': 0xFF426D86,
+    };
+
+    final grouped = <String, List<DuaModel>>{};
+    for (final dua in duas) {
+      grouped.putIfAbsent(dua.category, () => <DuaModel>[]).add(dua);
+    }
+
+    categories.assignAll(
+      grouped.entries.map((entry) {
+        return DuaCategory(
+          id: entry.key,
+          title: _categoryTitle(entry.key),
+          count: entry.value.length,
+          image: images[entry.key],
+          colorValue: colors[entry.key] ?? 0xFF527C72,
+        );
+      }).toList(),
+    );
+  }
+
+  String _categoryTitle(String category) {
+    if (category.isEmpty) return 'Daily Duas';
+    return category
+        .replaceAll('_', ' ')
+        .split(' ')
+        .where((word) => word.isNotEmpty)
+        .map((word) => '${word[0].toUpperCase()}${word.substring(1)}')
+        .join(' ');
+  }
+
+  void _syncFavoriteState() {
+    favoriteDuas.assignAll(
+      duas.where((dua) => _favoriteIds.contains(dua.id)).toList(),
+    );
+    final today = todayDua;
+    isTodayDuaFavorite.value = today != null && _favoriteIds.contains(today.id);
+  }
+
   // Get Duas by JSON category
   List<DuaModel> getDuasByCategory(String category) {
-    return duas
-        .where((dua) => dua.category == category)
-        .toList();
+    return duas.where((dua) => dua.category == category).toList();
   }
 
   // Find a Dua using its unique ID
@@ -158,19 +174,30 @@ class DuaController extends GetxController {
     selectedTab.value = index;
   }
 
-  void toggleTodayFavorite() {
-    isTodayDuaFavorite.toggle();
-
-    if (isTodayDuaFavorite.value) {
-      AppSnackbar.success('Dua added to favorites');
-    } else {
+  Future<void> toggleFavorite(DuaModel dua) async {
+    if (_favoriteIds.contains(dua.id)) {
+      _favoriteIds.remove(dua.id);
       AppSnackbar.info('Dua removed from favorites');
+    } else {
+      _favoriteIds.add(dua.id);
+      AppSnackbar.success('Dua added to favorites');
+    }
+
+    await _saveFavorites();
+    _syncFavoriteState();
+  }
+
+  void toggleTodayFavorite() {
+    final dua = todayDua;
+    if (dua != null) {
+      toggleFavorite(dua);
     }
   }
 
   void openCategory(DuaCategory category) {
-    AppSnackbar.info(
-      '${category.title} - ${category.count} Duas',
+    Get.toNamed(
+      '/dua-category',
+      arguments: {'id': category.id, 'title': category.title},
     );
   }
 }

@@ -41,6 +41,7 @@ dependencies:
       url: https://github.com/ammardev99/zi_core.git
       ref: v1.0.3
   get: ^4.7.3
+  shared_preferences: ^2.5.3
 
 dev_dependencies:
   flutter_test:
@@ -69,6 +70,7 @@ flutter:
     - lib/app_shell/shell_utils/assets/
     - lib/app_shell/shell_utils/assets/svg/
     - assets/
+    - assets/data/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

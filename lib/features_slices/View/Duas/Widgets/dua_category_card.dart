@@ -47,8 +47,8 @@ class DuaCategoryCard extends StatelessWidget {
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                   colors: [
-                    Colors.black.withOpacity(0.20),
-                    Colors.black.withOpacity(0.48),
+                    Colors.black.withValues(alpha: 0.20),
+                    Colors.black.withValues(alpha: 0.48),
                   ],
                 ),
               ),
