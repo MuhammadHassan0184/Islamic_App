@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:islam786/Config/Colors/app_colors.dart';
+import 'package:islam786/Config/Routes/app_routes.dart';
 import 'package:islam786/features_slices/View/Duas/Controller/dua_controller.dart';
 
 class DuaCategoryScreen extends GetView<DuaController> {
@@ -59,7 +60,7 @@ class DuaCategoryScreen extends GetView<DuaController> {
                   ),
                 ),
                 trailing: const Icon(Icons.chevron_right),
-                onTap: () => Get.toNamed('/dua-detail', arguments: dua),
+                onTap: () => Get.toNamed(AppRoutes.duaDetail, arguments: dua),
               ),
             );
           },

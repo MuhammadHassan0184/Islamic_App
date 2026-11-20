@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:islam786/Config/Routes/app_routes.dart';
 import 'package:zi_core/zi_core_io.dart';
-import '../../features_slices/view_io.dart';
 import '../app_shell_io.dart';
 
 class SignupView extends StatefulWidget {
@@ -118,8 +119,8 @@ class _SignupViewState extends State<SignupView> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder:
-                                (context) => const TermsConditionsPageView(),
+                            builder: (context) =>
+                                const TermsConditionsPageView(),
                           ),
                         );
                       },
@@ -132,23 +133,16 @@ class _SignupViewState extends State<SignupView> {
                 ZiButtonB(
                   label: controller.isLoading ? "Signing up..." : "Signup",
                   expand: true,
-                  action:
-                      controller.isValid
-                          ? () async {
-                            final success = await controller.onSignup();
-                            setState(() {});
+                  action: controller.isValid
+                      ? () async {
+                          final success = await controller.onSignup();
+                          setState(() {});
 
-                            if (success) {
-                              Navigator.pushReplacement(
-                                // ignore: use_build_context_synchronously
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => const NameAppView(),
-                                ),
-                              );
-                            }
+                          if (success) {
+                            Get.offNamed(AppRoutes.home);
                           }
-                          : null,
+                        }
+                      : null,
                 ),
               ],
             ),

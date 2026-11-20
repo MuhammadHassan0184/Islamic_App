@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:islam786/Config/Routes/app_routes.dart';
 import 'package:zi_core/zi_core_io.dart';
 
-import '../../../features_slices/view_io.dart';
 import '../../app_shell_io.dart';
 
 class ZAppGateView extends StatelessWidget {
@@ -48,13 +49,7 @@ class ZAppGateView extends StatelessWidget {
           ZiButtonB(
             expand: true,
             label: "Get Started",
-            // variant: ZiButtonVariantB.outline,
-            action: () {
-              Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(builder: (_) => const NameAppView()),
-              );
-            },
+            action: () => Get.offNamed(AppRoutes.home),
           ),
         ],
       ),

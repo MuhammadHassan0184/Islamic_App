@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:flutter/foundation.dart';
+import 'package:islam786/Config/Routes/app_routes.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:islam786/Widgets/app_snack_bar.dart';
 
@@ -102,7 +103,7 @@ class DuaController extends GetxController {
     const images = <String, String>{
       'morning': 'assets/Eveningbg.jpg',
       'guidance': 'assets/Dua_bg1.jpg',
-      'sleep': 'assets/Sleep.jpg',
+      'sleep': 'assets/Dua_bg3.jpg',
     };
     const colors = <String, int>{
       'morning': 0xFF858666,
@@ -196,7 +197,7 @@ class DuaController extends GetxController {
 
   void openCategory(DuaCategory category) {
     Get.toNamed(
-      '/dua-category',
+      AppRoutes.duaCategory,
       arguments: {'id': category.id, 'title': category.title},
     );
   }

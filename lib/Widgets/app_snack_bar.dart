@@ -1,61 +1,26 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:islam786/Config/Colors/app_colors.dart';
 
-
-enum SnackbarType {
-  success,
-  error,
-  warning,
-  info,
-}
+enum SnackbarType { success, error, warning, info }
 
 class AppSnackbar {
   AppSnackbar._();
 
-  static void success(
-    String message, {
-    String title = 'Success',
-  }) {
-    _show(
-      title: title,
-      message: message,
-      type: SnackbarType.success,
-    );
+  static void success(String message, {String title = 'Success'}) {
+    _show(title: title, message: message, type: SnackbarType.success);
   }
 
-  static void error(
-    String message, {
-    String title = 'Error',
-  }) {
-    _show(
-      title: title,
-      message: message,
-      type: SnackbarType.error,
-    );
+  static void error(String message, {String title = 'Error'}) {
+    _show(title: title, message: message, type: SnackbarType.error);
   }
 
-  static void warning(
-    String message, {
-    String title = 'Warning',
-  }) {
-    _show(
-      title: title,
-      message: message,
-      type: SnackbarType.warning,
-    );
+  static void warning(String message, {String title = 'Warning'}) {
+    _show(title: title, message: message, type: SnackbarType.warning);
   }
 
-  static void info(
-    String message, {
-    String title = 'Information',
-  }) {
-    _show(
-      title: title,
-      message: message,
-      type: SnackbarType.info,
-    );
+  static void info(String message, {String title = 'Information'}) {
+    _show(title: title, message: message, type: SnackbarType.info);
   }
 
   static void _show({
@@ -74,11 +39,7 @@ class AppSnackbar {
       GetSnackBar(
         titleText: Row(
           children: [
-            Icon(
-              icon,
-              color: color,
-              size: 20,
-            ),
+            Icon(icon, color: color, size: 20),
             SizedBox(width: 10),
             Expanded(
               child: Text(
@@ -114,10 +75,7 @@ class AppSnackbar {
           vertical: Get.height * 0.015,
         ),
 
-        padding: EdgeInsets.symmetric(
-          horizontal: 16,
-          vertical: 14,
-        ),
+        padding: EdgeInsets.symmetric(horizontal: 16, vertical: 14),
 
         snackPosition: SnackPosition.BOTTOM,
 

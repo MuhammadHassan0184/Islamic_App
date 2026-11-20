@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:islam786/Config/Colors/app_colors.dart';
+import 'package:islam786/Config/Routes/app_routes.dart';
 import 'package:islam786/Utils/mediaquery_extension.dart';
 
 import 'package:islam786/features_slices/View/Duas/Controller/dua_controller.dart';
@@ -118,7 +119,7 @@ class DuaScreen extends GetView<DuaController> {
                     style: TextStyle(color: AppColors.textSecondary),
                   ),
                   trailing: const Icon(Icons.chevron_right),
-                  onTap: () => Get.toNamed('/dua-detail', arguments: dua),
+                  onTap: () => Get.toNamed(AppRoutes.duaDetail, arguments: dua),
                 ),
               ),
             ),
@@ -128,7 +129,7 @@ class DuaScreen extends GetView<DuaController> {
             onTap: () {
               final dua = controller.todayDua;
               if (dua != null) {
-                Get.toNamed('/dua-detail', arguments: dua);
+                Get.toNamed(AppRoutes.duaDetail, arguments: dua);
               }
             },
             child: TodayDuaCard(controller: controller),
@@ -236,7 +237,7 @@ class DuaScreen extends GetView<DuaController> {
                 child: Text(dua.title),
               ),
               trailing: const Icon(Icons.chevron_right),
-              onTap: () => Get.toNamed('/dua-detail', arguments: dua),
+              onTap: () => Get.toNamed(AppRoutes.duaDetail, arguments: dua),
             ),
           );
         }).toList(),

@@ -1,51 +1,46 @@
 import 'package:flutter/material.dart';
-import 'package:islam786/features_slices/View/Duas/Bindings/dua_binding.dart';
+import 'package:get/get.dart';
+import 'package:islam786/features_slices/View/Azkar/azkar_screen.dart';
 import 'package:islam786/features_slices/View/Duas/duas_screen.dart';
 import 'package:zi_core/zi_core_io.dart';
-import '../app_shell/app_shell_io.dart';
 
-class NameAppView extends StatefulWidget {
+import '../app_shell/app_shell_io.dart';
+import 'app_shell_controller.dart';
+
+class NameAppView extends GetView<AppShellController> {
   const NameAppView({super.key});
 
-  @override
-  State<NameAppView> createState() => _NameAppViewState();
-}
-
-class _NameAppViewState extends State<NameAppView> {
-  int pageIndex = 0;
-  List mainPavesView = [
-    // home bottom screens
-    // GlobalWidgets(),
-    DuaScreen(),
-    MenuView(),
-  ];
-  List<TabItem> mainPages = [
+  static final List<TabItem> _mainPages = [
     TabItem(icon: Icons.mosque_rounded, title: 'Dua'),
+    TabItem(icon: Icons.auto_awesome_rounded, title: 'Azkar'),
     TabItem(icon: Icons.menu, title: 'Menu'),
   ];
 
-  @override
-  void initState() {
-    super.initState();
-    DuaBinding().dependencies();
-  }
+  static final List<Widget> _pages = [
+    const DuaScreen(),
+    const AzkarScreen(),
+    MenuView(),
+  ];
 
   @override
   Widget build(BuildContext context) {
-    return ZiScaffoldB(
-      showPagePadding: false,
-      body: mainPavesView[pageIndex],
-      bottomNavigationBar: ZiBottomBar(
-        items: mainPages,
-        currentIndex: pageIndex,
-        onTap: (i) => setState(() => pageIndex = i),
-        type: ZiBottomBarType.fancy,
-        style: ZiBottomBarStyle(
-          backgroundColor: ZiColors.white,
-          color: ZiColors.textMuted,
-          colorSelected: ZiColors.primary,
+    return Obx(() {
+      final selectedIndex = controller.selectedIndex.value;
+      return ZiScaffoldB(
+        showPagePadding: false,
+        body: IndexedStack(index: selectedIndex, children: _pages),
+        bottomNavigationBar: ZiBottomBar(
+          items: _mainPages,
+          currentIndex: selectedIndex,
+          onTap: controller.selectTab,
+          type: ZiBottomBarType.fancy,
+          style: ZiBottomBarStyle(
+            backgroundColor: ZiColors.white,
+            color: ZiColors.textMuted,
+            colorSelected: ZiColors.primary,
+          ),
         ),
-      ),
-    );
+      );
+    });
   }
 }
