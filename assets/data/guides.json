@@ -1,0 +1,98 @@
+[
+  {
+    "id": "guide_wazu",
+    "category": "wazu",
+    "title": "Wazu Ka Tareeqa",
+    "arabic": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+    "urdu": "وضو سے پہلے دل میں نیت اور بسم اللہ پڑھنا سنت ہے، اور چار فرائض مکمل کرنا ضروری ہے۔",
+    "english": "Begin with intention and Bismillah, then complete the four obligatory acts of ablution.",
+    "reference": "Sahih al-Bukhari & Quran 5:6",
+    "faraiz": [
+      "Mooh dhona",
+      "Kohniyon tak hath dhona",
+      "Chauthai sar ka masah",
+      "Paaon takhnay tak dhona"
+    ],
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Niyyat aur Bismillah",
+        "detail": "Pehle dil mein niyyat karein aur Bismillah parhein."
+      },
+      {
+        "step_no": 2,
+        "title": "Hath aur Kulliyan",
+        "detail": "Dono hath ghatton tak 3 baar dhoyein, phir 3 baar kulli karein aur naak mein pani dalein."
+      },
+      {
+        "step_no": 3,
+        "title": "Mooh, Hath, Masah aur Paaon",
+        "detail": "Mooh aur kohniyon samet hath 3 baar dhoyein, chauthai sar ka masah karein, aur takhnon samet paaon 3 baar dhoyein."
+      }
+    ]
+  },
+  {
+    "id": "guide_daily_nimaz",
+    "category": "daily_nimaz",
+    "title": "Daily Nimaz Ka Tareeqa",
+    "arabic": "اللَّهُ أَكْبَرُ",
+    "urdu": "قبلہ رخ ہو کر نیت باندھیں، ثناء، تعوذ، تسمیہ، سورۃ فاتحہ اور قرات کے ساتھ رکوع و سجود مکمل کریں۔",
+    "english": "Face the Qiblah, state your intention, recite opening supplications, Surah Al-Fatihah, and a passage, then perform Ruku and Sujood.",
+    "reference": "Sahih al-Bukhari",
+    "faraiz": [
+      "Takbeer-e-Tahreema",
+      "Qiyam (Khara hona)",
+      "Qira'at (Quran parhna)",
+      "Ruku",
+      "Sujood",
+      "Qa'da-e-Akhira"
+    ],
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Niyyat aur Takbeer-e-Tahreema",
+        "detail": "Qiblah rukh khare ho kar niyyat karein aur 'Allahu Akbar' kehte hue hath kaanon tak uthayein."
+      },
+      {
+        "step_no": 2,
+        "title": "Qiyam, Ruku aur Qaumah",
+        "detail": "Sana, Ta'awwuz, Tasmiyah, Surah Fatiha aur koi surat parhein; phir Allahu Akbar keh kar Ruku karein aur 'Sami'Allahu liman hamidah' keh kar seedhe khare hon."
+      },
+      {
+        "step_no": 3,
+        "title": "Sajda, Qa'da aur Salam",
+        "detail": "Do sajde karein, darmiyan mein thora baithay rahein; aakhri qa'de mein Tashahhud, Durood aur Dua parh kar dayein-bayein salam pherein."
+      }
+    ]
+  },
+  {
+    "id": "guide_janazah_nimaz",
+    "category": "janazah_nimaz",
+    "title": "Janazah Nimaz Ka Tareeqa",
+    "arabic": "اللَّهُمَّ اغْفِرْ لِحَيِّنَا وَمَيِّتِنَا",
+    "urdu": "نمازِ جنازہ بغیر رکوع اور سجدے کے چار تکبیروں کے ساتھ ادا کی جاتی ہے۔",
+    "english": "Janazah prayer is performed standing with four Takbeers and no Ruku or Sujood.",
+    "reference": "Sunan Abi Dawud",
+    "faraiz": [
+      "Qiyam",
+      "Char Takbeerein"
+    ],
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Pehli Takbeer aur Sana",
+        "detail": "Niyyat aur pehli Takbeer ke baad Sana parhein."
+      },
+      {
+        "step_no": 2,
+        "title": "Doosri aur Teesri Takbeer",
+        "detail": "Doosri Takbeer ke baad Durood-e-Ibrahim parhein, aur teesri Takbeer ke baad Mayyat ke liye dua karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Chauthi Takbeer aur Salam",
+        "detail": "Chauthi Takbeer ke baad thori dair ruk kar pehle dayein aur phir bayein taraf salam pherein."
+      }
+    ]
+  }
+]

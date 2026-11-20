@@ -1,0 +1,71 @@
+[
+  {
+    "id": "rem_morning_azkar",
+    "category": "morning",
+    "title": "Subah Ke Azkar",
+    "arabic": "أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ",
+    "urdu": "ہم نے اور اللہ کے ملک نے صبح کی، اور سب تعریفیں اللہ کے لیے ہیں۔",
+    "english": "We have reached the morning and at this very time all sovereignty belongs to Allah.",
+    "reference": "Sahih Muslim",
+    "time_label": "06:00 AM",
+    "is_enabled": true,
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Fajr Ke Baad Waqt Muqarrar Karein",
+        "detail": "Subah uthne ya Fajr ke baad ka waqt reminder ke liye set rakhein."
+      },
+      {
+        "step_no": 2,
+        "title": "Azkar Mukammal Karein",
+        "detail": "Subah ke masnoon azkar aur istighfar parhein."
+      }
+    ]
+  },
+  {
+    "id": "rem_surah_mulk",
+    "category": "night",
+    "title": "Raat Ko Surah Al-Mulk Ki Tilawat",
+    "arabic": "تَبَارَكَ الَّذِي بِيَدِهِ الْمُلْكُ",
+    "urdu": "نہایت بابرکت ہے وہ ذات جس کے ہاتھ میں بادشاہت ہے اور وہ ہر چیز پر قادر ہے۔",
+    "english": "Blessed is He in whose hand is dominion, and He is over all things competent.",
+    "reference": "Surah Al-Mulk 67:1 & Jami' at-Tirmidhi",
+    "time_label": "10:00 PM",
+    "is_enabled": false,
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Sone Se Pehle Routine Banayein",
+        "detail": "Raat ko sone se pehle Surah Al-Mulk parhne ka waqt chunein."
+      },
+      {
+        "step_no": 2,
+        "title": "Wazu Aur Dua Ke Sath Soyein",
+        "detail": "Tilawat ke baad sone ki masnoon dua parh kar aaram karein."
+      }
+    ]
+  },
+  {
+    "id": "rem_friday_darood",
+    "category": "jummah",
+    "title": "Jummah Ke Din Kasrat Se Darood Pak",
+    "arabic": "إِنَّ اللَّهَ وَمَلَائِكَتَهُ يُصَلُّونَ عَلَى النَّبِيِّ",
+    "urdu": "بے شک اللہ اور اس کے فرشتے نبی پر درود بھیجتے ہیں۔",
+    "english": "Indeed, Allah and His angels send blessings upon the Prophet.",
+    "reference": "Surah Al-Ahzab 33:56 & Sunan Abi Dawud",
+    "time_label": "11:00 AM",
+    "is_enabled": true,
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Jummah Ki Tayyari Karein",
+        "detail": "Ghusl, saaf libas aur jummah ki nimaz ki tayyari ke sath darood parhein."
+      },
+      {
+        "step_no": 2,
+        "title": "Surah Al-Kahf Ka Ehtimam",
+        "detail": "Jummah ke din Surah Al-Kahf ki tilawat bhi shamil karein."
+      }
+    ]
+  }
+]

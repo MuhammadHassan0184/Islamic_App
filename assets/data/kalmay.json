@@ -1,0 +1,71 @@
+[
+  {
+    "id": "kalma_1_tayyab",
+    "category": "first_kalma",
+    "title": "Pehla Kalma Tayyab",
+    "arabic": "لَا إِلَٰهَ إِلَّا اللَّهُ مُحَمَّدٌ رَسُولُ اللَّهِ",
+    "urdu": "اللہ کے سوا کوئی عبادت کے لائق نہیں، محمد صلی اللہ علیہ وسلم اللہ کے رسول ہیں۔",
+    "english": "There is no deity worthy of worship except Allah, and Muhammad is the Messenger of Allah.",
+    "reference": "Six Kalimas Tradition",
+    "number": 1,
+    "transliteration": "La ilaha illallahu Muhammadur Rasulullah",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Tawheed Ki Shahadat",
+        "detail": "Dil aur zaban se iqrar karein ke wahdaniyat sirf Allah ki hai."
+      },
+      {
+        "step_no": 2,
+        "title": "Risalat Ka Iqrar",
+        "detail": "Hazrat Muhammad (S.A.W) ko aakhri nabi aur rasool manein."
+      }
+    ]
+  },
+  {
+    "id": "kalma_2_shahadat",
+    "category": "second_kalma",
+    "title": "Doosra Kalma Shahadat",
+    "arabic": "أَشْهَدُ أَنْ لَا إِلَٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
+    "urdu": "میں گواہی دیتا ہوں کہ اللہ کے سوا کوئی معبود نہیں، وہ اکیلا ہے اس کا کوئی شریک نہیں، اور میں گواہی دیتا ہوں کہ محمد اس کے بندے اور رسول ہیں۔",
+    "english": "I bear witness that there is no deity except Allah alone, with no partner, and I bear witness that Muhammad is His servant and Messenger.",
+    "reference": "Sahih Muslim",
+    "number": 2,
+    "transliteration": "Ashhadu an la ilaha illallahu wahdahu la sharika lahu wa ashhadu anna Muhammadan abduhu wa rasuluh",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Gawahi Ke Alfaz",
+        "detail": "Tawheed aur risalat ki gawahi wazeh aur mo'adab andaz mein parhein."
+      },
+      {
+        "step_no": 2,
+        "title": "Makna Samjhein",
+        "detail": "Har lafz ke urdu aur english tarjume par ghaur karein."
+      }
+    ]
+  },
+  {
+    "id": "kalma_3_tamjeed",
+    "category": "third_kalma",
+    "title": "Teesra Kalma Tamjeed",
+    "arabic": "سُبْحَانَ اللَّهِ وَالْحَمْدُ لِلَّهِ وَلَا إِلَٰهَ إِلَّا اللَّهُ وَاللَّهُ أَكْبَرُ",
+    "urdu": "اللہ پاک ہے، سب تعریفیں اللہ کے لیے ہیں، اللہ کے سوا کوئی معبود نہیں اور اللہ سب سے بڑا ہے۔",
+    "english": "Glory be to Allah, all praise is for Allah, there is no deity except Allah, and Allah is the Greatest.",
+    "reference": "Sahih Muslim",
+    "number": 3,
+    "transliteration": "Subhanallahi walhamdulillahi wa la ilaha illallahu wallahu akbar",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Tasbeeh Aur Tahmeed",
+        "detail": "Allah ki paaki aur hamd ke kalmat ko zikar ke taur par dohrayein."
+      },
+      {
+        "step_no": 2,
+        "title": "Tahleel Aur Takbeer",
+        "detail": "Tawheed aur Allah ki kibriyai ka iqrar shamil karein."
+      }
+    ]
+  }
+]

@@ -1,0 +1,65 @@
+[
+  {
+    "id": "hadees_01_actions_by_intentions",
+    "category": "intention",
+    "title": "Aamaal Ka Daromadar Niyyat Par Hai",
+    "arabic": "إِنَّمَا الْأَعْمَالُ بِالنِّيَّاتِ",
+    "urdu": "بے شک اعمال کا دارومدار نیتوں پر ہے۔",
+    "english": "Verily, actions are according to intentions.",
+    "reference": "Sahih al-Bukhari 1 & Sahih Muslim 1907",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Kaam Se Pehle Niyyat Durust Karein",
+        "detail": "Har jaiz kaam ya ibadat se pehle niyyat ko khalis Allah ke liye karein."
+      },
+      {
+        "step_no": 2,
+        "title": "Niyyat Ka Jaiza Lein",
+        "detail": "Din ke darmiyan apni niyyat ko riyakari ya ghaflat se pak rakhein."
+      }
+    ]
+  },
+  {
+    "id": "hadees_02_best_character",
+    "category": "akhlaq",
+    "title": "Behtareen Imaan Aur Akhlaq",
+    "arabic": "أَكْمَلُ الْمُؤْمِنِينَ إِيمَانًا أَحْسَنُهُمْ خُلُقًا",
+    "urdu": "مومنوں میں سب سے کامل ایمان والا وہ ہے جس کے اخلاق سب سے اچھے ہوں۔",
+    "english": "The believers with the most complete faith are those with the best character.",
+    "reference": "Jami' at-Tirmidhi 1162",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Guftagu Mein Narmi",
+        "detail": "Ghar walon, dost on aur sahkar an ke sath adab aur narmi se baat karein."
+      },
+      {
+        "step_no": 2,
+        "title": "Darguzar Ki Aadat",
+        "detail": "Choti bhool chook maaf karne ki koshish karein."
+      }
+    ]
+  },
+  {
+    "id": "hadees_03_seeking_knowledge",
+    "category": "knowledge",
+    "title": "Ilm Seekhne Ki Fazeelat",
+    "arabic": "مَنْ سَلَكَ طَرِيقًا يَلْتَمِسُ فِيهِ عِلْمًا سَهَّلَ اللَّهُ لَهُ طَرِيقًا إِلَى الْجَنَّةِ",
+    "urdu": "جو شخص علم حاصل کرنے کے لیے کسی راستے پر چلتا ہے، اللہ اس کے لیے جنت کا راستہ آسان فرما دیتا ہے۔",
+    "english": "Whoever takes a path seeking knowledge, Allah makes easy for him a path to Paradise.",
+    "reference": "Sahih Muslim 2699",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Rozana Kuch Naya Seekhein",
+        "detail": "Deeni ya mufeed duniyawe ilm ka thora hissa rozana parhein aur samjhein."
+      },
+      {
+        "step_no": 2,
+        "title": "Ilm Par Amal Karein",
+        "detail": "Jo seekhein us par amal karein aur doosron tak sahi baat puhanchayein."
+      }
+    ]
+  }
+]

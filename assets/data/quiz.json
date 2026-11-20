@@ -1,0 +1,89 @@
+[
+  {
+    "id": "quiz_pillars_of_islam",
+    "category": "pillars_of_islam",
+    "title": "Islam Ke Buniadi Rukn Kitne Hain?",
+    "arabic": "بُنِيَ الْإِسْلَامُ عَلَى خَمْسٍ",
+    "urdu": "اسلام کی بنیاد پانچ چیزوں پر رکھی گئی ہے۔",
+    "english": "Islam is built upon five pillars.",
+    "reference": "Sahih al-Bukhari",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "correct_index": 2,
+    "explanation": "Shahadah, Nimaz, Zakat, Sawm (Roza), aur Hajj Islam ke 5 arkan hain.",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Sawal Parhein",
+        "detail": "Sawal aur char options mein se durust jawab chunein."
+      },
+      {
+        "step_no": 2,
+        "title": "Wazahat Dekhein",
+        "detail": "Jawab submit karne ke baad hawala aur mukhtasar wazahat parhein."
+      }
+    ]
+  },
+  {
+    "id": "quiz_first_wahi_surah",
+    "category": "quran",
+    "title": "Quran Ki Pehli Wahi Kis Surah Ki Aayaat Mein Nazil Hui?",
+    "arabic": "اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ",
+    "urdu": "پڑھ اپنے رب کے نام سے جس نے پیدا کیا۔",
+    "english": "Read in the name of your Lord who created.",
+    "reference": "Surah Al-Alaq 96:1-5",
+    "options": [
+      "Surah Al-Fatihah",
+      "Surah Al-Alaq",
+      "Surah Al-Muzzammil",
+      "Surah Al-Ikhlas"
+    ],
+    "correct_index": 1,
+    "explanation": "Ghar-e-Hira mein Surah Al-Alaq ki shuruati 5 aayaat pehli wahi ke taur par nazil huin.",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Option Muntakhib Karein",
+        "detail": "Diye gaye options mein se sahi surah ka naam select karein."
+      },
+      {
+        "step_no": 2,
+        "title": "Score Update Karein",
+        "detail": "Har durust jawab par score barhayein aur hawala note karein."
+      }
+    ]
+  },
+  {
+    "id": "quiz_daily_fard_prayers",
+    "category": "nimaz",
+    "title": "Raat Din Mein Kul Kitni Farz Nimazein Hain?",
+    "arabic": "إِنَّ الصَّلَاةَ كَانَتْ عَلَى الْمُؤْمِنِينَ كِتَابًا مَوْقُوتًا",
+    "urdu": "بے شک نماز مومنوں پر مقررہ وقت کے مطابق فرض ہے۔",
+    "english": "Indeed, prayer has been decreed upon the believers a decree of specified times.",
+    "reference": "Surah An-Nisa 4:103",
+    "options": [
+      "3",
+      "5",
+      "6",
+      "7"
+    ],
+    "correct_index": 1,
+    "explanation": "Fajr, Zuhr, Asr, Maghrib, aur Isha — rozana 5 farz nimazein hain.",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Jawab Chunein",
+        "detail": "5 farz nimazon ka durust option select karein."
+      },
+      {
+        "step_no": 2,
+        "title": "Nimaz Guide Se Jorhein",
+        "detail": "Tafseeli tareeqa dekhne ke liye Tareeqa Guides section kholein."
+      }
+    ]
+  }
+]

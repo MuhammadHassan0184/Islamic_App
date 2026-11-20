@@ -1,0 +1,65 @@
+[
+  {
+    "id": "waqia_01_cave_of_hira",
+    "category": "seerah",
+    "title": "Ghar-e-Hira Aur Pehli Wahi Ka Waqia",
+    "arabic": "اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ",
+    "urdu": "غارِ حرا میں پہلی وحی کے نزول نے علم، نبوت اور دعوت کے ایک نئے دور کا آغاز کیا۔",
+    "english": "The revelation of the first verses in the Cave of Hira marked the beginning of prophethood, knowledge, and guidance.",
+    "reference": "Sahih al-Bukhari 3 & Surah Al-Alaq",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Pas-e-Manzar Samjhein",
+        "detail": "Ghar-e-Hira mein tafakkur aur ibadat ke dauran pehli wahi nazil hui."
+      },
+      {
+        "step_no": 2,
+        "title": "Sabaq Hasil Karein",
+        "detail": "Pehla hukam 'Iqra' (parho) tha, jo ilm aur samajh ki ahmiyat batata hai."
+      }
+    ]
+  },
+  {
+    "id": "waqia_02_hijrat_madinah",
+    "category": "seerah",
+    "title": "Hijrat-e-Madinah Aur Muwakhat Ka Sabaq",
+    "arabic": "إِلَّا تَنْصُرُوهُ فَقَدْ نَصَرَهُ اللَّهُ",
+    "urdu": "ہجرتِ مدینہ نے صبر، توکل، ایثار اور بھائی چارے کی مضبوط بنیاد رکھی۔",
+    "english": "The migration to Madinah established lasting lessons of perseverance, trust in Allah, sacrifice, and brotherhood.",
+    "reference": "Sahih al-Bukhari & Surah At-Tawbah 9:40",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Sabr Aur Planning",
+        "detail": "Khatrat ke bawajood Allah par yaqeen aur behtareen hikmat-e-amli ikhtiyar ki gayi."
+      },
+      {
+        "step_no": 2,
+        "title": "Bhaichara Aur Ittehad",
+        "detail": "Muhajireen aur Ansar ke darmiyan muwakhat ne muashre ko mazboot banaya."
+      }
+    ]
+  },
+  {
+    "id": "waqia_03_trust_in_allah",
+    "category": "reflection",
+    "title": "Hazrat Musa (A.S) Aur Samundar Ka Waqia",
+    "arabic": "كَلَّا إِنَّ مَعِيَ رَبِّي سَيَهْدِينِ",
+    "urdu": "ہرگز نہیں، بے شک میرا رب میرے ساتھ ہے، وہ عنقریب مجھے راستہ دکھائے گا۔",
+    "english": "No! Indeed, with me is my Lord; He will guide me.",
+    "reference": "Surah Ash-Shu'ara 26:62",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Musibat Mein Yaqeen",
+        "detail": "Jab samne samundar aur peeche lashkar tha tab bhi yaqeen-e-kamil qaim raha."
+      },
+      {
+        "step_no": 2,
+        "title": "Hidayat Aur Nijat",
+        "detail": "Allah ke hukam se aasani aur nijat ka rasta khul gaya."
+      }
+    ]
+  }
+]

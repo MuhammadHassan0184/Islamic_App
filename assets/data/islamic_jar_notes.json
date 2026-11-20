@@ -1,0 +1,65 @@
+[
+  {
+    "id": "jar_01_smile_sadaqah",
+    "category": "good_deed",
+    "title": "Muskurana Bhi Sadqah Hai",
+    "arabic": "تَبَسُّمُكَ فِي وَجْهِ أَخِيكَ لَكَ صَدَقَةٌ",
+    "urdu": "تمہارا اپنے بھائی کے سامنے مسکرانا بھی تمہارے لیے صدقہ ہے۔",
+    "english": "Your smile in the face of your brother is charity for you.",
+    "reference": "Jami' at-Tirmidhi 1956",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Aaj Ka Amal Chunein",
+        "detail": "Aaj kisi se milte waqt khush-akhlaqi aur muskurahat ke sath pesh aayein."
+      },
+      {
+        "step_no": 2,
+        "title": "Jar Mein Mark Karein",
+        "detail": "Amal mukammal karne ke baad is card ko read/completed mark karein."
+      }
+    ]
+  },
+  {
+    "id": "jar_02_subhanallah_wabihamdihi",
+    "category": "zikr_prompt",
+    "title": "Subhanallahi Wa Bihamdihi Ka Zikr",
+    "arabic": "سُبْحَانَ اللَّهِ وَبِحَمْدِهِ",
+    "urdu": "اللہ پاک ہے اپنی تعریف کے ساتھ۔",
+    "english": "Glory be to Allah and praise is to Him.",
+    "reference": "Sahih al-Bukhari 6405",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Thora Waqt Nikalein",
+        "detail": "Din mein kisi bhi waqt sukoon se is tasbeeh ko dohrayein."
+      },
+      {
+        "step_no": 2,
+        "title": "Agla Card Dekhein",
+        "detail": "Naye din ya naye tap par agla random reflection card kholein."
+      }
+    ]
+  },
+  {
+    "id": "jar_03_gratitude_check",
+    "category": "reflection",
+    "title": "Teen Nematon Par Shukr Ka Jaiza",
+    "arabic": "لَئِنْ شَكَرْتُمْ لَأَزِيدَنَّكُمْ",
+    "urdu": "اگر تم شکر ادا کرو گے تو میں ضرور تمہیں اور زیادہ دوں گا۔",
+    "english": "If you are grateful, I will surely increase you [in favor].",
+    "reference": "Surah Ibrahim 14:7",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "3 Nematein Yaad Karein",
+        "detail": "Aaj ki sehat, rizq ya kisi khaas madad ke liye 3 cheezein zehan mein layein."
+      },
+      {
+        "step_no": 2,
+        "title": "Alhamdulillah Kahein",
+        "detail": "Dil aur zaban se 'Alhamdulillah' keh kar shukr ada karein."
+      }
+    ]
+  }
+]

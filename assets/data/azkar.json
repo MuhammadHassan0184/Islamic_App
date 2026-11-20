@@ -1,0 +1,68 @@
+[
+  {
+    "id": "zikr_subhanallah",
+    "category": "tasbeeh_preset",
+    "title": "SubhanAllah",
+    "arabic": "سُبْحَانَ اللَّهِ",
+    "urdu": "اللہ پاک ہے ہر عیب اور نقص سے۔",
+    "english": "Glory be to Allah, free from every imperfection.",
+    "reference": "Sahih Muslim",
+    "default_target": 33,
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Target Select Karein",
+        "detail": "Tasbeeh counter mein 33 ya apni marzi ka target select karein."
+      },
+      {
+        "step_no": 2,
+        "title": "Tawajjah Ke Sath Parhein",
+        "detail": "Har tap ke sath dil mein makna samajhte hue 'SubhanAllah' parhein."
+      }
+    ]
+  },
+  {
+    "id": "zikr_alhamdulillah",
+    "category": "tasbeeh_preset",
+    "title": "Alhamdulillah",
+    "arabic": "الْحَمْدُ لِلَّهِ",
+    "urdu": "تمام تعریفیں صرف اللہ کے لیے ہیں۔",
+    "english": "All praise and thanks belong solely to Allah.",
+    "reference": "Sahih Muslim",
+    "default_target": 33,
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Shukar Ki Niyyat Karein",
+        "detail": "Allah ki nemat on ka shukar ada karte hue 'Alhamdulillah' parhein."
+      },
+      {
+        "step_no": 2,
+        "title": "Ginti Mukammal Karein",
+        "detail": "Mutayyan ginti poori hone par agle zikr ki taraf barhein."
+      }
+    ]
+  },
+  {
+    "id": "zikr_astagfirullah",
+    "category": "tasbeeh_preset",
+    "title": "Astagfirullah",
+    "arabic": "أَسْتَغْفِرُ اللَّهَ",
+    "urdu": "میں اللہ سے مغفرت مانگتا ہوں۔",
+    "english": "I seek forgiveness from Allah.",
+    "reference": "Sahih al-Bukhari",
+    "default_target": 100,
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Tauba aur Istighfar",
+        "detail": "Gunaahon aur kotahiyon par nadamat ke sath 'Astagfirullah' parhein."
+      },
+      {
+        "step_no": 2,
+        "title": "Rozana Mamool Banayein",
+        "detail": "Din mein mukhtalif auqat mein is ko barhane ki koshish karein."
+      }
+    ]
+  }
+]

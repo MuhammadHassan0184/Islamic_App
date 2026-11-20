@@ -1,0 +1,65 @@
+[
+  {
+    "id": "wazifa_preshani_relief",
+    "category": "preshani",
+    "title": "Preshani Aur Gham Se Nijat Ka Wazifa",
+    "arabic": "لَا إِلَٰهَ إِلَّا أَنْتَ سُبْحَانَكَ إِنِّي كُنْتُ مِنَ الظَّالِمِينَ",
+    "urdu": "تیرے سوا کوئی معبود نہیں، تو پاک ہے، بے شک میں ظالموں میں سے ہوں۔",
+    "english": "There is no deity except You; exalted are You. Indeed, I have been of the wrongdoers.",
+    "reference": "Surah Al-Anbiya 21:87",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Wazu Aur Sukoon",
+        "detail": "Ba-wazu ho kar pur-sukoon jagah baithay rahein."
+      },
+      {
+        "step_no": 2,
+        "title": "Tadad Aur Waqt",
+        "detail": "Fajr ya Maghrib ke baad ya kisi bhi waqt preshani mein kasrat se parhein."
+      }
+    ]
+  },
+  {
+    "id": "wazifa_rizq_kushadgi",
+    "category": "rizq",
+    "title": "Rizq Mein Barkat Aur Kushadgi",
+    "arabic": "يَا بَاسِطُ",
+    "urdu": "اے رزق اور کشادگی عطا فرمانے والے۔",
+    "english": "O The Expander (of provision and relief).",
+    "reference": "Asma-ul-Husna",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Chasht Ya Fajr Ke Baad",
+        "detail": "Dono hath utha kar 'Ya Basitu' 10 martaba parhein aur chehre par pherein."
+      },
+      {
+        "step_no": 2,
+        "title": "Halal Sabab",
+        "detail": "Wazife ke sath halal kamai aur mehnat ke asbab ikhtiyar karein."
+      }
+    ]
+  },
+  {
+    "id": "wazifa_bemari_shifa",
+    "category": "bemari",
+    "title": "Bemari Se Shifa Ki Dua",
+    "arabic": "اللَّهُمَّ رَبَّ النَّاسِ أَذْهِبِ الْبَأْسَ اشْفِ أَنْتَ الشَّافِي",
+    "urdu": "اے اللہ! لوگوں کے رب، تکلیف دور فرما، شفا عطا فرما، تو ہی شفا دینے والا ہے۔",
+    "english": "O Allah, Lord of mankind, remove the hardship and grant healing, for You are the Healer.",
+    "reference": "Sahih al-Bukhari",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Dukh Wali Jagah Par Hath",
+        "detail": "Jahan takleef ho wahan hath rakh kar ya mareez par dam karte hue parhein."
+      },
+      {
+        "step_no": 2,
+        "title": "Ilaj Ke Sath Jari Rakhein",
+        "detail": "Doctor ke mashwaray aur dawai ke sath is dua ko rozana parhte rahein."
+      }
+    ]
+  }
+]

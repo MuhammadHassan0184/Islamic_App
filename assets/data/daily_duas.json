@@ -1,0 +1,65 @@
+[
+  {
+    "id": "dua_01_morning_knowledge_rizq",
+    "category": "morning",
+    "title": "Ilm, Rizq Aur Amal Mein Barkat Ki Dua",
+    "arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْمًا نَافِعًا وَرِزْقًا طَيِّبًا وَعَمَلًا مُتَقَبَّلًا",
+    "urdu": "اے اللہ! میں تجھ سے نفع بخش علم، پاکیزہ رزق اور مقبول عمل کا سوال کرتا ہوں۔",
+    "english": "O Allah, I ask You for beneficial knowledge, good provision, and deeds that are accepted.",
+    "reference": "Sunan Ibn Majah 925",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Subah Ke Waqt Parhein",
+        "detail": "Fajr ki nimaz ke baad is dua ko parhne ka mamool banayein."
+      },
+      {
+        "step_no": 2,
+        "title": "Dil Se Maangein",
+        "detail": "Har lafz ke makna par tawajjah dete hue dua karein."
+      }
+    ]
+  },
+  {
+    "id": "dua_02_guidance_and_piety",
+    "category": "guidance",
+    "title": "Hidayat, Taqwa Aur Iffat Ki Dua",
+    "arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ الْهُدَى وَالتُّقَى وَالْعَفَافَ وَالْغِنَى",
+    "urdu": "اے اللہ! میں تجھ سے ہدایت، تقویٰ، پاکدامنی اور بے نیازی کا سوال کرتا ہوں۔",
+    "english": "O Allah, I ask You for guidance, piety, chastity, and self-sufficiency.",
+    "reference": "Sahih Muslim 2721",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Din Ke Aaghaz Ya Soodmand Waqt Mein",
+        "detail": "Kisi bhi waqt sukoon aur tawajjah ke sath is dua ko dohrayein."
+      },
+      {
+        "step_no": 2,
+        "title": "Amal Mein Qaim Rahein",
+        "detail": "Hidayat aur taqwa ke mutabiq faisle karne ki taufiq mangien."
+      }
+    ]
+  },
+  {
+    "id": "dua_03_before_sleeping",
+    "category": "sleep",
+    "title": "Sone Se Pehle Ki Dua",
+    "arabic": "بِاسْمِكَ اللَّهُمَّ أَمُوتُ وَأَحْيَا",
+    "urdu": "اے اللہ! تیرے نام کے ساتھ میں مرتا ہوں (سوتا ہوں) اور تیرے نام کے ساتھ جیتا ہوں (جاگتا ہوں)۔",
+    "english": "In Your name, O Allah, I die and I live.",
+    "reference": "Sahih al-Bukhari 6314",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Bistar Par Jane Ke Baad",
+        "detail": "Bistar jhar kar dayein karwat letne se pehle ya let kar parhein."
+      },
+      {
+        "step_no": 2,
+        "title": "Baqi Azkar Ke Sath Jorhein",
+        "detail": "Is ke sath Ayat-ul-Kursi aur teen Qul bhi parh sakte hain."
+      }
+    ]
+  }
+]

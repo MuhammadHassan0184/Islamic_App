@@ -1,0 +1,65 @@
+[
+  {
+    "id": "event_ramzan",
+    "category": "ramzan",
+    "title": "Ramzan-ul-Mubarak",
+    "arabic": "شَهْرُ رَمَضَانَ الَّذِي أُنْزِلَ فِيهِ الْقُرْآنُ",
+    "urdu": "رمضان المبارک روزے، تلاوتِ قرآن، تراویح اور صدقہ و خیرات کا مہینہ ہے۔",
+    "english": "Ramadan is the month of fasting, Quran recitation, Taraweeh prayers, and charity.",
+    "reference": "Surah Al-Baqarah 2:185",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Sehri Aur Roze Ki Niyyat",
+        "detail": "Sehri ke baad roze ki niyyat karein aur maghrib mein iftar ke sath rozah kholein."
+      },
+      {
+        "step_no": 2,
+        "title": "Ibadat Aur Quran",
+        "detail": "Farz namazon, Taraweeh, tilawat aur aakhri ashre mein Laylatul Qadr ki talash karein."
+      }
+    ]
+  },
+  {
+    "id": "event_muharram",
+    "category": "muharram",
+    "title": "Muharram-ul-Haram",
+    "arabic": "إِنَّ عِدَّةَ الشُّهُورِ عِنْدَ اللَّهِ اثْنَا عَشَرَ شَهْرًا",
+    "urdu": "محرم الحرام اسلامی سال کا پہلا مہینہ اور حرمت والے مہینوں میں شامل ہے۔",
+    "english": "Muharram is the first month of the Islamic calendar and one of the sacred months.",
+    "reference": "Surah At-Tawbah 9:36",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Ashura Ke Rozay",
+        "detail": "9 aur 10 ya 10 aur 11 Muharram ke roze rakhne ka ehtimam karein."
+      },
+      {
+        "step_no": 2,
+        "title": "Neki Aur Tauba",
+        "detail": "Naye islami saal ki ibtidai mein istighfar, nafl ibadat aur acchi aadat apnayein."
+      }
+    ]
+  },
+  {
+    "id": "event_laylatul_qadr",
+    "category": "laylatul_qadr",
+    "title": "Laylatul Qadr",
+    "arabic": "لَيْلَةُ الْقَدْرِ خَيْرٌ مِنْ أَلْفِ شَهْرٍ",
+    "urdu": "شبِ قدر ہزار مہینوں سے بہتر ہے؛ اسے رمضان کی طاق راتوں میں تلاش کرنا چاہیے۔",
+    "english": "The Night of Decree is better than a thousand months; seek it in the odd nights of Ramadan.",
+    "reference": "Surah Al-Qadr 97:3",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Taq Raaton Mein Ibadat",
+        "detail": "Ramzan ke aakhri ashre ki 21, 23, 25, 27 aur 29veen raat mein ibadat karein."
+      },
+      {
+        "step_no": 2,
+        "title": "Khas Dua",
+        "detail": "'Allahumma innaka 'afuwwun tuhibbul 'afwa fa'fu 'anni' kasrat se parhein."
+      }
+    ]
+  }
+]

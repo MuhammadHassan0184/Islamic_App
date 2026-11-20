@@ -1,0 +1,71 @@
+[
+  {
+    "id": "name_ayesha",
+    "category": "girl",
+    "title": "Ayesha",
+    "arabic": "عَائِشَةُ",
+    "urdu": "زندہ دل، خوشحال اور حیات والی۔",
+    "english": "Living, lively, and prosperous.",
+    "reference": "Umm al-Mu'minin (R.A) Name",
+    "gender": "female",
+    "origin": "Arabic",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Naam Aur Makna Dekhein",
+        "detail": "Arabic imla, talaffuz aur urdu/english makna check karein."
+      },
+      {
+        "step_no": 2,
+        "title": "Pasandeeda List Mein Mehfooz Karein",
+        "detail": "Aapke pasandida naamon ki list mein save karne ke liye bookmark karein."
+      }
+    ]
+  },
+  {
+    "id": "name_hamza",
+    "category": "boy",
+    "title": "Hamza",
+    "arabic": "حَمْزَةُ",
+    "urdu": "بہادر، مضبوط اور شیر دل۔",
+    "english": "Strong, steadfast, and brave.",
+    "reference": "Companion of the Prophet (R.A)",
+    "gender": "male",
+    "origin": "Arabic",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Makna Aur Hawala Parhein",
+        "detail": "Naam ki asl zuban, makna aur tarikh-e-islami hawala dekhein."
+      },
+      {
+        "step_no": 2,
+        "title": "Muqabla Karein",
+        "detail": "Doosre pasandeeda boy names ke sath muqabla kar ke final choice banayein."
+      }
+    ]
+  },
+  {
+    "id": "name_imaan",
+    "category": "unisex",
+    "title": "Imaan",
+    "arabic": "إِيمَانُ",
+    "urdu": "یقین، ایمان اور کامل بھروسہ۔",
+    "english": "Faith, belief, and conviction.",
+    "reference": "Quranic Concept",
+    "gender": "unisex",
+    "origin": "Arabic",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Makna Tasdeeq Karein",
+        "detail": "Is naam ka makna 'yaqeen aur iman' hai jo ba-makna naamon mein shumar hota hai."
+      },
+      {
+        "step_no": 2,
+        "title": "Family Ke Sath Share Karein",
+        "detail": "Faisle ke liye family members ke sath note ya shortlist share karein."
+      }
+    ]
+  }
+]

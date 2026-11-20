@@ -1,0 +1,75 @@
+[
+  {
+    "id": "adaab_khane_ke_adab",
+    "category": "khane",
+    "title": "Khane Ke Adab",
+    "arabic": "يَا غُلَامُ سَمِّ اللَّهَ وَكُلْ بِيَمِينِكَ وَكُلْ مِمَّا يَلِيكَ",
+    "urdu": "کھانے سے پہلے بسم اللہ پڑھنا، دائیں ہاتھ سے کھانا اور اپنے سامنے سے کھانا کھانے کے بنیادی آداب میں شامل ہے۔",
+    "english": "Saying Bismillah before eating, eating with the right hand, and eating from what is directly in front of you are core manners of eating.",
+    "reference": "Sahih al-Bukhari & Sahih Muslim",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Hath Dhona Aur Bismillah",
+        "detail": "Khane se pehle hath dhoyein aur 'Bismillah' parhein; agar bhool jayein to 'Bismillahi awwalahu wa akhirahu' parhein."
+      },
+      {
+        "step_no": 2,
+        "title": "Dayein Hath Aur Samne Se Khana",
+        "detail": "Dayein hath se luqma uthayein aur bartan mein apne samne se khayein."
+      },
+      {
+        "step_no": 3,
+        "title": "Khane Ke Baad Shukar",
+        "detail": "Khana khatam kar ke 'Alhamdulillah' parhein aur israf (zaya karne) se bachein."
+      }
+    ]
+  },
+  {
+    "id": "adaab_walidain_ke_huqooq",
+    "category": "parents",
+    "title": "Walidain Ke Huqooq Aur Adab",
+    "arabic": "وَاخْفِضْ لَهُمَا جَنَاحَ الذُّلِّ مِنَ الرَّحْمَةِ",
+    "urdu": "والدین کے ساتھ نرمی، ادب اور خدمت سے پیش آنا، ان کی بات غور سے سننا اور ان کے لیے دعا کرنا فرض و عظیم نیکی ہے۔",
+    "english": "Treating parents with gentleness, respect, and service, listening attentively, and praying for them are vital duties and great virtues.",
+    "reference": "Surah Al-Isra 17:23-24",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Narm Lehja Aur Adab",
+        "detail": "Walidain ke samne oonchi awaaz ya sakht lafz bolne se parhez karein aur 'Uff' tak na kahein."
+      },
+      {
+        "step_no": 2,
+        "title": "Khidmat Aur Farmabardari",
+        "detail": "Un ki zarooriyat, sehat aur aaram ka khayal rakhein aur jaiz baaton mein itaat karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Dua-e-Maghfirat",
+        "detail": "Zindagi aur wafaat ke baad walidain ke liye maghfirat aur rehmat ki dua karte rahein."
+      }
+    ]
+  },
+  {
+    "id": "adaab_humsayon_ke_huqooq",
+    "category": "neighbors",
+    "title": "Humsayon Ke Huqooq",
+    "arabic": "مَا زَالَ جِبْرِيلُ يُوصِينِي بِالْجَارِ",
+    "urdu": "ہمسایوں کو تکلیف نہ دینا، ان کے دکھ سکھ میں شریک ہونا اور خیر خواہی کرنا اسلامی معاشرت کا اہم حصہ ہے۔",
+    "english": "Not harming neighbors, sharing in their hardships and joys, and wishing well for them are essential parts of Islamic conduct.",
+    "reference": "Sahih al-Bukhari & Sahih Muslim",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Kisi Qism Ki Takleef Se Bachna",
+        "detail": "Shor, kachra, parking ya kisi aur amal se humsaye ko pareshan na karein."
+      },
+      {
+        "step_no": 2,
+        "title": "Madad Aur Husn-e-Sulook",
+        "detail": "Zaroorat ya musibat ke waqt madad karein aur khushi ke mauqon par mubarakbad dein."
+      }
+    ]
+  }
+]

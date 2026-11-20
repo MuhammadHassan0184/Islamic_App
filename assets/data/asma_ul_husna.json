@@ -1,0 +1,71 @@
+[
+  {
+    "id": "asma_01_ar_rahman",
+    "category": "mercy",
+    "title": "Ar-Rahman",
+    "arabic": "الرَّحْمَٰنُ",
+    "urdu": "بے حد اور بے پایاں رحمت فرمانے والا (تمام مخلوقات پر)۔",
+    "english": "The Most Gracious, whose mercy encompasses all creation.",
+    "reference": "Surah Al-Fatihah 1:3",
+    "number": 1,
+    "transliteration": "Ar-Rahman",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Makna Aur Rahmat Ka Ehsas",
+        "detail": "Zindagi, rizq aur hidayat mein Allah ki aam rehmaton par ghaur karein."
+      },
+      {
+        "step_no": 2,
+        "title": "Zikr Aur Dua",
+        "detail": "Rahmat-e-ilahi ki talab ke sath 'Ya Rahman' ka zikr karein."
+      }
+    ]
+  },
+  {
+    "id": "asma_02_ar_rahim",
+    "category": "mercy",
+    "title": "Ar-Rahim",
+    "arabic": "الرَّحِيمُ",
+    "urdu": "نہایت رحم کرنے والا (خاص طور پر مومنوں کے حال پر)۔",
+    "english": "The Most Merciful, especially to the believers in their deeds and hereafter.",
+    "reference": "Surah Al-Fatihah 1:3",
+    "number": 2,
+    "transliteration": "Ar-Rahim",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Narm Dili Apnayein",
+        "detail": "Doosron ke sath rehmat aur shafqat ka sulook karein."
+      },
+      {
+        "step_no": 2,
+        "title": "Maghfirat Ki Umeed",
+        "detail": "Apni kotahiyon par 'Ya Rahim' kehte hue rahmat mangien."
+      }
+    ]
+  },
+  {
+    "id": "asma_03_al_malik",
+    "category": "sovereignty",
+    "title": "Al-Malik",
+    "arabic": "الْمَلِكُ",
+    "urdu": "حقیقی بادشاہ اور کائنات کا اصل مالک۔",
+    "english": "The King and Sovereign Lord of the entire universe.",
+    "reference": "Surah Al-Hashr 59:23",
+    "number": 3,
+    "transliteration": "Al-Malik",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Haqeeqi Badshahi Ka Iqrar",
+        "detail": "Samjhein ke duniya aur aakhirat ki asal hukumat sirf Allah ki hai."
+      },
+      {
+        "step_no": 2,
+        "title": "Tawakkul Barhayein",
+        "detail": "Faislon aur halat mein asli Malik par bharosa rakhein."
+      }
+    ]
+  }
+]

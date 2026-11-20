@@ -1,0 +1,72 @@
+[
+  {
+    "id": "zakat_rule_gold_nisab",
+    "category": "gold",
+    "title": "Gold Nisab Threshold",
+    "arabic": "وَالَّذِينَ يَكْنِزُونَ الذَّهَبَ وَالْفِضَّةَ",
+    "urdu": "سونے کا نصاب 7.5 تولہ (تقریباً 87.48 گرام) ہے، جس پر ایک سال گزرنے کے بعد 2.5 فیصد زکوٰۃ واجب ہوتی ہے۔",
+    "english": "The Nisab threshold for gold is 7.5 tola (approx. 87.48 grams), subject to 2.5% Zakat after one lunar year of possession.",
+    "reference": "Hanafi Fiqh Nisab Standard",
+    "nisab_tola": 7.5,
+    "nisab_grams": 87.48,
+    "rate_percent": 2.5,
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Wazan Ya Maliyat Darj Karein",
+        "detail": "Apne paas mojood sone ka wazan (tola ya grams mein) ya kul market value calculator mein darj karein."
+      },
+      {
+        "step_no": 2,
+        "title": "Nisab Aur 2.5% Hisab",
+        "detail": "Agar kul net zakatable assets نصاب tak puhanch jayein to 2.5% hissa nikal kar mustahiqeen ko dein."
+      }
+    ]
+  },
+  {
+    "id": "zakat_rule_silver_nisab",
+    "category": "silver",
+    "title": "Silver Nisab Threshold",
+    "arabic": "وَآتُوا الزَّكَاةَ",
+    "urdu": "چاندی کا نصاب 52.5 تولہ (تقریباً 612.36 گرام) ہے، اور واجب شرح 2.5 فیصد ہے۔",
+    "english": "The Nisab threshold for silver is 52.5 tola (approx. 612.36 grams), with a standard Zakat rate of 2.5%.",
+    "reference": "Hanafi Fiqh Nisab Standard",
+    "nisab_tola": 52.5,
+    "nisab_grams": 612.36,
+    "rate_percent": 2.5,
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Chandi Ki Miqdar Shamil Karein",
+        "detail": "Mojooda chandi ka wazan ya qeemat calculator mein shamil karein."
+      },
+      {
+        "step_no": 2,
+        "title": "Net Assets Ke Sath Jam'a Karein",
+        "detail": "Cash, savings aur trade inventory ke sath milakar vajibat (liabilities) minus karein."
+      }
+    ]
+  },
+  {
+    "id": "zakat_rule_liabilities",
+    "category": "liabilities",
+    "title": "Deductible Liabilities Rule",
+    "arabic": "وَأَقِيمُوا الصَّلَاةَ وَآتُوا الزَّكَاةَ",
+    "urdu": "زکوٰۃ کا حساب لگاتے وقت واجب الادا قرض اور فوری واجبات کل قابلِ زکوٰۃ اثاثوں سے منہا کیے جاتے ہیں۔",
+    "english": "When calculating Zakat, due debts and immediate obligations are deducted from total zakatable assets.",
+    "reference": "Zakat Calculation Standard",
+    "rate_percent": 2.5,
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Kul Zakatable Assets Jam'a Karein",
+        "detail": "Gold, silver, cash in hand/bank aur karobari maal ki qeemat jam'a karein."
+      },
+      {
+        "step_no": 2,
+        "title": "Qarz Minus Karein",
+        "detail": "Kul jama raqam mein se wajibal-ada qarz ghata kar baqi net amount par 2.5% nikal lein."
+      }
+    ]
+  }
+]
