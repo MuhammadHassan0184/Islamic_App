@@ -48,21 +48,22 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.text('SubhanAllah'), findsOneWidget);
 
-    await tester.tap(find.text('Count').first);
+    await tester.tap(find.text('Open dhikr counter').first);
     await tester.pumpAndSettle();
-    expect(find.text('Target: 33'), findsOneWidget);
+    expect(find.text('Target: 33 repetitions'), findsOneWidget);
+    expect(find.text('TAP TO COUNT'), findsOneWidget);
 
-    await tester.tap(find.text('Target: 33'));
+    await tester.tap(find.text('Change goal'));
     await tester.pumpAndSettle();
     await tester.enterText(find.byType(TextField).last, '2');
     await tester.tap(find.text('Save'));
     await tester.pumpAndSettle();
-    expect(find.text('Target: 2'), findsOneWidget);
+    expect(find.text('Target: 2 repetitions'), findsOneWidget);
 
     final counterButton = find.byWidgetPredicate(
       (widget) =>
           widget is Semantics &&
-          widget.properties.label == 'Increment SubhanAllah counter',
+          widget.properties.label == 'Tap to count SubhanAllah, 0 of 2',
     );
     await tester.tap(counterButton);
     await tester.pumpAndSettle();

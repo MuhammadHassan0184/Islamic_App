@@ -48,14 +48,6 @@ class ZikrCard extends StatelessWidget {
                       ),
                     ),
                   ),
-                  IconButton(
-                    tooltip: 'Reset counter',
-                    onPressed: count == 0
-                        ? null
-                        : () => controller.resetCount(zikr),
-                    icon: const Icon(Icons.restart_alt_rounded),
-                    color: AppColors.textSecondary,
-                  ),
                 ],
               ),
               SizedBox(height: context.heightPct(0.008)),
@@ -110,37 +102,45 @@ class ZikrCard extends StatelessWidget {
               SizedBox(height: context.heightPct(0.016)),
               Row(
                 children: [
-                  Text(
-                    '$count / $target',
-                    style: TextStyle(
-                      color: AppColors.textPrimary,
-                      fontSize: azkarFontSize(context, 12),
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                  SizedBox(width: context.widthPct(0.025)),
                   Expanded(
-                    child: LinearProgressIndicator(
-                      value: progress,
-                      minHeight: 6,
-                      borderRadius: BorderRadius.circular(8),
-                      color: AppColors.primary,
-                      backgroundColor: AppColors.softGreenGradient.colors.first,
-                    ),
-                  ),
-                  SizedBox(width: context.widthPct(0.025)),
-                  FilledButton(
-                    onPressed: () => _openCounter(context),
-                    style: FilledButton.styleFrom(
-                      backgroundColor: AppColors.primary,
-                      foregroundColor: AppColors.white,
-                      padding: EdgeInsets.symmetric(
-                        horizontal: context.widthPct(0.035),
+                    child: Text(
+                      '$count of $target repetitions',
+                      style: TextStyle(
+                        color: AppColors.textPrimary,
+                        fontSize: azkarFontSize(context, 12),
+                        fontWeight: FontWeight.w600,
                       ),
                     ),
-                    child: const Text('Count'),
+                  ),
+                  Text(
+                    '${(progress * 100).round()}%',
+                    style: TextStyle(
+                      color: AppColors.textSecondary,
+                      fontSize: azkarFontSize(context, 11),
+                    ),
                   ),
                 ],
+              ),
+              SizedBox(height: context.heightPct(0.006)),
+              LinearProgressIndicator(
+                value: progress,
+                minHeight: 7,
+                borderRadius: BorderRadius.circular(8),
+                color: AppColors.primary,
+                backgroundColor: AppColors.softGreenGradient.colors.first,
+              ),
+              SizedBox(height: context.heightPct(0.012)),
+              SizedBox(
+                width: double.infinity,
+                child: FilledButton.icon(
+                  onPressed: () => _openCounter(context),
+                  style: FilledButton.styleFrom(
+                    backgroundColor: AppColors.primary,
+                    foregroundColor: AppColors.white,
+                  ),
+                  icon: const Icon(Icons.touch_app_rounded),
+                  label: const Text('Open dhikr counter'),
+                ),
               ),
             ],
           ),
@@ -299,91 +299,193 @@ class ZikrCounterSheet extends StatelessWidget {
                   final count = controller.countFor(zikr);
                   final target = controller.targetFor(zikr);
                   final complete = count >= target;
-                  final diameter = (size.width * 0.42).clamp(132.0, 180.0);
+                  final remaining = target - count;
+                  final diameter = (size.width * 0.42)
+                      .clamp(112.0, 180.0)
+                      .clamp(0.0, size.height * 0.25)
+                      .toDouble();
 
-                  return Column(
-                    children: [
-                      TextButton.icon(
-                        onPressed: () => _editTarget(context),
-                        icon: const Icon(Icons.tune_rounded),
-                        label: Text('Target: $target'),
+                  return Container(
+                    width: double.infinity,
+                    padding: context.responsivePadding(
+                      horizontal: 0.035,
+                      vertical: 0.012,
+                    ),
+                    decoration: BoxDecoration(
+                      color: AppColors.white,
+                      borderRadius: BorderRadius.circular(
+                        context.widthPct(0.04),
                       ),
-                      Semantics(
-                        button: true,
-                        label: 'Increment ${zikr.title} counter',
-                        child: SizedBox(
-                          width: diameter,
-                          height: diameter,
-                          child: Material(
-                            color: AppColors.white,
-                            shape: const CircleBorder(),
-                            elevation: 2,
-                            child: InkWell(
-                              customBorder: const CircleBorder(),
-                              onTap: complete
-                                  ? null
-                                  : () {
-                                      HapticFeedback.selectionClick();
-                                      controller.increment(zikr);
-                                    },
-                              child: Stack(
-                                alignment: Alignment.center,
+                      border: Border.all(color: AppColors.cardBorder),
+                    ),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Row(
+                          children: [
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  SizedBox(
-                                    width: diameter - 12,
-                                    height: diameter - 12,
-                                    child: CircularProgressIndicator(
-                                      value: controller.progressFor(zikr),
-                                      strokeWidth: 7,
-                                      color: AppColors.primary,
-                                      backgroundColor: AppColors
-                                          .softGreenGradient
-                                          .colors
-                                          .first,
+                                  Text(
+                                    'YOUR GOAL',
+                                    style: TextStyle(
+                                      color: AppColors.textSecondary,
+                                      fontSize: azkarFontSize(context, 10),
+                                      fontWeight: FontWeight.w700,
+                                      letterSpacing: 0.8,
                                     ),
                                   ),
-                                  Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Text(
-                                        '$count',
-                                        style: TextStyle(
-                                          color: AppColors.textPrimary,
-                                          fontSize: azkarFontSize(context, 32),
-                                          fontWeight: FontWeight.w700,
-                                        ),
-                                      ),
-                                      Text(
-                                        complete ? 'Complete' : 'of $target',
-                                        style: TextStyle(
-                                          color: AppColors.textSecondary,
-                                          fontSize: azkarFontSize(context, 12),
-                                        ),
-                                      ),
-                                    ],
+                                  SizedBox(height: context.heightPct(0.003)),
+                                  Text(
+                                    'Target: $target repetitions',
+                                    style: TextStyle(
+                                      color: AppColors.textPrimary,
+                                      fontSize: azkarFontSize(context, 14),
+                                      fontWeight: FontWeight.w700,
+                                    ),
                                   ),
                                 ],
                               ),
                             ),
+                            TextButton.icon(
+                              onPressed: () => _editTarget(context),
+                              icon: const Icon(Icons.tune_rounded, size: 18),
+                              label: const Text('Change goal'),
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: context.heightPct(0.012)),
+                        LinearProgressIndicator(
+                          value: controller.progressFor(zikr),
+                          minHeight: 8,
+                          borderRadius: BorderRadius.circular(8),
+                          color: AppColors.primary,
+                          backgroundColor:
+                              AppColors.softGreenGradient.colors.first,
+                        ),
+                        SizedBox(height: context.heightPct(0.006)),
+                        Row(
+                          children: [
+                            Text(
+                              '$count of $target completed',
+                              style: TextStyle(
+                                color: AppColors.textSecondary,
+                                fontSize: azkarFontSize(context, 11),
+                              ),
+                            ),
+                            const Spacer(),
+                            Text(
+                              complete ? 'Goal reached' : '$remaining left',
+                              style: TextStyle(
+                                color: complete
+                                    ? AppColors.success
+                                    : AppColors.textSecondary,
+                                fontSize: azkarFontSize(context, 11),
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: context.heightPct(0.012)),
+                        Semantics(
+                          button: !complete,
+                          label:
+                              'Tap to count ${zikr.title}, $count of $target',
+                          child: SizedBox(
+                            width: diameter,
+                            height: diameter,
+                            child: Stack(
+                              alignment: Alignment.center,
+                              children: [
+                                SizedBox.expand(
+                                  child: CircularProgressIndicator(
+                                    value: controller.progressFor(zikr),
+                                    strokeWidth: 7,
+                                    color: AppColors.tabIndicator,
+                                    backgroundColor: AppColors
+                                        .softGreenGradient
+                                        .colors
+                                        .first,
+                                  ),
+                                ),
+                                Positioned.fill(
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(10),
+                                    child: Material(
+                                      color: complete
+                                          ? AppColors.primaryDark
+                                          : AppColors.primary,
+                                      shape: const CircleBorder(),
+                                      child: InkWell(
+                                        customBorder: const CircleBorder(),
+                                        onTap: complete
+                                            ? null
+                                            : () {
+                                                HapticFeedback.selectionClick();
+                                                controller.increment(zikr);
+                                              },
+                                        child: Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            Text(
+                                              '$count',
+                                              style: TextStyle(
+                                                color: AppColors.white,
+                                                fontSize: azkarFontSize(
+                                                  context,
+                                                  34,
+                                                ),
+                                                fontWeight: FontWeight.w700,
+                                              ),
+                                            ),
+                                            SizedBox(
+                                              height: context.heightPct(0.003),
+                                            ),
+                                            Text(
+                                              complete
+                                                  ? 'GOAL COMPLETE'
+                                                  : 'TAP TO COUNT',
+                                              style: TextStyle(
+                                                color: AppColors.white,
+                                                fontSize: azkarFontSize(
+                                                  context,
+                                                  10,
+                                                ),
+                                                fontWeight: FontWeight.w700,
+                                                letterSpacing: 0.6,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
-                      ),
-                      SizedBox(height: context.heightPct(0.008)),
-                      Text(
-                        complete ? 'Target reached' : 'Tap the circle to count',
-                        style: TextStyle(
-                          color: AppColors.textSecondary,
-                          fontSize: azkarFontSize(context, 12),
+                        SizedBox(height: context.heightPct(0.006)),
+                        Text(
+                          complete
+                              ? 'This target is complete.'
+                              : 'Tap the green button to add one repetition.',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: AppColors.textSecondary,
+                            fontSize: azkarFontSize(context, 11),
+                          ),
                         ),
-                      ),
-                      TextButton.icon(
-                        onPressed: count == 0
-                            ? null
-                            : () => controller.resetCount(zikr),
-                        icon: const Icon(Icons.restart_alt_rounded),
-                        label: const Text('Reset'),
-                      ),
-                    ],
+                        if (count > 0)
+                          TextButton.icon(
+                            onPressed: () => controller.resetCount(zikr),
+                            icon: const Icon(Icons.restart_alt_rounded),
+                            label: const Text('Reset counter'),
+                          ),
+                      ],
+                    ),
                   );
                 }),
               ],
