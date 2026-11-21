@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:islam786/features_slices/View/Adaab/adaab_screen.dart';
 import 'package:islam786/features_slices/View/Azkar/azkar_screen.dart';
 import 'package:islam786/features_slices/View/Duas/duas_screen.dart';
 import 'package:zi_core/zi_core_io.dart';
@@ -13,12 +14,14 @@ class NameAppView extends GetView<AppShellController> {
   static final List<TabItem> _mainPages = [
     TabItem(icon: Icons.mosque_rounded, title: 'Dua'),
     TabItem(icon: Icons.auto_awesome_rounded, title: 'Azkar'),
+    TabItem(icon: Icons.volunteer_activism_rounded, title: 'Adaab'),
     TabItem(icon: Icons.menu, title: 'Menu'),
   ];
 
   static final List<Widget> _pages = [
     const DuaScreen(),
     const AzkarScreen(),
+    const AdaabScreen(),
     MenuView(),
   ];
 
