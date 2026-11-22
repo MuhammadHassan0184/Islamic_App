@@ -2,6 +2,9 @@ import 'package:get/get.dart';
 import 'package:islam786/features_slices/View/Adaab/Bindings/adaab_binding.dart';
 import 'package:islam786/features_slices/View/Adaab/adaab_detail_screen.dart';
 import 'package:islam786/features_slices/View/Adaab/adaab_screen.dart';
+import 'package:islam786/features_slices/View/AsmaUlHusna/Bindings/asma_ul_husna_binding.dart';
+import 'package:islam786/features_slices/View/AsmaUlHusna/asma_ul_husna_detail_screen.dart';
+import 'package:islam786/features_slices/View/AsmaUlHusna/asma_ul_husna_screen.dart';
 import 'package:islam786/features_slices/View/Azkar/Bindings/azkar_binding.dart';
 import 'package:islam786/features_slices/View/Azkar/azkar_screen.dart';
 import 'package:islam786/features_slices/View/Duas/Bindings/dua_binding.dart';
@@ -21,6 +24,8 @@ class AppRoutes {
   static const duaDetail = '/dua-detail';
   static const adaab = '/adaab';
   static const adaabDetail = '/adaab-detail';
+  static const asmaUlHusna = '/asma-ul-husna';
+  static const asmaUlHusnaDetail = '/asma-ul-husna-detail';
 
   static final List<GetPage> pages = [
     GetPage(
@@ -43,6 +48,16 @@ class AppRoutes {
       name: adaabDetail,
       page: () => const AdaabDetailScreen(),
       binding: AdaabBinding(),
+    ),
+    GetPage(
+      name: asmaUlHusna,
+      page: () => const AsmaUlHusnaScreen(),
+      binding: AsmaUlHusnaBinding(),
+    ),
+    GetPage(
+      name: asmaUlHusnaDetail,
+      page: () => const AsmaUlHusnaDetailScreen(),
+      binding: AsmaUlHusnaBinding(),
     ),
     GetPage(
       name: duaCategory,
