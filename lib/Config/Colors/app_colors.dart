@@ -59,4 +59,7 @@ class AppColors {
 
   // warning
   static const Color warning = Color(0xFFE89B35);
+
+  static const Color darkGreen = Color(0xFF00584C);
+  static const Color primaryGreen = Color(0xFF087C65);
 }
