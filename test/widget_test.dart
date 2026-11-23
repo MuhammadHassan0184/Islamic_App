@@ -1,6 +1,10 @@
 import 'package:flutter_test/flutter_test.dart';
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:islam786/Data/Models/dua_model.dart';
 import 'package:islam786/Data/Sources/asset_data_source.dart';
+import 'package:islam786/features_slices/View/Home/Controller/home_controller.dart';
+import 'package:islam786/features_slices/View/Home/Widgets/last_read_banner.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
@@ -33,5 +37,34 @@ void main() {
     expect(dua.reference, 'Test Reference');
     expect(dua.steps, hasLength(1));
     expect(dua.steps.first.detail, 'Read sincerely');
+  });
+
+  testWidgets('Last Read banner remains bounded on narrow screens', (
+    tester,
+  ) async {
+    tester.view.physicalSize = const Size(320, 700);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+
+    final controller = HomeController();
+    await tester.pumpWidget(
+      GetMaterialApp(
+        home: Scaffold(
+          body: Padding(
+            padding: const EdgeInsets.all(16),
+            child: Align(
+              alignment: Alignment.topCenter,
+              child: LastReadBanner(controller: controller),
+            ),
+          ),
+        ),
+      ),
+    );
+    await tester.pumpAndSettle();
+
+    expect(tester.takeException(), isNull);
+    expect(find.text('Last Read'), findsOneWidget);
+    expect(find.text('Continue Reading'), findsOneWidget);
   });
 }

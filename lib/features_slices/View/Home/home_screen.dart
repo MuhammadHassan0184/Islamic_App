@@ -17,34 +17,40 @@ class HomeScreen extends GetView<HomeController> {
       key: controller.scaffoldKey,
       backgroundColor: Colors.white,
       drawer: HomeDrawer(controller: controller),
-      body: SafeArea(
-        child: SingleChildScrollView(
-          physics: const BouncingScrollPhysics(),
-          padding: context.responsivePadding(
-            horizontal: 0.058,
-            vertical: 0.018,
+      body: Stack(
+        fit: StackFit.expand,
+        children: [
+          Image.asset(
+            'assets/Home_bg_image.png',
+            fit: BoxFit.cover,
+            alignment: Alignment.center,
+            errorBuilder: (context, error, stackTrace) {
+              return const ColoredBox(color: Colors.white);
+            },
           ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              HomeHeader(controller: controller),
-
-              SizedBox(height: context.heightPct(0.035)),
-
-              LastReadBanner(controller: controller),
-
-              SizedBox(height: context.heightPct(0.038)),
-
-              const HomeSectionTitle(title: 'Popular'),
-
-              SizedBox(height: context.heightPct(0.025)),
-
-              PopularFeaturesGrid(controller: controller),
-
-              SizedBox(height: context.heightPct(0.035)),
-            ],
+          SafeArea(
+            child: SingleChildScrollView(
+              physics: const BouncingScrollPhysics(),
+              padding: context.responsivePadding(
+                horizontal: 0.058,
+                vertical: 0.018,
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  HomeHeader(controller: controller),
+                  SizedBox(height: context.heightPct(0.027)),
+                  LastReadBanner(controller: controller),
+                  SizedBox(height: context.heightPct(0.034)),
+                  const HomeSectionTitle(title: 'Popular'),
+                  SizedBox(height: context.heightPct(0.022)),
+                  PopularFeaturesGrid(controller: controller),
+                  SizedBox(height: context.heightPct(0.035)),
+                ],
+              ),
+            ),
           ),
-        ),
+        ],
       ),
     );
   }

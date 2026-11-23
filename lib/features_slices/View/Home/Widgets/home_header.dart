@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:islam786/Config/Colors/app_colors.dart';
 import 'package:islam786/Utils/mediaquery_extension.dart';
@@ -8,10 +7,7 @@ import '../Controller/home_controller.dart';
 class HomeHeader extends StatelessWidget {
   final HomeController controller;
 
-  const HomeHeader({
-    super.key,
-    required this.controller,
-  });
+  const HomeHeader({super.key, required this.controller});
 
   @override
   Widget build(BuildContext context) {
@@ -52,10 +48,7 @@ class _HeaderIconButton extends StatelessWidget {
   final IconData icon;
   final VoidCallback onTap;
 
-  const _HeaderIconButton({
-    required this.icon,
-    required this.onTap,
-  });
+  const _HeaderIconButton({required this.icon, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -69,7 +62,7 @@ class _HeaderIconButton extends StatelessWidget {
           padding: EdgeInsets.all(context.widthPct(0.012)),
           child: Icon(
             icon,
-            color: const Color(0xFF858585),
+            color: const Color(0xFF2E2E2E),
             size: context.scaledFont(25),
           ),
         ),

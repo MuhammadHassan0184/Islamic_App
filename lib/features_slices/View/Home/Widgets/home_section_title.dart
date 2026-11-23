@@ -13,14 +13,27 @@ class HomeSectionTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      title,
-      style: TextStyle(
-        color: AppColors.darkGreen,
-        fontSize: context.scaledFont(19),
-        fontWeight: FontWeight.w800,
-        letterSpacing: -0.3,
-      ),
+    return Row(
+      children: [
+        Container(
+          width: 4,
+          height: context.scaledFont(21),
+          decoration: BoxDecoration(
+            color: AppColors.primaryGreen,
+            borderRadius: BorderRadius.circular(10),
+          ),
+        ),
+        SizedBox(width: context.widthPct(0.022)),
+        Text(
+          title,
+          style: TextStyle(
+            color: const Color(0xFF01463D),
+            fontSize: context.scaledFont(20),
+            fontWeight: FontWeight.w800,
+            letterSpacing: -0.4,
+          ),
+        ),
+      ],
     );
   }
 }

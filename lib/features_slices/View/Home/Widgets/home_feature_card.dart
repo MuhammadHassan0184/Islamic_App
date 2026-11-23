@@ -45,7 +45,7 @@ class HomeFeatureCard extends StatelessWidget {
                   Text(
                     feature.title,
                     style: TextStyle(
-                      color: const Color(0xFF00584C),
+                      color: const Color(0xFF004139),
                       fontSize: context.scaledFont(14),
                       fontWeight: FontWeight.w700,
                     ),
