@@ -30,7 +30,7 @@ class AsmaUlHusnaDetailScreen extends StatelessWidget {
       appBar: ZiAppBarB(title: item.title, centerTitle: true),
       backgroundColor: AppColors.background,
       body: ListView(
-        padding: context.responsivePadding(horizontal: 0.04, vertical: 0.018),
+        padding: context.responsivePadding(horizontal: 0.01, vertical: 0.018),
         children: [
           Container(
             width: double.infinity,
@@ -165,11 +165,12 @@ class AsmaUlHusnaDetailScreen extends StatelessWidget {
             ...item.steps.map(
               (step) => Card(
                 color: AppColors.white,
+                elevation: 2,
                 margin: EdgeInsets.only(bottom: context.heightPct(0.012)),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(context.widthPct(0.035)),
-                  side: const BorderSide(color: AppColors.cardBorder),
-                ),
+                // shape: RoundedRectangleBorder(
+                //   borderRadius: BorderRadius.circular(context.widthPct(0.035)),
+                //   side: const BorderSide(color: AppColors.cardBorder),
+                // ),
                 child: Padding(
                   padding: context.responsiveAll(0.04),
                   child: Row(

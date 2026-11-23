@@ -182,11 +182,12 @@ class AdaabScreen extends GetView<AdaabController> {
   Widget _adaabCard(BuildContext context, AdaabModel item) {
     return Card(
       color: AppColors.white,
+      elevation: 2,
       margin: EdgeInsets.only(bottom: context.heightPct(0.012)),
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(context.widthPct(0.04)),
-        side: const BorderSide(color: AppColors.cardBorder),
-      ),
+      // shape: RoundedRectangleBorder(
+      //   borderRadius: BorderRadius.circular(context.widthPct(0.04)),
+      //   side: const BorderSide(color: AppColors.cardBorder),
+      // ),
       child: InkWell(
         borderRadius: BorderRadius.circular(context.widthPct(0.04)),
         onTap: () => Get.toNamed(AppRoutes.adaabDetail, arguments: item),

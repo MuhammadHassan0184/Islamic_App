@@ -14,20 +14,38 @@ class LibrarySearchField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final radius = BorderRadius.circular(context.widthPct(0.03));
+
     return TextField(
       onChanged: onChanged,
+      textInputAction: TextInputAction.search,
+      style: TextStyle(
+        color: AppColors.textPrimary,
+        fontSize: context.scaledFont(14),
+      ),
       decoration: InputDecoration(
         hintText: hintText,
-        prefixIcon: const Icon(Icons.search_rounded),
+        hintStyle: TextStyle(
+          color: AppColors.textSecondary,
+          fontSize: context.scaledFont(14),
+        ),
+        prefixIcon: const Icon(Icons.search_rounded, color: AppColors.primary),
+        contentPadding: EdgeInsets.symmetric(
+          vertical: context.heightPct(0.018),
+        ),
         filled: true,
         fillColor: AppColors.white,
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(context.widthPct(0.03)),
+          borderRadius: radius,
           borderSide: const BorderSide(color: AppColors.cardBorder),
         ),
         enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(context.widthPct(0.03)),
+          borderRadius: radius,
           borderSide: const BorderSide(color: AppColors.cardBorder),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: radius,
+          borderSide: const BorderSide(color: AppColors.primaryLight),
         ),
       ),
     );

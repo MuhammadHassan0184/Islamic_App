@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:islam786/Config/Colors/app_colors.dart';
 import 'package:islam786/Config/Routes/app_routes.dart';
+import 'package:islam786/Data/Models/dua_model.dart';
 import 'package:islam786/features_slices/View/Duas/Controller/dua_controller.dart';
 
 class DuaCategoryScreen extends GetView<DuaController> {
@@ -9,9 +10,36 @@ class DuaCategoryScreen extends GetView<DuaController> {
 
   @override
   Widget build(BuildContext context) {
-    final arguments = Get.arguments as Map?;
-    final categoryId = arguments?['id']?.toString() ?? '';
-    final title = arguments?['title']?.toString() ?? 'Duain';
+    final arguments = Get.arguments;
+    late final String categoryId;
+    late final String title;
+
+    if (arguments is DuaModel) {
+      categoryId = arguments.category;
+      title = _formatCategory(arguments.category);
+    } else if (arguments == null || arguments is Map) {
+      final categoryArguments = arguments as Map?;
+      categoryId = categoryArguments?['id']?.toString() ?? '';
+      title = categoryArguments?['title']?.toString() ?? 'Duain';
+    } else {
+      return Scaffold(
+        backgroundColor: AppColors.background,
+        appBar: AppBar(
+          backgroundColor: AppColors.primary,
+          foregroundColor: AppColors.white,
+          title: const Text('Duain'),
+        ),
+        body: const Center(
+          child: Padding(
+            padding: EdgeInsets.all(24),
+            child: Text(
+              'Unable to open this Dua category. Please go back and try again.',
+              textAlign: TextAlign.center,
+            ),
+          ),
+        ),
+      );
+    }
 
     return Scaffold(
       backgroundColor: AppColors.background,
@@ -44,6 +72,8 @@ class DuaCategoryScreen extends GetView<DuaController> {
           itemBuilder: (context, index) {
             final dua = duas[index];
             return Card(
+              color: AppColors.white,
+              elevation: 2,
               margin: const EdgeInsets.only(bottom: 12),
               child: ListTile(
                 contentPadding: const EdgeInsets.all(16),
@@ -74,5 +104,14 @@ class DuaCategoryScreen extends GetView<DuaController> {
         );
       }),
     );
+  }
+
+  String _formatCategory(String category) {
+    if (category.isEmpty) return 'Duain';
+    return category
+        .split('_')
+        .where((word) => word.isNotEmpty)
+        .map((word) => '${word[0].toUpperCase()}${word.substring(1)}')
+        .join(' ');
   }
 }

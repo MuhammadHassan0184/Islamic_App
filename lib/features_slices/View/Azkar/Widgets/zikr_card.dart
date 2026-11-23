@@ -23,11 +23,12 @@ class ZikrCard extends StatelessWidget {
 
       return Card(
         color: AppColors.white,
+        elevation: 2,
         margin: EdgeInsets.only(bottom: context.heightPct(0.014)),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(context.widthPct(0.035)),
-          side: const BorderSide(color: AppColors.cardBorder),
-        ),
+        // shape: RoundedRectangleBorder(
+        //   borderRadius: BorderRadius.circular(context.widthPct(0.035)),
+        //   side: const BorderSide(color: AppColors.cardBorder),
+        // ),
         child: Padding(
           padding: context.responsivePadding(
             horizontal: 0.045,

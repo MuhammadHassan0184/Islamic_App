@@ -222,13 +222,14 @@ class AsmaUlHusnaScreen extends GetView<AsmaUlHusnaController> {
   Widget _nameCard(BuildContext context, AsmaUlHusnaModel item) {
     return Card(
       color: AppColors.white,
+      elevation: 2,
       margin: context.isMobile
           ? EdgeInsets.only(bottom: context.heightPct(0.012))
           : EdgeInsets.zero,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(context.widthPct(0.04)),
-        side: const BorderSide(color: AppColors.cardBorder),
-      ),
+      // shape: RoundedRectangleBorder(
+      //   borderRadius: BorderRadius.circular(context.widthPct(0.04)),
+      //   side: const BorderSide(color: AppColors.cardBorder),
+      // ),
       child: InkWell(
         borderRadius: BorderRadius.circular(context.widthPct(0.04)),
         onTap: () => Get.toNamed(AppRoutes.asmaUlHusnaDetail, arguments: item),

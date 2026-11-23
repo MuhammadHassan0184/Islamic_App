@@ -143,6 +143,8 @@ class DuaDetailScreen extends GetView<DuaController> {
             const SizedBox(height: 8),
             ...dua.steps.map(
               (step) => Card(
+                color: AppColors.white,
+                elevation: 2,
                 margin: const EdgeInsets.only(bottom: 8),
                 child: ListTile(
                   leading: CircleAvatar(
