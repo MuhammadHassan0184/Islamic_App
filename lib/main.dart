@@ -37,11 +37,23 @@
 // }
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:islam786/Config/Colors/app_colors.dart';
 import 'package:islam786/Config/Routes/app_routes.dart';
 import 'package:zi_core/zi_core_io.dart';
 import 'app_shell/app_shell_io.dart';
+
+const _lightSystemBars = SystemUiOverlayStyle(
+  statusBarColor: Colors.white,
+  statusBarIconBrightness: Brightness.dark,
+  statusBarBrightness: Brightness.light,
+  systemNavigationBarColor: Colors.white,
+  systemNavigationBarDividerColor: Colors.white,
+  systemNavigationBarIconBrightness: Brightness.dark,
+  systemStatusBarContrastEnforced: false,
+  systemNavigationBarContrastEnforced: false,
+);
 
 void main() {
   ziCoreInit(beta: true);
@@ -49,6 +61,7 @@ void main() {
   ZiColors.override(ZiColorOverrides(primary: AppColors.primary));
 
   AppConfig.environment = ZiEnvironment.production;
+  SystemChrome.setSystemUIOverlayStyle(_lightSystemBars);
 
   runApp(const MyApp());
 }
@@ -64,12 +77,17 @@ class MyApp extends StatelessWidget {
 
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: ZiColors.primary),
+        appBarTheme: const AppBarTheme(systemOverlayStyle: _lightSystemBars),
       ),
 
       // Keep your existing splash screen.
       home: ZiSplashScreen(),
 
       getPages: AppRoutes.pages,
+      builder: (context, child) => ColoredBox(
+        color: Colors.white,
+        child: SafeArea(child: child ?? const SizedBox.shrink()),
+      ),
     );
   }
 }
