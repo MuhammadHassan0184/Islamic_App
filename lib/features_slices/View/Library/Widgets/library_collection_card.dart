@@ -21,10 +21,10 @@ class LibraryCollectionCard extends StatelessWidget {
       color: AppColors.white,
       margin: EdgeInsets.zero,
       elevation: 1,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(context.widthPct(0.04)),
-        side: const BorderSide(color: AppColors.cardBorder),
-      ),
+      // shape: RoundedRectangleBorder(
+      //   borderRadius: BorderRadius.circular(context.widthPct(0.04)),
+      //   side: const BorderSide(color: AppColors.cardBorder),
+      // ),
       child: InkWell(
         onTap: onTap,
         borderRadius: BorderRadius.circular(context.widthPct(0.04)),

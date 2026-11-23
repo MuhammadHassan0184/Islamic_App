@@ -21,11 +21,11 @@ class LibraryContentCard extends StatelessWidget {
     return Card(
       color: AppColors.white,
       margin: EdgeInsets.only(bottom: context.heightPct(0.012)),
-      elevation: 1,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(context.widthPct(0.04)),
-        side: const BorderSide(color: AppColors.cardBorder),
-      ),
+      elevation: 2,
+      // shape: RoundedRectangleBorder(
+      //   borderRadius: BorderRadius.circular(context.widthPct(0.04)),
+      //   side: const BorderSide(color: AppColors.cardBorder),
+      // ),
       child: InkWell(
         onTap: onTap,
         borderRadius: BorderRadius.circular(context.widthPct(0.04)),

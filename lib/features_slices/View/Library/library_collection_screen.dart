@@ -15,11 +15,57 @@ class LibraryCollectionScreen extends GetView<LibraryController> {
 
   @override
   Widget build(BuildContext context) {
-    final argument = Get.arguments;
-    if (argument is! LibraryCollectionModel) {
-      throw StateError('A library collection is required for this screen.');
+    final collection = _resolveCollection(Get.arguments);
+    if (collection == null) {
+      return ZiScaffoldB(
+        showPagePadding: false,
+        backgroundColor: AppColors.background,
+        body: Column(
+          children: [
+            const LibraryPageHeader(
+              title: 'Collection unavailable',
+              subtitle: 'Choose a collection from the Islamic Library',
+            ),
+            Expanded(
+              child: Center(
+                child: Padding(
+                  padding: context.responsiveAll(0.06),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      const Icon(
+                        Icons.menu_book_rounded,
+                        size: 42,
+                        color: AppColors.primary,
+                      ),
+                      SizedBox(height: context.heightPct(0.014)),
+                      Text(
+                        'This collection could not be opened.',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: AppColors.textSecondary,
+                          fontSize: context.scaledFont(14),
+                        ),
+                      ),
+                      SizedBox(height: context.heightPct(0.018)),
+                      FilledButton.icon(
+                        onPressed: () => Get.offNamed(AppRoutes.library),
+                        style: FilledButton.styleFrom(
+                          backgroundColor: AppColors.primary,
+                          foregroundColor: AppColors.white,
+                        ),
+                        icon: const Icon(Icons.arrow_back_rounded),
+                        label: const Text('Open Islamic Library'),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      );
     }
-    final collection = argument;
 
     return ZiScaffoldB(
       showPagePadding: false,
@@ -113,5 +159,29 @@ class LibraryCollectionScreen extends GetView<LibraryController> {
         ],
       ),
     );
+  }
+
+  LibraryCollectionModel? _resolveCollection(dynamic argument) {
+    if (argument is LibraryCollectionModel) return argument;
+
+    String? identifier;
+    if (argument is String) {
+      identifier = argument;
+    } else if (argument is Map) {
+      identifier =
+          argument['fileName']?.toString() ??
+          argument['file_name']?.toString() ??
+          argument['title']?.toString();
+    }
+
+    if (identifier == null || identifier.isEmpty) return null;
+
+    for (final collection in LibraryCollectionModel.available) {
+      if (collection.fileName == identifier ||
+          collection.title.toLowerCase() == identifier.toLowerCase()) {
+        return collection;
+      }
+    }
+    return null;
   }
 }

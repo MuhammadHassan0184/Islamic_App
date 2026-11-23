@@ -85,4 +85,41 @@ void main() {
     expect(find.text('Meaning'), findsOneWidget);
     expect(find.text('Gender'), findsOneWidget);
   });
+
+  testWidgets('collection screen handles missing route arguments safely', (
+    tester,
+  ) async {
+    await tester.pumpWidget(
+      GetMaterialApp(
+        home: Scaffold(
+          body: Center(
+            child: ElevatedButton(
+              onPressed: () => Get.toNamed('/library/collection'),
+              child: const Text('Open collection'),
+            ),
+          ),
+        ),
+        getPages: [
+          GetPage(
+            name: '/library/collection',
+            page: () => const LibraryCollectionScreen(),
+          ),
+          GetPage(
+            name: '/library',
+            page: () => const Scaffold(body: Text('Islamic Library home')),
+          ),
+        ],
+      ),
+    );
+
+    await tester.tap(find.text('Open collection'));
+    await tester.pumpAndSettle();
+
+    expect(tester.takeException(), isNull);
+    expect(find.text('This collection could not be opened.'), findsOneWidget);
+
+    await tester.tap(find.text('Open Islamic Library'));
+    await tester.pumpAndSettle();
+    expect(find.text('Islamic Library home'), findsOneWidget);
+  });
 }
