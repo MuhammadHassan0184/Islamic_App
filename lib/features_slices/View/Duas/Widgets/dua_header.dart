@@ -25,22 +25,28 @@ class DuaHeader extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  // IconButton(
-                  //   onPressed: () => Get.back(),
-                  //   icon: Icon(
-                  //     Icons.arrow_back_rounded,
-                  //     color: AppColors.white,
-                  //     size: context.scaledFont(24),
-                  //   ),
-                  // ),
-                  Text(
-                    'Dua',
-                    style: TextStyle(
-                      color: AppColors.white,
-                      fontSize: context.scaledFont(18),
-                      fontWeight: FontWeight.w700,
+                  if (Navigator.of(context).canPop())
+                    IconButton(
+                      tooltip: 'Back',
+                      onPressed: () => Navigator.of(context).maybePop(),
+                      icon: const Icon(
+                        Icons.arrow_back_rounded,
+                        color: AppColors.white,
+                      ),
+                    ),
+                  Expanded(
+                    child: Text(
+                      'Dua',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: AppColors.white,
+                        fontSize: context.scaledFont(18),
+                        fontWeight: FontWeight.w700,
+                      ),
                     ),
                   ),
+                  if (Navigator.of(context).canPop())
+                    SizedBox(width: context.widthPct(0.12)),
                 ],
               ),
             ),

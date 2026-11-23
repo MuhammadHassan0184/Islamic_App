@@ -27,24 +27,41 @@ class AzkarScreen extends GetView<AzkarController> {
                   horizontal: 0.05,
                   vertical: 0.022,
                 ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
+                child: Stack(
+                  alignment: Alignment.center,
                   children: [
-                    Text(
-                      'Azkar',
-                      style: TextStyle(
-                        color: AppColors.white,
-                        fontSize: azkarFontSize(context, 22),
-                        fontWeight: FontWeight.w700,
+                    if (Navigator.of(context).canPop())
+                      Align(
+                        alignment: Alignment.centerLeft,
+                        child: IconButton(
+                          tooltip: 'Back',
+                          onPressed: () => Navigator.of(context).maybePop(),
+                          icon: const Icon(
+                            Icons.arrow_back_rounded,
+                            color: AppColors.white,
+                          ),
+                        ),
                       ),
-                    ),
-                    SizedBox(height: context.heightPct(0.004)),
-                    Text(
-                      'Remember Allah at your own pace',
-                      style: TextStyle(
-                        color: AppColors.white.withValues(alpha: 0.82),
-                        fontSize: azkarFontSize(context, 12),
-                      ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Azkar',
+                          style: TextStyle(
+                            color: AppColors.white,
+                            fontSize: azkarFontSize(context, 22),
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                        SizedBox(height: context.heightPct(0.004)),
+                        Text(
+                          'Remember Allah at your own pace',
+                          style: TextStyle(
+                            color: AppColors.white.withValues(alpha: 0.82),
+                            fontSize: azkarFontSize(context, 12),
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),

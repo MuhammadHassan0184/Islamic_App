@@ -18,6 +18,13 @@ class AdaabDetailScreen extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: AppColors.primary,
           foregroundColor: AppColors.white,
+          leading: Navigator.of(context).canPop()
+              ? IconButton(
+                  tooltip: 'Back',
+                  onPressed: () => Navigator.of(context).maybePop(),
+                  icon: const Icon(Icons.arrow_back_rounded),
+                )
+              : null,
           title: const Text('Adaab'),
         ),
         body: const Center(child: Text('Adaab not found.')),
@@ -29,6 +36,13 @@ class AdaabDetailScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: AppColors.primary,
         foregroundColor: AppColors.white,
+        leading: Navigator.of(context).canPop()
+            ? IconButton(
+                tooltip: 'Back',
+                onPressed: () => Navigator.of(context).maybePop(),
+                icon: const Icon(Icons.arrow_back_rounded),
+              )
+            : null,
         title: Text(item.title),
         centerTitle: true,
       ),

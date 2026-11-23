@@ -27,23 +27,40 @@ class AdaabScreen extends GetView<AdaabController> {
                   horizontal: 0.05,
                   vertical: 0.022,
                 ),
-                child: Column(
+                child: Stack(
+                  alignment: Alignment.center,
                   children: [
-                    Text(
-                      'Adaab',
-                      style: TextStyle(
-                        color: AppColors.white,
-                        fontSize: context.scaledFont(22),
-                        fontWeight: FontWeight.w700,
+                    if (Navigator.of(context).canPop())
+                      Align(
+                        alignment: Alignment.centerLeft,
+                        child: IconButton(
+                          tooltip: 'Back',
+                          onPressed: () => Navigator.of(context).maybePop(),
+                          icon: const Icon(
+                            Icons.arrow_back_rounded,
+                            color: AppColors.white,
+                          ),
+                        ),
                       ),
-                    ),
-                    const SizedBox(height: 4),
-                    Text(
-                      'Beautiful manners for everyday life',
-                      style: TextStyle(
-                        color: AppColors.white.withValues(alpha: 0.82),
-                        fontSize: context.scaledFont(12),
-                      ),
+                    Column(
+                      children: [
+                        Text(
+                          'Adaab',
+                          style: TextStyle(
+                            color: AppColors.white,
+                            fontSize: context.scaledFont(22),
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                        const SizedBox(height: 4),
+                        Text(
+                          'Beautiful manners for everyday life',
+                          style: TextStyle(
+                            color: AppColors.white.withValues(alpha: 0.82),
+                            fontSize: context.scaledFont(12),
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),

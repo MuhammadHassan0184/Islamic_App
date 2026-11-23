@@ -15,7 +15,16 @@ class DuaDetailScreen extends GetView<DuaController> {
 
     if (dua == null) {
       return Scaffold(
-        appBar: AppBar(title: const Text('Dua')),
+        appBar: AppBar(
+          title: const Text('Dua'),
+          leading: Navigator.of(context).canPop()
+              ? IconButton(
+                  tooltip: 'Back',
+                  onPressed: () => Navigator.of(context).maybePop(),
+                  icon: const Icon(Icons.arrow_back_rounded),
+                )
+              : null,
+        ),
         body: const Center(child: Text('Dua not found.')),
       );
     }
@@ -25,6 +34,13 @@ class DuaDetailScreen extends GetView<DuaController> {
       appBar: AppBar(
         backgroundColor: AppColors.primary,
         foregroundColor: AppColors.white,
+        leading: Navigator.of(context).canPop()
+            ? IconButton(
+                tooltip: 'Back',
+                onPressed: () => Navigator.of(context).maybePop(),
+                icon: const Icon(Icons.arrow_back_rounded),
+              )
+            : null,
         title: Text(dua.title),
         actions: [
           Obx(() {

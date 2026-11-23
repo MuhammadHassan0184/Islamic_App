@@ -31,24 +31,41 @@ class AsmaUlHusnaScreen extends GetView<AsmaUlHusnaController> {
                   horizontal: 0.05,
                   vertical: 0.022,
                 ),
-                child: Column(
+                child: Stack(
+                  alignment: Alignment.center,
                   children: [
-                    Text(
-                      'Asma-ul-Husna',
-                      style: TextStyle(
-                        color: AppColors.white,
-                        fontSize: context.scaledFont(22),
-                        fontWeight: FontWeight.w700,
+                    if (Navigator.of(context).canPop())
+                      Align(
+                        alignment: Alignment.centerLeft,
+                        child: IconButton(
+                          tooltip: 'Back',
+                          onPressed: () => Navigator.of(context).maybePop(),
+                          icon: const Icon(
+                            Icons.arrow_back_rounded,
+                            color: AppColors.white,
+                          ),
+                        ),
                       ),
-                    ),
-                    SizedBox(height: context.heightPct(0.005)),
-                    Text(
-                      'Discover the beautiful names of Allah',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: AppColors.white.withValues(alpha: 0.82),
-                        fontSize: context.scaledFont(12),
-                      ),
+                    Column(
+                      children: [
+                        Text(
+                          'Asma-ul-Husna',
+                          style: TextStyle(
+                            color: AppColors.white,
+                            fontSize: context.scaledFont(22),
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                        SizedBox(height: context.heightPct(0.005)),
+                        Text(
+                          'Discover the beautiful names of Allah',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: AppColors.white.withValues(alpha: 0.82),
+                            fontSize: context.scaledFont(12),
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),

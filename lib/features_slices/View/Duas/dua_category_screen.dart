@@ -18,6 +18,13 @@ class DuaCategoryScreen extends GetView<DuaController> {
       appBar: AppBar(
         backgroundColor: AppColors.primary,
         foregroundColor: AppColors.white,
+        leading: Navigator.of(context).canPop()
+            ? IconButton(
+                tooltip: 'Back',
+                onPressed: () => Navigator.of(context).maybePop(),
+                icon: const Icon(Icons.arrow_back_rounded),
+              )
+            : null,
         title: Text(title),
         centerTitle: true,
       ),
