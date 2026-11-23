@@ -11,6 +11,10 @@ import 'package:islam786/features_slices/View/Duas/Bindings/dua_binding.dart';
 import 'package:islam786/features_slices/View/Duas/dua_category_screen.dart';
 import 'package:islam786/features_slices/View/Duas/dua_detail_screen.dart';
 import 'package:islam786/features_slices/View/Duas/duas_screen.dart';
+import 'package:islam786/features_slices/View/Library/Bindings/library_binding.dart';
+import 'package:islam786/features_slices/View/Library/library_collection_screen.dart';
+import 'package:islam786/features_slices/View/Library/library_detail_screen.dart';
+import 'package:islam786/features_slices/View/Library/library_screen.dart';
 import 'package:islam786/features_slices/app_shell_binding.dart';
 import 'package:islam786/features_slices/name_app.dart';
 
@@ -26,6 +30,9 @@ class AppRoutes {
   static const adaabDetail = '/adaab-detail';
   static const asmaUlHusna = '/asma-ul-husna';
   static const asmaUlHusnaDetail = '/asma-ul-husna-detail';
+  static const library = '/library';
+  static const libraryCollection = '/library/collection';
+  static const libraryDetail = '/library/detail';
 
   static final List<GetPage> pages = [
     GetPage(
@@ -69,5 +76,16 @@ class AppRoutes {
       page: () => const DuaDetailScreen(),
       binding: DuaBinding(),
     ),
+    GetPage(
+      name: library,
+      page: () => const LibraryScreen(),
+      binding: LibraryBinding(),
+    ),
+    GetPage(
+      name: libraryCollection,
+      page: () => const LibraryCollectionScreen(),
+      binding: LibraryBinding(),
+    ),
+    GetPage(name: libraryDetail, page: () => const LibraryDetailScreen()),
   ];
 }

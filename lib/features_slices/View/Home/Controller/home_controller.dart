@@ -46,6 +46,7 @@ class HomeController extends GetxController {
       'Azkar' => AppRoutes.azkar,
       'Adaab' => AppRoutes.adaab,
       'Asma-ul-Husna' => AppRoutes.asmaUlHusna,
+      'Islamic Library' => AppRoutes.library,
       _ => null,
     };
 

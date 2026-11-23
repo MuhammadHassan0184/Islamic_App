@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class HomeFeatureModel {
@@ -36,6 +35,13 @@ class HomeFeatureModel {
       icon: Icons.verified_rounded,
       background: Color(0xFFFFF9EF),
       accent: Color(0xFFFFF0D9),
+      iconColor: Color(0xFF39766A),
+    ),
+    HomeFeatureModel(
+      title: 'Islamic Library',
+      icon: Icons.menu_book_rounded,
+      background: Color(0xFFF1F6FF),
+      accent: Color(0xFFDCE9FF),
       iconColor: Color(0xFF39766A),
     ),
   ];
