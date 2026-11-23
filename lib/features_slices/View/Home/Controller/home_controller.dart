@@ -7,34 +7,28 @@ class HomeController extends GetxController {
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
 
   final RxString searchQuery = ''.obs;
+  final RxBool isSearchOpen = false.obs;
+  final TextEditingController searchTextController = TextEditingController();
 
   void openDrawer() {
     scaffoldKey.currentState?.openDrawer();
   }
 
   void openSearch() {
-    Get.dialog(
-      AlertDialog(
-        title: const Text('Search'),
-        content: TextField(
-          autofocus: true,
-          onChanged: (value) => searchQuery.value = value,
-          decoration: const InputDecoration(
-            hintText: 'Search Quran, Duas, and more...',
-            prefixIcon: Icon(Icons.search_rounded),
-          ),
-        ),
-        actions: [
-          TextButton(
-            onPressed: () {
-              searchQuery.value = '';
-              Get.back();
-            },
-            child: const Text('Close'),
-          ),
-        ],
-      ),
-    );
+    isSearchOpen.value = true;
+  }
+
+  void closeSearch() {
+    isSearchOpen.value = false;
+    searchQuery.value = '';
+    searchTextController.clear();
+    FocusManager.instance.primaryFocus?.unfocus();
+  }
+
+  @override
+  void onClose() {
+    searchTextController.dispose();
+    super.onClose();
   }
 
   void continueReading() {
