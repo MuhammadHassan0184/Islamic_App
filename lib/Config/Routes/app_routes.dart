@@ -15,6 +15,8 @@ import 'package:islam786/features_slices/View/Library/Bindings/library_binding.d
 import 'package:islam786/features_slices/View/Library/library_collection_screen.dart';
 import 'package:islam786/features_slices/View/Library/library_detail_screen.dart';
 import 'package:islam786/features_slices/View/Library/library_screen.dart';
+import 'package:islam786/features_slices/View/Namaz/Bindings/namaz_binding.dart';
+import 'package:islam786/features_slices/View/Namaz/namaz_screen.dart';
 import 'package:islam786/features_slices/app_shell_binding.dart';
 import 'package:islam786/features_slices/name_app.dart';
 
@@ -23,6 +25,7 @@ class AppRoutes {
 
   static const home = '/home';
   static const azkar = '/azkar';
+  static const namaz = '/namaz';
   static const duas = '/duas';
   static const duaCategory = '/dua-category';
   static const duaDetail = '/dua-detail';
@@ -39,6 +42,11 @@ class AppRoutes {
       name: home,
       page: () => const NameAppView(),
       binding: AppShellBinding(),
+    ),
+    GetPage(
+      name: namaz,
+      page: () => const NamazScreen(),
+      binding: NamazBinding(),
     ),
     GetPage(
       name: azkar,
