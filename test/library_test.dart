@@ -86,6 +86,39 @@ void main() {
     expect(find.text('Gender'), findsOneWidget);
   });
 
+  testWidgets('library cards fit compact screens with larger text', (
+    tester,
+  ) async {
+    tester.view.physicalSize = const Size(320, 480);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+
+    final controller = LibraryController(
+      LibraryContentRepository(AssetDataSource()),
+    );
+    await controller.loadCollections();
+    Get.put<LibraryController>(controller);
+    addTearDown(Get.reset);
+
+    await tester.pumpWidget(
+      GetMaterialApp(
+        home: Builder(
+          builder: (context) => MediaQuery(
+            data: MediaQuery.of(
+              context,
+            ).copyWith(textScaler: const TextScaler.linear(1.3)),
+            child: const LibraryScreen(),
+          ),
+        ),
+      ),
+    );
+    await tester.pumpAndSettle();
+
+    expect(tester.takeException(), isNull);
+    expect(find.text('Baby Names'), findsOneWidget);
+  });
+
   testWidgets('collection screen handles missing route arguments safely', (
     tester,
   ) async {

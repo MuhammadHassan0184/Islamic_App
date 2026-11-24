@@ -17,105 +17,134 @@ class AsmaUlHusnaScreen extends GetView<AsmaUlHusnaController> {
     return ZiScaffoldB(
       showPagePadding: false,
       backgroundColor: AppColors.background,
-      body: Column(
+      body: Stack(
+        fit: StackFit.expand,
         children: [
-          Container(
-            width: double.infinity,
-            decoration: const BoxDecoration(
-              gradient: AppColors.primaryGradient,
-            ),
-            child: SafeArea(
-              bottom: false,
-              child: Padding(
-                padding: context.responsivePadding(
-                  horizontal: 0.05,
-                  vertical: 0.022,
-                ),
-                child: Stack(
-                  alignment: Alignment.center,
-                  children: [
-                    if (Navigator.of(context).canPop())
-                      Align(
-                        alignment: Alignment.centerLeft,
-                        child: IconButton(
-                          tooltip: 'Back',
-                          onPressed: () => Navigator.of(context).maybePop(),
-                          icon: const Icon(
-                            Icons.arrow_back_rounded,
-                            color: AppColors.white,
+          Image.asset(
+            'assets/Home_bg_image.png',
+            fit: BoxFit.cover,
+            alignment: Alignment.center,
+            errorBuilder: (context, error, stackTrace) {
+              return const ColoredBox(color: Colors.white);
+            },
+          ),
+          SafeArea(
+            child: Column(
+              children: [
+                Container(
+                  width: double.infinity,
+                  decoration: const BoxDecoration(
+                    gradient: AppColors.primaryGradient,
+                  ),
+                  child: SafeArea(
+                    bottom: false,
+                    child: Padding(
+                      padding: context.responsivePadding(
+                        horizontal: 0.05,
+                        vertical: 0.022,
+                      ),
+                      child: Stack(
+                        alignment: Alignment.center,
+                        children: [
+                          if (Navigator.of(context).canPop())
+                            Align(
+                              alignment: Alignment.centerLeft,
+                              child: IconButton(
+                                tooltip: 'Back',
+                                onPressed: () =>
+                                    Navigator.of(context).maybePop(),
+                                icon: const Icon(
+                                  Icons.arrow_back_rounded,
+                                  color: AppColors.white,
+                                ),
+                              ),
+                            ),
+                          Column(
+                            children: [
+                              Text(
+                                'Asma-ul-Husna',
+                                style: TextStyle(
+                                  color: AppColors.white,
+                                  fontSize: context.scaledFont(22),
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              ),
+                              SizedBox(height: context.heightPct(0.005)),
+                              Text(
+                                'Discover the beautiful names of Allah',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  color: AppColors.white.withValues(
+                                    alpha: 0.82,
+                                  ),
+                                  fontSize: context.scaledFont(12),
+                                ),
+                              ),
+                            ],
                           ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: context.responsivePadding(
+                    horizontal: 0.04,
+                    vertical: 0.014,
+                  ),
+                  child: TextField(
+                    onChanged: (value) => controller.searchQuery.value = value,
+                    decoration: InputDecoration(
+                      hintText: 'Search names',
+                      prefixIcon: const Icon(
+                        Icons.search_rounded,
+                        color: AppColors.primary,
+                      ),
+                      filled: true,
+                      fillColor: AppColors.white,
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(
+                          context.widthPct(0.03),
+                        ),
+                        borderSide: const BorderSide(
+                          color: AppColors.cardBorder,
                         ),
                       ),
-                    Column(
-                      children: [
-                        Text(
-                          'Asma-ul-Husna',
-                          style: TextStyle(
-                            color: AppColors.white,
-                            fontSize: context.scaledFont(22),
-                            fontWeight: FontWeight.w700,
-                          ),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(
+                          context.widthPct(0.03),
                         ),
-                        SizedBox(height: context.heightPct(0.005)),
-                        Text(
-                          'Discover the beautiful names of Allah',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: AppColors.white.withValues(alpha: 0.82),
-                            fontSize: context.scaledFont(12),
-                          ),
+                        borderSide: const BorderSide(
+                          color: AppColors.cardBorder,
                         ),
-                      ],
+                      ),
                     ),
-                  ],
+                  ),
                 ),
-              ),
-            ),
-          ),
-          Padding(
-            padding: context.responsivePadding(
-              horizontal: 0.04,
-              vertical: 0.014,
-            ),
-            child: TextField(
-              onChanged: (value) => controller.searchQuery.value = value,
-              decoration: InputDecoration(
-                hintText: 'Search names',
-                prefixIcon: const Icon(
-                  Icons.search_rounded,
-                  color: AppColors.primary,
-                ),
-                filled: true,
-                fillColor: AppColors.white,
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(context.widthPct(0.03)),
-                  borderSide: const BorderSide(color: AppColors.cardBorder),
-                ),
-                enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(context.widthPct(0.03)),
-                  borderSide: const BorderSide(color: AppColors.cardBorder),
-                ),
-              ),
-            ),
-          ),
-          Expanded(
-            child: Obx(() {
-              if (controller.isLoading.value) {
-                return const Center(
-                  child: CircularProgressIndicator(color: AppColors.primary),
-                );
-              }
-              if (controller.errorMessage.value.isNotEmpty) {
-                return _errorState(context);
-              }
+                Expanded(
+                  child: Obx(() {
+                    if (controller.isLoading.value) {
+                      return const Center(
+                        child: CircularProgressIndicator(
+                          color: AppColors.primary,
+                        ),
+                      );
+                    }
+                    if (controller.errorMessage.value.isNotEmpty) {
+                      return _errorState(context);
+                    }
 
-              return Column(
-                children: [
-                  if (controller.categories.length > 1) _categoryChips(context),
-                  Expanded(child: _namesList(context)),
-                ],
-              );
-            }),
+                    return Column(
+                      children: [
+                        if (controller.categories.length > 1)
+                          _categoryChips(context),
+                        Expanded(child: _namesList(context)),
+                      ],
+                    );
+                  }),
+                ),
+              ],
+            ),
           ),
         ],
       ),

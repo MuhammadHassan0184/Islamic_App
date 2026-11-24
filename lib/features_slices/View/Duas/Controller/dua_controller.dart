@@ -103,7 +103,7 @@ class DuaController extends GetxController {
     const images = <String, String>{
       'morning': 'assets/Eveningbg.jpg',
       'guidance': 'assets/Dua_bg1.jpg',
-      'sleep': 'assets/Dua_bg3.jpg',
+      'sleep': 'assets/Sleep.jpg',
     };
     const colors = <String, int>{
       'morning': 0xFF858666,

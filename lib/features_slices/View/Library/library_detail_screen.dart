@@ -136,7 +136,7 @@ class LibraryDetailScreen extends StatelessWidget {
       width: double.infinity,
       padding: context.responsiveAll(0.045),
       decoration: BoxDecoration(
-        color: AppColors.white,
+        gradient: AppColors.softGreenGradient,
         borderRadius: BorderRadius.circular(context.widthPct(0.04)),
         border: Border.all(color: AppColors.cardBorder),
       ),
@@ -195,13 +195,13 @@ class LibraryDetailScreen extends StatelessWidget {
             Container(
               padding: context.responsiveAll(0.03),
               decoration: BoxDecoration(
-                color: AppColors.softGreenGradient.colors.first,
+                color: AppColors.white,
                 borderRadius: BorderRadius.circular(context.widthPct(0.03)),
               ),
               child: Text(
                 'Reference: ${item.reference}',
                 style: TextStyle(
-                  color: AppColors.primaryDark,
+                  color: AppColors.primary,
                   fontSize: context.scaledFont(14),
                   fontWeight: FontWeight.w600,
                 ),

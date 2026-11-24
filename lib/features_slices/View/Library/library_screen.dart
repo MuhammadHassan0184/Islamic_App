@@ -17,71 +17,88 @@ class LibraryScreen extends GetView<LibraryController> {
     return ZiScaffoldB(
       showPagePadding: false,
       backgroundColor: AppColors.background,
-      body: Column(
+      body: Stack(
+        fit: StackFit.expand,
         children: [
-          const LibraryPageHeader(
-            title: 'Islamic Library',
-            subtitle: 'Explore helpful Islamic knowledge',
+          Image.asset(
+            'assets/Home_bg_image.png',
+            fit: BoxFit.cover,
+            alignment: Alignment.center,
+            errorBuilder: (context, error, stackTrace) {
+              return const ColoredBox(color: Colors.white);
+            },
           ),
-          Padding(
-            padding: context.responsivePadding(
-              horizontal: 0.04,
-              vertical: 0.014,
-            ),
-            child: LibrarySearchField(
-              onChanged: (value) =>
-                  controller.collectionSearchQuery.value = value,
-            ),
-          ),
-          Expanded(
-            child: Obx(() {
-              if (controller.isLoading.value) {
-                return const Center(child: CircularProgressIndicator());
-              }
-              if (controller.errorMessage.value.isNotEmpty) {
-                return _errorState(context);
-              }
-
-              final collections = controller.filteredCollections;
-              if (collections.isEmpty) {
-                return _emptyState(
-                  context,
-                  'No collections match your search.',
-                );
-              }
-
-              return GridView.builder(
-                physics: const BouncingScrollPhysics(),
-                padding: context.responsivePadding(
-                  horizontal: 0.04,
-                  vertical: 0.008,
+          SafeArea(
+            child: Column(
+              children: [
+                const LibraryPageHeader(
+                  title: 'Islamic Library',
+                  subtitle: 'Explore helpful Islamic knowledge',
                 ),
-                itemCount: collections.length,
-                gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-                  maxCrossAxisExtent: 220,
-                  mainAxisExtent: context.isMobile
-                      ? context.heightPct(0.225)
-                      : context.heightPct(0.24),
-                  crossAxisSpacing: context.widthPct(0.035),
-                  mainAxisSpacing: context.heightPct(0.015),
+                Padding(
+                  padding: context.responsivePadding(
+                    horizontal: 0.04,
+                    vertical: 0.014,
+                  ),
+                  child: LibrarySearchField(
+                    onChanged: (value) =>
+                        controller.collectionSearchQuery.value = value,
+                  ),
                 ),
-                itemBuilder: (context, index) {
-                  final collection = collections[index];
-                  return LibraryCollectionCard(
-                    collection: collection,
-                    itemCount:
-                        controller.contents[collection.fileName]?.length ?? 0,
-                    onTap: () {
-                      controller.itemSearchQuery.value = '';
-                      Get.toNamed(
-                        AppRoutes.libraryCollection,
-                        arguments: collection,
+                Expanded(
+                  child: Obx(() {
+                    if (controller.isLoading.value) {
+                      return const Center(child: CircularProgressIndicator());
+                    }
+                    if (controller.errorMessage.value.isNotEmpty) {
+                      return _errorState(context);
+                    }
+
+                    final collections = controller.filteredCollections;
+                    if (collections.isEmpty) {
+                      return _emptyState(
+                        context,
+                        'No collections match your search.',
                       );
-                    },
-                  );
-                },
-              );
-            }),
+                    }
+
+                    return GridView.builder(
+                      physics: const BouncingScrollPhysics(),
+                      padding: context.responsivePadding(
+                        horizontal: 0.04,
+                        vertical: 0.008,
+                      ),
+                      itemCount: collections.length,
+                      gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+                        maxCrossAxisExtent: 220,
+                        childAspectRatio:
+                            0.95 / MediaQuery.textScalerOf(context).scale(1),
+                        crossAxisSpacing: 12,
+                        mainAxisSpacing: 12,
+                      ),
+                      itemBuilder: (context, index) {
+                        final collection = collections[index];
+                        return LibraryCollectionCard(
+                          collection: collection,
+                          itemCount:
+                              controller
+                                  .contents[collection.fileName]
+                                  ?.length ??
+                              0,
+                          onTap: () {
+                            controller.itemSearchQuery.value = '';
+                            Get.toNamed(
+                              AppRoutes.libraryCollection,
+                              arguments: collection,
+                            );
+                          },
+                        );
+                      },
+                    );
+                  }),
+                ),
+              ],
+            ),
           ),
         ],
       ),

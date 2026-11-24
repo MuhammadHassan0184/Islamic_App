@@ -56,53 +56,69 @@ class DuaCategoryScreen extends GetView<DuaController> {
         title: Text(title),
         centerTitle: true,
       ),
-      body: Obx(() {
-        final duas = controller.getDuasByCategory(categoryId);
+      body: Stack(
+        fit: StackFit.expand,
+        children: [
+          Image.asset(
+            'assets/Home_bg_image.png',
+            fit: BoxFit.cover,
+            alignment: Alignment.center,
+            errorBuilder: (context, error, stackTrace) {
+              return const ColoredBox(color: Colors.white);
+            },
+          ),
+          Obx(() {
+            final duas = controller.getDuasByCategory(categoryId);
 
-        if (controller.isLoading.value) {
-          return const Center(child: CircularProgressIndicator());
-        }
-        if (duas.isEmpty) {
-          return const Center(child: Text('No Duas found in this category.'));
-        }
+            if (controller.isLoading.value) {
+              return const Center(child: CircularProgressIndicator());
+            }
+            if (duas.isEmpty) {
+              return const Center(
+                child: Text('No Duas found in this category.'),
+              );
+            }
 
-        return ListView.builder(
-          padding: const EdgeInsets.all(16),
-          itemCount: duas.length,
-          itemBuilder: (context, index) {
-            final dua = duas[index];
-            return Card(
-              color: AppColors.white,
-              elevation: 2,
-              margin: const EdgeInsets.only(bottom: 12),
-              child: ListTile(
-                contentPadding: const EdgeInsets.all(16),
-                title: Directionality(
-                  textDirection: TextDirection.rtl,
-                  child: Text(
-                    dua.arabic,
-                    textAlign: TextAlign.right,
-                    style: const TextStyle(
-                      fontSize: 20,
-                      height: 1.8,
-                      fontFamily: 'NotoNaskhArabic',
+            return ListView.builder(
+              padding: const EdgeInsets.all(16),
+              itemCount: duas.length,
+              itemBuilder: (context, index) {
+                final dua = duas[index];
+                return Card(
+                  color: AppColors.white,
+                  elevation: 2,
+                  margin: const EdgeInsets.only(bottom: 12),
+                  child: ListTile(
+                    contentPadding: const EdgeInsets.all(16),
+                    title: Directionality(
+                      textDirection: TextDirection.rtl,
+                      child: Text(
+                        dua.arabic,
+                        textAlign: TextAlign.right,
+                        style: const TextStyle(
+                          fontSize: 20,
+                          height: 1.8,
+                          fontFamily: 'NotoNaskhArabic',
+                        ),
+                      ),
                     ),
+                    subtitle: Padding(
+                      padding: const EdgeInsets.only(top: 10),
+                      child: Text(
+                        dua.urdu.isNotEmpty ? dua.urdu : dua.english,
+                        style: const TextStyle(height: 1.5),
+                      ),
+                    ),
+                    trailing: const Icon(Icons.chevron_right),
+                    onTap: () =>
+                        Get.toNamed(AppRoutes.duaDetail, arguments: dua),
                   ),
-                ),
-                subtitle: Padding(
-                  padding: const EdgeInsets.only(top: 10),
-                  child: Text(
-                    dua.urdu.isNotEmpty ? dua.urdu : dua.english,
-                    style: const TextStyle(height: 1.5),
-                  ),
-                ),
-                trailing: const Icon(Icons.chevron_right),
-                onTap: () => Get.toNamed(AppRoutes.duaDetail, arguments: dua),
-              ),
+                );
+              },
             );
-          },
-        );
-      }),
+          }),
+        ],
+      ),
     );
   }
 

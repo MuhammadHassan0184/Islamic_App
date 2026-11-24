@@ -27,7 +27,20 @@ class AsmaUlHusnaDetailScreen extends StatelessWidget {
     }
 
     return ZiScaffoldB(
-      appBar: ZiAppBarB(title: item.title, centerTitle: true),
+      appBar: AppBar(
+        backgroundColor: AppColors.primary,
+        foregroundColor: AppColors.white,
+        leading: Navigator.of(context).canPop()
+            ? IconButton(
+                tooltip: 'Back',
+                onPressed: () => Navigator.of(context).maybePop(),
+                icon: const Icon(Icons.arrow_back_rounded),
+              )
+            : null,
+        title: Text(item.title),
+        centerTitle: true,
+      ),
+      // ZiAppBarB(title: item.title, centerTitle: true, ),
       backgroundColor: AppColors.background,
       body: ListView(
         padding: context.responsivePadding(horizontal: 0.01, vertical: 0.018),
