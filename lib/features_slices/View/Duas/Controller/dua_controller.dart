@@ -104,11 +104,42 @@ class DuaController extends GetxController {
       'morning': 'assets/Eveningbg.jpg',
       'guidance': 'assets/Dua_bg1.jpg',
       'sleep': 'assets/Sleep.jpg',
+      'daily': 'assets/daily_life.jpg',
+      'distress': 'assets/Safety.jpg',
+      'family': 'assets/Dua_bg2.jpg',
+      'forgiveness': 'assets/forgiveness.jpg',
+      'protection': 'assets/Safety.jpg',
+      'travel': 'assets/Travel.jpg',
+      'worship': 'assets/prayer.jpg',
+      'prayer': 'assets/prayer.jpg',
+      'food_drink': 'assets/Dua_bg3.jpg',
     };
+
+    const fallbackImages = <String>[
+      'assets/Dua_bg1.jpg',
+      'assets/Dua_bg2.jpg',
+      'assets/Dua_bg3.jpg',
+      'assets/daily_life.jpg',
+      'assets/prayer.jpg',
+      'assets/forgiveness.jpg',
+      'assets/Safety.jpg',
+      'assets/Sleep.jpg',
+      'assets/Travel.jpg',
+      'assets/Eveningbg.jpg',
+    ];
+
     const colors = <String, int>{
       'morning': 0xFF858666,
       'guidance': 0xFF515C61,
       'sleep': 0xFF426D86,
+      'daily': 0xFF527C72,
+      'distress': 0xFF71868B,
+      'family': 0xFF515C61,
+      'forgiveness': 0xFF777C9C,
+      'protection': 0xFF81749C,
+      'travel': 0xFF987B63,
+      'worship': 0xFF668B76,
+      'prayer': 0xFF668B76,
     };
 
     final grouped = <String, List<DuaModel>>{};
@@ -116,14 +147,21 @@ class DuaController extends GetxController {
       grouped.putIfAbsent(dua.category, () => <DuaModel>[]).add(dua);
     }
 
+    final entries = grouped.entries.toList();
     categories.assignAll(
-      grouped.entries.map((entry) {
+      entries.asMap().entries.map((indexedEntry) {
+        final index = indexedEntry.key;
+        final entry = indexedEntry.value;
+        final catKey = entry.key.toLowerCase().trim();
+        final img =
+            images[catKey] ?? fallbackImages[index % fallbackImages.length];
+
         return DuaCategory(
           id: entry.key,
           title: _categoryTitle(entry.key),
           count: entry.value.length,
-          image: images[entry.key],
-          colorValue: colors[entry.key] ?? 0xFF527C72,
+          image: img,
+          colorValue: colors[catKey] ?? 0xFF527C72,
         );
       }).toList(),
     );
