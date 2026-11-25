@@ -207,8 +207,8 @@ class PrayerTimeTile extends StatelessWidget {
                 final enabled = prayer.isReminderEnabled.value;
                 return IconButton(
                   tooltip: enabled
-                      ? 'Mute ${prayer.name} alarm'
-                      : 'Enable ${prayer.name} alarm',
+                      ? 'Mute ${prayer.name} notification'
+                      : 'Enable ${prayer.name} notification',
                   onPressed: onSoundTap,
                   padding: EdgeInsets.zero,
                   constraints: const BoxConstraints(
@@ -244,8 +244,12 @@ class PrayerTimeTile extends StatelessWidget {
 
   IconData _alarmIconForMode(PrayerAlarmMode mode) {
     switch (mode) {
+      /*
+      // Commented out: Alarm icon hidden, using notification icon
       case PrayerAlarmMode.alarm:
         return Icons.alarm_on_rounded;
+      */
+      case PrayerAlarmMode.alarm:
       case PrayerAlarmMode.notification:
         return Icons.notifications_active_rounded;
       case PrayerAlarmMode.silent:

@@ -65,7 +65,7 @@ Future<void> showAlarmSettingsSheet(
     type: ZiFeedOverType.bottomSheet,
     size: ZiFeedOverSize.auto,
     dismissOutside: true,
-    title: 'Alarms & Notifications',
+    title: 'Prayer Notifications',
     style: ZiFeedOverStyle.defaults(context).copyWith(
       backgroundColor: AppColors.white,
       radius: ZiRadius.xl,
@@ -440,13 +440,15 @@ class _CustomPrayerSheetBodyState extends State<_CustomPrayerSheetBody> {
             borderRadius: BorderRadius.circular(ZiRadius.md),
           ),
           child: ZiSwitchTile(
-            label: 'Enable Prayer Alarm',
+            label: 'Enable Prayer Notification',
             value: _reminderEnabled,
             onChanged: (value) => setState(() => _reminderEnabled = value),
           ),
         ),
 
         if (_reminderEnabled) ...[
+          /*
+          // Commented out: Alarm Style selector hidden so alarm system does not show in UI
           ziGap(14),
           Text(
             'Alarm Style',
@@ -507,6 +509,7 @@ class _CustomPrayerSheetBodyState extends State<_CustomPrayerSheetBody> {
               );
             }).toList(),
           ),
+          */
           ziGap(14),
           Text(
             'Remind Me',
@@ -951,7 +954,7 @@ class _AlarmSettingsSheetBody extends StatelessWidget {
               borderRadius: BorderRadius.circular(ZiRadius.md),
             ),
             child: ZiSwitchTile(
-              label: 'Enable Prayer Alarms & Alerts',
+              label: 'Enable Prayer Notifications',
               value: enabled,
               onChanged: (_) => controller.toggleAdhan(),
             ),
@@ -968,7 +971,7 @@ class _AlarmSettingsSheetBody extends StatelessWidget {
                 child: Text(
                   enabled
                       ? '$scheduled upcoming prayer alerts scheduled for the next 7 days'
-                      : 'All prayer alarms are currently paused',
+                      : 'All prayer notifications are currently paused',
                   style: ZiTypoStyles.bodySm.copyWith(
                     color: AppColors.textSecondary,
                   ),
@@ -976,8 +979,67 @@ class _AlarmSettingsSheetBody extends StatelessWidget {
               ),
             ],
           ),
+          /*
+          // Commented out: Exact Alarms permission banner hidden (alarm system disabled)
+          if (!controller.canScheduleExactAlarms.value) ...[
+            ziGap(12),
+            Container(
+              padding: const EdgeInsets.all(12),
+              decoration: BoxDecoration(
+                color: AppColors.warning.withValues(alpha: 0.12),
+                borderRadius: BorderRadius.circular(ZiRadius.md),
+                border: Border.all(
+                  color: AppColors.warning.withValues(alpha: 0.4),
+                ),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      const Icon(
+                        Icons.warning_amber_rounded,
+                        color: AppColors.warning,
+                        size: 20,
+                      ),
+                      ziGap(8),
+                      Text(
+                        'Exact Alarms Permission Required',
+                        style: ZiTypoStyles.titleXsm.copyWith(
+                          color: AppColors.textPrimary,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                    ],
+                  ),
+                  ziGap(6),
+                  Text(
+                    'To ring on time when the screen is off and app is closed, allow Exact Alarms in system settings.',
+                    style: ZiTypoStyles.caption.copyWith(
+                      color: AppColors.textSecondary,
+                      fontSize: 11.5,
+                    ),
+                  ),
+                  ziGap(8),
+                  ZiButtonB(
+                    variant: ZiButtonVariantB.outline,
+                    label: 'Allow Exact Alarms',
+                    style: ZiButtonStyleB(
+                      height: 34,
+                      borderColor: AppColors.warning,
+                      foregroundColor: AppColors.warning,
+                      borderRadius: BorderRadius.circular(ZiRadius.sm),
+                    ),
+                    action: controller.requestExactAlarmPermission,
+                  ),
+                ],
+              ),
+            ),
+          ],
+          */
+          /*
+          // Commented out: Alarm mode selector hidden, defaulting to standard notifications
           ziGap(16),
-
           Text(
             'Default Alarm Mode',
             style: ZiTypoStyles.titleSm.copyWith(color: AppColors.textPrimary),
@@ -1051,6 +1113,7 @@ class _AlarmSettingsSheetBody extends StatelessWidget {
               );
             }).toList(),
           ),
+          */
           ziGap(8),
 
           Text(
@@ -1087,13 +1150,14 @@ class _AlarmSettingsSheetBody extends StatelessWidget {
               borderRadius: BorderRadius.circular(ZiRadius.md),
             ),
             child: ZiSwitchTile(
-              label: 'Vibrate on Alarm',
+              label: 'Vibrate on Notification',
               value: vibrate,
               onChanged: controller.setVibrateEnabled,
             ),
           ),
+          /*
+          // Commented out: Test notification button removed from UI
           ziGap(16),
-
           ZiButtonB(
             variant: ZiButtonVariantB.primary,
             expand: true,
@@ -1102,7 +1166,7 @@ class _AlarmSettingsSheetBody extends StatelessWidget {
               color: AppColors.white,
               size: 18,
             ),
-            label: 'Test Alarm Notification',
+            label: 'Test Notification',
             style: ZiButtonStyleB(
               backgroundColor: AppColors.primary,
               foregroundColor: AppColors.white,
@@ -1110,6 +1174,56 @@ class _AlarmSettingsSheetBody extends StatelessWidget {
             ),
             action: controller.testAlarmNotification,
           ),
+          */
+          /*
+          // Commented out: 10s Alarm test button and battery tip hidden from UI
+          ziGap(10),
+          ZiButtonB(
+            variant: ZiButtonVariantB.outline,
+            expand: true,
+            icon: const Icon(
+              Icons.timer_outlined,
+              color: AppColors.primary,
+              size: 18,
+            ),
+            label: 'Schedule 10s Alarm (Test Off-Screen)',
+            style: ZiButtonStyleB(
+              borderColor: AppColors.primary,
+              foregroundColor: AppColors.primary,
+              borderRadius: BorderRadius.circular(ZiRadius.md),
+            ),
+            action: () => controller.scheduleTestAlarmInSeconds(seconds: 10),
+          ),
+          ziGap(14),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+            decoration: BoxDecoration(
+              color: AppColors.background,
+              borderRadius: BorderRadius.circular(ZiRadius.md),
+              border: Border.all(color: AppColors.cardBorder),
+            ),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Icon(
+                  Icons.battery_charging_full_rounded,
+                  color: AppColors.primary,
+                  size: 18,
+                ),
+                ziGap(10),
+                Expanded(
+                  child: Text(
+                    'Tip: For screen-off alarms to ring without delay, set Battery to "Unrestricted" for Islam786 in your phone\'s App Info settings.',
+                    style: ZiTypoStyles.caption.copyWith(
+                      color: AppColors.textSecondary,
+                      fontSize: 11,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          */
         ],
       );
     });

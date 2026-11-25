@@ -81,7 +81,7 @@ class NamazHeader extends StatelessWidget {
                   clipBehavior: Clip.none,
                   children: [
                     IconButton(
-                      tooltip: 'Alarm & Notification Settings',
+                      tooltip: 'Notification Settings',
                       onPressed: onAlarmSettingsTap,
                       icon: Icon(
                         active

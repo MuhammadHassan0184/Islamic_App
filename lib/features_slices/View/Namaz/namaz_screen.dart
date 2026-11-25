@@ -30,6 +30,8 @@ class _NamazScreenState extends State<NamazScreen> with WidgetsBindingObserver {
     controller = Get.find<NamazController>();
     controller.startLiveTicker();
 
+    /*
+    // Commented out: Alarm system dialog disabled, using notifications only
     _alarmWorker = ever(controller.activeForegroundAlarm, (prayer) {
       if (!mounted || prayer == null || _isAlarmDialogOpen) return;
       _isAlarmDialogOpen = true;
@@ -42,12 +44,14 @@ class _NamazScreenState extends State<NamazScreen> with WidgetsBindingObserver {
         },
       );
     });
+    */
   }
 
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
     if (state == AppLifecycleState.resumed) {
       controller.refreshCurrentTime();
+      controller.checkExactAlarmPermission();
     }
   }
 
@@ -122,6 +126,85 @@ class _NamazScreenState extends State<NamazScreen> with WidgetsBindingObserver {
                               onAlarmModeTap: () =>
                                   showAlarmSettingsSheet(context, controller),
                             ),
+
+                            /*
+                            // Commented out: Exact Alarm Permission banner hidden (alarm system disabled, notifications used)
+                            Obx(() {
+                              if (controller.canScheduleExactAlarms.value) {
+                                return const SizedBox.shrink();
+                              }
+                              return Container(
+                                margin: EdgeInsets.only(
+                                  top: context.heightPct(0.016),
+                                ),
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 14,
+                                  vertical: 12,
+                                ),
+                                decoration: BoxDecoration(
+                                  color: AppColors.warning.withValues(alpha: 0.12),
+                                  borderRadius: BorderRadius.circular(ZiRadius.md),
+                                  border: Border.all(
+                                    color: AppColors.warning.withValues(alpha: 0.35),
+                                  ),
+                                ),
+                                child: Row(
+                                  children: [
+                                    const Icon(
+                                      Icons.alarm_off_rounded,
+                                      color: AppColors.warning,
+                                      size: 26,
+                                    ),
+                                    const SizedBox(width: 12),
+                                    Expanded(
+                                      child: Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            'Alarms & Reminders Permission Needed',
+                                            style: TextStyle(
+                                              fontSize: context
+                                                  .scaledFont(13)
+                                                  .clamp(12.0, 15.0),
+                                              fontWeight: FontWeight.w700,
+                                              color: AppColors.textPrimary,
+                                            ),
+                                          ),
+                                          const SizedBox(height: 3),
+                                          Text(
+                                            'Required on Android 12+ for prayer alarms to wake your phone and ring on time when screen is off.',
+                                            style: TextStyle(
+                                              fontSize: context
+                                                  .scaledFont(11)
+                                                  .clamp(10.5, 13.0),
+                                              color: AppColors.textSecondary,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    const SizedBox(width: 10),
+                                    ZiButtonB(
+                                      variant: ZiButtonVariantB.primary,
+                                      label: 'Allow',
+                                      style: ZiButtonStyleB(
+                                        height: 34,
+                                        backgroundColor: AppColors.warning,
+                                        foregroundColor: AppColors.white,
+                                        borderRadius: BorderRadius.circular(
+                                          ZiRadius.sm,
+                                        ),
+                                        padding: const EdgeInsets.symmetric(
+                                          horizontal: 14,
+                                        ),
+                                      ),
+                                      action: controller.requestExactAlarmPermission,
+                                    ),
+                                  ],
+                                ),
+                              );
+                            }),
+                            */
 
                             SizedBox(height: context.heightPct(0.024)),
 

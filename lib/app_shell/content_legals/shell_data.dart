@@ -64,8 +64,9 @@ abstract class ShellData {
 
   // ─── ZGate ────────────────────────────────────────────────
   static const ShellContent zGate = ShellContent(
-    title: 'Welcome to ZitoKit',
-    info: 'Sign in or create an account\nand launch your digital store instantly.',
+    title: 'Welcome to Islam786',
+    info:
+        'Your comprehensive companion for daily prayers, authentic Duas, Azkar, and Islamic guidance.',
   );
 
   // ─── Auth ─────────────────────────────────────────────────

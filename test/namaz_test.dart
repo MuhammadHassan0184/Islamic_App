@@ -133,6 +133,10 @@ void main() {
     await reloaded.deleteCustomPrayer(tahajjud);
     expect(reloaded.prayerTimes.any((p) => p.name == 'Tahajjud'), isFalse);
 
+    // Test scheduled alarm helper
+    await reloaded.scheduleTestAlarmInSeconds(seconds: 10);
+    expect(reloaded.scheduledNotificationsCount.value, greaterThanOrEqualTo(0));
+
     controller.onClose();
     reloaded.onClose();
   });

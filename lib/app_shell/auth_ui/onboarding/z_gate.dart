@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:islam786/Config/Routes/app_routes.dart';
+import 'package:islam786/Services/app_permission_service.dart';
 import 'package:zi_core/zi_core_io.dart';
 
 import '../../app_shell_io.dart';
@@ -49,7 +50,12 @@ class ZAppGateView extends StatelessWidget {
           ZiButtonB(
             expand: true,
             label: "Get Started",
-            action: () => Get.offNamed(AppRoutes.home),
+            action: () async {
+              await AppPermissionService.showPermissionSheet(
+                context,
+                onCompleted: () => Get.offAllNamed(AppRoutes.home),
+              );
+            },
           ),
         ],
       ),

@@ -116,7 +116,7 @@ class NextPrayerCard extends StatelessWidget {
                                       ),
                                       ziGap(6),
                                       Text(
-                                        enabled ? 'ALARM ON' : 'MUTED',
+                                        enabled ? 'NOTIFICATIONS ON' : 'MUTED',
                                         style: TextStyle(
                                           color: AppColors.white,
                                           fontSize: context
@@ -132,6 +132,8 @@ class NextPrayerCard extends StatelessWidget {
                               ),
                             );
                           }),
+                          /*
+                          // Commented out: Alarm mode selector pill hidden so alarm system does not show in UI
                           ziGap(8),
                           Obx(() {
                             final mode = controller.globalAlarmMode.value;
@@ -171,6 +173,7 @@ class NextPrayerCard extends StatelessWidget {
                               ),
                             );
                           }),
+                          */
                         ],
                       ),
 

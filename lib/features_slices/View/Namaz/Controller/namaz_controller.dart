@@ -10,7 +10,7 @@ import '../Model/prayer_time_model.dart';
 import '../Services/namaz_notification_service.dart';
 import '../Services/namaz_time_calculator.dart';
 
-class NamazController extends GetxController {
+class NamazController extends GetxController with WidgetsBindingObserver {
   NamazController({
     NamazNotificationService? notificationService,
     this.enableTicker = true,
@@ -46,11 +46,13 @@ class NamazController extends GetxController {
   final Rx<DateTime> currentTime = DateTime.now().obs;
 
   final RxBool adhanEnabled = true.obs;
-  final Rx<PrayerAlarmMode> globalAlarmMode = PrayerAlarmMode.alarm.obs;
+  // Default alarm mode set to notification so alarm system is not used
+  final Rx<PrayerAlarmMode> globalAlarmMode = PrayerAlarmMode.notification.obs;
   final RxInt defaultLeadMinutes = 0.obs;
   final RxBool vibrateEnabled = true.obs;
   final RxBool use24HourFormat = false.obs;
   final RxInt scheduledNotificationsCount = 0.obs;
+  final RxBool canScheduleExactAlarms = true.obs;
 
   final RxString cityName = ''.obs;
   final RxString areaName = ''.obs;
@@ -82,6 +84,7 @@ class NamazController extends GetxController {
   @override
   void onInit() {
     super.onInit();
+    WidgetsBinding.instance.addObserver(this);
     _applyDefaultCity();
     _prepareWeekDays(selectToday: true);
     recalculatePrayerTimes();
@@ -114,7 +117,16 @@ class NamazController extends GetxController {
   }
 
   @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state == AppLifecycleState.resumed) {
+      refreshCurrentTime();
+      checkExactAlarmPermission();
+    }
+  }
+
+  @override
   void onClose() {
+    WidgetsBinding.instance.removeObserver(this);
     _ticker?.cancel();
     super.onClose();
   }
@@ -170,7 +182,8 @@ class NamazController extends GetxController {
         _rescheduleNotifications();
       }
 
-      _checkForegroundAlarmTrigger(now);
+      // Commented out: Foreground alarm popup disabled, notifications used instead
+      // _checkForegroundAlarmTrigger(now);
     });
   }
 
@@ -253,6 +266,7 @@ class NamazController extends GetxController {
           recalculatePrayerTimes();
         },
       );
+      await checkExactAlarmPermission();
       await _rescheduleNotifications();
     } catch (error, stackTrace) {
       debugPrint('Failed to restore Namaz preferences: $error');
@@ -734,16 +748,40 @@ class NamazController extends GetxController {
   Future<void> testAlarmNotification() async {
     await _notificationService.requestPermissions();
     final sent = await _notificationService.showTestAlarm(
-      mode: globalAlarmMode.value,
+      mode: PrayerAlarmMode.notification,
       vibrate: vibrateEnabled.value,
     );
     if (sent) {
       _showSuccess('Test prayer notification sent');
-    } else {
-      // Fallback preview inside app when platform notifications aren't active (e.g. web/test)
-      activeForegroundAlarm.value = nextPrayer ??
-          (prayerTimes.isNotEmpty ? prayerTimes.first : null);
     }
+  }
+
+  Future<void> scheduleTestAlarmInSeconds({int seconds = 10}) async {
+    /*
+    // Commented out: 10s exact alarm test disabled
+    await _notificationService.requestPermissions();
+    await checkExactAlarmPermission();
+    if (!canScheduleExactAlarms.value) {
+      AppSnackbar.warning(
+        'Exact alarm permission required. Please allow "Alarms & Reminders" in settings.',
+      );
+      await requestExactAlarmPermission();
+      return;
+    }
+    final ok = await _notificationService.scheduleTestAlarm(
+      mode: globalAlarmMode.value,
+      vibrate: vibrateEnabled.value,
+      seconds: seconds,
+    );
+    if (ok) {
+      _showSuccess(
+        'Alarm scheduled for $seconds seconds! Lock your phone or exit app to test.',
+      );
+    } else {
+      _showWarning('Failed to schedule test alarm.');
+    }
+    */
+    await testAlarmNotification();
   }
 
   Future<void> snoozeForegroundAlarm({int minutes = 5}) async {
@@ -817,6 +855,24 @@ class NamazController extends GetxController {
   Future<void> toggleTimeFormat(bool use24Hour) async {
     use24HourFormat.value = use24Hour;
     await _persistPreferences();
+    await _rescheduleNotifications();
+  }
+
+  Future<void> checkExactAlarmPermission() async {
+    canScheduleExactAlarms.value =
+        await _notificationService.canScheduleExactAlarms();
+  }
+
+  Future<void> checkExactAlarmsPermission() => checkExactAlarmPermission();
+
+  Future<void> requestExactAlarmPermission() async {
+    await _notificationService.requestExactAlarmsPermission();
+    await checkExactAlarmPermission();
+    await _rescheduleNotifications();
+  }
+
+  /// Public API to recalculate and reschedule upcoming prayer alarms
+  Future<void> scheduleAllPrayers() async {
     await _rescheduleNotifications();
   }
 

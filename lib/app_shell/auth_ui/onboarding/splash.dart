@@ -1,6 +1,9 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:islam786/Config/Routes/app_routes.dart';
+import 'package:islam786/Services/app_permission_service.dart';
 import 'package:zi_core/zi_core_io.dart';
 
 import '../../app_shell_io.dart';
@@ -33,11 +36,18 @@ class _ZiSplashScreenState extends State<ZiSplashScreen>
     _controller.forward();
     _controller.addStatusListener((status) {
       if (status == AnimationStatus.completed) {
-        Timer(const Duration(seconds: 1), () {
-          Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(builder: (_) => const ZAppGateView()),
-          );
+        Timer(const Duration(seconds: 1), () async {
+          if (!mounted) return;
+          final isFirst = await AppPermissionService.isFirstLaunch();
+          if (!mounted) return;
+          if (isFirst) {
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (_) => const ZAppGateView()),
+            );
+          } else {
+            Get.offAllNamed(AppRoutes.home);
+          }
         });
       }
     });

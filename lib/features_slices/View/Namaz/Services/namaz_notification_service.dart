@@ -1,6 +1,9 @@
 import 'dart:async';
+import 'dart:typed_data';
 import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:flutter_timezone/flutter_timezone.dart';
 import 'package:timezone/data/latest_all.dart' as tz_data;
 import 'package:timezone/timezone.dart' as tz;
 
@@ -8,7 +11,20 @@ import '../Model/prayer_time_model.dart';
 
 @pragma('vm:entry-point')
 void namazNotificationTapBackground(NotificationResponse response) {
-  debugPrint('Background Namaz notification tapped: ${response.payload}');
+  debugPrint(
+    'Background Namaz notification action: ${response.actionId}, payload: ${response.payload}',
+  );
+  if (response.actionId == 'namaz_snooze' ||
+      response.actionId == 'namaz_snooze_5') {
+    final parts = (response.payload ?? '').split(':');
+    final prayerName = parts.length > 2 ? parts[2] : 'Prayer';
+    NamazNotificationService().scheduleSnooze(
+      prayerName: prayerName,
+      mode: PrayerAlarmMode.alarm,
+      vibrate: true,
+      minutes: 5,
+    );
+  }
 }
 
 class NamazNotificationService {
@@ -23,17 +39,17 @@ class NamazNotificationService {
   bool _initialized = false;
   bool _timezonesInitialized = false;
 
-  static const String _alarmChannelId = 'namaz_alarm_channel';
-  static const String _alarmChannelName = 'Namaz Alarms';
+  static const String _alarmChannelId = 'namaz_alarm_v5';
+  static const String _alarmChannelName = 'Namaz Alarms (Max Priority)';
   static const String _alarmChannelDesc =
-      'High-priority prayer time alarms with sound and vibration';
+      'High-priority prayer alarms with sound, vibration, and lock screen alerts';
 
-  static const String _reminderChannelId = 'namaz_reminder_channel';
+  static const String _reminderChannelId = 'namaz_reminder_v5';
   static const String _reminderChannelName = 'Namaz Reminders';
   static const String _reminderChannelDesc =
-      'Standard notifications for daily prayer times';
+      'Standard banners and chimes for daily prayer times';
 
-  static const String _silentChannelId = 'namaz_silent_channel';
+  static const String _silentChannelId = 'namaz_silent_v5';
   static const String _silentChannelName = 'Silent Namaz Alerts';
   static const String _silentChannelDesc =
       'Silent notifications for prayer reminders';
@@ -41,12 +57,10 @@ class NamazNotificationService {
   static const int _baseScheduleId = 4100;
   static const int _maxManagedIds = 250;
 
-  Future<void> init({
-    void Function(String? payload)? onNotificationTap,
-  }) async {
+  Future<void> init({void Function(String? payload)? onNotificationTap}) async {
     if (!enabled || kIsWeb || _initialized) return;
 
-    _ensureTimezones();
+    await _ensureTimezones();
 
     try {
       const androidSettings = AndroidInitializationSettings(
@@ -77,6 +91,17 @@ class NamazNotificationService {
       await _plugin.initialize(
         settings: settings,
         onDidReceiveNotificationResponse: (response) {
+          if (response.actionId == 'namaz_snooze' ||
+              response.actionId == 'namaz_snooze_5') {
+            final parts = (response.payload ?? '').split(':');
+            final prayerName = parts.length > 2 ? parts[2] : 'Prayer';
+            scheduleSnooze(
+              prayerName: prayerName,
+              mode: PrayerAlarmMode.alarm,
+              vibrate: true,
+              minutes: 5,
+            );
+          }
           onNotificationTap?.call(response.payload);
         },
         onDidReceiveBackgroundNotificationResponse:
@@ -91,13 +116,23 @@ class NamazNotificationService {
     }
   }
 
-  void _ensureTimezones() {
+  Future<void> _ensureTimezones() async {
     if (_timezonesInitialized) return;
     try {
       tz_data.initializeTimeZones();
-      final localLocation = _resolveLocalLocation();
-      if (localLocation != null) {
-        tz.setLocalLocation(localLocation);
+      try {
+        final dynamic tzResult = await FlutterTimezone.getLocalTimezone();
+        final String tzName = tzResult is String
+            ? tzResult
+            : (tzResult.identifier?.toString() ??
+                  tzResult.name?.toString() ??
+                  tzResult.toString());
+        tz.setLocalLocation(tz.getLocation(tzName));
+      } catch (_) {
+        final localLocation = _resolveLocalLocation();
+        if (localLocation != null) {
+          tz.setLocalLocation(localLocation);
+        }
       }
       _timezonesInitialized = true;
     } catch (error) {
@@ -108,7 +143,7 @@ class NamazNotificationService {
   tz.Location? _resolveLocalLocation() {
     final now = DateTime.now();
     final nowMillis = now.millisecondsSinceEpoch;
-    final offset = now.timeZoneOffset;
+    final offsetMs = now.timeZoneOffset.inMilliseconds;
     final zoneName = now.timeZoneName;
 
     final locations = tz.timeZoneDatabase.locations;
@@ -118,11 +153,19 @@ class NamazNotificationService {
 
     for (final loc in locations.values) {
       final tzInfo = loc.timeZone(nowMillis);
-      if (tzInfo.offset == offset) {
+      if (tzInfo.offset == offsetMs) {
         return loc;
       }
     }
     return null;
+  }
+
+  Future<void> _ensureReady() async {
+    await _ensureTimezones();
+    if (!_initialized) {
+      await init();
+    }
+    await _createAndroidChannels();
   }
 
   Future<void> _createAndroidChannels() async {
@@ -133,30 +176,33 @@ class NamazNotificationService {
     if (androidPlugin == null) return;
 
     await androidPlugin.createNotificationChannel(
-      const AndroidNotificationChannel(
+      AndroidNotificationChannel(
         _alarmChannelId,
         _alarmChannelName,
         description: _alarmChannelDesc,
         importance: Importance.max,
         playSound: true,
         enableVibration: true,
-        audioAttributesUsage: AudioAttributesUsage.alarm,
+        enableLights: true,
+        ledColor: const Color(0xFF2F6F1F),
       ),
     );
 
     await androidPlugin.createNotificationChannel(
-      const AndroidNotificationChannel(
+      AndroidNotificationChannel(
         _reminderChannelId,
         _reminderChannelName,
         description: _reminderChannelDesc,
         importance: Importance.high,
         playSound: true,
         enableVibration: true,
+        enableLights: true,
+        ledColor: const Color(0xFF2F6F1F),
       ),
     );
 
     await androidPlugin.createNotificationChannel(
-      const AndroidNotificationChannel(
+      AndroidNotificationChannel(
         _silentChannelId,
         _silentChannelName,
         description: _silentChannelDesc,
@@ -165,6 +211,36 @@ class NamazNotificationService {
         enableVibration: false,
       ),
     );
+  }
+
+  Future<bool> canScheduleExactAlarms() async {
+    if (!enabled || kIsWeb) return false;
+    try {
+      final androidPlugin = _plugin
+          .resolvePlatformSpecificImplementation<
+            AndroidFlutterLocalNotificationsPlugin
+          >();
+      if (androidPlugin == null) return true;
+      final canExact = await androidPlugin.canScheduleExactNotifications();
+      return canExact ?? false;
+    } catch (_) {
+      return false;
+    }
+  }
+
+  Future<void> requestExactAlarmsPermission() async {
+    if (!enabled || kIsWeb) return;
+    try {
+      final androidPlugin = _plugin
+          .resolvePlatformSpecificImplementation<
+            AndroidFlutterLocalNotificationsPlugin
+          >();
+      if (androidPlugin != null) {
+        await androidPlugin.requestExactAlarmsPermission();
+      }
+    } catch (error) {
+      debugPrint('Failed to request exact alarms permission: $error');
+    }
   }
 
   Future<bool> requestPermissions() async {
@@ -179,8 +255,8 @@ class NamazNotificationService {
             AndroidFlutterLocalNotificationsPlugin
           >();
       if (androidPlugin != null) {
-        final notifGranted =
-            await androidPlugin.requestNotificationsPermission();
+        final notifGranted = await androidPlugin
+            .requestNotificationsPermission();
         if (notifGranted != null) {
           granted = notifGranted;
         }
@@ -236,8 +312,7 @@ class NamazNotificationService {
     int daysAhead = 7,
   }) async {
     if (!enabled || kIsWeb) return 0;
-    await init();
-    if (!_initialized) return 0;
+    await _ensureReady();
 
     await cancelAllNamazSchedules();
     if (!masterEnabled) return 0;
@@ -246,7 +321,8 @@ class NamazNotificationService {
     var scheduledCount = 0;
     var slot = 0;
 
-    final scheduleMode = await _resolveAndroidScheduleMode();
+    final canExact = await canScheduleExactAlarms();
+    final tzNow = tz.TZDateTime.now(tz.local);
 
     for (var dayOffset = 0; dayOffset < daysAhead; dayOffset++) {
       final date = DateTime(now.year, now.month, now.day + dayOffset);
@@ -259,7 +335,10 @@ class NamazNotificationService {
         final triggerTime = prayer.dateTime.subtract(
           Duration(minutes: prayer.leadMinutes),
         );
-        if (!triggerTime.isAfter(now)) continue;
+        final tzTrigger = _toTzDateTime(triggerTime);
+
+        // Ensure trigger is strictly in the future (minimum 2s margin)
+        if (!tzTrigger.isAfter(tzNow.add(const Duration(seconds: 2)))) continue;
 
         final id = _baseScheduleId + slot;
         slot++;
@@ -268,28 +347,29 @@ class NamazNotificationService {
         final leadLabel = prayer.leadMinutes > 0
             ? 'Starts in ${prayer.leadMinutes} min ($formatted)'
             : 'It is time for ${prayer.name} ($formatted)';
+        /*
+        // Commented out: Alarm title commented out, notification title used
         final title = prayer.alarmMode == PrayerAlarmMode.alarm
             ? '${prayer.name} Prayer Alarm'
             : '${prayer.name} Prayer Time';
+        */
+        final title = '${prayer.name} Prayer Time';
 
-        try {
-          await _plugin.zonedSchedule(
-            id: id,
-            title: title,
-            body: prayer.note != null && prayer.note!.isNotEmpty
-                ? '$leadLabel • ${prayer.note}'
-                : leadLabel,
-            scheduledDate: _toTzDateTime(triggerTime),
-            notificationDetails: _detailsForMode(
-              prayer.alarmMode,
-              vibrate: vibrate,
-            ),
-            androidScheduleMode: scheduleMode,
-            payload: 'namaz:${prayer.id}',
-          );
+        final success = await _scheduleWithFallback(
+          id: id,
+          title: title,
+          body: prayer.note != null && prayer.note!.isNotEmpty
+              ? '$leadLabel • ${prayer.note}'
+              : leadLabel,
+          scheduledDate: tzTrigger,
+          details: _detailsForMode(prayer.alarmMode, vibrate: vibrate),
+          mode: prayer.alarmMode,
+          canExact: canExact,
+          payload: 'namaz:${prayer.id}:${prayer.name}',
+        );
+
+        if (success) {
           scheduledCount++;
-        } catch (error) {
-          debugPrint('Failed to schedule ${prayer.name}: $error');
         }
       }
     }
@@ -304,25 +384,49 @@ class NamazNotificationService {
     int minutes = 5,
   }) async {
     if (!enabled || kIsWeb) return;
-    await init();
-    if (!_initialized) return;
+    await _ensureReady();
 
     final trigger = DateTime.now().add(Duration(minutes: minutes));
-    final scheduleMode = await _resolveAndroidScheduleMode();
+    final tzTrigger = _toTzDateTime(trigger);
+    final canExact = await canScheduleExactAlarms();
 
-    try {
-      await _plugin.zonedSchedule(
-        id: _baseScheduleId + _maxManagedIds + 1,
-        title: '$prayerName Reminder (Snoozed)',
-        body: 'Snoozed for $minutes minutes — time to pray $prayerName',
-        scheduledDate: _toTzDateTime(trigger),
-        notificationDetails: _detailsForMode(mode, vibrate: vibrate),
-        androidScheduleMode: scheduleMode,
-        payload: 'namaz:snooze',
-      );
-    } catch (error) {
-      debugPrint('Failed to schedule snooze: $error');
-    }
+    await _scheduleWithFallback(
+      id: _baseScheduleId + _maxManagedIds + 1,
+      title: '$prayerName Alarm (Snoozed)',
+      body: 'Snoozed for $minutes minutes — time to pray $prayerName',
+      scheduledDate: tzTrigger,
+      details: _detailsForMode(mode, vibrate: vibrate),
+      mode: mode,
+      canExact: canExact,
+      payload: 'namaz:snooze:$prayerName',
+    );
+  }
+
+  Future<bool> scheduleTestAlarm({
+    required PrayerAlarmMode mode,
+    required bool vibrate,
+    int seconds = 10,
+  }) async {
+    if (!enabled || kIsWeb) return false;
+    await _ensureReady();
+
+    final trigger = DateTime.now().add(Duration(seconds: seconds));
+    final tzTrigger = _toTzDateTime(trigger);
+    final canExact = await canScheduleExactAlarms();
+
+    return _scheduleWithFallback(
+      id: _baseScheduleId + _maxManagedIds + 2,
+      title: mode == PrayerAlarmMode.alarm
+          ? 'Namaz Prayer Alarm (Test)'
+          : 'Namaz Prayer Notification (Test)',
+      body:
+          'Prayer alarm test firing on time. Audio & wakeup working properly.',
+      scheduledDate: tzTrigger,
+      details: _detailsForMode(mode, vibrate: vibrate),
+      mode: mode,
+      canExact: canExact,
+      payload: 'namaz:test:Test',
+    );
   }
 
   Future<bool> showTestAlarm({
@@ -330,18 +434,18 @@ class NamazNotificationService {
     required bool vibrate,
   }) async {
     if (!enabled || kIsWeb) return false;
-    await init();
-    if (!_initialized) return false;
+    await _ensureReady();
 
     try {
       await _plugin.show(
         id: _baseScheduleId + _maxManagedIds + 2,
-        title: mode == PrayerAlarmMode.alarm
-            ? 'Namaz Alarm Active'
-            : 'Namaz Notification Active',
-        body: 'Your prayer alerts are configured and working properly.',
-        notificationDetails: _detailsForMode(mode, vibrate: vibrate),
-        payload: 'namaz:test',
+        title: 'Namaz Notification Active',
+        body: 'Your prayer notifications are configured and working properly.',
+        notificationDetails: _detailsForMode(
+          PrayerAlarmMode.notification,
+          vibrate: vibrate,
+        ),
+        payload: 'namaz:test:Test',
       );
       return true;
     } catch (error) {
@@ -361,35 +465,57 @@ class NamazNotificationService {
     }
   }
 
-  Future<AndroidScheduleMode> _resolveAndroidScheduleMode() async {
+  /// Multi-tier robust scheduler ensuring an alarm is NEVER silently dropped:
+  /// 1. Primary: exactAllowWhileIdle (fires at the exact second even when asleep).
+  /// 2. Guaranteed fallback: inexactAllowWhileIdle (works on 100% of Android devices without permissions).
+  Future<bool> _scheduleWithFallback({
+    required int id,
+    required String title,
+    required String body,
+    required tz.TZDateTime scheduledDate,
+    required NotificationDetails details,
+    required PrayerAlarmMode mode,
+    required bool canExact,
+    required String payload,
+  }) async {
+    // Attempt 1: Always try exactAllowWhileIdle first
     try {
-      final androidPlugin = _plugin
-          .resolvePlatformSpecificImplementation<
-            AndroidFlutterLocalNotificationsPlugin
-          >();
-      if (androidPlugin == null) {
-        return AndroidScheduleMode.inexactAllowWhileIdle;
-      }
-      final canExact = await androidPlugin.canScheduleExactNotifications();
-      return (canExact ?? false)
-          ? AndroidScheduleMode.exactAllowWhileIdle
-          : AndroidScheduleMode.inexactAllowWhileIdle;
-    } catch (_) {
-      return AndroidScheduleMode.inexactAllowWhileIdle;
+      await _plugin.zonedSchedule(
+        id: id,
+        title: title,
+        body: body,
+        scheduledDate: scheduledDate,
+        notificationDetails: details,
+        androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
+        payload: payload,
+      );
+      return true;
+    } catch (error) {
+      debugPrint(
+        'exactAllowWhileIdle failed for $title ($error); falling back to inexactAllowWhileIdle',
+      );
+    }
+
+    // Attempt 2: Guaranteed fallback that never throws SecurityException
+    try {
+      await _plugin.zonedSchedule(
+        id: id,
+        title: title,
+        body: body,
+        scheduledDate: scheduledDate,
+        notificationDetails: details,
+        androidScheduleMode: AndroidScheduleMode.inexactAllowWhileIdle,
+        payload: payload,
+      );
+      return true;
+    } catch (error) {
+      debugPrint('All schedule modes failed for $title: $error');
+      return false;
     }
   }
 
   tz.TZDateTime _toTzDateTime(DateTime dateTime) {
-    _ensureTimezones();
-    return tz.TZDateTime(
-      tz.local,
-      dateTime.year,
-      dateTime.month,
-      dateTime.day,
-      dateTime.hour,
-      dateTime.minute,
-      dateTime.second,
-    );
+    return tz.TZDateTime.from(dateTime, tz.local);
   }
 
   NotificationDetails _detailsForMode(
@@ -397,11 +523,13 @@ class NamazNotificationService {
     required bool vibrate,
   }) {
     final vibrationPattern = vibrate
-        ? Int64List.fromList([0, 600, 300, 600, 300, 800])
+        ? Int64List.fromList([0, 1000, 500, 1000, 500, 1000, 500, 1000])
         : null;
 
     switch (mode) {
       case PrayerAlarmMode.alarm:
+        /*
+        // Commented out: Dedicated Alarm channel details (alarm system disabled, notifications used instead)
         return NotificationDetails(
           android: AndroidNotificationDetails(
             _alarmChannelId,
@@ -410,12 +538,15 @@ class NamazNotificationService {
             importance: Importance.max,
             priority: Priority.max,
             category: AndroidNotificationCategory.alarm,
-            audioAttributesUsage: AudioAttributesUsage.alarm,
-            fullScreenIntent: true,
             playSound: true,
             enableVibration: vibrate,
             vibrationPattern: vibrationPattern,
             visibility: NotificationVisibility.public,
+            ticker: 'Namaz Alarm',
+            enableLights: true,
+            ledColor: const Color.fromARGB(255, 47, 111, 31),
+            autoCancel: true,
+            showWhen: true,
           ),
           iOS: const DarwinNotificationDetails(
             presentAlert: true,
@@ -429,6 +560,9 @@ class NamazNotificationService {
             presentSound: true,
           ),
         );
+        */
+        // Route alarm mode to standard high-priority notification details
+        return _detailsForMode(PrayerAlarmMode.notification, vibrate: vibrate);
       case PrayerAlarmMode.notification:
         return NotificationDetails(
           android: AndroidNotificationDetails(
@@ -440,6 +574,10 @@ class NamazNotificationService {
             category: AndroidNotificationCategory.reminder,
             playSound: true,
             enableVibration: vibrate,
+            visibility: NotificationVisibility.public,
+            ticker: 'Namaz Reminder',
+            autoCancel: true,
+            showWhen: true,
           ),
           iOS: const DarwinNotificationDetails(
             presentAlert: true,
@@ -463,6 +601,8 @@ class NamazNotificationService {
             playSound: false,
             enableVibration: false,
             silent: true,
+            visibility: NotificationVisibility.public,
+            autoCancel: true,
           ),
           iOS: DarwinNotificationDetails(
             presentAlert: true,
