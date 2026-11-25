@@ -5,7 +5,7 @@ class NamazBinding extends Bindings {
   @override
   void dependencies() {
     if (!Get.isRegistered<NamazController>()) {
-      Get.lazyPut<NamazController>(NamazController.new);
+      Get.put<NamazController>(NamazController());
     }
   }
 }
