@@ -75,12 +75,6 @@ class LibraryCollectionModel {
       icon: Icons.mosque_rounded,
     ),
     LibraryCollectionModel(
-      fileName: 'quiz.json',
-      title: 'Islamic Quiz',
-      description: 'Browse questions, answer options, and explanations.',
-      icon: Icons.quiz_rounded,
-    ),
-    LibraryCollectionModel(
       fileName: 'wazaif.json',
       title: 'Wazaif',
       description: 'Browse supplications and their references.',

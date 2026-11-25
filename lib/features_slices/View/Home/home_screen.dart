@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:islam786/Config/Colors/app_colors.dart';
 import 'package:islam786/Utils/mediaquery_extension.dart';
 import 'package:islam786/features_slices/View/Home/Controller/home_controller.dart';
 import 'package:islam786/features_slices/View/Home/Widgets/home_drawer.dart';
 import 'package:islam786/features_slices/View/Home/Widgets/home_header.dart';
+import 'package:islam786/features_slices/View/Home/Widgets/home_quiz_horizontal_section.dart';
 import 'package:islam786/features_slices/View/Home/Widgets/home_section_title.dart';
 import 'package:islam786/features_slices/View/Home/Widgets/last_read_banner.dart';
 import 'package:islam786/features_slices/View/Home/Widgets/popular_features_grid.dart';
@@ -45,6 +47,26 @@ class HomeScreen extends GetView<HomeController> {
                   const HomeSectionTitle(title: 'Popular'),
                   SizedBox(height: context.heightPct(0.022)),
                   PopularFeaturesGrid(controller: controller),
+                  SizedBox(height: context.heightPct(0.034)),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      const HomeSectionTitle(title: 'Islamic Quiz'),
+                      TextButton(
+                        onPressed: () => controller.openQuiz(),
+                        child: Text(
+                          'View All',
+                          style: TextStyle(
+                            color: AppColors.primaryGreen,
+                            fontSize: context.scaledFont(13),
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: context.heightPct(0.016)),
+                  HomeQuizHorizontalSection(controller: controller),
                   SizedBox(height: context.heightPct(0.035)),
                 ],
               ),

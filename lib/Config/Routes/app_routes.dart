@@ -17,6 +17,8 @@ import 'package:islam786/features_slices/View/Library/library_detail_screen.dart
 import 'package:islam786/features_slices/View/Library/library_screen.dart';
 import 'package:islam786/features_slices/View/Namaz/Bindings/namaz_binding.dart';
 import 'package:islam786/features_slices/View/Namaz/namaz_screen.dart';
+import 'package:islam786/features_slices/View/Quiz/Bindings/quiz_binding.dart';
+import 'package:islam786/features_slices/View/Quiz/quiz_screen.dart';
 import 'package:islam786/features_slices/View/Tasbeeh/Bindings/tasbeeh_binding.dart';
 import 'package:islam786/features_slices/View/Tasbeeh/tasbeeh_screen.dart';
 import 'package:islam786/features_slices/app_shell_binding.dart';
@@ -39,6 +41,7 @@ class AppRoutes {
   static const library = '/library';
   static const libraryCollection = '/library/collection';
   static const libraryDetail = '/library/detail';
+  static const quiz = '/quiz';
 
   static final List<GetPage> pages = [
     GetPage(
@@ -103,5 +106,10 @@ class AppRoutes {
       binding: LibraryBinding(),
     ),
     GetPage(name: libraryDetail, page: () => const LibraryDetailScreen()),
+    GetPage(
+      name: quiz,
+      page: () => const QuizScreen(),
+      binding: QuizBinding(),
+    ),
   ];
 }

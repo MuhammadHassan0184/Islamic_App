@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:islam786/Config/Routes/app_routes.dart';
+import 'package:islam786/Data/Models/quiz_model.dart';
+import 'package:islam786/Data/Repositories/quiz_repository.dart';
+import 'package:islam786/Data/Sources/asset_data_source.dart';
 import 'package:islam786/Widgets/app_snack_bar.dart';
 
 class HomeController extends GetxController {
@@ -9,6 +12,36 @@ class HomeController extends GetxController {
   final RxString searchQuery = ''.obs;
   final RxBool isSearchOpen = false.obs;
   final TextEditingController searchTextController = TextEditingController();
+
+  final RxList<QuizModel> quizHighlights = <QuizModel>[].obs;
+  final RxBool isQuizLoading = false.obs;
+
+  @override
+  void onInit() {
+    super.onInit();
+    loadQuizHighlights();
+  }
+
+  Future<void> loadQuizHighlights() async {
+    isQuizLoading.value = true;
+    try {
+      final repo = QuizRepository(AssetDataSource());
+      final items = await repo.getQuizList();
+      quizHighlights.assignAll(items);
+    } catch (_) {
+      // Graceful fallback
+    } finally {
+      isQuizLoading.value = false;
+    }
+  }
+
+  void openQuiz({String? category}) {
+    if (category != null) {
+      Get.toNamed(AppRoutes.quiz, arguments: {'category': category});
+    } else {
+      Get.toNamed(AppRoutes.quiz);
+    }
+  }
 
   void openDrawer() {
     scaffoldKey.currentState?.openDrawer();
@@ -42,6 +75,7 @@ class HomeController extends GetxController {
       'Asma-ul-Husna' => AppRoutes.asmaUlHusna,
       'Islamic Library' => AppRoutes.library,
       'Tasbeeh' => AppRoutes.tasbeeh,
+      'Islamic Quiz' => AppRoutes.quiz,
       _ => null,
     };
 
