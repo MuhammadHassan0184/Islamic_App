@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 import '../Controller/home_controller.dart';
@@ -6,10 +5,7 @@ import '../Controller/home_controller.dart';
 class LastReadBanner extends StatelessWidget {
   final HomeController controller;
 
-  const LastReadBanner({
-    super.key,
-    required this.controller,
-  });
+  const LastReadBanner({super.key, required this.controller});
 
   @override
   Widget build(BuildContext context) {
@@ -114,27 +110,26 @@ class LastReadBanner extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Icon(
-                              Icons.bookmark_rounded,
-                              color: Colors.white.withValues(alpha: 0.9),
-                              size: width * 0.043,
-                            ),
-                            SizedBox(width: width * 0.015),
-                            Text(
-                              'Last Read',
-                              style: TextStyle(
-                                color: Colors.white.withValues(alpha: 0.94),
-                                fontSize: compact ? 10 : 11.5,
-                                fontWeight: FontWeight.w600,
-                                letterSpacing: 0.2,
-                              ),
-                            ),
-                          ],
-                        ),
-
+                        // Row(
+                        //   mainAxisSize: MainAxisSize.min,
+                        //   children: [
+                        //     Icon(
+                        //       Icons.bookmark_rounded,
+                        //       color: Colors.white.withValues(alpha: 0.9),
+                        //       size: width * 0.043,
+                        //     ),
+                        //     SizedBox(width: width * 0.015),
+                        //     Text(
+                        //       'Last Read',
+                        //       style: TextStyle(
+                        //         color: Colors.white.withValues(alpha: 0.94),
+                        //         fontSize: compact ? 10 : 11.5,
+                        //         fontWeight: FontWeight.w600,
+                        //         letterSpacing: 0.2,
+                        //       ),
+                        //     ),
+                        //   ],
+                        // ),
                         const Spacer(),
 
                         FittedBox(
