@@ -938,7 +938,6 @@ class _AlarmSettingsSheetBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Obx(() {
       final enabled = controller.adhanEnabled.value;
-      final mode = controller.globalAlarmMode.value;
       final lead = controller.defaultLeadMinutes.value;
       final vibrate = controller.vibrateEnabled.value;
       final scheduled = controller.scheduledNotificationsCount.value;

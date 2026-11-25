@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:islam786/Config/Colors/app_colors.dart';
 import 'package:islam786/Data/Models/dua_model.dart';
+import 'package:islam786/Utils/mediaquery_extension.dart';
 import 'package:islam786/Widgets/app_snack_bar.dart';
 import 'package:islam786/features_slices/View/Duas/Controller/dua_controller.dart';
 
@@ -64,8 +65,9 @@ class DuaDetailScreen extends GetView<DuaController> {
             width: double.infinity,
             padding: const EdgeInsets.all(18),
             decoration: BoxDecoration(
-              color: AppColors.white,
-              borderRadius: BorderRadius.circular(16),
+              gradient: AppColors.softGreenGradient,
+              borderRadius: BorderRadius.circular(context.widthPct(0.04)),
+              border: Border.all(color: AppColors.cardBorder),
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -105,11 +107,22 @@ class DuaDetailScreen extends GetView<DuaController> {
                 ],
                 if (dua.reference.isNotEmpty) ...[
                   const SizedBox(height: 14),
-                  Text(
-                    'Reference: ${dua.reference}',
-                    style: const TextStyle(
-                      color: AppColors.primary,
-                      fontWeight: FontWeight.w600,
+                  Container(
+                    padding: context.responsiveAll(0.03),
+                    decoration: BoxDecoration(
+                      color: AppColors.white,
+                      borderRadius: BorderRadius.circular(
+                        context.widthPct(0.025),
+                      ),
+                    ),
+                    child: Text(
+                      'Reference: ${dua.reference}',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: AppColors.primaryDark,
+                        fontSize: context.scaledFont(13),
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
                   ),
                 ],

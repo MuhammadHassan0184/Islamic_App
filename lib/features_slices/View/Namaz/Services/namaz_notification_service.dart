@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:typed_data';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
@@ -143,7 +142,6 @@ class NamazNotificationService {
   tz.Location? _resolveLocalLocation() {
     final now = DateTime.now();
     final nowMillis = now.millisecondsSinceEpoch;
-    final offsetMs = now.timeZoneOffset.inMilliseconds;
     final zoneName = now.timeZoneName;
 
     final locations = tz.timeZoneDatabase.locations;
@@ -153,7 +151,7 @@ class NamazNotificationService {
 
     for (final loc in locations.values) {
       final tzInfo = loc.timeZone(nowMillis);
-      if (tzInfo.offset == offsetMs) {
+      if (tzInfo.offset == now.timeZoneOffset) {
         return loc;
       }
     }
@@ -574,6 +572,7 @@ class NamazNotificationService {
             category: AndroidNotificationCategory.reminder,
             playSound: true,
             enableVibration: vibrate,
+            vibrationPattern: vibrationPattern,
             visibility: NotificationVisibility.public,
             ticker: 'Namaz Reminder',
             autoCancel: true,

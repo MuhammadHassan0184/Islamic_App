@@ -20,8 +20,6 @@ class NamazScreen extends StatefulWidget {
 
 class _NamazScreenState extends State<NamazScreen> with WidgetsBindingObserver {
   late final NamazController controller;
-  Worker? _alarmWorker;
-  bool _isAlarmDialogOpen = false;
 
   @override
   void initState() {
@@ -58,7 +56,6 @@ class _NamazScreenState extends State<NamazScreen> with WidgetsBindingObserver {
   @override
   void dispose() {
     WidgetsBinding.instance.removeObserver(this);
-    _alarmWorker?.dispose();
     controller.stopLiveTicker();
     super.dispose();
   }

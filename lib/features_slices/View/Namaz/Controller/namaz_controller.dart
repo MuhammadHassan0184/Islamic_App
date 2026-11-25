@@ -187,6 +187,8 @@ class NamazController extends GetxController with WidgetsBindingObserver {
     });
   }
 
+  /*
+  // Commented out: Foreground alarm popup disabled
   void _checkForegroundAlarmTrigger(DateTime now) {
     if (!adhanEnabled.value) return;
 
@@ -206,6 +208,7 @@ class NamazController extends GetxController with WidgetsBindingObserver {
       }
     }
   }
+  */
 
   Future<void> _restorePreferencesAndSync() async {
     try {
