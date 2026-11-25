@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:islam786/Config/Colors/app_colors.dart';
 import 'package:islam786/Utils/mediaquery_extension.dart';
 import 'package:zi_core/zi_core_io.dart';
