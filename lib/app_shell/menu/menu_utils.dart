@@ -36,32 +36,32 @@ class MenuModel {
 // Menu List
 final List<MenuModel> menuList = [
   // --------------User Account--------------//
-  MenuModel(
-    prefix: Icons.store_mall_directory_rounded,
-    label: 'Store Settings',
-    group: MenuGroup.userAccount,
-    action: ZiTapAction(type: ZiTapActionType.openPage, page: StoreMenuView()),
-  ),
+  // MenuModel(
+  //   prefix: Icons.store_mall_directory_rounded,
+  //   label: 'Store Settings',
+  //   group: MenuGroup.userAccount,
+  //   action: ZiTapAction(type: ZiTapActionType.openPage, page: StoreMenuView()),
+  // ),
   // // Edit Profile
-  MenuModel(
-    prefix: Icons.person_outline_rounded,
-    label: 'Edit Profile',
-    group: MenuGroup.userAccount,
-    action: ZiTapAction(
-      type: ZiTapActionType.openPage,
-      page: EditProfileView(),
-    ),
-  ),
-  // Reset Password
-  MenuModel(
-    prefix: Icons.password_outlined,
-    label: 'Reset Password',
-    group: MenuGroup.userAccount,
-    action: ZiTapAction(
-      type: ZiTapActionType.openPage,
-      page: ResetPasswordView(),
-    ),
-  ),
+  // MenuModel(
+  //   prefix: Icons.person_outline_rounded,
+  //   label: 'Edit Profile',
+  //   group: MenuGroup.userAccount,
+  //   action: ZiTapAction(
+  //     type: ZiTapActionType.openPage,
+  //     page: EditProfileView(),
+  //   ),
+  // ),
+  // // Reset Password
+  // MenuModel(
+  //   prefix: Icons.password_outlined,
+  //   label: 'Reset Password',
+  //   group: MenuGroup.userAccount,
+  //   action: ZiTapAction(
+  //     type: ZiTapActionType.openPage,
+  //     page: ResetPasswordView(),
+  //   ),
+  // ),
 
   // // Contact Us
   // MenuModel(

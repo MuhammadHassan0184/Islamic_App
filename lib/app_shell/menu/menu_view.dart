@@ -10,8 +10,8 @@ class MenuView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // DO: Get user data from provider or state
-    const userName = 'User';
-    const userEmail = '';
+    // const userName = 'User';
+    // const userEmail = '';
 
     return ZiScaffoldB(
       showPagePadding: false,
@@ -27,17 +27,24 @@ class MenuView extends StatelessWidget {
                   children: [
                     Column(
                       children: [
-                        ZiSvgIcon(
-                          path: ShellSVGs.avPerson,
-                          color: ZiColors.primary,
-                          size: 80,
+                        SizedBox(
+                          width: 100,
+                          height: 100,
+                          child: Image.asset("assets/Islamic_app_Icon.png"),
                         ),
-                        heroSectionContent(
-                          // img: ShellImages.avPerson,
-                          // svgImg: ShellSVGs.avPerson,
-                          title: userName,
-                          content: userEmail,
-                        ),
+                        SizedBox(height: 20),
+                        // ZiSvgIcon(
+                        //   path: ShellSVGs.avPerson,
+                        //   color: ZiColors.primary,
+                        //   size: 80,
+                        // ),
+                        //
+                        // heroSectionContent(
+                        //   // img: ShellImages.avPerson,
+                        //   // svgImg: ShellSVGs.avPerson,
+                        //   title: userName,
+                        //   content: userEmail,
+                        // ),
                       ],
                     ),
                   ],
@@ -57,26 +64,26 @@ class MenuView extends StatelessWidget {
               padding: const EdgeInsets.all(0),
               children: [
                 buildGroupedMenu(context, showGroupTitle: false),
-                ZiMenuTile1(
-                  icon: Icons.power_settings_new_rounded,
-                  iconPrefixColor: Colors.red,
-                  label: "Logout",
-                  action: ZiTapAction(
-                    type: ZiTapActionType.custom,
-                    onTap: () async {
-                      // bool? isLogout = await ZiConfirmationUser.logout(
-                      //   context: context,
-                      // );
-                      // if (isLogout!) {
-                      //   // logout logic here
-                      //   Navigator.pushReplacement(
-                      //     context,
-                      //     MaterialPageRoute(builder: (context) => LoginView()),
-                      //   );
-                      // }
-                    },
-                  ),
-                ),
+                // ZiMenuTile1(
+                //   icon: Icons.power_settings_new_rounded,
+                //   iconPrefixColor: Colors.red,
+                //   label: "Logout",
+                //   action: ZiTapAction(
+                //     type: ZiTapActionType.custom,
+                //     onTap: () async {
+                //       // bool? isLogout = await ZiConfirmationUser.logout(
+                //       //   context: context,
+                //       // );
+                //       // if (isLogout!) {
+                //       //   // logout logic here
+                //       //   Navigator.pushReplacement(
+                //       //     context,
+                //       //     MaterialPageRoute(builder: (context) => LoginView()),
+                //       //   );
+                //       // }
+                //     },
+                //   ),
+                // ),
               ],
             ),
           ),
