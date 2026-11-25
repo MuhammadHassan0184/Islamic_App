@@ -16,7 +16,12 @@
       {
         "step_no": 2,
         "title": "Niyyat Ka Jaiza Lein",
-        "detail": "Din ke darmiyan apni niyyat ko riyakari ya ghaflat se pak rakhein."
+        "detail": "Din ke darmiyan apni niyyat ko riyakari, dikhawe ya ghaflat se pak rakhein."
+      },
+      {
+        "step_no": 3,
+        "title": "Duniyawe Kaam Ko Bhi Ibadat Banayein",
+        "detail": "Agar aap ghar ki khidmat, mehnat ya ilm seekhne ka kaam achhi niyyat se karte hain to woh bhi ajar ka sabab ban sakta hai."
       }
     ]
   },
@@ -32,12 +37,17 @@
       {
         "step_no": 1,
         "title": "Guftagu Mein Narmi",
-        "detail": "Ghar walon, dost on aur sahkar an ke sath adab aur narmi se baat karein."
+        "detail": "Ghar walon, doston aur sahkar an ke sath adab aur narmi se baat karein."
       },
       {
         "step_no": 2,
         "title": "Darguzar Ki Aadat",
-        "detail": "Choti bhool chook maaf karne ki koshish karein."
+        "detail": "Choti bhool chook maaf karne aur ghusse ko peene ki koshish karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Wada Aur Amanat Ka Pas",
+        "detail": "Achhe akhlaq ka ek aham hissa sachaai, waqt ki pabandi aur logon ke sath wada nibhana hai."
       }
     ]
   },
@@ -59,6 +69,193 @@
         "step_no": 2,
         "title": "Ilm Par Amal Karein",
         "detail": "Jo seekhein us par amal karein aur doosron tak sahi baat puhanchayein."
+      },
+      {
+        "step_no": 3,
+        "title": "Sabr Aur Istiqamat Rakhein",
+        "detail": "Seekhne ke safar mein mushkil aaye to himmat na harein balke mustaqil mizaji se aage barhein."
+      }
+    ]
+  }, 
+  {
+    "id": "hadees_04_brotherhood_love",
+    "category": "brotherhood",
+    "title": "Apne Bhai Ke Liye Bhi Wahi Pasand Karna",
+    "arabic": "لَا يُؤْمِنُ أَحَدُكُمْ حَتَّى يُحِبَّ لِأَخِيهِ مَا يُحِبُّ لِنَفْسِهِ",
+    "urdu": "تم میں سے کوئی شخص اس وقت تک کامل مومن نہیں ہو سکتا جب تک اپنے بھائی کے لیے بھی وہی پسند نہ کرے جو اپنے لیے پسند کرتا ہے۔",
+    "english": "None of you truly believes until he loves for his brother what he loves for himself.",
+    "reference": "Sahih al-Bukhari 13 & Sahih Muslim 45",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Hasad Aur Bughz Se Bachna",
+        "detail": "Doosron ki kamyabi ya nemat dekh kar jalne ke bajaye khush hon aur un ke liye barkat ki dua karein."
+      },
+      {
+        "step_no": 2,
+        "title": "Khair-Khawahi Aur Mashwara",
+        "detail": "Jab koi mashwara ya madad maange to use wahi mukhlis mashwara dein jo aap khud ke liye pasand karte."
+      },
+      {
+        "step_no": 3,
+        "title": "Muamlaat Mein Insaf",
+        "detail": "Len-den, karobar aur rozmarra ke faislon mein doosron ke haq ka utna hi khayal rakhein jitna apne haq ka rakhte hain."
+      }
+    ]
+  },
+  {
+    "id": "hadees_05_leaving_what_does_not_concern",
+    "category": "self_discipline",
+    "title": "Be-Faidah Baaton Ko Chhorna",
+    "arabic": "مِنْ حُسْنِ إِسْلَامِ الْمَرْءِ تَرْكُهُ مَا لَا يَعْنِيهِ",
+    "urdu": "انسان کے اسلام کی خوبی یہ ہے کہ وہ لایعنی (بے فائدہ) باتوں اور کاموں کو چھوڑ دے۔",
+    "english": "Part of the perfection of one's Islam is leaving that which does not concern him.",
+    "reference": "Jami' at-Tirmidhi 2317 & Sunan Ibn Majah 3976",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Waqt Aur Tawajjah Ki Hifazat",
+        "detail": "Fuzool behas, afwahon aur be-maqsad social media scrolling se bach kar apna waqt qeemti kaamon mein lagayein."
+      },
+      {
+        "step_no": 2,
+        "title": "Doosron Ke Zaati Muamlaat Mein Dakhal Na Dein",
+        "detail": "Bila-zaroorat kisi ki zati zindagi mein tajassus ya tanqeed karne se parhez karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Apni Islah Par Focus Karein",
+        "detail": "Doosron ki ghaltiyan ginne ke bajaye apni namaz, akhlaq aur zimmedariyon ko behtar banane par dhyan dein."
+      }
+    ]
+  },
+  {
+    "id": "hadees_06_cleanliness_half_faith",
+    "category": "purity",
+    "title": "Safai Aur Paakizgi Nisf Imaan Hai",
+    "arabic": "الطُّهُورُ شَطْرُ الْإِيمَانِ",
+    "urdu": "پاکیزگی اور صفائی نصف ایمان ہے۔",
+    "english": "Cleanliness and purity are half of faith.",
+    "reference": "Sahih Muslim 223",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Jism Aur Libas Ki Safai",
+        "detail": "Wuzu, ghusl, miswak aur saaf suthre libas ka rozana ehtimam karein."
+      },
+      {
+        "step_no": 2,
+        "title": "Ghar Aur Mahol Ko Saaf Rakhna",
+        "detail": "Apne kamre, gali aur kaam ki jagah par kachra na phailayein aur safai ko apni aadat banayein."
+      },
+      {
+        "step_no": 3,
+        "title": "Dil Aur Niyyat Ki Paakizgi",
+        "detail": "Zahiri safai ke sath dil ko bhi keena, takabbur aur haram khayalat se paak rakhne ki koshish karein."
+      }
+    ]
+  },
+  {
+    "id": "hadees_07_controlling_anger",
+    "category": "self_control",
+    "title": "Ghussa Na Karna",
+    "arabic": "لَا تَغْضَبْ",
+    "urdu": "غصہ نہ کرو۔",
+    "english": "Do not get angry.",
+    "reference": "Sahih al-Bukhari 6116",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "A'udhu Billah Aur Khamoshi",
+        "detail": "Ghussa aate hi 'A'udhu billahi minash-shaytanir-rajeem' parhein aur foran bolne ya faisla karne se ruk jayein."
+      },
+      {
+        "step_no": 2,
+        "title": "Halat Tabdeel Karein",
+        "detail": "Agar khade hain to baith jayein, baithe hain to let jayein aur thande pani se wuzu kar lein."
+      },
+      {
+        "step_no": 3,
+        "title": "Haqeeqi Bahadur Banein",
+        "detail": "Yaad rakhein ke asli pehlwan woh nahi jo kisi ko pachhar de, balke woh hai jo ghusse ke waqt khud par qabu rakhe."
+      }
+    ]
+  },
+  {
+    "id": "hadees_08_smile_is_charity",
+    "category": "charity",
+    "title": "Muskurahat Bhi Sadqa Hai",
+    "arabic": "تَبَسُّمُكَ فِي وَجْهِ أَخِيكَ لَكَ صَدَقَةٌ",
+    "urdu": "تمہارا اپنے بھائی کے سامنے مسکرانا بھی تمہارے لیے صدقہ ہے۔",
+    "english": "Your smiling in the face of your brother is charity for you.",
+    "reference": "Jami' at-Tirmidhi 1956",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Khush-Dili Se Mulaqat Karein",
+        "detail": "Ghar walon, doston aur milne walon ka istaqbal muskurahat aur narm chehre ke sath karein."
+      },
+      {
+        "step_no": 2,
+        "title": "Chhoti Nekiyon Ko Haqeer Na Samjhein",
+        "detail": "Har sadqa maal se nahi hota; achhi baat kehna, rasta dikhana aur takleef-deh cheez raste se hatana bhi sadqa hai."
+      },
+      {
+        "step_no": 3,
+        "title": "Doosron Ka Bojh Halka Karein",
+        "detail": "Apne narm rawaiye se logon ko sukoon dein taake aap ki maujoodgi un ke liye khushi ka sabab bane."
+      }
+    ]
+  },
+  {
+    "id": "hadees_09_ease_not_hardship",
+    "category": "wisdom",
+    "title": "Asaani Paida Karo Mushkil Nahi",
+    "arabic": "يَسِّرُوا وَلَا تُعَسِّرُوا وَبَشِّرُوا وَلَا تُنَفِّرُوا",
+    "urdu": "آسانی پیدا کرو اور مشکل میں نہ ڈالو، خوشخبری دو اور نفرت نہ دلاؤ۔",
+    "english": "Make things easy and do not make them difficult; give glad tidings and do not drive people away.",
+    "reference": "Sahih al-Bukhari 69 & Sahih Muslim 1734",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Doosron Ke Liye Asaani Banayein",
+        "detail": "Ghar, daftar ya muamlaat mein logon ke liye be-ja rukawatein khadi karne ke bajaye asaani ka rasta nikalein."
+      },
+      {
+        "step_no": 2,
+        "title": "Umeed Aur Khushkhabri Dein",
+        "detail": "Deen aur zindagi ki baatein karte waqt mayusi phailane ke bajaye Allah ki rehmat aur umeed ka paigham dein."
+      },
+      {
+        "step_no": 3,
+        "title": "Narmi Se Islah Karein",
+        "detail": "Kisi ki ghalti samjhate waqt sakhti aur sharminda karne ke bajaye hikmat aur muhabbat ka tareeqa apnayein."
+      }
+    ]
+  },
+  {
+    "id": "hadees_10_best_among_you_quran",
+    "category": "quran",
+    "title": "Tum Mein Se Behtareen Log",
+    "arabic": "خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ",
+    "urdu": "تم میں سے بہترین شخص وہ ہے جو قرآن سیکھے اور سکھائے۔",
+    "english": "The best among you are those who learn the Quran and teach it.",
+    "reference": "Sahih al-Bukhari 5027",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Tajweed Aur Tarjuma Seekhein",
+        "detail": "Quran ko durust talaffuz (tajweed) ke sath parhne aur us ka tarjuma o paigham samajhne ke liye waqt nikalen."
+      },
+      {
+        "step_no": 2,
+        "title": "Ghar Mein Tilawat Ka Mahol Banayein",
+        "detail": "Apne bachon aur ghar walon ke sath mil kar rozana thoda hissa Quran parhne aur seekhne ka mamool banayein."
+      },
+      {
+        "step_no": 3,
+        "title": "Jo Seekhein Woh Aage Sikhayein",
+        "detail": "Chhoti suratein, namazon ke azkar ya ek aayat ka mafhoom hi sahi, doosron ko sikhane mein hissa lein."
       }
     ]
   }

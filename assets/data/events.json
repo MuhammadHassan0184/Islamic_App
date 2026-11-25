@@ -17,6 +17,16 @@
         "step_no": 2,
         "title": "Ibadat Aur Quran",
         "detail": "Farz namazon, Taraweeh, tilawat aur aakhri ashre mein Laylatul Qadr ki talash karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Zaban Aur Akhlaq Ki Hifazat",
+        "detail": "Roza sirf bhook pyas rokne ka naam nahi; jhoot, gheebat, ghussa aur be-faida baaton se bhi parhez karein."
+      },
+      {
+        "step_no": 4,
+        "title": "Sadqa, Zakat Aur Khidmat",
+        "detail": "Gharibon, yatimon aur zarooratmand khandan ki madad karein aur iftar ya rashan share karein."
       }
     ]
   },
@@ -38,6 +48,16 @@
         "step_no": 2,
         "title": "Neki Aur Tauba",
         "detail": "Naye islami saal ki ibtidai mein istighfar, nafl ibadat aur acchi aadat apnayein."
+      },
+      {
+        "step_no": 3,
+        "title": "Hurmat Ka Ehtiram",
+        "detail": "Choonke yeh char hurmat wale mahinon mein se hai, is liye zulm, jhagde aur gunahon se zyada bachne ki koshish karein."
+      },
+      {
+        "step_no": 4,
+        "title": "Saal Bhar Ki Mansoobabandi",
+        "detail": "Naye hijri saal ke liye apne namaz, tilawat aur khidmat ke chhote maqasid tay karein."
       }
     ]
   },
@@ -59,6 +79,202 @@
         "step_no": 2,
         "title": "Khas Dua",
         "detail": "'Allahumma innaka 'afuwwun tuhibbul 'afwa fa'fu 'anni' kasrat se parhein."
+      },
+      {
+        "step_no": 3,
+        "title": "Quran Aur Qiyam-ul-Layl",
+        "detail": "Nafl namaz, Quran ki tilawat aur us ke maani samajhne mein waqt guzarein."
+      },
+      {
+        "step_no": 4,
+        "title": "Dil Ki Safai Aur Dua",
+        "detail": "Apne aur doosron ke liye hidayat, maghfirat, sehat aur aman ki dil se dua karein."
+      }
+    ]
+  },
+  {
+    "id": "event_eid_ul_fitr",
+    "category": "eid_ul_fitr",
+    "title": "Eid-ul-Fitr",
+    "arabic": "وَلِتُكْمِلُوا الْعِدَّةَ وَلِتُكَبِّرُوا اللَّهَ عَلَىٰ مَا هَدَاكُمْ وَلَعَلَّكُمْ تَشْكُرُونَ",
+    "urdu": "عید الفطر روزوں کی تکمیل پر اللہ کا شکر ادا کرنے، فطرانہ دینے اور خوشیاں بانٹنے کا دن ہے۔",
+    "english": "Eid-ul-Fitr is a day of gratitude to Allah upon completing fasting, giving Sadaqat-ul-Fitr, and sharing joy.",
+    "reference": "Surah Al-Baqarah 2:185",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Sadaqat-ul-Fitr Ki Adaigi",
+        "detail": "Eid ki namaz se pehle ghar ke har fard ki taraf se Fitrana zaroor ada karein taake zarooratmand bhi khushi mein shamil hon."
+      },
+      {
+        "step_no": 2,
+        "title": "Subah Ki Sunnatein Aur Takbeer",
+        "detail": "Ghusl karein, saaf libas pehnein, Eidgah jaane se pehle kuch meetha khayein aur raaste mein aahista takbeerat parhein."
+      },
+      {
+        "step_no": 3,
+        "title": "Salat-ul-Eid",
+        "detail": "Waqt par jamat ke sath Eid ki namaz ada karein aur khutba tawajjah se sunein."
+      },
+      {
+        "step_no": 4,
+        "title": "Silah Rehmi Aur Muafi",
+        "detail": "Rishtedaron, hamsayon aur doston se milein, narazgiyan khatam karein aur sab ko mubarakbad dein."
+      }
+    ]
+  },
+  {
+    "id": "event_eid_ul_adha",
+    "category": "eid_ul_adha",
+    "title": "Eid-ul-Adha",
+    "arabic": "فَصَلِّ لِرَبِّكَ وَانْحَرْ",
+    "urdu": "عید الاضحیٰ اللہ کی رضا کے لیے قربانی، ایثار اور تکبیرِ تشریق کے ساتھ منائی جاتی ہے۔",
+    "english": "Eid-ul-Adha is marked by sacrifice for the sake of Allah, selflessness, and reciting Takbeer-e-Tashreeq.",
+    "reference": "Surah Al-Kawthar 108:2",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Takbeerat-e-Tashreeq",
+        "detail": "9 Zil-Hajj ki fajr se 13 Zil-Hajj ki asr tak har farz namaz ke baad buland awaaz se Takbeer-e-Tashreeq parhein."
+      },
+      {
+        "step_no": 2,
+        "title": "Eid Ki Namaz Aur Niyyat",
+        "detail": "Eid ki namaz ada karein aur qurbani ka janwar sirf Allah ke naam aur us ki khushnoodi ki niyyat se zibah karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Gosht Ki Taqseem",
+        "detail": "Qurbani ke gosht ko khud istemal karne ke sath rishtedaron aur ghareebon mein dil khol kar taqseem karein."
+      },
+      {
+        "step_no": 4,
+        "title": "Safai Aur Qurbani Ka Roohani Paigham",
+        "detail": "Qurbani ki jagah ki safai ka khayal rakhein aur apni anaa, khudgharzi aur buri khwahishon ko bhi qurban karne ka irada karein."
+      }
+    ]
+  },
+  {
+    "id": "event_ashura",
+    "category": "ashura",
+    "title": "Yawm-e-Ashura (10 Muharram)",
+    "arabic": "وَصِيَامُ يَوْمِ عَاشُورَاءَ أَحْتَسِبُ عَلَى اللَّهِ أَنْ يُكَفِّرَ السَّنَةَ الَّتِي قَبْلَهُ",
+    "urdu": "یومِ عاشورہ کے روزے کے بارے میں امید ہے کہ وہ پچھلے ایک سال کے گناہوں کا کفارہ بنتا ہے۔",
+    "english": "Fasting on the day of Ashura is hoped to expiate the sins of the preceding year.",
+    "reference": "Sahih Muslim",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Ek Din Mila Kar Roza",
+        "detail": "9 aur 10 ya 10 aur 11 Muharram ko roza rakhein taake ahl-e-kitab se mushabihat na ho."
+      },
+      {
+        "step_no": 2,
+        "title": "Zikar, Istighfar Aur Dua",
+        "detail": "Is mubarak din mein istighfar, tilawat-e-Quran aur apni islah o maghfirat ke liye dua karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Sabar Aur Waqar",
+        "detail": "Din ko waqar, sukoon aur aman ke sath guzarein aur kisi bhi tarah ki bad-kalami ya nafrat se bachein."
+      },
+      {
+        "step_no": 4,
+        "title": "Ahle Bayt Ki Muhabbat Aur Khidmat",
+        "detail": "Nabi Kareem (S.A.W) ke Ahle Bayt (R.A) se sachhi muhabbat aur adab rakhte hue ghareebon aur zarooratmand ki madad karein."
+      }
+    ]
+  },
+  {
+    "id": "event_dhul_hijjah_arafah",
+    "category": "dhul_hijjah",
+    "title": "Ashra-e-Dhul-Hijjah & Yawm-e-Arafah",
+    "arabic": "مَا مِنْ أَيَّامٍ الْعَمَلُ الصَّالِحُ فِيهِنَّ أَحَبُّ إِلَى اللَّهِ مِنْ هَذِهِ الْأَيَّامِ",
+    "urdu": "ذوالحجہ کے ابتدائی دس دنوں میں نیک عمل اللہ کو سب سے زیادہ محبوب ہیں، اور یومِ عرفہ کا روزہ خاص فضیلت رکھتا ہے۔",
+    "english": "No righteous deeds are more beloved to Allah than those done during the first ten days of Dhul-Hijjah, with special reward for fasting on Arafah.",
+    "reference": "Sahih Al-Bukhari",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Pehle Das Dinon Mein Naik Amal",
+        "detail": "1 se 9 Zil-Hajj tak nafl roze, sadqa, tilawat aur zikar ko barhayein."
+      },
+      {
+        "step_no": 2,
+        "title": "Yawm-e-Arafah Ka Roza",
+        "detail": "9 Zil-Hajj (Hajj mein na hon to) ka roza rakhein jo pichle aur aane wale saal ke chhote gunahon ki maghfirat ka sabab banta hai."
+      },
+      {
+        "step_no": 3,
+        "title": "Takbeer, Tahmeed Aur Tahleel",
+        "detail": "In ayyam mein 'Allahu Akbar', 'Alhamdulillah' aur 'La ilaha illallah' ki kasrat karein."
+      },
+      {
+        "step_no": 4,
+        "title": "Arafah Ke Din Khas Dua",
+        "detail": "9 Zil-Hajj ko zikr aur dua mein waqt lagayein kyunkay sab se behtareen dua Arafah ke din ki dua hai."
+      }
+    ]
+  },
+  {
+    "id": "event_jumu_ah",
+    "category": "jumuah",
+    "title": "Yawm-ul-Jumu'ah",
+    "arabic": "يَا أَيُّهَا الَّذِينَ آمَنُوا إِذَا نُودِيَ لِلصَّلَاةِ مِنْ يَوْمِ الْجُمُعَةِ فَاسْعَوْا إِلَىٰ ذِكْرِ اللَّهِ",
+    "urdu": "جمعہ کا دن ہفتے کا سب سے افضل دن ہے، جس میں نمازِ جمعہ، سورۃ الکہف اور درود کی خاص فضیلت ہے۔",
+    "english": "Jumu'ah is the best day of the week, blessed with the Friday prayer, Surah Al-Kahf, and sending blessings upon the Prophet.",
+    "reference": "Surah Al-Jumu'ah 62:9",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Ghusl Aur Jald Masjid Jana",
+        "detail": "Jumu'ah ke din ghusl karein, pak o saaf kapde pehnein aur azaan ke sath masjid ki taraf rawana hon."
+      },
+      {
+        "step_no": 2,
+        "title": "Surah Al-Kahf Ki Tilawat",
+        "detail": "Jumu'ah ke din Surah Al-Kahf parhne ka ehtimam karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Khutba Sunna Aur Durood",
+        "detail": "Khutba ke waqt khamoshi aur tawajjah se sunein, aur poore din Nabi Kareem (S.A.W) par kasrat se durood bhejein."
+      },
+      {
+        "step_no": 4,
+        "title": "Aakhri Ghari Mein Dua",
+        "detail": "Asr ke baad se maghrib tak wali qabooliyat ki ghari mein apni ahem duaein zaroor maangein."
+      }
+    ]
+  },
+  {
+    "id": "event_shab_e_baraat",
+    "category": "shab_e_baraat",
+    "title": "15th Night of Sha'ban (Shab-e-Bara'at)",
+    "arabic": "إِنَّ اللَّهَ لَيَطَّلِعُ فِي لَيْلَةِ النِّصْفِ مِنْ شَعْبَانَ فَيَغْفِرُ لِجَمِيعِ خَلْقِهِ",
+    "urdu": "شعبان کی پندرہویں رات مغفرت، دعا اور دل کو kinah o bughz سے پاک کرنے کا موقع ہے۔",
+    "english": "The fifteenth night of Sha'ban is an occasion for seeking forgiveness, making supplication, and cleansing the heart of malice.",
+    "reference": "Sunan Ibn Majah",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Dil Ko Bughz Se Paak Karein",
+        "detail": "Kisi musalman ke khilaf dil mein nafrat, hasad ya kinah ho to use khatam karne ki koshish karein."
+      },
+      {
+        "step_no": 2,
+        "title": "Istighfar Aur Tanha Ibadat",
+        "detail": "Ghar mein rah kar nafl namaz, tilawat aur istighfar ke zariye Allah se maghfirat maangein."
+      },
+      {
+        "step_no": 3,
+        "title": "Biddat Se Parhez",
+        "detail": "Rasm o riwaj ya aatishbazi ke bajaye ibadat, khamoshi aur waqar ko tarjeeh dein."
+      },
+      {
+        "step_no": 4,
+        "title": "Ramzan Ki Tayari",
+        "detail": "Sha'ban ke is waqt ko aane wale mahine Ramzan ke liye zehni aur roohani tayari ka aaghaz banayein."
       }
     ]
   }

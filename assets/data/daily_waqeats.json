@@ -11,12 +11,17 @@
       {
         "step_no": 1,
         "title": "Pas-e-Manzar Samjhein",
-        "detail": "Ghar-e-Hira mein tafakkur aur ibadat ke dauran pehli wahi nazil hui."
+        "detail": "Ghar-e-Hira mein tafakkur, khamoshi aur ibadat ke dauran pehli wahi nazil hui aur nubuwwat ka aaghaz hua."
       },
       {
         "step_no": 2,
         "title": "Sabaq Hasil Karein",
-        "detail": "Pehla hukam 'Iqra' (parho) tha, jo ilm aur samajh ki ahmiyat batata hai."
+        "detail": "Pehla hukam 'Iqra' (parho) tha, jo ilm, ghaur-o-fikr aur samajh ki bunyadi ahmiyat batata hai."
+      },
+      {
+        "step_no": 3,
+        "title": "Ghar Walon Ka Sahara",
+        "detail": "Wahi ke baad Hazrat Khadijah (R.A) ki tasalli aur himmat bandhane se rishton mein sukoon aur bharose ka sabaq milta hai."
       }
     ]
   },
@@ -32,12 +37,17 @@
       {
         "step_no": 1,
         "title": "Sabr Aur Planning",
-        "detail": "Khatrat ke bawajood Allah par yaqeen aur behtareen hikmat-e-amli ikhtiyar ki gayi."
+        "detail": "Khatrat ke bawajood Allah par yaqeen aur behtareen hikmat-e-amli ikhtiyar ki gayi; tawakkul aur mehnat sath sath chale."
       },
       {
         "step_no": 2,
         "title": "Bhaichara Aur Ittehad",
-        "detail": "Muhajireen aur Ansar ke darmiyan muwakhat ne muashre ko mazboot banaya."
+        "detail": "Muhajireen aur Ansar ke darmiyan muwakhat ne muashre ko mazboot banaya aur eesar ki misal qaim ki."
+      },
+      {
+        "step_no": 3,
+        "title": "Naye Muashre Ki Bunyad",
+        "detail": "Madinah puhanch kar masjid, aman, muahida aur baahami ta'awun ke zariye ek pur-aman muashre ki bunyad rakhi gayi."
       }
     ]
   },
@@ -53,12 +63,199 @@
       {
         "step_no": 1,
         "title": "Musibat Mein Yaqeen",
-        "detail": "Jab samne samundar aur peeche lashkar tha tab bhi yaqeen-e-kamil qaim raha."
+        "detail": "Jab samne samundar aur peeche lashkar tha tab bhi yaqeen-e-kamil qaim raha ke Allah saath hai."
       },
       {
         "step_no": 2,
         "title": "Hidayat Aur Nijat",
-        "detail": "Allah ke hukam se aasani aur nijat ka rasta khul gaya."
+        "detail": "Allah ke hukam se samundar mein rasta bana aur aasani aur nijat ka darwaza khul gaya."
+      },
+      {
+        "step_no": 3,
+        "title": "Asbab Se Barh Kar Rab Par Bharosa",
+        "detail": "Jab zahiri raste band dikhayi dein tab bhi Allah ki qudrat aur madad par umeed rakhni chahiye."
+      }
+    ]
+  },
+  {
+    "id": "waqia_04_fath_makkah",
+    "category": "seerah",
+    "title": "Fath-e-Makkah Aur Aam Muafi Ka Waqia",
+    "arabic": "لَا تَثْرِيبَ عَلَيْكُمُ الْيَوْمَ يَغْفِرُ اللَّهُ لَكُمْ",
+    "urdu": "فتحِ مکہ کے موقع پر بدلے کی طاقت ہونے کے باوجود عام معافی کا اعلان رحمت اور عاجزی کی عظیم مثال ہے۔",
+    "english": "At the Conquest of Makkah, declaring general amnesty despite having the power to retaliate stood as a timeless example of mercy and humility.",
+    "reference": "Sahih al-Bukhari & Seerah Ibn Hisham",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Kamyabi Mein Aajizi",
+        "detail": "Fath ke waqt Nabi Kareem (S.A.W) ne fakhr ke bajaye sar jhuka kar Allah ka shukar ada kiya aur aman ka paigham diya."
+      },
+      {
+        "step_no": 2,
+        "title": "Qudrat Ke Bawajood Darguzar",
+        "detail": "Jinhon ne barson tak takleefein di thin unhein bhi muaf kar ke dilon ko jeetne ka tareeqa sikhaya."
+      },
+      {
+        "step_no": 3,
+        "title": "Intiqam Ke Bajaye Islah",
+        "detail": "Zati badle se upar uth kar rishton aur muashre mein aman qaim karne ko tarjeeh dein."
+      }
+    ]
+  },
+  {
+    "id": "waqia_05_taif_mercy",
+    "category": "seerah",
+    "title": "Safar-e-Taif Aur Rahmat Ka Sabaq",
+    "arabic": "وَمَا أَرْسَلْنَاكَ إِلَّا رَحْمَةً لِلْعَالَمِينَ",
+    "urdu": "طائف کے سخت ترین لمحات میں بھی بددعا کے بجائے ہدایت اور رحمت کی دعا کرنا صبر و شفقت کا اعلیٰ نمونہ ہے۔",
+    "english": "Even in the hardest moments at Ta'if, praying for guidance and mercy rather than cursing exemplified ultimate patience and compassion.",
+    "reference": "Sahih al-Bukhari 3231 & Surah Al-Anbiya 21:107",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Inkar Aur Takleef Par Sabr",
+        "detail": "Jab Taif walon ne pathar barsaye aur zakhmi kiya tab bhi Nabi Kareem (S.A.W) ne apni kamzori ka shikwa sirf Allah ke samne rakha."
+      },
+      {
+        "step_no": 2,
+        "title": "Bad-Dua Ke Bajaye Khair Ki Umeed",
+        "detail": "Pahadon ke farishte ki peshkash ke bawajood un ki tabahi nahi chahi balke un ki aane wali naslon ke eeman ki umeed rakhi."
+      },
+      {
+        "step_no": 3,
+        "title": "Dushwari Mein Allah Se Ruju",
+        "detail": "Logon ke rawaiye se dil toot jaye to bhi sabr, narmi aur dua ka daman hath se na chhorein."
+      }
+    ]
+  },
+  {
+    "id": "waqia_06_yusuf_patience",
+    "category": "prophets",
+    "title": "Hazrat Yusuf (A.S) Ka Sabr Aur Afw",
+    "arabic": "إِنَّهُ مَنْ يَتَّقِ وَيَصْبِرْ فَإِنَّ اللَّهَ لَا يُضِيعُ أَجْرَ الْمُحْسِنِينَ",
+    "urdu": "بے شک جو شخص تقویٰ اور صبر اختیار کرتا ہے تو اللہ نیکی کرنے والوں کا اجر ضائع نہیں فرماتا۔",
+    "english": "Indeed, whoever fears Allah and is patient, then indeed, Allah does not allow to be lost the reward of those who do good.",
+    "reference": "Surah Yusuf 12:90",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Har Haal Mein Taqwa Aur Paakdamani",
+        "detail": "Andhe kunwein, ghulami aur qaid khane jaisi aazmaishon mein bhi Hazrat Yusuf (A.S) ne gunaah ke bajaye sabr ko chuna."
+      },
+      {
+        "step_no": 2,
+        "title": "Taqdeer Ki Hikmat Par Yaqeen",
+        "detail": "Jo mushkilat ba-zahir nuqsan lagti thin, Allah ne unhi ke zariye izzat aur khidmat ka rasta khola."
+      },
+      {
+        "step_no": 3,
+        "title": "Apnon Ki Ghaltiyon Ko Maaf Karna",
+        "detail": "Maqam aur ikhtiyar milne ke baad bhaiyon ko taana dene ke bajaye muaf kar ke khandan ko dobara jor diya."
+      }
+    ]
+  },
+  {
+    "id": "waqia_07_ibrahim_fire",
+    "category": "prophets",
+    "title": "Hazrat Ibrahim (A.S) Aur Aag Ka Thanda Hona",
+    "arabic": "قُلْنَا يَا نَارُ كُونِي بَرْدًا وَسَلَامًا عَلَىٰ إِبْرَاهِيمَ",
+    "urdu": "ہم نے فرمایا: اے آگ! ابراہیم پر ٹھنڈی اور سلامتی والی ہو جا۔",
+    "english": "We said, 'O fire, be coolness and safety upon Ibrahim.'",
+    "reference": "Surah Al-Anbiya 21:69",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Haq Par Mazbooti",
+        "detail": "Poori qaum ke mukhalif hone ke bawajood Hazrat Ibrahim (A.S) ne tawheed aur sachai par koi samjhota nahi kiya."
+      },
+      {
+        "step_no": 2,
+        "title": "Aakhri Lamhe Mein Kifayat",
+        "detail": "Aag mein daale jate waqt bhi 'Hasbunallahu wa ni'mal Wakil' ke yaqeen ke sath sirf Allah par bharosa rakha."
+      },
+      {
+        "step_no": 3,
+        "title": "Allah Ke Hukam Se Fitrat Ka Badalna",
+        "detail": "Samjhein ke aag ka jalana bhi Allah ke hukam ka mohtaj hai; jab Woh chahe to har aazmaish ko salamti bana deta hai."
+      }
+    ]
+  },
+  {
+    "id": "waqia_08_yunus_whale",
+    "category": "reflection",
+    "title": "Hazrat Yunus (A.S) Aur Andheron Mein Tasbeeh",
+    "arabic": "فَنَادَىٰ فِي الظُّلُمَاتِ أَنْ لَا إِلَٰهَ إِلَّا أَنْتَ سُبْحَانَكَ إِنِّي كُنْتُ مِنَ الظَّالِمِينَ",
+    "urdu": "پس انہوں نے اندھیروں میں پکارا کہ تیرے سوا کوئی معبود نہیں، تو پاک ہے، بے شک میں ہی قصوروار تھا۔",
+    "english": "And he called out within the darknesses, 'There is no deity except You; exalted are You. Indeed, I have been of the wrongdoers.'",
+    "reference": "Surah Al-Anbiya 21:87-88",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Andheron Mein Bhi Ummeed",
+        "detail": "Raat, samundar aur machhli ke pet ke teen andheron mein bhi Allah ki rehmat aur sunne par yaqeen nahi khoya."
+      },
+      {
+        "step_no": 2,
+        "title": "Apni Kotahi Ka E'tiraf",
+        "detail": "Doosron ko ilzam dene ke bajaye apni laghzish ka iqrar aur Allah ki tasbeeh nijat ka sabab bani."
+      },
+      {
+        "step_no": 3,
+        "title": "Har Momin Ke Liye Basharat",
+        "detail": "Quran batata hai ke isi tarah Allah iman walon ko gham aur mushkil se nijat deta hai."
+      }
+    ]
+  },
+  {
+    "id": "waqia_09_sulh_hudaybiyah",
+    "category": "seerah",
+    "title": "Sulh-e-Hudaybiyah Aur Door-Andeshi",
+    "arabic": "إِنَّا فَتَحْنَا لَكَ فَتْحًا مُبِينًا",
+    "urdu": "صلحِ حدیبیہ بظاہر سخت شرائط کے باوجود اسلام کی عظیم فتح اور امن کی بنیاد ثابت ہوئی۔",
+    "english": "The Treaty of Hudaybiyah, despite seemingly tough terms, proved to be a clear victory and a foundation for peace.",
+    "reference": "Surah Al-Fath 48:1 & Sahih al-Bukhari",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Jazbaat Ke Bajaye Hikmat",
+        "detail": "Fauri jazbaat mein aane ke bajaye aman aur mustaqbil ke baray maqsad ko samne rakh kar sulh qubool ki gayi."
+      },
+      {
+        "step_no": 2,
+        "title": "Ahad Aur Wada Nibhana",
+        "detail": "Muahide ki sharton ki mukammal pabandi kar ke sachai aur qabil-e-etimad hone ki misal qaim ki gayi."
+      },
+      {
+        "step_no": 3,
+        "title": "Sabr Ka Behtareen Nateeja",
+        "detail": "Baaz auqat jo faisla shuru mein peeche hatna lagta hai, Allah ke bharose aur hikmat se wahi bari kamyabi ban jata hai."
+      }
+    ]
+  },
+  {
+    "id": "waqia_10_ashab_al_kahf",
+    "category": "reflection",
+    "title": "Ashab-e-Kahf Aur Eeman Ki Hifazat",
+    "arabic": "رَبَّنَا آتِنَا مِنْ لَدُنْكَ رَحْمَةً وَهَيِّئْ لَنَا مِنْ أَمْرِنَا رَشَدًا",
+    "urdu": "اصحابِ کہف نے اپنے ایمان کو بچانے کے لیے دنیاوی آسائشوں کو چھوڑا تو اللہ نے ان کے لیے غار میں رحمت اور حفاظت کے اسباب پیدا فرما دیے۔",
+    "english": "The Companions of the Cave left worldly comfort to protect their faith, and Allah surrounded them with mercy and guidance.",
+    "reference": "Surah Al-Kahf 18:10",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Eeman Ko Har Cheez Par Tarjeeh",
+        "detail": "Jab mahol mein burai aur shirk aam ho gaya to un naujawanon ne apne deen aur zameer ko bachane ka faisla kiya."
+      },
+      {
+        "step_no": 2,
+        "title": "Rehmat Aur Hidayat Ki Dua",
+        "detail": "Ghar mein panah lete waqt unhon ne kisi taqat ke bajaye Allah se rehmat aur seedhe raste ki dua maangi."
+      },
+      {
+        "step_no": 3,
+        "title": "Khuloos Ki Hifazat",
+        "detail": "Jo log sachay dil se Allah ki khatir qadam uthate hain, Allah un ki hifazat ke aise raste nikalta hai jo aql se balatar hote hain."
       }
     ]
   }

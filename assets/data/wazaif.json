@@ -11,12 +11,17 @@
       {
         "step_no": 1,
         "title": "Wazu Aur Sukoon",
-        "detail": "Ba-wazu ho kar pur-sukoon jagah baithay rahein."
+        "detail": "Ba-wazu ho kar pur-sukoon jagah baithay rahein aur dil ko hazir rakhein."
       },
       {
         "step_no": 2,
         "title": "Tadad Aur Waqt",
         "detail": "Fajr ya Maghrib ke baad ya kisi bhi waqt preshani mein kasrat se parhein."
+      },
+      {
+        "step_no": 3,
+        "title": "Istighfar Aur Tawakkul",
+        "detail": "Is dua ke zariye apni kotahiyon ka iqrar aur Allah ki qudrat par yaqeen taza karein aur halat sudharne ki dua karein."
       }
     ]
   },
@@ -37,7 +42,12 @@
       {
         "step_no": 2,
         "title": "Halal Sabab",
-        "detail": "Wazife ke sath halal kamai aur mehnat ke asbab ikhtiyar karein."
+        "detail": "Wazife ke sath halal kamai, mehnat aur karobar/job ke jaiz asbab ikhtiyar karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Qana'at Aur Sadqa",
+        "detail": "Rizq mein barkat ke liye israf se bachein aur thora ya zyada jo bhi muyassar ho us mein se sadqa dene ki aadat banayein."
       }
     ]
   },
@@ -53,12 +63,200 @@
       {
         "step_no": 1,
         "title": "Dukh Wali Jagah Par Hath",
-        "detail": "Jahan takleef ho wahan hath rakh kar ya mareez par dam karte hue parhein."
+        "detail": "Jahan takleef ho wahan hath rakh kar ya mareez par dam karte hue tawajjah se parhein."
       },
       {
         "step_no": 2,
         "title": "Ilaj Ke Sath Jari Rakhein",
         "detail": "Doctor ke mashwaray aur dawai ke sath is dua ko rozana parhte rahein."
+      },
+      {
+        "step_no": 3,
+        "title": "Sabr Aur Shifa Ki Umeed",
+        "detail": "Takleef ke dauran mayus na hon balke 'Ashfi Antash-Shafi' par yaqeen rakhte hue sehat aur aafiyat ki dua karein."
+      }
+    ]
+  },
+
+  {
+    "id": "wazifa_qarz_se_nijat",
+    "category": "qarz",
+    "title": "Qarz Ki Adaigi Aur Tangi Se Nijat",
+    "arabic": "اللَّهُمَّ اكْفِنِي بِحَلَالِكَ عَنْ حَرَامِكَ وَأَغْنِنِي بِفَضْلِكَ عَمَّنْ سِوَاكَ",
+    "urdu": "اے اللہ! مجھے اپنے حلال رزق کے ذریعے حرام سے کفایت دے اور اپنے فضل سے مجھے غیروں سے بے نیاز کر دے۔",
+    "english": "O Allah, suffice me with what You have made lawful over what You have made unlawful, and enrich me by Your grace so I need none other than You.",
+    "reference": "Jami' at-Tirmidhi 3563",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Wuzu Aur Khuloos Ke Sath Parhein",
+        "detail": "Farz namazon ke baad ya subah shaam pur-yaqeen lehje mein is masnoon dua ko dohrayein."
+      },
+      {
+        "step_no": 2,
+        "title": "Hisab Aur Adaigi Ki Mansoobabandi",
+        "detail": "Apne qarz aur aamdani ka wazeh hisab banayein aur imandari se adaigi ki koshish jari rakhein."
+      },
+      {
+        "step_no": 3,
+        "title": "Fuzool Kharchi Se Parhez",
+        "detail": "Ghair-zaroori kharchon ko rok kar bachat aur barkat ke sath aage barhne ki aadat banayein."
+      }
+    ]
+  },
+  {
+    "id": "wazifa_khauf_hifazat",
+    "category": "hifazat",
+    "title": "Khauf Aur Dushmani Se Hifazat",
+    "arabic": "اللَّهُمَّ إِنَّا نَجْعَلُكَ فِي نُحُورِهِمْ وَنَعُوذُ بِكَ مِنْ شُرُورِهِمْ",
+    "urdu": "اے اللہ! ہم تجھے ان کے مقابلے میں رکھتے ہیں اور ان کے شر سے تیری پناہ مانگتے ہیں۔",
+    "english": "O Allah, we place You before them [to confront them] and seek refuge in You from their evils.",
+    "reference": "Sunan Abi Dawud 1537",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Khaof Ya Khatre Ke Waqt Parhein",
+        "detail": "Jab kisi muqable, safar ya dushmani ke andeshe mein dil ghabraye to is dua ke zariye Allah ki panah lein."
+      },
+      {
+        "step_no": 2,
+        "title": "Hifazati Azkar Shamil Karein",
+        "detail": "Is ke sath Ayat-ul-Kursi aur subah shaam ke hifazati azkar bhi tawajjah ke sath parhein."
+      },
+      {
+        "step_no": 3,
+        "title": "Sabr Aur Hikmat Ikhtiyar Karein",
+        "detail": "Jazbaat ya be-ja takrao ke bajaye sabr, ehtiyat aur Allah ke bharose ke sath apna mamla sambhalein."
+      }
+    ]
+  },
+  {
+    "id": "wazifa_hajat_kamranee",
+    "category": "hajat",
+    "title": "Jayez Hajat Aur Mushkil Kaam Mein Aasani",
+    "arabic": "رَبِّ إِنِّي لِمَا أَنْزَلْتَ إِلَيَّ مِنْ خَيْرٍ فَقِيرٌ",
+    "urdu": "اے میرے رب! میں اس بھلائی کا محتاج ہوں جو تو میری طرف نازل فرمائے۔",
+    "english": "My Lord, indeed I am, for whatever good You would send down to me, in need.",
+    "reference": "Surah Al-Qasas 28:24",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Aajizi Ke Sath Dua Karein",
+        "detail": "Jab kisi jaiz zaroorat, rozgar ya ahem faisle ke liye rehnumai aur madad chahiye ho to dil se yeh dua parhein."
+      },
+      {
+        "step_no": 2,
+        "title": "Do Rakat Hajat Ya Mashwara",
+        "detail": "Sukoon se namaz aur dua ke baad ahl-e-ilm ya bharosemand logon se jaiz mashwara aur koshish karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Allah Ke Behtar Faisle Par Razi Rahein",
+        "detail": "Yaqeen rakhein ke jo bhi behtar hota hai Allah usi ka sabab banata hai, chahe rasta kisi aur simt se khule."
+      }
+    ]
+  },
+  {
+    "id": "wazifa_imtehan_kamyabi",
+    "category": "ilm",
+    "title": "Imtehan, YaadDASHT Aur Behtar Samajh",
+    "arabic": "اللَّهُمَّ انْفَعْنِي بِمَا عَلَّمْتَنِي وَعَلِّمْنِي مَا يَنْفَعُنِي وَزِدْنِي عِلْمًا",
+    "urdu": "اے اللہ! مجھے اس علم سے نفع دے جو تو نے مجھے سکھایا، مجھے وہ سکھا جو مجھے نفع دے، اور میرے علم میں اضافہ فرما۔",
+    "english": "O Allah, benefit me with what You have taught me, teach me what will benefit me, and increase me in knowledge.",
+    "reference": "Jami' at-Tirmidhi 3599 & Sunan Ibn Majah",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Parhne Se Pehle Niyyat Aur Dua",
+        "detail": "Kitab kholne, lecture sunne ya paper ki tayyari se pehle yeh dua parh kar zehan ki aasani maangein."
+      },
+      {
+        "step_no": 2,
+        "title": "Mehnat Aur Dohrai Ka Mamool",
+        "detail": "Sirf wazife par bharosa karne ke bajaye waqt par mutala, notes aur revision ko apni aadat banayein."
+      },
+      {
+        "step_no": 3,
+        "title": "Paper Se Pehle Sukoon",
+        "detail": "Imtehan ke waqt ghabrahat ke bajaye 'Rabbish-rahli sadri' ya is dua se itminan le kar sawalat hal karein."
+      }
+    ]
+  },
+  {
+    "id": "wazifa_ghussa_sukoon",
+    "category": "sukoon",
+    "title": "Ghusse Aur Bechaini Se Dil Ka Sukoon",
+    "arabic": "أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ",
+    "urdu": "میں شیطان مردود سے اللہ کی پناہ مانگتا ہوں۔",
+    "english": "I seek refuge in Allah from Satan, the accursed.",
+    "reference": "Sahih al-Bukhari 3282",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Ghusse Ki Pehli Lehar Mein Parhein",
+        "detail": "Jab ghussa ya jazbati dabao barhne lage to foran 'A'udhu billahi minash-shaytanir-rajeem' parhein."
+      },
+      {
+        "step_no": 2,
+        "title": "Wuzu Aur Jagah Badalna",
+        "detail": "Agar ghussa kam na ho to wuzu karein, baith jayein ya thori dair ke liye us jagah se hat jayein."
+      },
+      {
+        "step_no": 3,
+        "title": "Dil Ko Narm Rakhein",
+        "detail": "Sukoon milne ke baad baat ko samajhne aur darguzar karne ki koshish karein taake rishton mein kharash na aaye."
+      }
+    ]
+  },
+  {
+    "id": "wazifa_ghar_barkat_aman",
+    "category": "barkat",
+    "title": "Ghar Mein Aman, Barkat Aur Muhabbat",
+    "arabic": "بِسْمِ اللَّهِ وَلَجْنَا وَبِسْمِ اللَّهِ خَرَجْنَا وَعَلَى اللَّهِ رَبِّنَا تَوَكَّلْنَا",
+    "urdu": "اللہ کے نام کے ساتھ ہم داخل ہوئے اور اللہ کے نام کے ساتھ ہم نکلے، اور ہم نے اپنے رب اللہ پر بھروسہ کیا۔",
+    "english": "In the name of Allah we enter, and in the name of Allah we leave, and upon Allah, our Lord, we rely.",
+    "reference": "Sunan Abi Dawud 5096",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Ghar Aate Waqt Zikar Aur Salam",
+        "detail": "Ghar mein qadam rakhte waqt yeh dua parhein aur ghar walon ko khush-dili se salam karein."
+      },
+      {
+        "step_no": 2,
+        "title": "Ghar Mein Tilawat Aur Zikar",
+        "detail": "Ghar ke mahol ko pur-aman aur ba-barkat rakhne ke liye rozana thori tilawat-e-Quran aur zikar ka mamool banayein."
+      },
+      {
+        "step_no": 3,
+        "title": "Narmi Aur Baahami Madad",
+        "detail": "Ghar ke afraad ke sath adab, shukar aur chhotay chhotay kaamon mein madad ke zariye mohabbat ko barqarar rakhein."
+      }
+    ]
+  },
+  {
+    "id": "wazifa_safar_khair_hifazat",
+    "category": "safar",
+    "title": "Safar Mein Hifazat Aur Barkat",
+    "arabic": "سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَٰذَا وَمَا كُنَّا لَهُ مُقْرِنِينَ",
+    "urdu": "پاک ہے وہ ذات جس نے اس سواری کو ہمارے تابع کر دیا، ورنہ ہم اسے قابو میں لانے کی طاقت نہ رکھتے تھے۔",
+    "english": "Exalted is He who has subjected this to us, and we could not have [otherwise] controlled it.",
+    "reference": "Surah Az-Zukhruf 43:13-14 & Sahih Muslim",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Sawari Ya Safar Ke Aaghaz Mein",
+        "detail": "Safar shuru karte waqt ya sawari par baith kar yeh dua parhein aur aakhir mein 'Wa inna ila Rabbina la munqalibun' shamil karein."
+      },
+      {
+        "step_no": 2,
+        "title": "Safar Ke Dauraan Zikar",
+        "detail": "Raaste mein subhanallah, alhamdulillah, allahu akbar aur istighfar ke zariye safar ko mufeed aur pur-sukoon banayein."
+      },
+      {
+        "step_no": 3,
+        "title": "Ehtiyat Aur Khairiyat Ki Dua",
+        "detail": "Apni aur baqi musafiron ki hifazat ke liye dua karein aur safar ke qawaneen par amal karte rahein."
       }
     ]
   }

@@ -18,7 +18,12 @@
       {
         "step_no": 2,
         "title": "Azkar Mukammal Karein",
-        "detail": "Subah ke masnoon azkar aur istighfar parhein."
+        "detail": "Subah ke masnoon azkar, tasbeeh aur istighfar tawajjah ke sath parhein."
+      },
+      {
+        "step_no": 3,
+        "title": "Din Ki Niyyat Aur Barkat",
+        "detail": "Azkar khatam kar ke apne kaam, ilm aur risq mein barkat aur hifazat ki dua karein."
       }
     ]
   },
@@ -36,12 +41,17 @@
       {
         "step_no": 1,
         "title": "Sone Se Pehle Routine Banayein",
-        "detail": "Raat ko sone se pehle Surah Al-Mulk parhne ka waqt chunein."
+        "detail": "Raat ko sone se pehle Surah Al-Mulk parhne ka waqt chunein aur reminder ko zaroorat ke mutabiq on karein."
       },
       {
         "step_no": 2,
         "title": "Wazu Aur Dua Ke Sath Soyein",
-        "detail": "Tilawat ke baad sone ki masnoon dua parh kar aaram karein."
+        "detail": "Tilawat ke baad sone ki masnoon dua parh kar pur-sukoon tareeqe se aaram karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Qudrat Aur Hifazat Par Ghaur",
+        "detail": "Surah ke maani par ghaur karein ke zindagi aur maut ka nizam Allah ke hath mein hai."
       }
     ]
   },
@@ -59,12 +69,185 @@
       {
         "step_no": 1,
         "title": "Jummah Ki Tayyari Karein",
-        "detail": "Ghusl, saaf libas aur jummah ki nimaz ki tayyari ke sath darood parhein."
+        "detail": "Ghusl, saaf libas, khushboo aur jummah ki nimaz ki tayyari ke sath darood parhein."
       },
       {
         "step_no": 2,
         "title": "Surah Al-Kahf Ka Ehtimam",
-        "detail": "Jummah ke din Surah Al-Kahf ki tilawat bhi shamil karein."
+        "detail": "Jummah ke din Surah Al-Kahf ki tilawat aur khas duaon ka ehtimam karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Qubooliyat Ki Ghari Ka Intezar",
+        "detail": "Jummah ke din asr se maghrib ke darmiyan dua aur darood mein kasrat karein."
+      }
+    ]
+  },
+  {
+    "id": "rem_evening_azkar",
+    "category": "evening",
+    "title": "Shaam Ke Azkar",
+    "arabic": "أَمْسَيْنَا وَأَمْسَى الْمُلْكُ لِلَّهِ",
+    "urdu": "ہم نے اور اللہ کے ملک نے شام کی، اور سب تعریفیں اللہ کے لیے ہیں۔",
+    "english": "We have reached the evening and at this very time all sovereignty belongs to Allah.",
+    "reference": "Sahih Muslim",
+    "time_label": "05:30 PM",
+    "is_enabled": true,
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Asr Ya Maghrib Ke Baad Waqt Rakhein",
+        "detail": "Din ki masroofiyat ke baad shaam ke azkar ke liye apna reminder time set rakhein."
+      },
+      {
+        "step_no": 2,
+        "title": "Hifazat Aur Istighfar Ke Azkar Parhein",
+        "detail": "Shaam ke masnoon azkar, Ayat-ul-Kursi, teen Qul aur istighfar tawajjah ke sath dohrayein."
+      },
+      {
+        "step_no": 3,
+        "title": "Din Ka Muhasaba Aur Shukar",
+        "detail": "Gujre hue waqt par Allah ka shukar ada karein aur aane wali raat ki khair aur hifazat ki dua karein."
+      }
+    ]
+  },
+  {
+    "id": "rem_duha_salat",
+    "category": "morning",
+    "title": "Salat-ud-Duha (Chasht Ki Namaz)",
+    "arabic": "إِنَّ الصَّلَاةَ كَانَتْ عَلَى الْمُؤْمِنِينَ كِتَابًا مَوْقُوتًا",
+    "urdu": "بے شک نماز مومنوں پر مقررہ وقت میں فرض ہے، اور چاشت کی نماز نیکی اور شکر کا بہترین ذریعہ ہے۔",
+    "english": "Indeed, prayer has been decreed upon the believers a decree of specified times, and Duha prayer is a virtuous act of gratitude.",
+    "reference": "Surah An-Nisa 4:103 & Sahih Muslim",
+    "time_label": "09:30 AM",
+    "is_enabled": false,
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Ishraq Ke Baad Waqt Muqarrar Karein",
+        "detail": "Suraj nikalne ke kuch der baad se zawal se pehle tak ke darmiyan apna reminder adjust karein."
+      },
+      {
+        "step_no": 2,
+        "title": "Do Ya Char Rakat Nafl Ada Karein",
+        "detail": "Kam az kam do rakat ya us se zyada (2, 4, 6 ya 8) nafl namaz sukoon aur khushu ke sath parhein."
+      },
+      {
+        "step_no": 3,
+        "title": "Jism Ke Jodon Ka Shukar",
+        "detail": "Is namaz ko jism ki nematon aur jodon ke sadqe ke taur par ada karein aur rizq o kaam mein barkat maangein."
+      }
+    ]
+  },
+  {
+    "id": "rem_after_fard_tasbeeh",
+    "category": "daily",
+    "title": "Farz Namaz Ke Baad Tasbeeh",
+    "arabic": "سُبْحَانَ اللَّهِ وَالْحَمْدُ لِلَّهِ وَاللَّهُ أَكْبَرُ",
+    "urdu": "ہر فرض نماز کے بعد تسبیح اور مسنون اذکار پڑھنا نماز کی تکمیل اور ذکر کا بہترین mamool ہے۔",
+    "english": "Reciting tasbeeh and prescribed remembrance after each obligatory prayer completes the daily dhikr routine.",
+    "reference": "Sahih al-Bukhari & Sahih Muslim",
+    "time_label": "01:30 PM",
+    "is_enabled": true,
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Salam Ke Baad Istighfar Aur As-Salam",
+        "detail": "Farz namaz ke salam ke baad teen bar 'Astaghfirullah' aur 'Allahumma Antas-Salam wa minkas-Salam' parhein."
+      },
+      {
+        "step_no": 2,
+        "title": "33-33-34 Ki Tasbeeh Mukammal Karein",
+        "detail": "SubhanAllah (33), Alhamdulillah (33) aur Allahu Akbar (34) parh kar sau ki ginti poori karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Ayat-ul-Kursi Aur Dua",
+        "detail": "Ayat-ul-Kursi parhne ke baad apni zarooraton, hidayat aur maghfirat ke liye dil se dua karein."
+      }
+    ]
+  },
+  {
+    "id": "rem_witr_before_sleep",
+    "category": "night",
+    "title": "Sone Se Pehle Witr Ki Namaz",
+    "arabic": "أَوْتِرُوا يَا أَهْلَ الْقُرْآنِ",
+    "urdu": "اے اہلِ قرآن! وتر کی نماز پڑھا کرو۔",
+    "english": "Perform Witr, O people of the Quran.",
+    "reference": "Sunan Abi Dawud 1416 & Jami' at-Tirmidhi",
+    "time_label": "10:30 PM",
+    "is_enabled": false,
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Tahajjud Ke Ehtimam Ka Jaiza Lein",
+        "detail": "Agar raat ke aakhri hisse mein uthne ka yaqeen ho to wahan parhein, warna sone se pehle ada karne ka reminder rakhein."
+      },
+      {
+        "step_no": 2,
+        "title": "Witr Aur Dua-e-Qunoot",
+        "detail": "Tawajjah aur itminan ke sath Witr ki namaz ada karein aur Dua-e-Qunoot mein bhalai aur bakhshish maangein."
+      },
+      {
+        "step_no": 3,
+        "title": "Din Ka Ikhtitam Zikar Par",
+        "detail": "Witr aur sone ke azkar ke sath din ko Allah ke zikar aur hifazat par khatam karein."
+      }
+    ]
+  },
+  {
+    "id": "rem_friday_surah_kahf",
+    "category": "jummah",
+    "title": "Jummah Ke Din Surah Al-Kahf",
+    "arabic": "مَنْ قَرَأَ سُورَةَ الْكَهْفِ يَوْمَ الْجُمُعَةِ أَضَاءَ اللَّهُ لَهُ مِنَ النُّورِ مَا بَيْنَ الْجُمُعَتَيْنِ",
+    "urdu": "جو شخص جمعہ کے دن سورۃ الکہف پڑھے، اللہ اس کے لیے دو جمعوں کے درمیان نور روشن کر دیتا ہے۔",
+    "english": "Whoever recites Surah Al-Kahf on Friday, Allah illuminates for him a light between the two Fridays.",
+    "reference": "Al-Mustadrak / Sunan al-Kubra",
+    "time_label": "09:00 AM",
+    "is_enabled": true,
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Subah Ya Dopahar Mein Waqt Chunein",
+        "detail": "Jummah ke din sukoon se tilawat karne ke liye subah ya Jummah ki namaz se pehle ka waqt set karein."
+      },
+      {
+        "step_no": 2,
+        "title": "Hisson Mein Ya Ek Sath Tilawat",
+        "detail": "Agar waqt kam ho to din ke mukhtalif hisson mein thoda thoda kar ke poori surah mukammal karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Fitnon Se Hifazat Aur Hidayat Ki Dua",
+        "detail": "Surah ke waqiat aur paigham se ibrat hasil karein aur eeman ki hifazat ke liye dua karein."
+      }
+    ]
+  },
+  {
+    "id": "rem_istighfar_night_end",
+    "category": "night",
+    "title": "Raat Ke Aakhri Pehar Mein Istighfar",
+    "arabic": "وَبِالْأَسْحَارِ هُمْ يَسْتَغْفِرُونَ",
+    "urdu": "اور رات کے پچھلے پہر (سحر کے وقت) وہ استغفار کرتے ہیں۔",
+    "english": "And in the hours before dawn they would seek forgiveness.",
+    "reference": "Surah Adh-Dhariyat 51:18",
+    "time_label": "04:30 AM",
+    "is_enabled": false,
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Fajr Ya Sehri Se Kuch Der Pehle",
+        "detail": "Agar aap pehle se jaag rahe hon ya Fajr ke waqt uthein to istighfar ke liye yeh waqt qeemti samjhein."
+      },
+      {
+        "step_no": 2,
+        "title": "Khuloos Ke Sath Maghfirat Talab Karein",
+        "detail": "Khamoshi aur tanhai mein 'Astaghfirullah' aur 'Rabbighfir li' ke zariye apni kotahiyon par muafi maangein."
+      },
+      {
+        "step_no": 3,
+        "title": "Hajat Aur Hidayat Ki Dua",
+        "detail": "Istighfar ke baad apne aur ahle khana ke liye hidayat, rizq aur aafiyat ki dua karein."
       }
     ]
   }

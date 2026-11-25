@@ -20,6 +20,11 @@
         "step_no": 2,
         "title": "Nisab Aur 2.5% Hisab",
         "detail": "Agar kul net zakatable assets نصاب tak puhanch jayein to 2.5% hissa nikal kar mustahiqeen ko dein."
+      },
+      {
+        "step_no": 3,
+        "title": "Qamri Saal Ki Takmeel",
+        "detail": "Yaqeen karein ke nisab ke barabar ya us se zyada maqdar par poora ek hijri (qamri) saal guzar chuka ho."
       }
     ]
   },
@@ -44,6 +49,11 @@
         "step_no": 2,
         "title": "Net Assets Ke Sath Jam'a Karein",
         "detail": "Cash, savings aur trade inventory ke sath milakar vajibat (liabilities) minus karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Mustahiqeen Tak Puhanchana",
+        "detail": "Hisab aane ke baad zakat ki raqam shar'i mustahiqeen tak jald aur amanat dari se puhanchayein."
       }
     ]
   },
@@ -66,6 +76,120 @@
         "step_no": 2,
         "title": "Qarz Minus Karein",
         "detail": "Kul jama raqam mein se wajibal-ada qarz ghata kar baqi net amount par 2.5% nikal lein."
+      },
+      {
+        "step_no": 3,
+        "title": "Record Mehfooz Rakhein",
+        "detail": "Apni asset aur liability ki calculation note kar ke rakhein taake har saal ka hisab wazeh aur asan rahe."
+      }
+    ]
+  },
+
+  {
+    "id": "zakat_rule_cash_savings",
+    "category": "cash_savings",
+    "title": "Cash, Bank Savings Aur Prize Bonds / Investments",
+    "arabic": "وَالَّذِينَ فِي أَمْوَالِهِمْ حَقٌّ مَعْلُومٌ",
+    "urdu": "نقد رقم، بینک بیلنس، سیونگز اور قابلِ زکوٰۃ سرمایہ کاری کو نصاب کے ساتھ ملا کر 2.5 فیصد زکوٰۃ ادا کی جاتی ہے۔",
+    "english": "Cash on hand, bank balances, savings, and zakatable investments are combined toward Nisab and taxed at 2.5%.",
+    "reference": "Surah Al-Ma'arij 70:24 & Zakat Standard",
+    "rate_percent": 2.5,
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Hath Ki Raqam Aur Bank Balances Jam'a Karein",
+        "detail": "Ghar mein rakhi naqd raqam, current/savings accounts aur kisi ke paas rakhi hui apni amanat ya wapsi wali raqam ka hisab lagayein."
+      },
+      {
+        "step_no": 2,
+        "title": "Nisab Ke Muqable Mein Check Karein",
+        "detail": "Agar aap ke paas sona ya chandi nahi hai to kul naqd raqam aur bachat ko silver ya gold nisab ki mojooda qeemat se muqabla karein."
+      },
+      {
+        "step_no": 3,
+        "title": "2.5% Zakat Alag Karein",
+        "detail": "Saal mukammal hone par net zakatable raqam ka 2.5% hissa (ya 40th hissa) alag kar ke mustahiqeen mein taqseem karein."
+      }
+    ]
+  },
+  {
+    "id": "zakat_rule_trade_inventory",
+    "category": "trade_inventory",
+    "title": "Karobari Maal (Trade Inventory) Rule",
+    "arabic": "أَنْفِقُوا مِنْ طَيِّبَاتِ مَا كَسَبْتُمْ",
+    "urdu": "جو پاکیزہ مال تم نے کمایا ہے اس میں سے خرچ کرو؛ فروخت کے لیے رکھا گیا کاروباری مال قابلِ زکوٰۃ ہوتا ہے۔",
+    "english": "Spend from the good things which you have earned; goods held for sale in trade are subject to Zakat.",
+    "reference": "Surah Al-Baqarah 2:267 & Fiqh Zakat Standard",
+    "rate_percent": 2.5,
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Faroqht Ke Maal Ki Market Value Lagayein",
+        "detail": "Dukaan, godam ya online business mein jo maal munafe aur farokht ke liye rakha hai us ki zakat ke din ki mojooda market qeemat shamil karein."
+      },
+      {
+        "step_no": 2,
+        "title": "Fixed Assets Ko Alag Rakhein",
+        "detail": "Karobar ki imarat, machinery, gaadi ya zaati istemal ki cheezon par zakat nahi aati; sirf farokht wale maal aur karobari naqd/bataayon ka hisab karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Karobari Qarz Minus Kar Ke 2.5% Nikalein",
+        "detail": "Suppliers ya karobari qarz ki fori raqam ghata kar baqi net karobari maaliyat par 2.5% zakat nikal lein."
+      }
+    ]
+  },
+  {
+    "id": "zakat_rule_lunar_year_hawl",
+    "category": "lunar_year",
+    "title": "Qamri Saal (Hawl) Aur Zakat Ki Tareekh",
+    "arabic": "يَسْأَلُونَكَ عَنِ الْأَهِلَّةِ قُلْ هِيَ مَوَاقِيتُ لِلنَّاسِ",
+    "urdu": "لوگ آپ سے نئے چاند کے بارے میں پوچھتے ہیں؛ کہہ دیجیے کہ وہ لوگوں کے لیے وقت اور حج کے تعین کا ذریعہ ہیں۔",
+    "english": "They ask you about the crescents. Say, they are measurements of time for the people.",
+    "reference": "Surah Al-Baqarah 2:189 & Zakat Standard",
+    "rate_percent": 2.5,
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Apni Qamri Tareekh Tay Karein",
+        "detail": "Jis hijri tareekh ko aap ke paas pehli baar nisab ke barabar maal jama hua tha, us ko apni zakat ki salana tareekh ke taur par note karein."
+      },
+      {
+        "step_no": 2,
+        "title": "Darmiyani Kami Beshi Ka Usul",
+        "detail": "Agar saal ke darmiyan maal kam bhi ho jaye magar saal ke aakhir mein dobara nisab ya us se zyada ho jaye to zakat wajib hogi."
+      },
+      {
+        "step_no": 3,
+        "title": "Waqt Par Adaigi Ki Koshish",
+        "detail": "Taakhir karne ke bajaye saal poora hote hi hisab saaf kar ke zakat ada karein taake zimmedari waqt par poori ho."
+      }
+    ]
+  },
+  {
+    "id": "zakat_rule_eligible_recipients",
+    "category": "recipients",
+    "title": "Masarif-e-Zakat (Mustahiqeen Ke Haq)",
+    "arabic": "إِنَّمَا الصَّدَقَاتُ لِلْفُقَرَاءِ وَالْمَسَاكِينِ",
+    "urdu": "بے شک صدقات (زکوٰۃ) صرف فقیروں، مسکینوں اور قرآن میں بیان کردہ مقررہ مصارف کے لیے ہیں۔",
+    "english": "Zakat expenditures are only for the poor, the needy, and the designated categories specified in the Quran.",
+    "reference": "Surah At-Tawbah 9:60",
+    "rate_percent": 2.5,
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Mustahiq Ki Pehchan Karein",
+        "detail": "Zakat un ghareeb ya zarooratmand afrad ya idaron ko dein jo shar'i taur par mustahiq hon; walidain, aulad aur miyan-biwi ko zakat nahi di ja sakti."
+      },
+      {
+        "step_no": 2,
+        "title": "Tamleek Ka Khayal Rakhein",
+        "detail": "Mustahiq ko maal ya raqam ka haqeeqi malik bana kar dein taake woh apni zaroorat ke mutabiq istemal kar sake."
+      },
+      {
+        "step_no": 3,
+        "title": "Qareebi Rishtedaron Ko Tarjeeh",
+        "detail": "Agar koi zarooratmand rishtedar (jaise bhai, behn, chacha ya phuphi) shar'an mustahiq ho to unhein dena zakat aur silah rehmi dono ka ajar deta hai."
       }
     ]
   }

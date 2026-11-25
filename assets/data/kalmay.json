@@ -13,12 +13,22 @@
       {
         "step_no": 1,
         "title": "Tawheed Ki Shahadat",
-        "detail": "Dil aur zaban se iqrar karein ke wahdaniyat sirf Allah ki hai."
+        "detail": "Dil aur zaban se iqrar karein ke wahdaniyat sirf Allah ki hai; koi zaat, taqat ya khayal us ke barabar nahi."
       },
       {
         "step_no": 2,
         "title": "Risalat Ka Iqrar",
-        "detail": "Hazrat Muhammad (S.A.W) ko aakhri nabi aur rasool manein."
+        "detail": "Hazrat Muhammad (S.A.W) ko aakhri nabi aur rasool manein jin ke zariye hidayat aur deen mukammal hua."
+      },
+      {
+        "step_no": 3,
+        "title": "Rozmarra Zindagi Mein Asar",
+        "detail": "Is kalme ka matlab sirf zubani bolna nahi balke har faisle, ummeed aur dar mein Allah ko markaz banana hai."
+      },
+      {
+        "step_no": 4,
+        "title": "Zikar Ki Aadat",
+        "detail": "Subah shaam, safar ya pareshani ke waqt is kalme ko yaad aur repeat karein taake dil ko itminan mile."
       }
     ]
   },
@@ -36,12 +46,22 @@
       {
         "step_no": 1,
         "title": "Gawahi Ke Alfaz",
-        "detail": "Tawheed aur risalat ki gawahi wazeh aur mo'adab andaz mein parhein."
+        "detail": "Tawheed aur risalat ki gawahi wazeh, pur-yaqeen aur mo'adab andaz mein parhein."
       },
       {
         "step_no": 2,
         "title": "Makna Samjhein",
-        "detail": "Har lafz ke urdu aur english tarjume par ghaur karein."
+        "detail": "Har lafz ke urdu aur english tarjume par ghaur karein, khas taur par 'wahdahu la sharika lahu' aur 'abduhu wa rasuluh' ke farq ko samjhein."
+      },
+      {
+        "step_no": 3,
+        "title": "Bande Aur Rasool Ka Tawazun",
+        "detail": "Nabi Kareem (S.A.W) ko Allah ka sab se pyara banda aur rasool maan kar un ki itaat karein aur shirk se door rahein."
+      },
+      {
+        "step_no": 4,
+        "title": "Wuzu Aur Azan Ke Baad",
+        "detail": "Wuzu mukammal karne ya azan ke baad is shahadat ka khayal taza karna behtareen amal hai."
       }
     ]
   },
@@ -59,12 +79,121 @@
       {
         "step_no": 1,
         "title": "Tasbeeh Aur Tahmeed",
-        "detail": "Allah ki paaki aur hamd ke kalmat ko zikar ke taur par dohrayein."
+        "detail": "Allah ki paaki (Subhanallah) aur tamam tareefon ka haqdar sirf us ke hone (Alhamdulillah) ko zikar ke taur par dohrayein."
       },
       {
         "step_no": 2,
         "title": "Tahleel Aur Takbeer",
-        "detail": "Tawheed aur Allah ki kibriyai ka iqrar shamil karein."
+        "detail": "Tawheed (La ilaha illallah) aur Allah ki kibriyai o azmat (Allahu Akbar) ka iqrar shamil karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Char Bunyadi Kalmat Ki Ehmiyat",
+        "detail": "Hadees mein in char kalmat ko zikar ke liye sab se mehboob alfaaz bataya gaya hai jo zaban ko halka aur mizan ko bhari karte hain."
+      },
+      {
+        "step_no": 4,
+        "title": "Khushi Aur Gham Mein Zikar",
+        "detail": "Kamyabi mile to shukar ke taur par aur mushkil aaye to Allah ki badai yaad kar ke in kalmat ko parhein."
+      }
+    ]
+  },
+  {
+    "id": "kalma_4_tauheed",
+    "category": "fourth_kalma",
+    "title": "Chautha Kalma Tauheed",
+    "arabic": "لَا إِلَٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ يُحْيِي وَيُمِيتُ وَهُوَ حَيٌّ لَا يَمُوتُ أَبَدًا أَبَدًا ذُو الْجَلَالِ وَالْإِكْرَامِ بِيَدِهِ الْخَيْرُ وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ",
+    "urdu": "اللہ کے سوا کوئی معبود نہیں، وہ اکیلا ہے اس کا کوئی شریک نہیں، اسی کے لیے بادشاہی ہے اور اسی کے لیے سب تعریفیں ہیں، وہی زندہ کرتا ہے اور وہی مارتا ہے، اور وہ ہمیشہ زندہ ہے اسے کبھی موت نہیں آئے گی، ہمیشہ ہمیشہ، وہ جلال اور بزرگی والا ہے، اسی کے ہاتھ میں بھلائی ہے اور وہ ہر چیز پر قادر ہے۔",
+    "english": "There is no deity except Allah alone, with no partner. To Him belongs the dominion and to Him belongs all praise. He gives life and causes death, and He is Ever-Living and never dies, forever and ever. Possessor of Majesty and Honor, in His hand is all good, and He is over all things competent.",
+    "reference": "Six Kalimas Tradition",
+    "number": 4,
+    "transliteration": "La ilaha illallahu wahdahu la sharika lahu lahul mulku wa lahul hamdu yuhyi wa yumitu wa huwa hayyun la yamutu abadan abada dhul jalali wal ikram biyadihil khayr wa huwa ala kulli shay'in qadir",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Mulk Aur Hamd Ka Iqrar",
+        "detail": "Kainat ki haqeeqi badshahi aur har tarah ki hamd o sana ko sirf Allah ke liye manein."
+      },
+      {
+        "step_no": 2,
+        "title": "Hayat O Maut Par Qudrat",
+        "detail": "Yeh yaqeen rakhein ke zindagi aur maut sirf Allah ke ikhtiyar mein hai aur us ki zaat hamesha baqi rehne wali hai."
+      },
+      {
+        "step_no": 3,
+        "title": "Jalal, Ikram Aur Qudrat",
+        "detail": "Allah ki azmat, karam nawazi aur har cheez par us ki mukammal qudrat ka ehsaas dil mein zinda rakhein."
+      },
+      {
+        "step_no": 4,
+        "title": "Khair Ki Ummeed",
+        "detail": "Jab bhi kisi kaam ya mushkil ka samna ho to 'biyadihil khayr' ko yaad karte hue har bhalaai Allah hi se maangein."
+      }
+    ]
+  },
+  {
+    "id": "kalma_5_istighfar",
+    "category": "fifth_kalma",
+    "title": "Paanchwa Kalma Astaghfar",
+    "arabic": "أَسْتَغْفِرُ اللَّهَ رَبِّي مِنْ كُلِّ ذَنْبٍ أَذْنَبْتُهُ عَمَدًا أَوْ خَطَأً سِرًّا أَوْ عَلَانِيَةً وَأَتُوبُ إِلَيْهِ مِنَ الذَّنْبِ الَّذِي أَعْلَمُ وَمِنَ الذَّنْبِ الَّذِي لَا أَعْلَمُ إِنَّكَ أَنْتَ عَلَّامُ الْغُيُوبِ وَسَتَّارُ الْعُيُوبِ وَغَفَّارُ الذُّنُوبِ وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ الْعَلِيِّ الْعَظِيمِ",
+    "urdu": "میں اپنے رب اللہ سے ہر اس گناہ کی معافی مانگتا ہوں جو میں نے جان بوجھ کر یا بھول کر کیا، چھپ کر یا کھلم کھلا، اور میں اس کی طرف توبہ کرتا ہوں اس گناہ سے جسے میں جانتا ہوں اور اس گناہ سے جسے میں نہیں جانتا، بے شک تو غیب کی باتوں کو خوب جاننے والا، عیبوں کو چھپانے والا اور گناہوں کو بخشنے والا ہے، اور گناہ سے بچنے کی طاقت اور نیکی کرنے کی قوت اللہ کے سوا کسی میں نہیں جو بلند اور عظیم ہے۔",
+    "english": "I seek forgiveness from Allah, my Lord, from every sin I committed intentionally or mistakenly, secretly or openly, and I turn in repentance to Him from the sin I know and the sin I do not know. Indeed, You are the Knower of the unseen, Concealer of faults, and Forgiver of sins, and there is no power and no strength except through Allah, the Most High, the Supreme.",
+    "reference": "Six Kalimas Tradition",
+    "number": 5,
+    "transliteration": "Astaghfirullaha rabbi min kulli dhanbin adhnabtuhu amadan aw khata'an sirran aw alaniyatan wa atubu ilayhi minadhdhanbilladhi a'lamu wa minadhdhanbilladhi la a'lamu innaka anta allamul ghuyubi wa sattarul uyubi wa ghaffarudh dhunubi wa la hawla wa la quwwata illa billahil aliyyil adheem",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Gunaahon Ka E'tiraf",
+        "detail": "Apni kotahiyon aur laghzishon ko samne rakhte hue, chahe woh jaan boojh kar hon ya anjane mein, sachay dil se maafi talab karein."
+      },
+      {
+        "step_no": 2,
+        "title": "Poshida Aur Zahiri Tawba",
+        "detail": "Tanhaai aur mehfil dono halaton ke gunaahon par nadamat karein aur un gunaahon se bhi panah maangein jin ka ilm hamein nahi."
+      },
+      {
+        "step_no": 3,
+        "title": "Sattar Aur Ghaffar Par Bharosa",
+        "detail": "Allah ki parda poshi (Sattarul Uyub) aur bakhshish (Ghaffarudh Dhunub) ki sifat par yaqeen rakhte hue mayusi se bachein."
+      },
+      {
+        "step_no": 4,
+        "title": "Hawla Aur Quwwat Ka Sahारा",
+        "detail": "Aakhri hisse ke zariye yeh samjhein ke gunaah se bachne aur naik amal karne ki asal taqat sirf Allah ki madad se milti hai."
+      }
+    ]
+  },
+  {
+    "id": "kalma_6_radd_e_kufr",
+    "category": "sixth_kalma",
+    "title": "Chhata Kalma Radde Kufr",
+    "arabic": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ أَنْ أُشْرِكَ بِكَ شَيْئًا وَأَنَا أَعْلَمُ بِهِ وَأَسْتَغْفِرُكَ لِمَا لَا أَعْلَمُ بِهِ تُبْتُ عَنْهُ وَتَبَرَّأْتُ مِنَ الْكُفْرِ وَالشِّرْكِ وَالْكِذْبِ وَالْغِيبَةِ وَالْبِدْعَةِ وَالنَّمِيمَةِ وَالْفَوَاحِشِ وَالْبُهْتَانِ وَالْمَعَاصِي كُلِّهَا وَأَسْلَمْتُ وَأَقُولُ لَا إِلَٰهَ إِلَّا اللَّهُ مُحَمَّدٌ رَسُولُ اللَّهِ",
+    "urdu": "اے اللہ! میں تیری پناہ مانگتا ہوں اس بات سے کہ میں جانتے بوجھتے تیرے ساتھ کسی کو شریک ٹھہراؤں، اور میں تجھ سے اس شریک ٹھہرانے پر معافی مانگتا ہوں جس کا مجھے علم نہیں، میں اس سے توبہ کرتا ہوں اور کفر، شرک، جھوٹ، غیبت، بدعت، چغلی، بے حیائی، بہتان اور تمام گناہوں سے بیزاری کا اعلان کرتا ہوں، اور میں اسلام لایا اور کہتا ہوں کہ اللہ کے سوا کوئی عبادت کے لائق نہیں، محمد صلی اللہ علیہ وسلم اللہ کے رسول ہیں۔",
+    "english": "O Allah, I seek refuge in You from associating anything with You while I know of it, and I seek Your forgiveness for what I do not know of. I repent from it and dissociate myself from disbelief, polytheism, lying, backbiting, innovation in religion, talebearing, immorality, false accusation, and all acts of disobedience. I submit in Islam and declare that there is no deity worthy of worship except Allah, and Muhammad is the Messenger of Allah.",
+    "reference": "Six Kalimas Tradition",
+    "number": 6,
+    "transliteration": "Allahumma inni a'udhu bika min an ushrika bika shay'an wa ana a'lamu bihi wa astaghfiruka lima la a'lamu bihi tubtu anhu wa tabarra'tu minal kufri wash-shirki wal-kidhbi wal-ghibati wal-bid'ati wan-namimati wal-fawahishi wal-buhtani wal-ma'asi kulliha wa aslamtu wa aqulu la ilaha illallahu Muhammadur Rasulullah",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Shirk Se Panah Aur Tawba",
+        "detail": "Zahiri aur batin har tarah ke shirk se Allah ki panah maangein, chahe woh maloom ho ya na-maloom."
+      },
+      {
+        "step_no": 2,
+        "title": "Akhlaqi Aur Deeni Buraiyon Se Bezari",
+        "detail": "Jhooth, gheebat, buhtan, chughli, bid'at aur behayai jaisi buraiyon ko dil se na-pasand karein aur un se door rehne ka irada karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Eeman Ki Tajdeed",
+        "detail": "Tamam ma'asi aur buraiyon se alag ho kar apne Islam aur eeman ko naye sire se taza karein."
+      },
+      {
+        "step_no": 4,
+        "title": "Kalma-e-Tayyaba Par Khatima",
+        "detail": "Aakhir mein 'La ilaha illallahu Muhammadur Rasulullah' ke iqrar ke sath apni wabastagi tawheed aur risalat par mazboot karein."
       }
     ]
   }

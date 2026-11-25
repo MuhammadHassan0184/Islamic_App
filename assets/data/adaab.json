@@ -16,12 +16,17 @@
       {
         "step_no": 2,
         "title": "Dayein Hath Aur Samne Se Khana",
-        "detail": "Dayein hath se luqma uthayein aur bartan mein apne samne se khayein."
+        "detail": "Dayein hath se luqma uthayein aur bartan mein apne samne se khayein; aib na nikalen."
       },
       {
         "step_no": 3,
         "title": "Khane Ke Baad Shukar",
         "detail": "Khana khatam kar ke 'Alhamdulillah' parhein aur israf (zaya karne) se bachein."
+      },
+      {
+        "step_no": 4,
+        "title": "Bhook Baqi Rakhte Hue Rukna",
+        "detail": "Pet bhar kar thonsne ke bajaye ehtidal se khayein taake sehat aur ibadat dono mein susti na aaye."
       }
     ]
   },
@@ -48,6 +53,11 @@
         "step_no": 3,
         "title": "Dua-e-Maghfirat",
         "detail": "Zindagi aur wafaat ke baad walidain ke liye maghfirat aur rehmat ki dua karte rahein."
+      },
+      {
+        "step_no": 4,
+        "title": "Waqt Dena Aur Baat Sunna",
+        "detail": "Masroofiyat ke bawajood un ke sath baith kar un ki baat tawajjo se sunein aur unhein tanha mehsoos na hone dein."
       }
     ]
   },
@@ -63,12 +73,208 @@
       {
         "step_no": 1,
         "title": "Kisi Qism Ki Takleef Se Bachna",
-        "detail": "Shor, kachra, parking ya kisi aur amal se humsaye ko pareshan na karein."
+        "detail": "Shor, kachra, parking, dhuan ya kisi aur amal se humsaye ko pareshan na karein."
       },
       {
         "step_no": 2,
         "title": "Madad Aur Husn-e-Sulook",
         "detail": "Zaroorat ya musibat ke waqt madad karein aur khushi ke mauqon par mubarakbad dein."
+      },
+      {
+        "step_no": 3,
+        "title": "Pardadari Aur Razdari",
+        "detail": "Humsaye ke ghar ki khususi baaton aur pardadari ka khayal rakhein aur afwahon se bachein."
+      },
+      {
+        "step_no": 4,
+        "title": "Salam Aur Khair-Khawahi",
+        "detail": "Milte waqt muskurahat aur salam ke sath pesh aayein aur achha khana banate waqt thoda hissa bhejne ki koshish karein."
+      }
+    ]
+  },
+  {
+    "id": "adaab_salam_ke_adab",
+    "category": "salam",
+    "title": "Salam Karne Ke Adab",
+    "arabic": "أَفْشُوا السَّلَامَ بَيْنَكُمْ",
+    "urdu": "آپس میں سلام کو عام کرنا محبت بڑھانے اور امن و سلامتی کی دعا دینے کا بہترین طریقہ ہے۔",
+    "english": "Spreading Salam among yourselves is the best way to foster love and pray for peace and safety.",
+    "reference": "Sahih Muslim",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Pehal Karna Aur Mukammal Alfaz",
+        "detail": "Mulaqat ke waqt 'Assalamu Alaikum wa Rahmatullahi wa Barakatuh' kehne mein pehal karein aur khush-akhlaqi se pesh aayein."
+      },
+      {
+        "step_no": 2,
+        "title": "Behtar Jawab Dena",
+        "detail": "Salam ka jawab us se behtar ya kam az kam utne hi alfaaz mein tawajjo aur muskurahat ke sath dein."
+      },
+      {
+        "step_no": 3,
+        "title": "Ghar Mein Dakhil Hote Waqt",
+        "detail": "Apne ghar ya kisi ke ghar dakhil hote waqt pehle salam karein, chahe ghar mein koi maujood ho ya na ho."
+      },
+      {
+        "step_no": 4,
+        "title": "Tarteeb Ka Khayal",
+        "detail": "Chhota bade ko, chalne wala baithe hue ko aur sawar paidal chalne wale ko pehle salam kare."
+      }
+    ]
+  },
+  {
+    "id": "adaab_sone_jaagne_ke_adab",
+    "category": "sleep",
+    "title": "Sone Aur Jaagne Ke Adab",
+    "arabic": "بِاسْمِكَ اللَّهُمَّ أَمُوتُ وَأَحْيَا",
+    "urdu": "وضو کر کے سونا، دائیں کروٹ لیٹنا، مسنون اذکار پڑھنا اور جاگنے پر اللہ کا شکر ادا کرنا سنتِ نبوی ہے۔",
+    "english": "Sleeping with Wudu, lying on the right side, reciting Sunnah supplications, and thanking Allah upon waking are part of Prophetic etiquette.",
+    "reference": "Sahih al-Bukhari",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Wuzu Aur Bistar Jharna",
+        "detail": "Sone se pehle wuzu karein aur bistar ko achhi tarah jhar kar saaf kar lein."
+      },
+      {
+        "step_no": 2,
+        "title": "Dayein Karwat Aur Masnoon Azkar",
+        "detail": "Dayein karwat let kar Ayat-ul-Kursi, teen Qul aur sone ki dua 'Bismika Allahumma amutu wa ahya' parhein."
+      },
+      {
+        "step_no": 3,
+        "title": "Jald Sona Aur Be-Faidah Jaagne Se Bachna",
+        "detail": "Isha ke baad bila-zaroorat dair tak jaagne aur mobile istemal karne se bachein taake Fajr ke liye aasani se utha ja sake."
+      },
+      {
+        "step_no": 4,
+        "title": "Jaagne Par Shukar Aur Dua",
+        "detail": "Aankh khulte hi 'Alhamdulillahil-ladhi ahyana ba'da ma amatana wa ilayhin-nushur' parhein aur din ka aaghaz Allah ke zikar se karein."
+      }
+    ]
+  },
+  {
+    "id": "adaab_guftagu_ke_adab",
+    "category": "speech",
+    "title": "Guftagu Aur Bolne Ke Adab",
+    "arabic": "مَنْ كَانَ يُؤْمِنُ بِاللَّهِ وَالْيَوْمِ الْآخِرِ فَلْيَقُلْ خَيْرًا أَوْ لِيَصْمُتْ",
+    "urdu": "سچ بولنا، نرمی سے بات کرنا، غیبت و چغلی سے بچنا اور فضول کلام پر خاموشی اختیار کرنا مومن کی پہچان ہے۔",
+    "english": "Speaking the truth, talking gently, avoiding backbiting and slander, and staying silent rather than speaking uselessly are signs of a believer.",
+    "reference": "Sahih al-Bukhari & Sahih Muslim",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Soch Samajh Kar Bolna",
+        "detail": "Koi bhi baat kehne se pehle sochein ke kya yeh sach, mufeed aur kisi ko takleef na dene wali hai."
+      },
+      {
+        "step_no": 2,
+        "title": "Narm Lehja Aur Sachai",
+        "detail": "Mazaq mein bhi jhoot na bolein aur ikhtilaf ke waqt bhi bad-zubani ya taana-zani se parhez karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Gheebat Aur Chughli Se Hifazat",
+        "detail": "Kisi ki ghaib-mojoodgi mein aisi baat na karein jo use buri lage aur na hi suni-sunai baatein aage phailayein."
+      },
+      {
+        "step_no": 4,
+        "title": "Doosron Ki Baat Tawajjo Se Sunna",
+        "detail": "Baat kaatne ke bajaye mukhatib ki baat poori tawajjo aur adab se sunein."
+      }
+    ]
+  },
+  {
+    "id": "adaab_masjid_ke_adab",
+    "category": "masjid",
+    "title": "Masjid Ke Adab",
+    "arabic": "إِذَا دَخَلَ أَحَدُكُمُ الْمَسْجِدَ فَلْيَرْكَعْ رَكْعَتَيْنِ قَبْلَ أَنْ يَجْلِسَ",
+    "urdu": "مسجد اللہ کا گھر ہے؛ یہاں پاکیزگی، وقار، خاموشی اور تحیۃ المسجد کے ساتھ داخل ہونا چاہیے۔",
+    "english": "The mosque is the house of Allah; one should enter it with cleanliness, dignity, quietness, and two rak'ahs of Tahiyyat-ul-Masjid.",
+    "reference": "Sahih al-Bukhari & Sahih Muslim",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Safai Aur Dayein Paon Se Dakhila",
+        "detail": "Paak libas ke sath dayein paon se masjid mein dakhil hon aur 'Allahummaftah li abwaba rahmatik' parhein."
+      },
+      {
+        "step_no": 2,
+        "title": "Tahiyyat-ul-Masjid",
+        "detail": "Makrooh waqt na ho to baithne se pehle do rakat Tahiyyat-ul-Masjid ada karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Khamoshi Aur Phone Silent Rakhna",
+        "detail": "Masjid mein dakhil hone se pehle mobile silent kar lein aur dunyawi baaton ya oonchi awaaz se bachein."
+      },
+      {
+        "step_no": 4,
+        "title": "Safoon Ki Durustagi Aur Khidmat",
+        "detail": "Safoon ko seedha aur milakar khade hon, aur masjid ki safai aur cheezon ki hifazat ka khayal rakhein."
+      }
+    ]
+  },
+  {
+    "id": "adaab_safar_ke_adab",
+    "category": "travel",
+    "title": "Safar Ke Adab",
+    "arabic": "سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَٰذَا وَمَا كُنَّا لَهُ مُقْرِنِينَ",
+    "urdu": "سفر شروع کرنے سے پہلے دعا پڑھنا، امانت و معاملات صاف رکھنا اور راستے میں خیر خواہی کرنا سفر کے آداب ہیں۔",
+    "english": "Reciting the travel supplication, settling obligations beforehand, and showing kindness along the way are manners of travel.",
+    "reference": "Surah Az-Zukhruf 43:13 & Sahih Muslim",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Safar Ki Tayari Aur Dua",
+        "detail": "Ghar se nikalte waqt ghar walon ko Allah ki hifazat mein dein aur sawari par baith kar safar ki masnoon dua parhein."
+      },
+      {
+        "step_no": 2,
+        "title": "Namazon Ka Ehtimam",
+        "detail": "Safar ke dauran namazon ke auqat aur qasr ke ahkam ka khayal rakhein aur namaz qaza na hone dein."
+      },
+      {
+        "step_no": 3,
+        "title": "Hamsafaron Se Husn-e-Sulook",
+        "detail": "Raaste mein sabr, narmi aur madad ka jazba rakhein aur traffic ya safar ke qawaneen ki pabandi karein."
+      },
+      {
+        "step_no": 4,
+        "title": "Wapsi Par Shukar",
+        "detail": "Khairiyat se wapas ghar pahunchne par Allah ka shukar ada karein aur ghar walon ke liye dua aur tohfa le kar aayein."
+      }
+    ]
+  },
+  {
+    "id": "adaab_mehman_nawazi",
+    "category": "hospitality",
+    "title": "Mehman Nawazi Ke Adab",
+    "arabic": "مَنْ كَانَ يُؤْمِنُ بِاللَّهِ وَالْيَوْمِ الْآخِرِ فَلْيُكْرِمْ ضَيْفَهُ",
+    "urdu": "مہمان کا خندہ پیشانی سے استقبال کرنا، حسبِ استطاعت تواضع کرنا اور عزت دینا ایمان کی علامت ہے۔",
+    "english": "Welcoming a guest warmly, offering hospitality within one's means, and honoring them are signs of faith.",
+    "reference": "Sahih al-Bukhari & Sahih Muslim",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Khush-Dili Se Istaqbal",
+        "detail": "Mehman ke aane par muskurahat, salam aur muhabbat se khush-amdeed kahein taake woh apnaiyat mehsoos kare."
+      },
+      {
+        "step_no": 2,
+        "title": "Bila-Takalluf Tawazo",
+        "detail": "Jo kuch asaani se mayassar ho us se foran tawazo karein aur dikhawe ya qarz ke takalluf se bachein."
+      },
+      {
+        "step_no": 3,
+        "title": "Aaram Aur Zaroorat Ka Khayal",
+        "detail": "Mehman ke baithne, wuzu, namaz aur aaram ki sahulat ka khamoshi se intezam karein."
+      },
+      {
+        "step_no": 4,
+        "title": "Rukhsat Karte Waqt Adab",
+        "detail": "Mehman ko darwaze tak chhorne jayein aur khair o barkat ki dua ke sath rukhsat karein."
       }
     ]
   }

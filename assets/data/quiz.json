@@ -25,6 +25,11 @@
         "step_no": 2,
         "title": "Wazahat Dekhein",
         "detail": "Jawab submit karne ke baad hawala aur mukhtasar wazahat parhein."
+      },
+      {
+        "step_no": 3,
+        "title": "Amali Jaiza Lein",
+        "detail": "Sochhein ke in panchon arkan mein se kaun sa rukn aapki rozmarra zindagi mein sab se zyada mazboot hai aur kis par mazeed tawajjah chahiye."
       }
     ]
   },
@@ -54,6 +59,11 @@
         "step_no": 2,
         "title": "Score Update Karein",
         "detail": "Har durust jawab par score barhayein aur hawala note karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Surah Al-Alaq Ki Tilawat",
+        "detail": "Wazahat parhne ke baad Quran mein Surah Al-Alaq ki pehli chand aayaat ka tarjuma zaroor dekhein."
       }
     ]
   },
@@ -83,6 +93,249 @@
         "step_no": 2,
         "title": "Nimaz Guide Se Jorhein",
         "detail": "Tafseeli tareeqa dekhne ke liye Tareeqa Guides section kholein."
+      },
+      {
+        "step_no": 3,
+        "title": "Aaj Ki Pabandi Check Karein",
+        "detail": "Apne aaj ke schedule mein dekhein ke kaun si nimazein waqt par ada ho chuki hain aur kaun si baqi hain."
+      }
+    ]
+  },
+  {
+    "id": "quiz_articles_of_faith",
+    "category": "pillars_of_islam",
+    "title": "Eeman Ke Buniadi Aqaid Kitne Hain?",
+    "arabic": "أَنْ تُؤْمِنَ بِاللَّهِ وَمَلَائِكَتِهِ وَكُتُبِهِ وَرُسُلِهِ وَالْيَوْمِ الْآخِرِ وَتُؤْمِنَ بِالْقَدَرِ خَيْرِهِ وَشَرِّهِ",
+    "urdu": "کہ تو ایمان لائے اللہ پر، اس کے فرشتوں پر، اس کی کتابوں پر، اس کے رسولوں پر، آخرت کے دن پر، اور تقدیر پر کہ اس کی بھلائی اور برائی اللہ کی طرف سے ہے۔",
+    "english": "That you believe in Allah, His angels, His books, His messengers, the Last Day, and decree, both its good and its evil.",
+    "reference": "Sahih Muslim",
+    "options": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "correct_index": 2,
+    "explanation": "Allah, Mala'ikah, Kutub, Rusul, Yawm-ul-Akhir, aur Taqdeer par eeman lana Eeman ke 6 buniadi arkan hain.",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Sawal Parhein",
+        "detail": "Eeman ke arkan ki ginti ke liye diye gaye options mein se sahi number chunein."
+      },
+      {
+        "step_no": 2,
+        "title": "Wazahat Dekhein",
+        "detail": "Jawab ke baad har rukn ka khulasa aur hadees ka hawala parhein."
+      },
+      {
+        "step_no": 3,
+        "title": "Aqeede Ko Amal Se Jorein",
+        "detail": "Ghaur karein ke aakhirat ki jawabdehi aur taqdeer par yaqeen aapke rozmarra faislon ko kis tarah behtar banata hai."
+      }
+    ]
+  },
+  {
+    "id": "quiz_longest_surah",
+    "category": "quran",
+    "title": "Quran Majeed Ki Sab Se Lambi Surah Kaun Si Hai?",
+    "arabic": "الم ۝ ذَٰلِكَ الْكِتَابُ لَا رَيْبَ فِيهِ",
+    "urdu": "الف لام میم، یہ وہ کتاب ہے جس میں کوئی شک نہیں۔",
+    "english": "Alif, Lam, Meem. This is the Book about which there is no doubt.",
+    "reference": "Surah Al-Baqarah 2:1-2",
+    "options": [
+      "Surah Aal-Imran",
+      "Surah An-Nisa",
+      "Surah Al-Baqarah",
+      "Surah Al-Ma'idah"
+    ],
+    "correct_index": 2,
+    "explanation": "Surah Al-Baqarah Quran Majeed ki sab se lambi surah hai jo 286 aayaat par mushtamil hai.",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Option Muntakhib Karein",
+        "detail": "Char suraton mein se sab se tawil surah ka durust naam select karein."
+      },
+      {
+        "step_no": 2,
+        "title": "Score Update Karein",
+        "detail": "Durust jawab ke sath score barhayein aur surah ki tafseel note karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Rozana Thori Tilawat",
+        "detail": "Bari surah dekh kar ghabrane ke bajaye rozana chand aayaat tilawat aur tarjume ke sath parhne ki aadat banayein."
+      }
+    ]
+  },
+  {
+    "id": "quiz_hijrah_city",
+    "category": "seerah",
+    "title": "Nabi Kareem (S.A.W) Ne Makkah Se Kis Shehar Ki Taraf Hijrat Farmayi?",
+    "arabic": "إِلَّا تَنْصُرُوهُ فَقَدْ نَصَرَهُ اللَّهُ",
+    "urdu": "اگر تم اس کی مدد نہ کرو گے تو بے شک اللہ نے اس کی مدد فرمائی۔",
+    "english": "If you do not aid him — Allah has already aided him.",
+    "reference": "Surah At-Tawbah 9:40 & Sahih al-Bukhari",
+    "options": [
+      "Ta'if",
+      "Madinah",
+      "Jerusalem",
+      "Tabuk"
+    ],
+    "correct_index": 1,
+    "explanation": "Nabi Kareem (S.A.W) ne Makkah se Madinah (jis ka pehla naam Yathrib tha) ki taraf hijrat farmayi.",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Jawab Chunein",
+        "detail": "Hijrat ki manzil ka durust option select karein."
+      },
+      {
+        "step_no": 2,
+        "title": "Wazahat Dekhein",
+        "detail": "Hijrat ke tareekhi pas-e-manzar aur hawale ko parhein."
+      },
+      {
+        "step_no": 3,
+        "title": "Hijrat Ka Sabaq Yaad Rakhein",
+        "detail": "Tawakkul, hikmat aur naye muashre mein bhaichare ki qadar ko apni zindagi mein samone rakhein."
+      }
+    ]
+  },
+  {
+    "id": "quiz_ramadan_month_number",
+    "category": "pillars_of_islam",
+    "title": "Islami (Hijri) Calendar Mein Ramzan Ka Mahina Kaun Sa Hota Hai?",
+    "arabic": "شَهْرُ رَمَضَانَ الَّذِي أُنْزِلَ فِيهِ الْقُرْآنُ",
+    "urdu": "رمضان وہ مہینہ ہے جس میں قرآن نازل کیا گیا۔",
+    "english": "The month of Ramadan [is that] in which was revealed the Quran.",
+    "reference": "Surah Al-Baqarah 2:185",
+    "options": [
+      "7th",
+      "8th",
+      "9th",
+      "10th"
+    ],
+    "correct_index": 2,
+    "explanation": "Ramzan-ul-Mubarak hijri calendar ka 9th mahina hai, jo Sha'ban ke baad aur Shawwal se pehle aata hai.",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Sawal Parhein",
+        "detail": "Hijri mahinon ki tarteeb ke mutabiq sahi number chunein."
+      },
+      {
+        "step_no": 2,
+        "title": "Score Update Karein",
+        "detail": "Jawab submit kar ke score aur explanation dekhein."
+      },
+      {
+        "step_no": 3,
+        "title": "Hijri Mahinon Ka Shaur",
+        "detail": "Apne rozmarra ke din aur mahine ke sath sath islami calendar ke mahinon se bhi wabastagi barhayein."
+      }
+    ]
+  },
+  {
+    "id": "quiz_best_day_of_week",
+    "category": "nimaz",
+    "title": "Hafte Ke Dinon Mein Kaun Sa Din Sab Se Afzal Bataya Gaya Hai?",
+    "arabic": "خَيْرُ يَوْمٍ طَلَعَتْ عَلَيْهِ الشَّمْسُ يَوْمُ الْجُمُعَةِ",
+    "urdu": "سب سے بہتر دن جس پر سورج طلوع ہوتا ہے جمعہ کا دن ہے۔",
+    "english": "The best day on which the sun rises is Friday.",
+    "reference": "Sahih Muslim",
+    "options": [
+      "Mangal (Tuesday)",
+      "Budh (Wednesday)",
+      "Jumu'ah (Friday)",
+      "Itwar (Sunday)"
+    ],
+    "correct_index": 2,
+    "explanation": "Jumu'ah (Friday) haftay ka sab se fazilat wala din hai, jis mein Jumu'ah ki namaz, Surah Al-Kahf aur durood ki khaas ehmiyat hai.",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Option Muntakhib Karein",
+        "detail": "Char dinon mein se afzal din ka sahi option select karein."
+      },
+      {
+        "step_no": 2,
+        "title": "Wazahat Dekhein",
+        "detail": "Hadees ka mafhoom aur Jumu'ah ki khaas baatein parhein."
+      },
+      {
+        "step_no": 3,
+        "title": "Jumu'ah Ki Tayyari Karein",
+        "detail": "Ghusl, Surah Al-Kahf, kasrat se durood aur aakhri ghari ki dua ko apni haftawar routine ka hissa banayein."
+      }
+    ]
+  },
+  {
+    "id": "quiz_qiblah_direction",
+    "category": "nimaz",
+    "title": "Namaz Ke Waqt Musalman Kis Simt Rukhsat/Rukh Kar Ke Khare Hote Hain?",
+    "arabic": "فَوَلِّ وَجْهَكَ شَطْرَ الْمَسْجِدِ الْحَرَامِ",
+    "urdu": "پس اپنا رخ مسجدِ حرام کی طرف پھیر لو۔",
+    "english": "So turn your face toward al-Masjid al-Haram.",
+    "reference": "Surah Al-Baqarah 2:144",
+    "options": [
+      "Bait-ul-Muqaddas",
+      "Masjid-e-Nabawi",
+      "Ka'bah (Masjid-ul-Haram)",
+      "Mount Arafah"
+    ],
+    "correct_index": 2,
+    "explanation": "Duniya bhar ke musalman namaz ke waqt Makkah mein maujood Ka'bah (Masjid-ul-Haram) ki simt rukh karte hain.",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Jawab Chunein",
+        "detail": "Qiblah ki durust simt/maqam ka option select karein."
+      },
+      {
+        "step_no": 2,
+        "title": "Wazahat Dekhein",
+        "detail": "Qurani hawala aur mukhtasar wazahat parhein."
+      },
+      {
+        "step_no": 3,
+        "title": "Ittehad Aur Tawajjah",
+        "detail": "Samjhein ke ek hi Qiblah ki taraf rukh karna ummat ke ittehad aur ek hi Rab ki bandagi ki nishani hai."
+      }
+    ]
+  },
+  {
+    "id": "quiz_zakat_pillar",
+    "category": "pillars_of_islam",
+    "title": "Zakat Ka Bunyadi Maqsad Kya Hai?",
+    "arabic": "خُذْ مِنْ أَمْوَالِهِمْ صَدَقَةً تُطَهِّرُهُمْ وَتُزَكِّيهِمْ بِهَا",
+    "urdu": "ان کے اموال سے صدقہ لے لیجیے جس کے ذریعے آپ انہیں پاک اور صاف کر دیں۔",
+    "english": "Take, [O Muhammad], from their wealth a charity by which you purify them and cause them increase.",
+    "reference": "Surah At-Tawbah 9:103",
+    "options": [
+      "Maal ko chhupana",
+      "Maal o nafs ki paaki aur zarooratmand ki madad",
+      "Sirf safar ke waqt dena",
+      "Sirf Ramzan mein shart hona"
+    ],
+    "correct_index": 1,
+    "explanation": "Zakat sahib-e-nisab par farz ibadat hai jo maal aur nafs ko bukhl se paak karti hai aur muashre mein zarooratmand logon ka haq un tak pahunchati hai.",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Sawal Parhein",
+        "detail": "Zakat ke maqsad ke hawale se sab se durust option chunein."
+      },
+      {
+        "step_no": 2,
+        "title": "Wazahat Dekhein",
+        "detail": "Qurani aayat ka mafhoom aur Zakat ki roohani o muashrati ehmiyat parhein."
+      },
+      {
+        "step_no": 3,
+        "title": "Hisab Aur Khair-Khawahi",
+        "detail": "Apne nisab aur waqt ka khayal rakhte hue mustahiq logon tak haq pahunchane ki niyyat mazboot karein."
       }
     ]
   }

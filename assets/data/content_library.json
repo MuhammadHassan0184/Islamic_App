@@ -7,7 +7,23 @@
     "urdu": "اللہ کے سوا کوئی معبود نہیں، وہ ہمیشہ زندہ اور سب کا تھامنے والا ہے۔",
     "english": "Allah — there is no deity except Him, the Ever-Living, the Sustainer of all existence.",
     "reference": "Surah Al-Baqarah 2:255",
-    "steps": []
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Wuzu Aur Tawajjah Ke Sath Tilawat",
+        "detail": "Har farz namaz ke baad, subah shaam aur sone se pehle pur-sukoon aur tawajjah ke sath is aayat ko parhein."
+      },
+      {
+        "step_no": 2,
+        "title": "Al-Hayy Aur Al-Qayyum Ka Makna",
+        "detail": "Samjhein ke Allah kabhi na marne wali zaat hai aur poori kainat ka nizam usi ke qayam rakhne se chal raha hai."
+      },
+      {
+        "step_no": 3,
+        "title": "Hifazat Aur Sukoon Ki Umeed",
+        "detail": "Khauf, be-chaini ya safar ke waqt is aayat ko parh kar Allah ki hifazat aur nigehbani par bharosa rakhein."
+      }
+    ]
   },
   {
     "id": "lib_darood_ibrahim",
@@ -17,7 +33,23 @@
     "urdu": "اے اللہ! محمد صلی اللہ علیہ وسلم اور آلِ محمد پر رحمت نازل فرما۔",
     "english": "O Allah, send prayers upon Muhammad and upon the family of Muhammad.",
     "reference": "Sahih al-Bukhari",
-    "steps": []
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Namaz Aur Zikar Mein Ehtimam",
+        "detail": "Namaz ke tashahhud ke ilawa rozana zikar, jumma ke din aur kisi bhi dua se pehle is darood ko parhein."
+      },
+      {
+        "step_no": 2,
+        "title": "Muhabbat Aur Adab Ka Izhar",
+        "detail": "Nabi Kareem (S.A.W) aur aap ki aal par rahmat aur barkat ki dua karte waqt dil mein adab aur muhabbat rakhein."
+      },
+      {
+        "step_no": 3,
+        "title": "Sunnat Par Amal Ki Niyyat",
+        "detail": "Darood parhne ke sath apni zindagi, akhlaq aur mamlat ko sunnat-e-nabawi ke mutabiq dhalne ki koshish karein."
+      }
+    ]
   },
   {
     "id": "lib_dua_rizq_barakah",
@@ -27,6 +59,205 @@
     "urdu": "اے اللہ! مجھے اپنے حلال رزق کے ذریعے حرام سے بچا لے۔",
     "english": "O Allah, suffice me with what You have made lawful over what You have made unlawful.",
     "reference": "Jami' at-Tirmidhi",
-    "steps": []
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Halal Kamaai Ki Niyyat",
+        "detail": "Karobar, job ya kisi bhi mehnat se pehle is dua ko parh kar rizq mein paakizgi aur barkat ki dua karein."
+      },
+      {
+        "step_no": 2,
+        "title": "Haram Aur Shubah Se Bachav",
+        "detail": "Sirf dua par iktifa na karein balke jhoot, dhoka, sood ya kisi bhi ghalat zariye se bachne ka khayal rakhein."
+      },
+      {
+        "step_no": 3,
+        "title": "Qana'at Aur Shukar",
+        "detail": "Jo halal rizq mil jaye us par shukar aur qana'at rakhein aur apne fazl se doosron ki zaroorat mein bhi hissa dalein."
+      }
+    ]
+  }, 
+
+  {
+    "id": "lib_surah_ikhlas",
+    "category": "surah",
+    "title": "Surah Al-Ikhlas",
+    "arabic": "قُلْ هُوَ اللَّهُ أَحَدٌ ۝ اللَّهُ الصَّمَدُ",
+    "urdu": "کہہ دیجیے کہ وہ اللہ ایک ہے، اللہ بے نیاز ہے۔",
+    "english": "Say, He is Allah, the One and Only; Allah, the Eternal, Absolute.",
+    "reference": "Surah Al-Ikhlas 112:1-2",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Tawheed Ka Khalis Iqrar",
+        "detail": "Subah shaam, sone se pehle aur namazon mein is surah ko parh kar Allah ki wahdaniyat aur be-niazi ko dil mein bithayein."
+      },
+      {
+        "step_no": 2,
+        "title": "As-Samad Ka Makna Samjhein",
+        "detail": "Samjhein ke tamam makhlooqat apni har zaroorat ke liye Allah ki mohtaj hain, jabke Allah kisi ka mohtaj nahi."
+      },
+      {
+        "step_no": 3,
+        "title": "Tihai Quran Ki Fazeelat",
+        "detail": "Hadees ke mutabiq is mukhtasir surah ki tilawat sawab mein ek tihai Quran ke barabar hai; ise rozana ke wird mein shamil karein."
+      }
+    ]
+  },
+  {
+    "id": "lib_dua_rabbana_atina",
+    "category": "masnoon_dua",
+    "title": "Rabbana Atina Fid-Dunya",
+    "arabic": "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ",
+    "urdu": "اے ہمارے رب! ہمیں دنیا میں بھی بھلائی عطا فرما اور آخرت میں بھی بھلائی عطا فرما اور ہمیں آگ کے عذاب سے بچا۔",
+    "english": "Our Lord, give us in this world that which is good and in the Hereafter that which is good, and protect us from the punishment of the Fire.",
+    "reference": "Surah Al-Baqarah 2:201",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Jame Dua Ki Aadat",
+        "detail": "Nabi Kareem (S.A.W) yeh dua kasrat se maangte the kyunkay is mein duniya aur aakhirat ki har bhalai jama ho gayi hai."
+      },
+      {
+        "step_no": 2,
+        "title": "Duniya Aur Aakhirat Ka Tawazun",
+        "detail": "Sirf dunyawi kamyabi par nazar na rakhein balke sehat, halal rizq aur naik aamal ke sath aakhirat ki nijat bhi maangein."
+      },
+      {
+        "step_no": 3,
+        "title": "Har Namaz Ke Baad Parhein",
+        "detail": "Sajde, tashahhud aur namaz ke baad ki duaon mein is Qurani dua ko zaroor shamil karein."
+      }
+    ]
+  },
+  {
+    "id": "lib_dua_ilm_izafa",
+    "category": "masnoon_dua",
+    "title": "Dua Baraye Ilm Mein Izafa",
+    "arabic": "رَبِّ زِدْنِي عِلْمًا",
+    "urdu": "اے میرے رب! میرے علم میں اضافہ فرما۔",
+    "english": "My Lord, increase me in knowledge.",
+    "reference": "Surah Taha 20:114",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Parhai Aur Kaam Se Pehle Parhein",
+        "detail": "Quran parhne, mutala karne, class ya kisi bhi seekhne ke kaam se pehle khuloos ke sath yeh dua parhein."
+      },
+      {
+        "step_no": 2,
+        "title": "Nafa Bakhsh Ilm Ki Talab",
+        "detail": "Aisa ilm maangein jo hidayat, hikmat aur doosron ko faida pahunchane ka zariya bane, na ke gharoor ka sabab."
+      },
+      {
+        "step_no": 3,
+        "title": "Ilm Par Amal Karein",
+        "detail": "Jo kuch seekhein us par amal karne aur doosron tak aasan andaaz mein pahunchane ki koshish karein."
+      }
+    ]
+  },
+  {
+    "id": "lib_sayyid_ul_istighfar",
+    "category": "istighfar",
+    "title": "Sayyid-ul-Istighfar",
+    "arabic": "اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَٰهَ إِلَّا أَنْتَ خَلَقْتَنِي وَأَنَا عَبْدُكَ",
+    "urdu": "اے اللہ! تو ہی میرا رب ہے، تیرے سوا کوئی معبود نہیں، تو نے مجھے پیدا کیا اور میں تیرا بندہ ہوں۔",
+    "english": "O Allah, You are my Lord, there is no deity except You; You created me and I am Your servant.",
+    "reference": "Sahih al-Bukhari",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Subah Aur Shaam Ka Wird",
+        "detail": "Subah aur shaam ke azkar mein yaqeen aur tawajjah ke sath is istighfar ko parhne ka ehtimam karein."
+      },
+      {
+        "step_no": 2,
+        "title": "Nemato Aur Kotahiyon Ka Iqrar",
+        "detail": "Allah ki nematon ka shukar aur apni ghaltiyon ka sachay dil se e'tiraf karte hue maghfirat maangein."
+      },
+      {
+        "step_no": 3,
+        "title": "Naye Azm Ke Sath Wapsi",
+        "detail": "Istighfar ke baad pichhle gunaahon ko na dohrane aur naik aamal par qaim rehne ka irada karein."
+      }
+    ]
+  },
+  {
+    "id": "lib_muawwidhatayn",
+    "category": "surah",
+    "title": "Mu'awwidhatayn (Surah Al-Falaq & An-Nas)",
+    "arabic": "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ ۝ قُلْ أَعُوذُ بِرَبِّ النَّاسِ",
+    "urdu": "کہہ دیجیے کہ میں صبح کے رب کی پناہ مانگتا ہوں، اور لوگوں کے رب کی پناہ مانگتا ہوں۔",
+    "english": "Say, I seek refuge in the Lord of daybreak, and I seek refuge in the Lord of mankind.",
+    "reference": "Surah Al-Falaq 113 & Surah An-Nas 114",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Subah Shaam Aur Sone Se Pehle",
+        "detail": "Subah o shaam teen-teen martaba aur raat ko sone se pehle in dono suraton ko parh kar apne aap par dam karein."
+      },
+      {
+        "step_no": 2,
+        "title": "Zahiri Aur Batini Shar Se Panah",
+        "detail": "Hasad, waswason, jadu aur har tarah ke nuqsan se bachne ke liye sirf Allah ki panah par bharosa rakhein."
+      },
+      {
+        "step_no": 3,
+        "title": "Beemari Aur Pareshani Mein Ruqyah",
+        "detail": "Kisi takleef ya ghabrahat ke waqt in suraton ko parh kar shifa aur itminan ki dua karein."
+      }
+    ]
+  },
+  {
+    "id": "lib_darood_tunajjina",
+    "category": "darood_pak",
+    "title": "Darood-e-Taj / Darood-e-Salam (Mukhtasir)",
+    "arabic": "اللَّهُمَّ صَلِّ وَسَلِّمْ وَبَارِكْ عَلَى سَيِّدِنَا مُحَمَّدٍ",
+    "urdu": "اے اللہ! ہمارے سردار محمد صلی اللہ علیہ وسلم پر رحمت، سلامتی اور برکت نازل فرما۔",
+    "english": "O Allah, send prayers, peace, and blessings upon our master Muhammad.",
+    "reference": "Surah Al-Ahzab 33:56",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Chalte Phirte Zikar",
+        "detail": "Safar, kaam ke waqfay ya farigh lamhat mein is mukhtasir aur pur-barkat darood ko kasrat se parhein."
+      },
+      {
+        "step_no": 2,
+        "title": "Pareshani Mein Rahat",
+        "detail": "Dil ki bechaini door karne aur Allah ki rehmat mutawajjah karne ke liye darood o salam ko apna mamool banayein."
+      },
+      {
+        "step_no": 3,
+        "title": "Huzoor (S.A.W) Ki Taleemat Yaad Rakhein",
+        "detail": "Darood parhte waqt narmi, sadgi aur doosron ke sath bhalai karne ki sunnat ko bhi zinda rakhein."
+      }
+    ]
+  },
+  {
+    "id": "lib_dua_maghfirat_walidain",
+    "category": "masnoon_dua",
+    "title": "Dua Baraye Walidain Aur Momineen",
+    "arabic": "رَبَّنَا اغْفِرْ لِي وَلِوَالِدَيَّ وَلِلْمُؤْمِنِينَ يَوْمَ يَقُومُ الْحِسَابُ",
+    "urdu": "اے ہمارے رب! مجھے، میرے والدین کو اور تمام ایمان والوں کو اس دن بخش دے جس دن حساب قائم ہوگا۔",
+    "english": "Our Lord, forgive me and my parents and the believers the Day the account is established.",
+    "reference": "Surah Ibrahim 14:41",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Har Namaz Mein Walidain Ko Yaad Rakhein",
+        "detail": "Apne walidain ke ehsaanat ko yaad karte hue har namaz ke aakhir mein un ki maghfirat aur darjat ki bulandi ke liye dua karein."
+      },
+      {
+        "step_no": 2,
+        "title": "Tamam Ummat Ke Liye Khair-Khawahi",
+        "detail": "Sirf apni zaat tak mehdood na rahein balke tamam musalmanon ke liye bakhshish aur aman ki dua maangein."
+      },
+      {
+        "step_no": 3,
+        "title": "Khidmat Aur Sadqa-e-Jariya",
+        "detail": "Dua ke sath walidain ki khidmat karein aur un ke naam se sadqa o khairat karte rahein."
+      }
+    ]
   }
 ]

@@ -17,7 +17,12 @@
       {
         "step_no": 2,
         "title": "Tawajjah Ke Sath Parhein",
-        "detail": "Har tap ke sath dil mein makna samajhte hue 'SubhanAllah' parhein."
+        "detail": "Har tap ke sath dil mein makna samajhte hue 'SubhanAllah' parhein aur be-dhyani se bachein."
+      },
+      {
+        "step_no": 3,
+        "title": "Qudrat Par Ghaur",
+        "detail": "Aasman, zameen aur apne andar Allah ki kamil paaki aur be-niasi ka tasawwur rakhein."
       }
     ]
   },
@@ -34,12 +39,17 @@
       {
         "step_no": 1,
         "title": "Shukar Ki Niyyat Karein",
-        "detail": "Allah ki nemat on ka shukar ada karte hue 'Alhamdulillah' parhein."
+        "detail": "Allah ki zahiri aur batini nematon ka shukar ada karte hue 'Alhamdulillah' parhein."
       },
       {
         "step_no": 2,
         "title": "Ginti Mukammal Karein",
-        "detail": "Mutayyan ginti poori hone par agle zikr ki taraf barhein."
+        "detail": "Mutayyan ginti poori hone par itminan ke sath agle zikr ki taraf barhein."
+      },
+      {
+        "step_no": 3,
+        "title": "Har Hal Mein Shukar",
+        "detail": "Asaani ke sath sath aazmaish mein bhi Allah ke behtar faisle par razi rehne ki mashq karein."
       }
     ]
   },
@@ -56,13 +66,236 @@
       {
         "step_no": 1,
         "title": "Tauba aur Istighfar",
-        "detail": "Gunaahon aur kotahiyon par nadamat ke sath 'Astagfirullah' parhein."
+        "detail": "Gunaahon, waqt ke ziya aur kotahiyon par nadamat ke sath 'Astagfirullah' parhein."
       },
       {
         "step_no": 2,
         "title": "Rozana Mamool Banayein",
-        "detail": "Din mein mukhtalif auqat mein is ko barhane ki koshish karein."
+        "detail": "Din mein mukhtalif auqat mein is ko barhane ki koshish karein taake dil saaf rahe."
+      },
+      {
+        "step_no": 3,
+        "title": "Gunaah Chhorne Ka Azm",
+        "detail": "Sirf zaban se istighfar na karein balke un aamalon ko sudharne ka irada bhi karein jin par maafi mang rahe hain."
+      }
+    ]
+  },
+  
+  {
+    "id": "zikr_allahu_akbar",
+    "category": "tasbeeh_preset",
+    "title": "Allahu Akbar",
+    "arabic": "اللَّهُ أَكْبَرُ",
+    "urdu": "اللہ سب سے بڑا اور عظیم ہے۔",
+    "english": "Allah is the Greatest and Most Supreme.",
+    "reference": "Sahih Muslim",
+    "default_target": 34,
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Azmat Ka Iqrar Karein",
+        "detail": "Dil se yeh iqrar karte hue 'Allahu Akbar' parhein ke Allah ki barai har khauf, gham aur dunyawi cheez se upar hai."
+      },
+      {
+        "step_no": 2,
+        "title": "Namaz Ke Baad Tasbeeh Mukammal Karein",
+        "detail": "SubhanAllah (33) aur Alhamdulillah (33) ke baad Allahu Akbar (34) parh kar namaz ke baad ki sunnat tasbeeh poori karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Pareshani Mein Himmat",
+        "detail": "Jab koi mushkil ya fikr bari nazar aaye to 'Allahu Akbar' dohra kar apne Rab ki sab se bari qudrat ko yaad karein."
+      }
+    ]
+  },
+  {
+    "id": "zikr_la_ilaha_illallah",
+    "category": "tasbeeh_preset",
+    "title": "La ilaha illallah",
+    "arabic": "لَا إِلَٰهَ إِلَّا اللَّهُ",
+    "urdu": "اللہ کے سوا کوئی معبود نہیں۔",
+    "english": "There is no deity worthy of worship except Allah.",
+    "reference": "Sahih Muslim & Jami at-Tirmidhi",
+    "default_target": 100,
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Tawheed Ka Markaz",
+        "detail": "Har jhooti ummeed, dar aur taqat ki nafi karte hue sirf ek Allah ki ibadat aur qudrat ka iqrar karein."
+      },
+      {
+        "step_no": 2,
+        "title": "Afzal Zikar Ki Qadr",
+        "detail": "Hadees ke mutabiq sab se afzal zikar 'La ilaha illallah' hai; ise sukoon aur khuloos ke sath dohrayein."
+      },
+      {
+        "step_no": 3,
+        "title": "Eeman Ki Tajdeed",
+        "detail": "Subah shaam ya safar aur aaram ke auqat mein is kalme ke zariye apne eeman ko taza rakhein."
+      }
+    ]
+  },
+  {
+    "id": "zikr_durood_shareef",
+    "category": "tasbeeh_preset",
+    "title": "Durood Shareef",
+    "arabic": "صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ",
+    "urdu": "اللہ ان پر رحمت اور سلامتی نازل فرمائے۔",
+    "english": "May Allah send peace and blessings upon him (the Prophet Muhammad).",
+    "reference": "Surah Al-Ahzab 33:56",
+    "default_target": 100,
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Muhabbat Aur Adab Ke Sath",
+        "detail": "Nabi Kareem (S.A.W) ki muhabbat, itaat aur adab ke sath durood parhein."
+      },
+      {
+        "step_no": 2,
+        "title": "Jumu'ah Aur Rozana Mamool",
+        "detail": "Jumu'ah ke din aur rozana ke zikar mein durood ka hissa zaroor rakhein."
+      },
+      {
+        "step_no": 3,
+        "title": "Dua Se Pehle Durood",
+        "detail": "Apni duaon ke aaghaz aur ikhtitam mein durood shareef shamil karne ki aadat banayein."
+      }
+    ]
+  },
+  {
+    "id": "zikr_la_hawla_wa_la_quwwata",
+    "category": "tasbeeh_preset",
+    "title": "La hawla wa la quwwata illa billah",
+    "arabic": "لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ",
+    "urdu": "نیکی کرنے اور گناہ سے بچنے کی طاقت و قوت اللہ ہی کی مدد سے ہے۔",
+    "english": "There is no power and no strength except through Allah.",
+    "reference": "Sahih al-Bukhari & Sahih Muslim",
+    "default_target": 100,
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Kamzori Ka E'tiraf Aur Sahारा",
+        "detail": "Samjhein ke hamare andar kisi bhalai ya badlav ki haqeeqi taqat sirf Allah ki tawfeeq se aati hai."
+      },
+      {
+        "step_no": 2,
+        "title": "Jannat Ke Khazanon Mein Se Ek",
+        "detail": "Is kalme ko jannat ke khazanon mein se ek khazana bataya gaya hai; ise kasrat se parhein."
+      },
+      {
+        "step_no": 3,
+        "title": "Bhari Kaam Ya Mushkil Mein Zikar",
+        "detail": "Jab koi barri zimmedari ya mushkil aaye to 'La hawla wa la quwwata illa billah' keh kar Allah se madad lein."
+      }
+    ]
+  },
+  {
+    "id": "zikr_subhanallahi_wa_bihamdihi",
+    "category": "tasbeeh_preset",
+    "title": "SubhanAllahi wa bihamdihi",
+    "arabic": "سُبْحَانَ اللَّهِ وَبِحَمْدِهِ",
+    "urdu": "اللہ پاک ہے اپنی حمد کے ساتھ۔",
+    "english": "Glory be to Allah and praise is to Him.",
+    "reference": "Sahih al-Bukhari & Sahih Muslim",
+    "default_target": 100,
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Subah Shaam Ya Din Mein 100 Bar",
+        "detail": "Hadees mein din mein 100 martaba is ke parhne ki khas fazilat aayi hai; target 100 set kar ke parhein."
+      },
+      {
+        "step_no": 2,
+        "title": "Paaki Aur Tareef Ka Ehtiram",
+        "detail": "Allah ki har aib se paaki aur us ki tamam nematon par us ki tareef ko yakja kar ke parhein."
+      },
+      {
+        "step_no": 3,
+        "title": "Zaban Ko Halka Aur Dil Ko Pur-Sakoon Karein",
+        "detail": "Aasan alfaaz aur gahre maani ke sath is zikar ko safar ya farigh waqt mein zaroor dohrayein."
+      }
+    ]
+  },
+  {
+    "id": "zikr_subhanallahil_adheem",
+    "category": "tasbeeh_preset",
+    "title": "SubhanAllahil Adheem wa bihamdihi",
+    "arabic": "سُبْحَانَ اللَّهِ الْعَظِيمِ وَبِحَمْدِهِ",
+    "urdu": "اللہ پاک ہے جو نہایت عظمت والا ہے، اپنی حمد کے ساتھ۔",
+    "english": "Glory be to Allah, the Supreme, and praise is to Him.",
+    "reference": "Sahih al-Bukhari & Sahih Muslim",
+    "default_target": 100,
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Azmat-e-Ilahi Ka Tasawwur",
+        "detail": "'Al-Adheem' ke sath Allah ki be-intiha azmat aur jalal ko dil mein bithate hue parhein."
+      },
+      {
+        "step_no": 2,
+        "title": "Rahman Ko Mehboob Kalimat",
+        "detail": "Yeh alfaaz zaban par halke, mizan mein bhari aur Rahman ko nihayat mehboob hain."
+      },
+      {
+        "step_no": 3,
+        "title": "Waqar Ke Sath Tasbeeh",
+        "detail": "Jald bazi ke bajaye har lafz ko wazeh aur mo'adab tarike se ada karein."
+      }
+    ]
+  },
+  {
+    "id": "zikr_hasbunallahu_wa_ni'mal_wakil",
+    "category": "tasbeeh_preset",
+    "title": "HasbunAllahu wa ni'mal Wakil",
+    "arabic": "حَسْبُنَا اللَّهُ وَنِعْمَ الْوَكِيلُ",
+    "urdu": "ہمارے لیے اللہ کافی ہے اور وہ بہترین کارساز ہے۔",
+    "english": "Sufficient for us is Allah, and He is the best Disposer of affairs.",
+    "reference": "Surah Aal-Imran 3:173",
+    "default_target": 33,
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Kafalat Aur Bharosa",
+        "detail": "Jab insani wasail kam par jayein ya fikr barh jaye to Allah ko apna kafi aur karsaz maan kar parhein."
+      },
+      {
+        "step_no": 2,
+        "title": "Khaof Aur Dabao Mein Sukoon",
+        "detail": "Kisi na-insafi, imtehan ya khauf ke waqt is aayat ke zariye dil ko tawakkul aur itminan dein."
+      },
+      {
+        "step_no": 3,
+        "title": "Amal Ke Sath Tawakkul",
+        "detail": "Apni koshish aur durust amal ke sath natija Allah ke supurd karne ki aadat banayein."
+      }
+    ]
+  },
+  {
+    "id": "zikr_la_ilaha_illa_anta_subhanaka",
+    "category": "tasbeeh_preset",
+    "title": "Dua-e-Yunus (La ilaha illa Anta Subhanaka)",
+    "arabic": "لَا إِلَٰهَ إِلَّا أَنْتَ سُبْحَانَكَ إِنِّي كُنْتُ مِنَ الظَّالِمِينَ",
+    "urdu": "تیرے سوا کوئی معبود نہیں، تو پاک ہے، بے شک میں ہی ظالموں (اپنی جان پر زیادتی کرنے والوں) میں سے تھا۔",
+    "english": "There is no deity except You; exalted are You. Indeed, I have been of the wrongdoers.",
+    "reference": "Surah Al-Anbiya 21:87",
+    "default_target": 100,
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Tawheed Aur Apni Ghalati Ka Iqrar",
+        "detail": "Allah ki tawheed aur paaki bayan karne ke sath apni kotahi ka sachay dil se iqrar karein."
+      },
+      {
+        "step_no": 2,
+        "title": "Gham Aur Mushkil Mein Sahारा",
+        "detail": "Jab kisi gham ya tangi mein hon to is dua ke zariye Allah se nijat aur asaani maangein."
+      },
+      {
+        "step_no": 3,
+        "title": "Yaqeen Ke Sath Dohrayein",
+        "detail": "Is dua ko sirf rasm nahi balke dil ki sachai aur tawakkul ke sath parhein."
       }
     ]
   }
+
 ]

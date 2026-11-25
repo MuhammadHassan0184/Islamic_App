@@ -11,12 +11,17 @@
       {
         "step_no": 1,
         "title": "Subah Ke Waqt Parhein",
-        "detail": "Fajr ki nimaz ke baad is dua ko parhne ka mamool banayein."
+        "detail": "Fajr ki nimaz ke baad ya din ki shuruat mein is dua ko parhne ka mamool banayein."
       },
       {
         "step_no": 2,
         "title": "Dil Se Maangein",
-        "detail": "Har lafz ke makna par tawajjah dete hue dua karein."
+        "detail": "Har lafz ke makna par tawajjah dete hue dua karein ke ilm faida de, rizq halal ho aur amal qabool ho."
+      },
+      {
+        "step_no": 3,
+        "title": "Amal Ke Sath Jorein",
+        "detail": "Dua ke baad apne seekhne, kaam karne aur ibadat ke mamlat mein ikhlas aur sachaai qaim rakhein."
       }
     ]
   },
@@ -37,7 +42,12 @@
       {
         "step_no": 2,
         "title": "Amal Mein Qaim Rahein",
-        "detail": "Hidayat aur taqwa ke mutabiq faisle karne ki taufiq mangien."
+        "detail": "Hidayat aur taqwa ke mutabiq faisle karne aur gunahon se bachne ki taufiq mangien."
+      },
+      {
+        "step_no": 3,
+        "title": "Iffat Aur Istighna Ki Qadar",
+        "detail": "Dil aur zaban ki pakdamani aur doosron ke samne hath phailane ke bajaye Allah par bharosa karne ki aadat banayein."
       }
     ]
   },
@@ -53,12 +63,199 @@
       {
         "step_no": 1,
         "title": "Bistar Par Jane Ke Baad",
-        "detail": "Bistar jhar kar dayein karwat letne se pehle ya let kar parhein."
+        "detail": "Bistar jhar kar dayein karwat letne se pehle ya let kar pur-sukoon lehje mein parhein."
       },
       {
         "step_no": 2,
         "title": "Baqi Azkar Ke Sath Jorhein",
-        "detail": "Is ke sath Ayat-ul-Kursi aur teen Qul bhi parh sakte hain."
+        "detail": "Is ke sath Ayat-ul-Kursi, teen Qul aur din bhar ki kotahiyon par istighfar bhi shamil karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Hisab Aur Shukar Ka Khayal",
+        "detail": "Sone se pehle din bhar ke aamalon ka jaiza lein, kisi ko maaf karna ho to maaf karein aur Allah ke naam par aaram karein."
+      }
+    ]
+  },
+  {
+    "id": "dua_04_waking_up",
+    "category": "morning",
+    "title": "Neend Se Jaagne Ki Dua",
+    "arabic": "الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ",
+    "urdu": "تمام تعریفیں اس اللہ کے لیے ہیں جس نے ہمیں موت (نیند) کے بعد زندگی عطا فرمائی اور اسی کی طرف لوٹ کر جانا ہے۔",
+    "english": "All praise is for Allah who gave us life after having taken it from us and unto Him is the resurrection.",
+    "reference": "Sahih al-Bukhari 6312",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Aankh Khulte Hi Parhein",
+        "detail": "Bistar se uthne se pehle chehre se neend ke asarat hatate hue Allah ke shukar ke sath yeh dua parhein."
+      },
+      {
+        "step_no": 2,
+        "title": "Nayi Zindagi Ka Ehsas",
+        "detail": "Har subah ko Allah ki taraf se mili hui ek nayi mohlat samjhein aur aakhirat ki taraf lautne ko yaad rakhein."
+      },
+      {
+        "step_no": 3,
+        "title": "Fajr Aur Wuzu Ki Taraf Barhein",
+        "detail": "Subah ke pehle lamhat ko mobile ke bajaye zikar, wuzu aur Fajr ki namaz se roshan karein."
+      }
+    ]
+  },
+  {
+    "id": "dua_05_leaving_home",
+    "category": "daily",
+    "title": "Ghar Se Nikalne Ki Dua",
+    "arabic": "بِسْمِ اللَّهِ تَوَكَّلْتُ عَلَى اللَّهِ وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ",
+    "urdu": "اللہ کے نام کے ساتھ، میں نے اللہ پر بھروسہ کیا، اور گناہ سے بچنے اور نیکی کرنے کی طاقت اللہ ہی کی مدد سے ہے۔",
+    "english": "In the name of Allah, I place my trust in Allah, and there is no might and no power except with Allah.",
+    "reference": "Sunan Abi Dawud 5095 & Jami' at-Tirmidhi 3426",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Darwaze Se Bahar Qadam Rakhte Waqt",
+        "detail": "Kaam, parhai ya kisi bhi zaroorat ke liye ghar se nikalte waqt yaqeen ke sath yeh dua parhein."
+      },
+      {
+        "step_no": 2,
+        "title": "Hifazat Aur Hidayat Ki Basharat",
+        "detail": "Hadees ke mutabiq is dua ke parhne wale ko hidayat, kifayat aur shaytan ke shar se hifazat ki khushkhabri di gayi hai."
+      },
+      {
+        "step_no": 3,
+        "title": "Tawakkul Ke Sath Safar",
+        "detail": "Raaste aur kaam ki mushkilat ki fikr Allah ke supurd kar ke itminan aur ehtiyat ke sath aage barhein."
+      }
+    ]
+  },
+  {
+    "id": "dua_06_entering_home",
+    "category": "daily",
+    "title": "Ghar Mein Dakhil Hone Ki Dua",
+    "arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ خَيْرَ الْمَوْلِجِ وَخَيْرَ الْمَخْرَجِ بِسْمِ اللَّهِ وَلَجْنَا وَبِسْمِ اللَّهِ خَرَجْنَا وَعَلَى اللَّهِ رَبِّنَا تَوَكَّلْنَا",
+    "urdu": "اے اللہ! میں تجھ سے اندر آنے کی بھلائی اور باہر جانے کی بھلائی مانگتا ہوں، اللہ کے نام کے ساتھ ہم داخل ہوئے اور اللہ کے نام کے ساتھ ہم نکلے، اور ہم نے اپنے رب اللہ پر بھروسہ کیا۔",
+    "english": "O Allah, I ask You for the best of entering and the best of exiting. In the name of Allah we enter, and in the name of Allah we leave, and upon Allah, our Lord, we rely.",
+    "reference": "Sunan Abi Dawud 5096",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Bismillah Aur Salam Ke Sath Dakhila",
+        "detail": "Ghar mein dakhil hote waqt yeh dua parhein aur phir ghar walon ko khush-dili se salam karein."
+      },
+      {
+        "step_no": 2,
+        "title": "Ghar Mein Barkat Ka Sabab",
+        "detail": "Allah ke naam ke sath ghar mein dakhil hone se shaytan ko ghar mein thikana aur khane mein hissa nahi milta."
+      },
+      {
+        "step_no": 3,
+        "title": "Ghar Ki Fiza Ko Pur-Sukoon Banayein",
+        "detail": "Bahar ki thakan ya ghusse ko darwaze se bahar chhor kar ghar walon ke sath narmi aur muhabbat se pesh aayein."
+      }
+    ]
+  },
+  {
+    "id": "dua_07_steadfast_heart",
+    "category": "guidance",
+    "title": "Dil Ki Istiqamat Ki Dua",
+    "arabic": "يَا مُقَلِّبَ الْقُلُوبِ ثَبِّتْ قَلْبِي عَلَى دِينِكَ",
+    "urdu": "اے دلوں کو پھیرنے والے! میرے دل کو اپنے دین پر ثابت قدم رکھ۔",
+    "english": "O Turner of the hearts, keep my heart firm upon Your religion.",
+    "reference": "Jami' at-Tirmidhi 2140",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Sajde Aur Namaz Ke Baad Kasrat Se Parhein",
+        "detail": "Nabi Kareem (S.A.W) yeh dua bohot kasrat se maangte the; ise apni rozana ki duaon mein shamil karein."
+      },
+      {
+        "step_no": 2,
+        "title": "Eeman Ki Hifazat Ka Khayal",
+        "detail": "Fitnon aur badalte halat ke daur mein apne eeman aur namaz par qaim rehne ke liye Allah ki madad maangein."
+      },
+      {
+        "step_no": 3,
+        "title": "Achhi Sohbat Ikhtiyar Karein",
+        "detail": "Dua ke sath aise mahol aur logon ke qareeb rahein jo aap ko Allah aur neki ki yaad dilate rahein."
+      }
+    ]
+  },
+  {
+    "id": "dua_08_relief_from_anxiety",
+    "category": "distress",
+    "title": "Gham Aur Pareshani Se Nijat Ki Dua",
+    "arabic": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْهَمِّ وَالْحَزَنِ",
+    "urdu": "اے اللہ! میں تیری پناہ مانگتا ہوں فکر و غم اور رنج و ملال سے۔",
+    "english": "O Allah, I seek refuge in You from anxiety and sorrow.",
+    "reference": "Sahih al-Bukhari 6369",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Subah Shaam Aur Dabao Ke Waqt",
+        "detail": "Jab mustaqbil ki fikr ya maazi ka gham dil ko bojhhal kare to is masnoon dua ke zariye Allah ki panah maangein."
+      },
+      {
+        "step_no": 2,
+        "title": "Sustii Aur Qarz Se Panah",
+        "detail": "Isi dua ke baqi hisse ki roshni mein aals, kamzori, buzdili aur qarz ke bojh se bhi Allah se aafiyat maangein."
+      },
+      {
+        "step_no": 3,
+        "title": "Chhote Qadam Aur Tawakkul",
+        "detail": "Pareshani mein ulajhne ke bajaye dua ke baad apne bas ka behtareen amal karein aur natija Allah par chhor dein."
+      }
+    ]
+  },
+  {
+    "id": "dua_09_for_parents",
+    "category": "family",
+    "title": "Walidain Ke Liye Rehmat Ki Dua",
+    "arabic": "رَبِّ ارْحَمْهُمَا كَمَا رَبَّيَانِي صَغِيرًا",
+    "urdu": "اے میرے رب! ان دونوں (والدین) پر رحم فرما جیسا کہ انہوں نے بچپن میں میری پرورش کی۔",
+    "english": "My Lord, have mercy upon them as they brought me up [when I was] small.",
+    "reference": "Surah Al-Isra 17:24",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Har Namaz Ke Baad Ka Mamool",
+        "detail": "Apne walidain ki zindagi aur wafaat ke baad har namaz ke aakhir mein un ke liye is Qurani dua ka ehtimam karein."
+      },
+      {
+        "step_no": 2,
+        "title": "Bachpan Ke Ehsaanat Yaad Rakhein",
+        "detail": "Un ki qurbaniyon aur shafqat ko yaad kar ke un ke sath narmi, adab aur sabr ka rawaiya rakhein."
+      },
+      {
+        "step_no": 3,
+        "title": "Dua Ke Sath Khidmat",
+        "detail": "Zaban se dua ke sath un ki sehat, zarooriyat aur khushi ka khayal rakhna un ke haq ki adaigi hai."
+      }
+    ]
+  },
+  {
+    "id": "dua_10_forgiveness_and_pardon",
+    "category": "forgiveness",
+    "title": "Muafi Aur Aafiyat Ki Dua",
+    "arabic": "اللَّهُمَّ إِنَّكَ عَفُوٌّ تُحِبُّ الْعَفْوَ فَاعْفُ عَنِّي",
+    "urdu": "اے اللہ! بے شک تو بہت معاف کرنے والا ہے، معاف کرنے کو پسند کرتا ہے، پس مجھے معاف فرما دے۔",
+    "english": "O Allah, You are Pardoning and love to pardon, so pardon me.",
+    "reference": "Jami' at-Tirmidhi 3513",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Raat Ki Ibadat Aur Laylatul Qadr",
+        "detail": "Ramzan ki taq raaton aur aam dinon mein bhi Allah se mukammal muafi ke liye yeh dua kasrat se parhein."
+      },
+      {
+        "step_no": 2,
+        "title": "Doosron Ko Maaf Karne Ki Aadat",
+        "detail": "Choonke Allah muaf karne ko pasand karta hai, is liye apne dil se logon ki ghaltiyon ko bhi muaf karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Nayi Paakizgi Ka Irada",
+        "detail": "Afuw (gunaahon ke mit jane) ki umeed ke sath dobara unhi ghaltiyon se bachne ka sachha azm karein."
       }
     ]
   }

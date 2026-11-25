@@ -17,7 +17,7 @@
       {
         "step_no": 1,
         "title": "Niyyat aur Bismillah",
-        "detail": "Pehle dil mein niyyat karein aur Bismillah parhein."
+        "detail": "Pehle dil mein niyyat karein aur Bismillah parhein; pani ko israf (zaya karne) se bachayein."
       },
       {
         "step_no": 2,
@@ -28,6 +28,11 @@
         "step_no": 3,
         "title": "Mooh, Hath, Masah aur Paaon",
         "detail": "Mooh aur kohniyon samet hath 3 baar dhoyein, chauthai sar ka masah karein, aur takhnon samet paaon 3 baar dhoyein."
+      },
+      {
+        "step_no": 4,
+        "title": "Wuzu Ke Baad Ki Dua",
+        "detail": "Wuzu mukammal kar ke shahadat aur dua parhein aur nimaz ya tilawat ke liye tayyar hon."
       }
     ]
   },
@@ -51,7 +56,7 @@
       {
         "step_no": 1,
         "title": "Niyyat aur Takbeer-e-Tahreema",
-        "detail": "Qiblah rukh khare ho kar niyyat karein aur 'Allahu Akbar' kehte hue hath kaanon tak uthayein."
+        "detail": "Qiblah rukh khare ho kar niyyat karein, nazar sajde ki jagah rakhein aur 'Allahu Akbar' kehte hue hath kaanon tak uthayein."
       },
       {
         "step_no": 2,
@@ -62,6 +67,11 @@
         "step_no": 3,
         "title": "Sajda, Qa'da aur Salam",
         "detail": "Do sajde karein, darmiyan mein thora baithay rahein; aakhri qa'de mein Tashahhud, Durood aur Dua parh kar dayein-bayein salam pherein."
+      },
+      {
+        "step_no": 4,
+        "title": "Khushoo Aur Waqt Ki Pabandi",
+        "detail": "Har rukn itminan aur tawajjah se ada karein aur farz nimazon ko un ke muqarrar auqat mein parhne ki koshish karein."
       }
     ]
   },
@@ -81,17 +91,165 @@
       {
         "step_no": 1,
         "title": "Pehli Takbeer aur Sana",
-        "detail": "Niyyat aur pehli Takbeer ke baad Sana parhein."
+        "detail": "Saf mein khare ho kar niyyat karein aur pehli Takbeer ke baad Sana parhein."
       },
       {
         "step_no": 2,
         "title": "Doosri aur Teesri Takbeer",
-        "detail": "Doosri Takbeer ke baad Durood-e-Ibrahim parhein, aur teesri Takbeer ke baad Mayyat ke liye dua karein."
+        "detail": "Doosri Takbeer ke baad Durood-e-Ibrahim parhein, aur teesri Takbeer ke baad Mayyat ke liye maghfirat aur rehmat ki dua karein."
       },
       {
         "step_no": 3,
         "title": "Chauthi Takbeer aur Salam",
         "detail": "Chauthi Takbeer ke baad thori dair ruk kar pehle dayein aur phir bayein taraf salam pherein."
+      },
+      {
+        "step_no": 4,
+        "title": "Adab Aur Khamoshi",
+        "detail": "Janazah ke waqt safon ko durust rakhein, be-ja guftagu se bachein aur marhoom ke ahle-khana ke liye sabr ki dua karein."
+      }
+    ]
+  },
+  
+{
+    "id": "guide_ghusl",
+    "category": "ghusl",
+    "title": "Ghusl Ka Tareeqa",
+    "arabic": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+    "urdu": "غسل سے پہلے نیت اور بسم اللہ پڑھنا، ہاتھ و شرمگاہ دھونا، کلی و ناک میں پانی ڈالنا اور پورے جسم پر پانی بہانا ضروری ہے۔",
+    "english": "Begin with intention and Bismillah, wash hands and private parts, rinse mouth and nose, and pour water over the entire body.",
+    "reference": "Sahih al-Bukhari & Quran 5:6",
+    "faraiz": [
+      "Kulli karna",
+      "Naak mein pani dalna",
+      "Poore jism par pani bahana"
+    ],
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Niyyat Aur Hath Dhona",
+        "detail": "Dil mein paaki ya ghusl ki niyyat karein, Bismillah parhein, dono hath ghatton tak dhoyein aur najasat ya ghandagi saaf karein."
+      },
+      {
+        "step_no": 2,
+        "title": "Wuzu Mukammal Karein",
+        "detail": "Ghusl ke dauran wuzu karein (agar paaon dhona aakhir ke liye rakhein to ghusl ke ikhtitam par dhoyein)."
+      },
+      {
+        "step_no": 3,
+        "title": "Sar Aur Poore Jism Par Pani Bahana",
+        "detail": "Sar aur balon ki jarhon tak pani pahunchayein, phir dayein kandhe, bayein kandhe aur poore jism par is tarah pani bahayein ke koi hissa khushk na rahe."
+      },
+      {
+        "step_no": 4,
+        "title": "Paaon Dhona Aur Parda",
+        "detail": "Jis jagah pani jama ho raha ho wahan se hat kar dono paaon dhoyein, satter (parda) ka khayal rakhein aur israf se bachein."
+      }
+    ]
+  },
+  {
+    "id": "guide_tayammum",
+    "category": "tayammum",
+    "title": "Tayammum Ka Tareeqa",
+    "arabic": "فَلَمْ تَجِدُوا مَاءً فَتَيَمَّمُوا صَعِيدًا طَيِّبًا",
+    "urdu": "پانی نہ ملنے یا بیماری و نقصان کے اندیشے کی صورت میں پاک مٹی یا مٹی کی جنس پر ہاتھ مار کر چہرے اور کہنیوں تک ہاتھوں کا مسح کیا جاتا ہے۔",
+    "english": "When water is unavailable or its use poses harm, strike clean earth or earthy material and wipe the face and hands up to the elbows.",
+    "reference": "Surah An-Nisa 4:43 & Sahih al-Bukhari",
+    "faraiz": [
+      "Niyyat",
+      "Poore mooh ka masah",
+      "Dono hathon ka kohniyon tak masah"
+    ],
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Niyyat Aur Paak Mitti Par Hath Marna",
+        "detail": "Tayammum ki niyyat aur Bismillah ke sath dono hathon ki hatheliyan paak mitti ya mitti ki kisi cheez par marein aur jhar lein."
+      },
+      {
+        "step_no": 2,
+        "title": "Mooh Ka Masah",
+        "detail": "Dono hathon ki hatheliyon se poore chehre par is tarah masah karein ke koi hissa na chhoote."
+      },
+      {
+        "step_no": 3,
+        "title": "Hathon Ka Masah",
+        "detail": "Dono hath dobara paak mitti par marein, pehle bayein hath se dayein hath ka kohni samet masah karein aur phir dayein hath se bayein hath ka masah karein."
+      },
+      {
+        "step_no": 4,
+        "title": "Zaroorat Ke Waqt Istemaal",
+        "detail": "Paani milte hi ya uzr khatam hote hi wuzu ya ghusl ke zariye paaki hasil karein."
+      }
+    ]
+  },
+  {
+    "id": "guide_jumuah_nimaz",
+    "category": "jumuah_nimaz",
+    "title": "Jumu'ah Nimaz Ka Tareeqa",
+    "arabic": "إِذَا نُودِيَ لِلصَّلَاةِ مِنْ يَوْمِ الْجُمُعَةِ فَاسْعَوْا إِلَىٰ ذِكْرِ اللَّهِ",
+    "urdu": "جمعہ کے دن اذان کے بعد مسجد آ کر خطبہ سننا اور امام کے ساتھ دو رکعت نمازِ جمعہ باجماعت ادا کرنا فرض ہے۔",
+    "english": "After the call to prayer on Friday, come to the mosque, listen to the Khutbah, and perform two rak'ahs of Jumu'ah prayer in congregation behind the Imam.",
+    "reference": "Surah Al-Jumu'ah 62:9 & Sahih al-Bukhari",
+    "faraiz": [
+      "Khutba-e-Jumu'ah sunna",
+      "Do rakat Jumu'ah ba-jamaat"
+    ],
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Ghusl, Libas Aur Jald Aamad",
+        "detail": "Jumu'ah ke din ghusl karein, pak o saaf kapde aur khushboo lagayein, aur waqt se pehle masjid mein pahunch kar sunnat ya tahiyyat-ul-masjid parhein."
+      },
+      {
+        "step_no": 2,
+        "title": "Khamoshi Se Khutba Sunna",
+        "detail": "Jab Imam khutbe ke liye khare hon to baat-cheet, phone chalane aur logon ke kandhon phlangne se ruk kar khutba tawajjah se sunein."
+      },
+      {
+        "step_no": 3,
+        "title": "Do Rakat Farz Ba-Jamaat",
+        "detail": "Imam ke peeche niyyat bandh kar do rakat Jumu'ah ki namaz sukoon aur khushu ke sath ada karein."
+      },
+      {
+        "step_no": 4,
+        "title": "Sunnat Aur Durood Ka Ehtimam",
+        "detail": "Farz ke baad masjid ya ghar mein sunnatein parhein aur asr ke baad dua o durood mein waqt guzarein."
+      }
+    ]
+  },
+  {
+    "id": "guide_eid_nimaz",
+    "category": "eid_nimaz",
+    "title": "Eid Nimaz Ka Tareeqa",
+    "arabic": "اللَّهُ أَكْبَرُ اللَّهُ أَكْبَرُ لَا إِلَٰهَ إِلَّا اللَّهُ",
+    "urdu": "نمازِ عید الفطر اور عید الاضحیٰ دو رکعت واجب ہوتی ہے جس میں زائد تکبیرات اور نماز کے بعد خطبہ ہوتا ہے۔",
+    "english": "The Eid prayer is two obligatory (wajib) rak'ahs featuring additional Takbeers followed by a sermon after the prayer.",
+    "reference": "Sahih al-Bukhari & Sahih Muslim",
+    "faraiz": [
+      "Do rakat Eid ki namaz",
+      "Qiyam, Qira'at, Ruku aur Sujood"
+    ],
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Eid Ki Tayyari Aur Takbeerat",
+        "detail": "Ghusl, behtareen saaf libas aur Eid-ul-Fitr mein namaz se pehle meetha khane ke baad Eidgah ya masjid jate hue takbeerat parhein."
+      },
+      {
+        "step_no": 2,
+        "title": "Pehli Rakat Ki Zaid Takbeerein",
+        "detail": "Niyyat aur Takbeer-e-Tahreema ke baad Sana parhein, phir Imam ke mutabiq zaid Takbeerein kahein; us ke baad Surah Fatiha aur qira'at ke sath ruku o sajda karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Doosri Rakat Aur Salam",
+        "detail": "Doosri rakat mein qira'at se pehle ya baad zaid Takbeerein mukammal karein, phir ruku, sajde, qa'da aur salam ke sath namaz poori karein."
+      },
+      {
+        "step_no": 4,
+        "title": "Khutba Sunna Aur Mubarakbad",
+        "detail": "Namaz ke baad Eid ka khutba tawajjah se sunein, phir logon se musafaha, muafi aur Eid mubarak ke sath khushiyan share karein."
       }
     ]
   }

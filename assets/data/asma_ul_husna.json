@@ -13,12 +13,17 @@
       {
         "step_no": 1,
         "title": "Makna Aur Rahmat Ka Ehsas",
-        "detail": "Zindagi, rizq aur hidayat mein Allah ki aam rehmaton par ghaur karein."
+        "detail": "Zindagi, rizq aur hidayat mein Allah ki aam rehmaton par ghaur karein jo har jaandar ke liye maujood hain."
       },
       {
         "step_no": 2,
         "title": "Zikr Aur Dua",
-        "detail": "Rahmat-e-ilahi ki talab ke sath 'Ya Rahman' ka zikr karein."
+        "detail": "Rahmat-e-ilahi ki talab ke sath 'Ya Rahman' ka zikr karein aur dil ko mayusi se bachayein."
+      },
+      {
+        "step_no": 3,
+        "title": "Amal Mein Akas",
+        "detail": "Jab Allah ki wasi rehmat ka khayal aaye to doosron ke liye bhi asaani paida karne ki koshish karein."
       }
     ]
   },
@@ -36,12 +41,17 @@
       {
         "step_no": 1,
         "title": "Narm Dili Apnayein",
-        "detail": "Doosron ke sath rehmat aur shafqat ka sulook karein."
+        "detail": "Doosron ke sath rehmat, darguzar aur shafqat ka sulook karein aur sakhti se bachein."
       },
       {
         "step_no": 2,
         "title": "Maghfirat Ki Umeed",
-        "detail": "Apni kotahiyon par 'Ya Rahim' kehte hue rahmat mangien."
+        "detail": "Apni kotahiyon par 'Ya Rahim' kehte hue tauba aur daimi rehmat ki dua karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Ibadat Mein Lazzat",
+        "detail": "Namaz, tilawat aur zikar ko bojh nahi balke apne Rab ki khas rehmat ke qareeb hone ka zariya samjhein."
       }
     ]
   },
@@ -59,12 +69,354 @@
       {
         "step_no": 1,
         "title": "Haqeeqi Badshahi Ka Iqrar",
-        "detail": "Samjhein ke duniya aur aakhirat ki asal hukumat sirf Allah ki hai."
+        "detail": "Samjhein ke duniya aur aakhirat ki asal hukumat aur ikhtiyar sirf Allah ki zaat ke paas hai."
       },
       {
         "step_no": 2,
         "title": "Tawakkul Barhayein",
-        "detail": "Faislon aur halat mein asli Malik par bharosa rakhein."
+        "detail": "Faislon, rizq aur badalte halat mein asli Malik par bharosa rakhein aur duniyawi taqaton se na darein."
+      },
+      {
+        "step_no": 3,
+        "title": "Inksari Aur Adab",
+        "detail": "Jab 'Al-Malik' ka zikr karein to apne andar takabbur ke bajaye aajizi aur farmabardari paida karein."
+      }
+    ]
+  },
+
+  {
+    "id": "asma_04_al_quddus",
+    "category": "purity",
+    "title": "Al-Quddus",
+    "arabic": "الْقُدُّوسُ",
+    "urdu": "ہر عیب، نقص اور کمزوری سے پاک ذات۔",
+    "english": "The Most Sacred and Pure, free from every imperfection and flaw.",
+    "reference": "Surah Al-Hashr 59:23",
+    "number": 4,
+    "transliteration": "Al-Quddus",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Tasbeeh Aur Paaki Ka Iqrar",
+        "detail": "Yeh yaqeen rakhein ke Allah har insani kamzori, zulm aur aib se bilkul pak o munazzah hai."
+      },
+      {
+        "step_no": 2,
+        "title": "Zahir Aur Batin Ki Safai",
+        "detail": "Apne libas, jism aur mahol ke sath apne dil ko bhi hasad, riyakari aur bure khayalat se paak rakhein."
+      },
+      {
+        "step_no": 3,
+        "title": "Ruku Aur Sajde Mein Zikr",
+        "detail": "'Subbuhun Quddusun Rabbul Mala'ikati war-Ruh' parh kar Allah ki paaki bayan karein."
+      }
+    ]
+  },
+  {
+    "id": "asma_05_as_salam",
+    "category": "peace",
+    "title": "As-Salam",
+    "arabic": "السَّلَامُ",
+    "urdu": "سلامتی دینے والا اور ہر آفت و نقص سے محفوظ۔",
+    "english": "The Source of Peace, Safety, and Perfection.",
+    "reference": "Surah Al-Hashr 59:23",
+    "number": 5,
+    "transliteration": "As-Salam",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Namaz Ke Baad Zikr",
+        "detail": "Har farz namaz ke baad 'Allahumma Antas-Salam wa minkas-Salam' parh kar salamti ki dua karein."
+      },
+      {
+        "step_no": 2,
+        "title": "Aman Aur Salamti Phailayein",
+        "detail": "Apni zaban aur hath se doosron ko mehfooz rakhein aur mulazmat, ghar aur muashre mein aman ka sabab banein."
+      },
+      {
+        "step_no": 3,
+        "title": "Pareshani Mein Sukoon",
+        "detail": "Khauf ya bechaini ke waqt 'Ya Salam' ke zariye Allah se dili itminan aur hifazat maangein."
+      }
+    ]
+  },
+  {
+    "id": "asma_06_al_mumin",
+    "category": "security",
+    "title": "Al-Mu'min",
+    "arabic": "الْمُؤْمِنُ",
+    "urdu": "امن و امان عطا کرنے والا اور اپنے وعدوں کی تصدیق فرمانے والا۔",
+    "english": "The Giver of Security and Faith, who grants peace and affirms His truth.",
+    "reference": "Surah Al-Hashr 59:23",
+    "number": 6,
+    "transliteration": "Al-Mu'min",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Hifazat Ka Yaqeen",
+        "detail": "Samjhein ke asal aman aur khauf se nijat sirf Allah ki panah mein aane se milti hai."
+      },
+      {
+        "step_no": 2,
+        "title": "Qabil-e-Etimad Banein",
+        "detail": "Apne wadon aur amanaton ko poora karein taake log aap se khauf nahi balke bharosa mehsoos karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Eeman Ki Mazbooti",
+        "detail": "Allah se eeman ki salamti aur yaqeen-e-kamil ki dua karte rahein."
+      }
+    ]
+  },
+  {
+    "id": "asma_07_al_muhaymin",
+    "category": "protection",
+    "title": "Al-Muhaymin",
+    "arabic": "الْمُهَيْمِنُ",
+    "urdu": "ہر چیز کا نگہبان، محافظ اور پوری طرح نگرانی کرنے والا۔",
+    "english": "The Guardian, Overseer, and Protector of all things.",
+    "reference": "Surah Al-Hashr 59:23",
+    "number": 7,
+    "transliteration": "Al-Muhaymin",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Muraqaba Aur Nigrani Ka Ehsas",
+        "detail": "Tanhaai aur mehfil dono mein yaad rakhein ke Allah hamare har amal aur niyyat ko dekh raha hai."
+      },
+      {
+        "step_no": 2,
+        "title": "Apnon Ko Allah Ki Hifazat Mein Dein",
+        "detail": "Ghar se nikalte waqt ya apnon ke liye fikarmand hon to unhein Al-Muhaymin ki hifazat ke supurd karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Zimmedari Nibhayein",
+        "detail": "Jo log ya kaam aap ke supurd hain un ki imandari aur khair-khwahi ke sath dekh-bhal karein."
+      }
+    ]
+  },
+  {
+    "id": "asma_08_al_aziz",
+    "category": "might",
+    "title": "Al-Aziz",
+    "arabic": "الْعَزِيزُ",
+    "urdu": "سب پر غالب، زبردست عزت اور قوت والا جسے کوئی مغلوب نہیں کر سکتا۔",
+    "english": "The Almighty, Invincible, and All-Powerful, whom none can overcome.",
+    "reference": "Surah Al-Hashr 59:23",
+    "number": 8,
+    "transliteration": "Al-Aziz",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Izzat Sirf Allah Se Maangein",
+        "detail": "Samjhein ke asal izzat daulat ya ohde se nahi balke Allah ki itaat aur us ke ataa karne se milti hai."
+      },
+      {
+        "step_no": 2,
+        "title": "Mushkil Waqt Mein Himmat",
+        "detail": "Jab halat kamzor kar dein to 'Ya Aziz' ko yaad kar ke Allah ki ghalib taqat par bharosa rakhein."
+      },
+      {
+        "step_no": 3,
+        "title": "Nafs Ki Ghulami Se Azaadi",
+        "detail": "Gunaah aur zillat ke kaamon se bach kar apne eeman ki izzat aur waqar ko barqarar rakhein."
+      }
+    ]
+  },
+  {
+    "id": "asma_09_al_jabbar",
+    "category": "might",
+    "title": "Al-Jabbar",
+    "arabic": "الْجَبَّارُ",
+    "urdu": "اپنا حکم نافذ کرنے والا اور ٹوٹے ہوئے دلوں اور بگڑے کاموں کو سنوارنے والا۔",
+    "english": "The Compeller whose will prevails, and the Restorer who mends the broken.",
+    "reference": "Surah Al-Hashr 59:23",
+    "number": 9,
+    "transliteration": "Al-Jabbar",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Toote Dil Ki Marham",
+        "detail": "Jab dil dukhi ho ya nuqsan ho jaye to 'Al-Jabbar' se dua karein ke Woh aap ke halat aur dil ko jor de."
+      },
+      {
+        "step_no": 2,
+        "title": "Zulm Se Bachna",
+        "detail": "Apni taqat ya ikhtiyar ka ghalat istemal kar ke kisi kamzor par zabardasti ya zulm na karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Raza-e-Ilahi Ke Aage Jhukna",
+        "detail": "Allah ke faislon aur ahkam ke samne khushi se sar tasleem kham karein."
+      }
+    ]
+  },
+  {
+    "id": "asma_10_al_mutakabbir",
+    "category": "majesty",
+    "title": "Al-Mutakabbir",
+    "arabic": "الْمُتَكَبِّرُ",
+    "urdu": "کبریائی اور بڑائی کا حقیقی مستحق، ہر مخلوق سے بلند و بالا۔",
+    "english": "The Supreme in Greatness and Majesty, to whom alone all pride and greatness belong.",
+    "reference": "Surah Al-Hashr 59:23",
+    "number": 10,
+    "transliteration": "Al-Mutakabbir",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Takabbur Se Mukammal Parhez",
+        "detail": "Samjhein ke barai sirf Allah ki sifat hai; insan ke liye takabbur karna sakht pasandida nahi."
+      },
+      {
+        "step_no": 2,
+        "title": "Aajizi Ikhtiyar Karein",
+        "detail": "Ilm, maal ya khandan par gharoor karne ke bajaye har insan ke sath tawazo aur izzat se pesh aayein."
+      },
+      {
+        "step_no": 3,
+        "title": "Takbeer Ki Rooh",
+        "detail": "Namaz mein 'Allahu Akbar' kehte waqt dil se iqrar karein ke Allah har cheez se bada hai."
+      }
+    ]
+  },
+  {
+    "id": "asma_11_al_khaliq",
+    "category": "creation",
+    "title": "Al-Khaliq",
+    "arabic": "الْخَالِقُ",
+    "urdu": "عدم سے وجود میں لانے والا اور ہر چیز کو اندازے کے مطابق پیدا کرنے والا۔",
+    "english": "The Creator who brings everything into existence from nothing with perfect measure.",
+    "reference": "Surah Al-Hashr 59:24",
+    "number": 11,
+    "transliteration": "Al-Khaliq",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Kainat Mein Ghaur O Fikr",
+        "detail": "Aasman, zameen, mausam aur apni takhleeq par ghaur kar ke Al-Khaliq ki qudrat ko pehchanein."
+      },
+      {
+        "step_no": 2,
+        "title": "Makhlooq Se Muhabbat",
+        "detail": "Allah ki paida ki hui tamam makhlooqat—insanon, janwaron aur qudrat—ke sath reham aur hifazat ka sulook karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Maqsad-e-Takhleeq Yaad Rakhein",
+        "detail": "Khud ko yaad dilayein ke hamein Allah ne apni ibadat aur zameen par bhalai phailane ke liye paida kiya hai."
+      }
+    ]
+  },
+  {
+    "id": "asma_12_al_bari",
+    "category": "creation",
+    "title": "Al-Bari",
+    "arabic": "الْبَارِئُ",
+    "urdu": "بے مثال اور بے عیب صورت میں پیدا کرنے والا۔",
+    "english": "The Originator and Maker who creates everything in harmony without flaw or prior model.",
+    "reference": "Surah Al-Hashr 59:24",
+    "number": 12,
+    "transliteration": "Al-Bari",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Apni Sakht Par Shukar",
+        "detail": "Apne jism, aql aur salahiyaton par Al-Bari ka shukar ada karein aur unhein naik kaamon mein lagayein."
+      },
+      {
+        "step_no": 2,
+        "title": "Kisi Ki Shakl Ya Khilqat Par Tanqeed Na Karein",
+        "detail": "Kisi ki zahiri shakl, rang ya kamzori ka mazaq na udayein kyunkay har takhleeq Al-Bari ki hikmat se hai."
+      },
+      {
+        "step_no": 3,
+        "title": "Tawazun Aur Safai",
+        "detail": "Apne kaam aur zindagi mein saleeqa, tawazun aur khoobsurti paida karne ki koshish karein."
+      }
+    ]
+  },
+  {
+    "id": "asma_13_al_musawwir",
+    "category": "creation",
+    "title": "Al-Musawwir",
+    "arabic": "الْمُصَوِّرُ",
+    "urdu": "ہر مخلوق کو جداگانہ شکل و صورت عطا فرمانے والا۔",
+    "english": "The Fashioner and Bestower of Forms, giving every creation its unique shape and features.",
+    "reference": "Surah Al-Hashr 59:24",
+    "number": 13,
+    "transliteration": "Al-Musawwir",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Aaina Dekhte Waqt Dua",
+        "detail": "Aaina dekhte waqt dua karein: 'Allahumma kama hassanta khalqi fa hassin khuluqi' (Jaise meri surat achhi banai, mera akhlaq bhi achha bana de)."
+      },
+      {
+        "step_no": 2,
+        "title": "Seerat Ki Khoobsurti",
+        "detail": "Sirf zahiri libas par nahi balke sachai, sabr aur khush-akhlaqi se apni seerat ko bhi khoobsurat banayein."
+      },
+      {
+        "step_no": 3,
+        "title": "Qudrat Ke Rangon Ki Qadr",
+        "detail": "Har insan aur makhlooq ke alag rang o roop ko Allah ki nishani samajh kar ehtiram dein."
+      }
+    ]
+  },
+  {
+    "id": "asma_14_al_ghaffar",
+    "category": "forgiveness",
+    "title": "Al-Ghaffar",
+    "arabic": "الْغَفَّارُ",
+    "urdu": "بار بار گناہوں کو بخشنے والا اور عیبوں پر پردہ ڈالنے والا۔",
+    "english": "The Perpetual Forgiver, who repeatedly forgives sins and conceals faults.",
+    "reference": "Surah Taha 20:82",
+    "number": 14,
+    "transliteration": "Al-Ghaffar",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Tauba Mein Der Na Karein",
+        "detail": "Gunaah ho jaye to mayus hone ke bajaye foran 'Ya Ghaffar' kehte hue sachi tauba karein."
+      },
+      {
+        "step_no": 2,
+        "title": "Doosron Ke Aib Chhupayein",
+        "detail": "Jab Allah hamare aib chhupata hai to hamein bhi doosron ki ghaltiyon ko uchhalne ke bajaye parda rakhna chahiye."
+      },
+      {
+        "step_no": 3,
+        "title": "Kasrat-e-Istighfar",
+        "detail": "Chalte phirte 'Astaghfirullah' parhne ki aadat dalen taake dil halka rahe aur barkat aaye."
+      }
+    ]
+  },
+  {
+    "id": "asma_15_al_qahhar",
+    "category": "might",
+    "title": "Al-Qahhar",
+    "arabic": "الْقَهَّارُ",
+    "urdu": "سب کو اپنے قبضۂ قدرت میں رکھنے والا اور ہر سرکش پر غالب۔",
+    "english": "The Subduer and Dominant, who holds absolute control over all creation.",
+    "reference": "Surah Ar-Ra'd 13:16",
+    "number": 15,
+    "transliteration": "Al-Qahhar",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Khauf-e-Khuda Aur Nafs Par Qabu",
+        "detail": "Apne nafs ki buri khwahishat aur ghusse par qabu pane ke liye Al-Qahhar se madad maangein."
+      },
+      {
+        "step_no": 2,
+        "title": "Zalim Se Na Darein",
+        "detail": "Yaad rakhein ke har zalim aur firaun ke upar Allah ki qahhariyat maujood hai, is liye haq par qaim rahein."
+      },
+      {
+        "step_no": 3,
+        "title": "Dunya Ki Mohabbat Ko Had Mein Rakhein",
+        "detail": "Dil ko sirf fani cheezon ka ghulam na banayein balke asli malik o hakim ke samne jhukayein."
       }
     ]
   }

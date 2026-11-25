@@ -11,12 +11,17 @@
       {
         "step_no": 1,
         "title": "Aaj Ka Amal Chunein",
-        "detail": "Aaj kisi se milte waqt khush-akhlaqi aur muskurahat ke sath pesh aayein."
+        "detail": "Aaj kisi se milte waqt khush-akhlaqi, narmi aur muskurahat ke sath pesh aayein."
       },
       {
         "step_no": 2,
         "title": "Jar Mein Mark Karein",
         "detail": "Amal mukammal karne ke baad is card ko read/completed mark karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Mahaul Mein Aasani",
+        "detail": "Ghar, kaam ya safar mein ek khushgawar rawaiya doosron ka bojh halka aur dil khush kar sakta hai."
       }
     ]
   },
@@ -38,6 +43,11 @@
         "step_no": 2,
         "title": "Agla Card Dekhein",
         "detail": "Naye din ya naye tap par agla random reflection card kholein."
+      },
+      {
+        "step_no": 3,
+        "title": "Dil Ki Be-Chaini Mein Sahar",
+        "detail": "Jab zehan mein thakan ya pareshani ho to is mukhtasar zikr ke zariye Allah ki taraf ruju karein."
       }
     ]
   },
@@ -53,12 +63,200 @@
       {
         "step_no": 1,
         "title": "3 Nematein Yaad Karein",
-        "detail": "Aaj ki sehat, rizq ya kisi khaas madad ke liye 3 cheezein zehan mein layein."
+        "detail": "Aaj ki sehat, rizq, ahle-khana ya kisi khaas madad ke liye 3 cheezein zehan mein layein."
       },
       {
         "step_no": 2,
         "title": "Alhamdulillah Kahein",
         "detail": "Dil aur zaban se 'Alhamdulillah' keh kar shukr ada karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Shukr Ko Amal Mein Dhalein",
+        "detail": "Nemat ka haq yeh hai ke us ka ghalat istemal na kiya jaye aur zarooratmand ke sath share kiya jaye."
+      }
+    ]
+  },
+
+  {
+    "id": "jar_04_call_parents",
+    "category": "good_deed",
+    "title": "Walidain Se Baat Ya Khidmat",
+    "arabic": "وَقُلْ رَبِّ ارْحَمْهُمَا كَمَا رَبَّيَانِي صَغِيرًا",
+    "urdu": "اور کہو: اے میرے رب! ان دونوں پر رحم فرما جیسا کہ انہوں نے بچپن میں میری پرورش کی۔",
+    "english": "And say, 'My Lord, have mercy upon them as they brought me up [when I was] small.'",
+    "reference": "Surah Al-Isra 17:24",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Aaj Ka Amal Chunein",
+        "detail": "Aaj apne walidain ko call karein, un ke pas baith kar baat karein ya un ka koi kaam khushi se karein."
+      },
+      {
+        "step_no": 2,
+        "title": "Jar Mein Mark Karein",
+        "detail": "Baat ya khidmat mukammal karne ke baad is card ko read/completed mark karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Dua Ke Sath Khatima",
+        "detail": "Un ki sehat, aafiyat aur darjat ki bulandi ke liye dil se dua karein."
+      }
+    ]
+  },
+  {
+    "id": "jar_05_astaghfirullah_prompt",
+    "category": "zikr_prompt",
+    "title": "Istighfar Ki Tasbeeh",
+    "arabic": "أَسْتَغْفِرُ اللَّهَ الْعَظِيمَ",
+    "urdu": "میں اللہ سے معافی مانگتا ہوں جو بہت عظمت والا ہے۔",
+    "english": "I seek forgiveness from Allah, the Supreme.",
+    "reference": "Sahih Muslim",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Thora Waqt Nikalein",
+        "detail": "Kisi bhi waqt sukoon se baith kar 'Astaghfirullah al-Adheem' parhne ka mamool banayein."
+      },
+      {
+        "step_no": 2,
+        "title": "Agla Card Dekhein",
+        "detail": "Naye din ya naye tap par agla random reflection card kholein."
+      },
+      {
+        "step_no": 3,
+        "title": "Dil Ki Safai Aur Umeed",
+        "detail": "Gunaahon par nidamat ke sath Allah ki bakhshish aur rizq o kaam mein barkat ki umeed rakhein."
+      }
+    ]
+  },
+  {
+    "id": "jar_06_anger_pause",
+    "category": "reflection",
+    "title": "Ghusse Ke Waqt Rukne Ka Jaiza",
+    "arabic": "وَالْكَاظِمِينَ الْغَيْظَ وَالْعَافِينَ عَنِ النَّاسِ",
+    "urdu": "اور غصہ پینے والے اور لوگوں سے درگزر کرنے والے۔",
+    "english": "And those who restrain anger and who pardon the people.",
+    "reference": "Surah Aal-Imran 3:134",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Aaj Ka Mauqa Yaad Karein",
+        "detail": "Dekhein ke aaj kis waqt ghussa ya chirchira-pan aaya aur us par kis tarah qabu paya ja sakta tha."
+      },
+      {
+        "step_no": 2,
+        "title": "A'udhu Billah Aur Khamoshi",
+        "detail": "Agli bar gusse ke waqt 'A'udhu billahi minash-shaytanir-rajeem' parhein aur foran jawab dene se ruk jayein."
+      },
+      {
+        "step_no": 3,
+        "title": "Muaf Karne Ki Bhalai",
+        "detail": "Chhoti bhool chook maaf kar ke dil ka bojh kam karein aur Allah ki muhabbat ki umeed rakhein."
+      }
+    ]
+  },
+  {
+    "id": "jar_07_remove_harm",
+    "category": "good_deed",
+    "title": "Raste Se Takleef Hatana",
+    "arabic": "وَتُمِيطُ الْأَذَى عَنِ الطَّرِيقِ صَدَقَةٌ",
+    "urdu": "اور راستے سے تکلیف دہ چیز کو ہٹانا بھی صدقہ ہے۔",
+    "english": "And removing what is harmful from the road is charity.",
+    "reference": "Sahih al-Bukhari 2989",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Aaj Ka Amal Chunein",
+        "detail": "Ghar, gali, office ya raaste mein koi kachra, pathar ya rukawat ho to use side par hatayein."
+      },
+      {
+        "step_no": 2,
+        "title": "Jar Mein Mark Karein",
+        "detail": "Yeh chhoti si khidmat poori karne ke baad is card ko read/completed mark karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Bhalai Ka Ehsas",
+        "detail": "Yaad rakhein ke kisi musafir ya chalne wale ko aasani dena bhi ajar ka sabab banta hai."
+      }
+    ]
+  },
+  {
+    "id": "jar_08_la_hawla_prompt",
+    "category": "zikr_prompt",
+    "title": "La Hawla Wa La Quwwata Ka Zikr",
+    "arabic": "لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ",
+    "urdu": "نیکی کرنے اور گناہ سے بچنے کی طاقت اللہ ہی کی مدد سے ہے۔",
+    "english": "There is no power and no strength except through Allah.",
+    "reference": "Sahih al-Bukhari 6384",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Thora Waqt Nikalein",
+        "detail": "Jab kisi mushkil kaam ya fikr ka samna ho to sukoon se is kalme ko dohrayein."
+      },
+      {
+        "step_no": 2,
+        "title": "Agla Card Dekhein",
+        "detail": "Naye din ya naye tap par agla random reflection card kholein."
+      },
+      {
+        "step_no": 3,
+        "title": "Asal Sahara Allah Par",
+        "detail": "Apni kamzori ko samajhte hue Allah ki madad aur tawfeeq par bharosa mazboot karein."
+      }
+    ]
+  },
+  {
+    "id": "jar_09_intention_check",
+    "category": "reflection",
+    "title": "Niyyat Aur Waqt Ka Muhasaba",
+    "arabic": "إِنَّمَا الْأَعْمَالُ بِالنِّيَّاتِ",
+    "urdu": "بے شک اعمال کا دارومدار نیتوں پر ہے۔",
+    "english": "Verily, actions are according to intentions.",
+    "reference": "Sahih al-Bukhari 1",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Aaj Ke Kaamon Ka Jaiza Lein",
+        "detail": "Sochein ke aaj jo kaam kiye gaye un mein se kitne sirf Allah ki raza aur khidmat ke liye the."
+      },
+      {
+        "step_no": 2,
+        "title": "Riyakari Se Bachayein",
+        "detail": "Agar kisi kaam mein dikhawa ya be-dhyani aayi ho to dil ko samjhayein aur niyyat dobara durust karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Aane Wale Waqt Ki Niyyat",
+        "detail": "Agle kaamon aur namazon ke liye pehle se khalis niyyat tayar rakhein."
+      }
+    ]
+  },
+  {
+    "id": "jar_10_kind_word_sadaqah",
+    "category": "good_deed",
+    "title": "Kisi Ko Achhi Baat Ya Hosla Dena",
+    "arabic": "وَقُولُوا لِلنَّاسِ حُسْنًا",
+    "urdu": "اور لوگوں سے اچھی اور بھلی بات کہو۔",
+    "english": "And speak to people good [words].",
+    "reference": "Surah Al-Baqarah 2:83",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Aaj Ka Amal Chunein",
+        "detail": "Aaj kisi pareshan, thake hue ya zarooratmand shaks ko narmi, hosla ya mufeed mashware ke do bol kahein."
+      },
+      {
+        "step_no": 2,
+        "title": "Jar Mein Mark Karein",
+        "detail": "Yeh amal karne ke baad is card ko read/completed mark karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Zaban Ki Hifazat",
+        "detail": "Aaj ke din gheebat, tanz aur sakht bol se bachne ka khayal rakhein."
       }
     ]
   }

@@ -17,6 +17,11 @@
         "step_no": 2,
         "title": "Allah Par Bharosa Rakhein",
         "detail": "Mehnat aur dua ke sath aasani ke liye Allah se ruju karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Jald Bazi Se Bachein",
+        "detail": "Samjhein ke waqt ke sath Allah ka khola hua darwaza aasani lata hai, is liye sabr aur istiqamat na chhorein."
       }
     ]
   },
@@ -38,6 +43,11 @@
         "step_no": 2,
         "title": "Shukrguzari Apnayein",
         "detail": "Har choti bari nemat par dil aur zaban se shukr ada karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Zikr Ko Zindagi Se Jorein",
+        "detail": "Zikar sirf ginti nahi balke har waqt yeh khayal rakhna hai ke Allah hamare aamal aur haal se bakhabar hai."
       }
     ]
   },
@@ -59,6 +69,193 @@
         "step_no": 2,
         "title": "Nateeja Allah Ke Supurd Karein",
         "detail": "Baqi mamla Allah ke hawale kar ke sukoon-e-qalb hasil karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Beparwahi Ke Bajaye Itminan",
+        "detail": "Tawakkul ka matlab kaam chhorna nahi balke poori mehnat ke baad natijon ki fikr se azad ho kar Allah par yaqeen rakhna hai."
+      }
+    ]
+  },
+  {
+    "id": "ayat_04_allah_does_not_burden",
+    "category": "mercy_and_strength",
+    "title": "Bardasht Se Zyada Bojh Nahi",
+    "arabic": "لَا يُكَلِّفُ اللَّهُ نَفْسًا إِلَّا وُسْعَهَا",
+    "urdu": "اللہ کسی جان پر اس کی طاقت سے زیادہ بوجھ نہیں ڈالتا۔",
+    "english": "Allah does not burden a soul beyond what it can bear.",
+    "reference": "Surah Al-Baqarah 2:286",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Apni Himmat Par Yaqeen Rakhein",
+        "detail": "Jab zimmedariyan ya mushkilat bhari lagein to is aayat ko yaad karein ke Allah ne aap ko is ke muqable ki taqat di hai."
+      },
+      {
+        "step_no": 2,
+        "title": "Aasan Qadam Uthayein",
+        "detail": "Ek waqt mein poori mushkil se ghabrane ke bajaye aaj ke hisse ka ek chhota qadam uthayein aur baqi Allah par chhor dein."
+      },
+      {
+        "step_no": 3,
+        "title": "Narmi Aur Madad Ki Dua",
+        "detail": "Isi aayat ke aakhir mein sikhayi gayi dua ke mutabiq Allah se aasani, muafi aur madad talab karte rahein."
+      }
+    ]
+  },
+  {
+    "id": "ayat_05_do_not_despair",
+    "category": "hope_and_mercy",
+    "title": "Allah Ki Rehmat Se Mayus Na Hon",
+    "arabic": "لَا تَقْنَطُوا مِنْ رَحْمَةِ اللَّهِ",
+    "urdu": "اللہ کی رحمت سے ناامید نہ ہو جاؤ۔",
+    "english": "Do not despair of the mercy of Allah.",
+    "reference": "Surah Az-Zumar 39:53",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Mayusi Ka Darwaza Band Karein",
+        "detail": "Ghaltiyan chahe jitni bhi barri hon, yeh na sochein ke wapsi ka rasta band ho chuka hai."
+      },
+      {
+        "step_no": 2,
+        "title": "Sachi Tauba Ki Taraf Paltein",
+        "detail": "Nidamat aur khuloos ke sath Allah ki taraf ruju karein kyunkay Woh tamam gunaahon ko bakhshne wala hai."
+      },
+      {
+        "step_no": 3,
+        "title": "Nayi Shuruat Karein",
+        "detail": "Pichhle pachtawon mein ulajhne ke bajaye aaj se naik aamal aur behtar aadat ki bunyad rakhein."
+      }
+    ]
+  },
+  {
+    "id": "ayat_06_hearts_find_rest",
+    "category": "peace_and_dhikr",
+    "title": "Dilon Ka Itminan Allah Ke Zikr Mein",
+    "arabic": "أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ",
+    "urdu": "خبردار رہو کہ اللہ ہی کے ذکر سے دلوں کو اطمینان حاصل ہوتا ہے۔",
+    "english": "Unquestionably, by the remembrance of Allah hearts are assured.",
+    "reference": "Surah Ar-Ra'd 13:28",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Bechaini Mein Zikr Ki Panah",
+        "detail": "Jab dil ghabrahat, stress ya tanhai mehsoos kare to chand minute khamoshi se Allah ka zikr aur istighfar karein."
+      },
+      {
+        "step_no": 2,
+        "title": "Quran Se Qurb Barhayein",
+        "detail": "Rozana chand aayaat tarjume ke sath parhein taake zehan aur dil ko roohani sukoon mile."
+      },
+      {
+        "step_no": 3,
+        "title": "Dunyawi Shor Kam Karein",
+        "detail": "Musalsal khabron aur screen ke shor se waqfa le kar apne Rab ke sath sukoon ke lamhat guzarein."
+      }
+    ]
+  },
+  {
+    "id": "ayat_07_patience_and_prayer",
+    "category": "patience",
+    "title": "Sabr Aur Namaz Se Madad",
+    "arabic": "وَاسْتَعِينُوا بِالصَّبْرِ وَالصَّلَاةِ",
+    "urdu": "اور صبر اور نماز کے ذریعے مدد طلب کرو۔",
+    "english": "And seek help through patience and prayer.",
+    "reference": "Surah Al-Baqarah 2:45",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Mushkil Waqt Mein Namaz Ki Taraf Ruju",
+        "detail": "Pareshani ke waqt shikwa karne ke bajaye wuzu karein aur do rakat namaz parh kar Allah se madad maangein."
+      },
+      {
+        "step_no": 2,
+        "title": "Sabr Ko Mazbooti Banayein",
+        "detail": "Sabr ka matlab be-basi nahi balke ghabrahat aur ghusse par qabu rakh kar sahi raste par qaim rehna hai."
+      },
+      {
+        "step_no": 3,
+        "title": "Khushu Aur Azmat Ka Ehsas",
+        "detail": "Namaz ko jaldi nibtaane ke bajaye sukoon se ada karein taake woh waqai dil ka sahara bane."
+      }
+    ]
+  },
+  {
+    "id": "ayat_08_gratitude_increases_blessing",
+    "category": "gratitude",
+    "title": "Shukar Se Nemat Mein Izafa",
+    "arabic": "لَئِنْ شَكَرْتُمْ لَأَزِيدَنَّكُمْ",
+    "urdu": "اگر تم شکر ادا کرو گے تو میں تمہیں ضرور زیادہ دوں گا۔",
+    "english": "If you are grateful, I will surely increase you [in favor].",
+    "reference": "Surah Ibrahim 14:7",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Chhoti Nematon Ko Pehchanein",
+        "detail": "Sehat, khandan, aman aur rozmarra ki aasaniyon ko ghaur se dekhein jinhein hum aksar mamooli samajh lete hain."
+      },
+      {
+        "step_no": 2,
+        "title": "Zaban Aur Amal Se Shukar",
+        "detail": "Sirf 'Alhamdulillah' kehne par bas na karein balke Allah ki di hui nematon ko achhe kaamon aur doosron ki madad mein kharch karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Nashukri Aur Muqable Se Bachein",
+        "detail": "Doosron ke paas kya hai us par nazar rakhne ke bajaye apne hisse ki barkaton par razi aur khush rahein."
+      }
+    ]
+  },
+  {
+    "id": "ayat_09_allah_is_near",
+    "category": "supplication",
+    "title": "Allah Qareeb Hai Aur Dua Sunta Hai",
+    "arabic": "وَإِذَا سَأَلَكَ عِبَادِي عَنِّي فَإِنِّي قَرِيبٌ أُجِيبُ دَعْوَةَ الدَّاعِ إِذَا دَعَانِ",
+    "urdu": "اور جب میرے بندے میرے بارے میں آپ سے سوال کریں تو بے شک میں قریب ہوں، پکارنے والے کی پکار کو قبول کرتا ہوں جب وہ مجھے پکارتا ہے۔",
+    "english": "And when My servants ask you concerning Me — indeed I am near. I respond to the invocation of the supplicant when he calls upon Me.",
+    "reference": "Surah Al-Baqarah 2:186",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Bila-Jhijhak Allah Se Baat Karein",
+        "detail": "Apni har chhoti bari zaroorat aur dil ki baat seedhe Allah ke samne rakhein kyunkay Woh har banda ke qareeb hai."
+      },
+      {
+        "step_no": 2,
+        "title": "Qabooliyat Par Yaqeen Rakhein",
+        "detail": "Dua maangte waqt yeh yaqeen rakhein ke Allah ya to wahi ataa karega, ya kisi musibat ko taal dega, ya aakhirat mein behtar ajar dega."
+      },
+      {
+        "step_no": 3,
+        "title": "Itaat Aur Eeman Ke Sath Dua",
+        "detail": "Dua ke sath Allah ke ahkam par chalne ki koshish karein taake zindagi mein hidayat aur barkat barhti rahe."
+      }
+    ]
+  },
+  {
+    "id": "ayat_10_speak_good_to_people",
+    "category": "character",
+    "title": "Logon Se Achhi Baat Kehna",
+    "arabic": "وَقُولُوا لِلنَّاسِ حُسْنًا",
+    "urdu": "اور لوگوں سے اچھی اور بھلی بات کہو۔",
+    "english": "And speak to people good [words].",
+    "reference": "Surah Al-Baqarah 2:83",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Har Insaan Se Narm Guftagu",
+        "detail": "Chhote bade, ghar walon aur kaam karne walon sab ke sath izzat aur narmi se baat karein."
+      },
+      {
+        "step_no": 2,
+        "title": "Dil Dukhane Wale Alfaz Se Parhez",
+        "detail": "Tanz, sakht lehje aur kisi ko nicha dikhane wali baaton se apni zaban ko bachayein."
+      },
+      {
+        "step_no": 3,
+        "title": "Hosla Afzai Ki Aadat",
+        "detail": "Kisi ki acchi koshish ki tareef karein aur pareshan shaks ko tasalli aur umeed ke do bol zaroor kahein."
       }
     ]
   }

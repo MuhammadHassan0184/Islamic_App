@@ -19,6 +19,11 @@
         "step_no": 2,
         "title": "Pasandeeda List Mein Mehfooz Karein",
         "detail": "Aapke pasandida naamon ki list mein save karne ke liye bookmark karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Ilm Aur Fazeelat Ka Khayal",
+        "detail": "Hazrat Ayesha Siddiqa (R.A) ki ilmi aur akhlaqi riwayat ko yaad rakhte hue achhi tarbiyat ki niyyat karein."
       }
     ]
   },
@@ -42,6 +47,11 @@
         "step_no": 2,
         "title": "Muqabla Karein",
         "detail": "Doosre pasandeeda boy names ke sath muqabla kar ke final choice banayein."
+      },
+      {
+        "step_no": 3,
+        "title": "Himmat Aur Sachaai",
+        "detail": "Haq aur insaf par mazboot rehne ki khoobi ko is naam ke sath jor kar samjhein."
       }
     ]
   },
@@ -65,7 +75,266 @@
         "step_no": 2,
         "title": "Family Ke Sath Share Karein",
         "detail": "Faisle ke liye family members ke sath note ya shortlist share karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Aasan Talaffuz Aur Imla",
+        "detail": "Check karein ke urdu, english aur arabic mein yeh naam aasani se likha aur pukara ja sakta hai."
+      }
+    ]
+  },
+  
+  {
+    "id": "name_fatima",
+    "category": "girl",
+    "title": "Fatima",
+    "arabic": "فَاطِمَةُ",
+    "urdu": "پاکدامن، باحیا اور نیکیوں میں بڑھنے والی۔",
+    "english": "Chaste, abstinent, and one who refrains from evil.",
+    "reference": "Daughter of the Prophet (R.A) Name",
+    "gender": "female",
+    "origin": "Arabic",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Naam Aur Makna Dekhein",
+        "detail": "Arabic imla, talaffuz aur urdu/english makna check karein."
+      },
+      {
+        "step_no": 2,
+        "title": "Pasandeeda List Mein Mehfooz Karein",
+        "detail": "Aapke pasandida naamon ki list mein save karne ke liye bookmark karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Haya Aur Sabr Ki Riwayat",
+        "detail": "Hazrat Fatima Zahra (R.A) ki sadgi, sabr aur akhlaqi waqar ko yaad rakhte hue achhi tarbiyat ki niyyat karein."
+      }
+    ]
+  },
+  {
+    "id": "name_maryam",
+    "category": "girl",
+    "title": "Maryam",
+    "arabic": "مَرْيَمُ",
+    "urdu": "عبادت گزار، پاکیزہ اور اللہ کی مقرب بندہ۔",
+    "english": "Devoted worshipper, pure, and revered.",
+    "reference": "Quranic Figure (Surah Maryam)",
+    "gender": "female",
+    "origin": "Arabic / Aramaic",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Qurani Hawala Aur Makna",
+        "detail": "Quran mein is naam ki azmat aur paaki ke zikr ko samjhein."
+      },
+      {
+        "step_no": 2,
+        "title": "Shortlist Mein Shamil Karein",
+        "detail": "Apni pasandida girl names ki list mein is naam ko mehfooz karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Ibadat Aur Wara",
+        "detail": "Taqwa, khamoshi aur Allah se talluq ki khoobi ko is naam ke sath jor kar dekhein."
+      }
+    ]
+  },
+  {
+    "id": "name_zainab",
+    "category": "girl",
+    "title": "Zainab",
+    "arabic": "زَيْنَبُ",
+    "urdu": "باپ کی زینت، خوبصورت اور باوقار۔",
+    "english": "Adornment of her father, graceful, and dignified.",
+    "reference": "Prophet's Daughters & Umm al-Mu'minin (R.A)",
+    "gender": "female",
+    "origin": "Arabic",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Makna Aur Talaffuz",
+        "detail": "Naam ka durust talaffuz aur khoobsurat makna check karein."
+      },
+      {
+        "step_no": 2,
+        "title": "Muqabla Karein",
+        "detail": "Doosre pasandeeda naamon ke sath rakh kar aawaz aur andaaz par ghaur karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Sakhawat Aur Waqar",
+        "detail": "Ehl-e-bait aur sahabiyat ke akhlaq o sakhawat ko yaad rakhte hue naik niyyat karein."
+      }
+    ]
+  },
+  {
+    "id": "name_muhammad",
+    "category": "boy",
+    "title": "Muhammad",
+    "arabic": "مُحَمَّدٌ",
+    "urdu": "بے حد تعریف کیا گیا، قابلِ ستائش۔",
+    "english": "Praised, commendable, and worthy of high praise.",
+    "reference": "Name of Prophet Muhammad (PBUH)",
+    "gender": "male",
+    "origin": "Arabic",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Fazeelat Aur Makna Samjhein",
+        "detail": "Is naam ki be-misal fazeelat aur 'hamd' se jude is ke makna par ghaur karein."
+      },
+      {
+        "step_no": 2,
+        "title": "Barkat Aur Muhabbat Ke Sath",
+        "detail": "Nabi Kareem (S.A.W) ki muhabbat aur adab ke sath is naam ko shortlist mein rakhein."
+      },
+      {
+        "step_no": 3,
+        "title": "Sunnat Aur Akhlaq Ki Tarbiyat",
+        "detail": "Bachay ki tarbiyat sachai, amanatdari aur husn-e-akhlaq par karne ka irada karein."
+      }
+    ]
+  },
+  {
+    "id": "name_umar",
+    "category": "boy",
+    "title": "Umar",
+    "arabic": "عُمَرُ",
+    "urdu": "لمبی عمر، آبادی اور زندگی کی بہار۔",
+    "english": "Flourishing life, longevity, and prosperity.",
+    "reference": "Companion of the Prophet (R.A)",
+    "gender": "male",
+    "origin": "Arabic",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Makna Aur Hawala Dekhein",
+        "detail": "Naam ka makna aur Sahabi-e-Rasool Hazrat Umar Farooq (R.A) ka hawala dekhein."
+      },
+      {
+        "step_no": 2,
+        "title": "Family Ke Sath Share Karein",
+        "detail": "Khandan ke sath mashwara aur shortlist share karne ke liye save karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Adl Aur Haq Goi",
+        "detail": "Insaf, haq goi aur zimmedari ki khoobiyon ko is naam ke sath yaad rakhein."
+      }
+    ]
+  },
+  {
+    "id": "name_ali",
+    "category": "boy",
+    "title": "Ali",
+    "arabic": "عَلِيٌّ",
+    "urdu": "بلند مرتبہ، عالی شان اور صاحبِ رفعت۔",
+    "english": "Exalted, high in rank, and noble.",
+    "reference": "Companion of the Prophet (R.A) & Quranic Attribute",
+    "gender": "male",
+    "origin": "Arabic",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Imla Aur Makna Check Karein",
+        "detail": "Mukhtasir, aasan aur ba-makna naam ke taur par is ka makna dekhein."
+      },
+      {
+        "step_no": 2,
+        "title": "Pasandeeda List Mein Save Karein",
+        "detail": "Apni boy names ki list mein bookmark kar ke mehfooz karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Ilm Aur Shuja'at",
+        "detail": "Hikmat, ilm aur sachai par qaim rehne ki khoobi ko zehan mein rakhein."
+      }
+    ]
+  },
+  {
+    "id": "name_noor",
+    "category": "unisex",
+    "title": "Noor",
+    "arabic": "نُورٌ",
+    "urdu": "روشنی، ضیا اور ہدایت کا نور۔",
+    "english": "Light, radiance, and illumination.",
+    "reference": "Quranic Concept",
+    "gender": "unisex",
+    "origin": "Arabic",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Makna Tasdeeq Karein",
+        "detail": "'Roshni aur hidayat' ke khoobsurat makna ko urdu aur english mein parhein."
+      },
+      {
+        "step_no": 2,
+        "title": "Unisex Choice Ka Jaiza Lein",
+        "detail": "Dekhein ke yeh naam aap ke plan ke mutabiq kis tarah fit aata hai."
+      },
+      {
+        "step_no": 3,
+        "title": "Ilm Aur Hidayat Ki Roshni",
+        "detail": "Zindagi mein ilm, sachai aur bhalai ki roshni phailane ki dua ke sath mehfooz karein."
+      }
+    ]
+  },
+  {
+    "id": "name_safa",
+    "category": "unisex",
+    "title": "Safa",
+    "arabic": "صَفَا",
+    "urdu": "صفائی، پاکیزگی اور خالص پن۔",
+    "english": "Purity, clarity, and serenity.",
+    "reference": "Mount Safa (Ritual of Sa'i)",
+    "gender": "unisex",
+    "origin": "Arabic",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Makna Aur Hawala Parhein",
+        "detail": "'Paaki aur safai' ke makna aur Hajj/Umrah ke maqam Safa ke hawale ko dekhein."
+      },
+      {
+        "step_no": 2,
+        "title": "Shortlist Mein Mehfooz Karein",
+        "detail": "Aapni pasandida list mein bookmark karein taake aasani se muqabla ho sake."
+      },
+      {
+        "step_no": 3,
+        "title": "Dil Aur Niyyat Ki Safai",
+        "detail": "Khuloos, sachai aur dil ki safai ko is naam ke sath jor kar samjhein."
+      }
+    ]
+  },
+  {
+    "id": "name_taqi",
+    "category": "unisex",
+    "title": "Taqi",
+    "arabic": "تَقِيٌّ",
+    "urdu": "پرہیزگار، متقی اور اللہ سے ڈرنے والا۔",
+    "english": "Pious, God-fearing, and righteous.",
+    "reference": "Quranic Concept of Taqwa",
+    "gender": "unisex",
+    "origin": "Arabic",
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Taqwa Ka Makna Samjhein",
+        "detail": "'Allah ki raza aur khauf-e-ilahi rakhne wale' ke makna ko ghaur se dekhein."
+      },
+      {
+        "step_no": 2,
+        "title": "Family Ke Sath Share Karein",
+        "detail": "Aapni pasandida list mein save kar ke family members ke sath discuss karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Parhezgari Ki Tarbiyat",
+        "detail": "Halal, sachai aur deeni shaur par mabni tarbiyat ki niyyat karein."
       }
     ]
   }
+
 ]
