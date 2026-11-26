@@ -11,12 +11,12 @@ class NamazHeader extends StatelessWidget {
     super.key,
     required this.controller,
     required this.onAlarmSettingsTap,
-    required this.onLocationSettingsTap,
+    required this.onCalculationSettingsTap,
   });
 
   final NamazController controller;
   final VoidCallback onAlarmSettingsTap;
-  final VoidCallback onLocationSettingsTap;
+  final VoidCallback onCalculationSettingsTap;
 
   @override
   Widget build(BuildContext context) {
@@ -104,8 +104,8 @@ class NamazHeader extends StatelessWidget {
                 );
               }),
               IconButton(
-                tooltip: 'Location & Calculation Settings',
-                onPressed: onLocationSettingsTap,
+                tooltip: 'Calculation Settings',
+                onPressed: onCalculationSettingsTap,
                 icon: const Icon(
                   Icons.tune_rounded,
                   color: AppColors.white,

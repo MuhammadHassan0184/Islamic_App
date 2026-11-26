@@ -7,7 +7,6 @@ import 'package:zi_core/zi_core_io.dart';
 
 import '../Controller/namaz_controller.dart';
 import '../Model/prayer_time_model.dart';
-import '../Services/namaz_time_calculator.dart';
 
 Future<void> showAddOrEditPrayerSheet(
   BuildContext context,
@@ -38,7 +37,7 @@ Future<void> showAddOrEditPrayerSheet(
   );
 }
 
-Future<void> showLocationAndMethodSheet(
+Future<void> showCalculationSettingsSheet(
   BuildContext context,
   NamazController controller,
 ) {
@@ -47,12 +46,12 @@ Future<void> showLocationAndMethodSheet(
     type: ZiFeedOverType.bottomSheet,
     size: ZiFeedOverSize.auto,
     dismissOutside: true,
-    title: 'Location & Calculation',
+    title: 'Calculation Settings',
     style: ZiFeedOverStyle.defaults(context).copyWith(
       backgroundColor: AppColors.white,
       radius: ZiRadius.xl,
     ),
-    body: _LocationAndMethodSheetBody(controller: controller),
+    body: _CalculationSettingsSheetBody(controller: controller),
   );
 }
 
@@ -603,69 +602,22 @@ class _CustomPrayerSheetBodyState extends State<_CustomPrayerSheetBody> {
   }
 }
 
-class _LocationAndMethodSheetBody extends StatefulWidget {
-  const _LocationAndMethodSheetBody({required this.controller});
+class _CalculationSettingsSheetBody extends StatelessWidget {
+  const _CalculationSettingsSheetBody({required this.controller});
 
   final NamazController controller;
 
   @override
-  State<_LocationAndMethodSheetBody> createState() =>
-      _LocationAndMethodSheetBodyState();
-}
-
-class _LocationAndMethodSheetBodyState
-    extends State<_LocationAndMethodSheetBody> {
-  final TextEditingController _searchController = TextEditingController();
-  late final TextEditingController _customCityController;
-  late final TextEditingController _latController;
-  late final TextEditingController _lngController;
-  String _query = '';
-  bool _showCustomCoords = false;
-
-  @override
-  void initState() {
-    super.initState();
-    _showCustomCoords = widget.controller.useCustomCoordinates.value;
-    _customCityController = TextEditingController(
-      text: widget.controller.cityName.value,
-    );
-    _latController = TextEditingController(
-      text: widget.controller.latitude.value.toStringAsFixed(4),
-    );
-    _lngController = TextEditingController(
-      text: widget.controller.longitude.value.toStringAsFixed(4),
-    );
-  }
-
-  @override
-  void dispose() {
-    _searchController.dispose();
-    _customCityController.dispose();
-    _latController.dispose();
-    _lngController.dispose();
-    super.dispose();
-  }
-
-  @override
   Widget build(BuildContext context) {
-    final filteredCities = NamazTimeCalculator.cityPresets.where((city) {
-      if (_query.trim().isEmpty) return true;
-      final q = _query.trim().toLowerCase();
-      return city.city.toLowerCase().contains(q) ||
-          city.country.toLowerCase().contains(q);
-    }).toList();
-
     return Obx(() {
-      final selectedMethod = widget.controller.calculationMethod.value;
-      final selectedMadhab = widget.controller.madhab.value;
-      final selectedCityId = widget.controller.selectedCityId.value;
-      final use24h = widget.controller.use24HourFormat.value;
+      final selectedMethod = controller.calculationMethod.value;
+      final selectedMadhab = controller.madhab.value;
+      final use24h = controller.use24HourFormat.value;
 
       return Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
         children: [
-          // Time format & Madhab quick settings
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
             decoration: BoxDecoration(
@@ -675,11 +627,10 @@ class _LocationAndMethodSheetBodyState
             child: ZiSwitchTile(
               label: '24-Hour Time Format',
               value: use24h,
-              onChanged: widget.controller.toggleTimeFormat,
+              onChanged: controller.toggleTimeFormat,
             ),
           ),
           ziGap(14),
-
           Text(
             'Asr Juristic Method (Madhab)',
             style: ZiTypoStyles.titleSm.copyWith(color: AppColors.textPrimary),
@@ -692,7 +643,7 @@ class _LocationAndMethodSheetBodyState
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 4),
                   child: InkWell(
-                    onTap: () => widget.controller.setMadhab(m),
+                    onTap: () => controller.setMadhab(m),
                     borderRadius: BorderRadius.circular(ZiRadius.md),
                     child: Container(
                       padding: const EdgeInsets.all(10),
@@ -737,7 +688,6 @@ class _LocationAndMethodSheetBodyState
             }).toList(),
           ),
           ziGap(14),
-
           Text(
             'Calculation Method',
             style: ZiTypoStyles.titleSm.copyWith(color: AppColors.textPrimary),
@@ -759,170 +709,10 @@ class _LocationAndMethodSheetBodyState
                   fontWeight: selected ? FontWeight.w700 : FontWeight.w500,
                   fontSize: 12,
                 ),
-                onSelected: (_) =>
-                    widget.controller.setCalculationMethod(method),
+                onSelected: (_) => controller.setCalculationMethod(method),
               );
             }).toList(),
           ),
-          ziGap(16),
-
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                'City / Coordinates',
-                style: ZiTypoStyles.titleSm.copyWith(
-                  color: AppColors.textPrimary,
-                ),
-              ),
-              TextButton.icon(
-                onPressed: () {
-                  setState(() => _showCustomCoords = !_showCustomCoords);
-                },
-                icon: Icon(
-                  _showCustomCoords ? Icons.location_city : Icons.my_location,
-                  size: 16,
-                  color: AppColors.primary,
-                ),
-                label: Text(
-                  _showCustomCoords ? 'City Presets' : 'Custom Lat/Lng',
-                  style: const TextStyle(
-                    color: AppColors.primary,
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
-              ),
-            ],
-          ),
-
-          if (_showCustomCoords) ...[
-            ZiInput(
-              label: 'Location Name',
-              hint: 'e.g. Multan, Pakistan',
-              controller: _customCityController,
-              variant: ZiInputVariant.outline,
-            ),
-            ziGap(10),
-            Row(
-              children: [
-                Expanded(
-                  child: ZiInput(
-                    label: 'Latitude',
-                    hint: '31.5204',
-                    controller: _latController,
-                    keyboardType: const TextInputType.numberWithOptions(
-                      decimal: true,
-                      signed: true,
-                    ),
-                    variant: ZiInputVariant.outline,
-                  ),
-                ),
-                ziGap(10),
-                Expanded(
-                  child: ZiInput(
-                    label: 'Longitude',
-                    hint: '74.3587',
-                    controller: _lngController,
-                    keyboardType: const TextInputType.numberWithOptions(
-                      decimal: true,
-                      signed: true,
-                    ),
-                    variant: ZiInputVariant.outline,
-                  ),
-                ),
-              ],
-            ),
-            ziGap(12),
-            ZiButtonB(
-              variant: ZiButtonVariantB.primary,
-              expand: true,
-              label: 'Apply Coordinates',
-              style: ZiButtonStyleB(
-                backgroundColor: AppColors.primary,
-                foregroundColor: AppColors.white,
-                borderRadius: BorderRadius.circular(ZiRadius.md),
-              ),
-              action: () async {
-                final lat = double.tryParse(_latController.text.trim());
-                final lng = double.tryParse(_lngController.text.trim());
-                if (lat == null ||
-                    lng == null ||
-                    lat < -90 ||
-                    lat > 90 ||
-                    lng < -180 ||
-                    lng > 180) {
-                  AppSnackbar.warning(
-                    'Enter valid latitude (-90..90) and longitude (-180..180)',
-                  );
-                  return;
-                }
-                await widget.controller.setCustomCoordinates(
-                  cityLabel: _customCityController.text,
-                  lat: lat,
-                  lng: lng,
-                );
-                if (context.mounted) Navigator.of(context).pop();
-              },
-            ),
-          ] else ...[
-            ZiInput(
-              hint: 'Search city or country...',
-              controller: _searchController,
-              variant: ZiInputVariant.outline,
-              prefix: const Icon(Icons.search_rounded, color: AppColors.primary),
-              onChanged: (value) => setState(() => _query = value),
-            ),
-            ziGap(10),
-            ConstrainedBox(
-              constraints: const BoxConstraints(maxHeight: 240),
-              child: ListView.separated(
-                shrinkWrap: true,
-                itemCount: filteredCities.length,
-                separatorBuilder: (_, _) => const Divider(height: 1),
-                itemBuilder: (context, index) {
-                  final city = filteredCities[index];
-                  final isSelected =
-                      !widget.controller.useCustomCoordinates.value &&
-                      selectedCityId == city.id;
-                  return ListTile(
-                    dense: true,
-                    contentPadding: const EdgeInsets.symmetric(horizontal: 6),
-                    leading: Icon(
-                      Icons.location_on_rounded,
-                      color: isSelected
-                          ? AppColors.primary
-                          : AppColors.textSecondary,
-                    ),
-                    title: Text(
-                      city.displayName,
-                      style: TextStyle(
-                        fontWeight: isSelected
-                            ? FontWeight.w700
-                            : FontWeight.w500,
-                        color: isSelected
-                            ? AppColors.primaryDark
-                            : AppColors.textPrimary,
-                      ),
-                    ),
-                    subtitle: Text(
-                      '${city.defaultMethod.shortLabel} • ${city.defaultMadhab.label}',
-                      style: const TextStyle(fontSize: 11),
-                    ),
-                    trailing: isSelected
-                        ? const Icon(
-                            Icons.check_circle_rounded,
-                            color: AppColors.primary,
-                          )
-                        : null,
-                    onTap: () async {
-                      await widget.controller.selectCityPreset(city);
-                      if (context.mounted) Navigator.of(context).pop();
-                    },
-                  );
-                },
-              ),
-            ),
-          ],
         ],
       );
     });

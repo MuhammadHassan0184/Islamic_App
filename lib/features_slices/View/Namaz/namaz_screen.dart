@@ -4,7 +4,6 @@ import 'package:islam786/Config/Colors/app_colors.dart';
 import 'package:islam786/Utils/mediaquery_extension.dart';
 import 'package:islam786/features_slices/View/Namaz/Controller/namaz_controller.dart';
 import 'package:islam786/features_slices/View/Namaz/Widgets/namaz_header.dart';
-import 'package:islam786/features_slices/View/Namaz/Widgets/namaz_location_header.dart';
 import 'package:islam786/features_slices/View/Namaz/Widgets/namaz_sheets.dart';
 import 'package:islam786/features_slices/View/Namaz/Widgets/namaz_week_strip.dart';
 import 'package:islam786/features_slices/View/Namaz/Widgets/next_prayer_card.dart';
@@ -81,8 +80,8 @@ class _NamazScreenState extends State<NamazScreen> with WidgetsBindingObserver {
                 controller: controller,
                 onAlarmSettingsTap: () =>
                     showAlarmSettingsSheet(context, controller),
-                onLocationSettingsTap: () =>
-                    showLocationAndMethodSheet(context, controller),
+                onCalculationSettingsTap: () =>
+                    showCalculationSettingsSheet(context, controller),
               ),
               Expanded(
                 child: SafeArea(
@@ -102,17 +101,9 @@ class _NamazScreenState extends State<NamazScreen> with WidgetsBindingObserver {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            SizedBox(height: context.heightPct(0.025)),
-                            NamazLocationHeader(
-                              controller: controller,
-                              onLocationTap: () => showLocationAndMethodSheet(
-                                context,
-                                controller,
-                              ),
-                              onAlarmTap: () =>
-                                  showAlarmSettingsSheet(context, controller),
-                            ),
+                            SizedBox(height: context.heightPct(0.016)),
 
+                            NamazWeekStrip(controller: controller),
                             /*
                             // Commented out: Exact Alarm Permission banner hidden (alarm system disabled, notifications used)
                             Obx(() {
@@ -381,10 +372,6 @@ class _NamazScreenState extends State<NamazScreen> with WidgetsBindingObserver {
                               onAlarmModeTap: () =>
                                   showAlarmSettingsSheet(context, controller),
                             ),
-
-                            SizedBox(height: context.heightPct(0.016)),
-
-                            NamazWeekStrip(controller: controller),
                           ],
                         ),
                       ),

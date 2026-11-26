@@ -21,11 +21,6 @@ class NamazController extends GetxController with WidgetsBindingObserver {
   final bool enableTicker;
 
   // SharedPreferences keys
-  static const _keyCityId = 'namaz_city_id';
-  static const _keyCustomCityName = 'namaz_custom_city_name';
-  static const _keyUseCustomCoords = 'namaz_use_custom_coords';
-  static const _keyCustomLat = 'namaz_custom_lat';
-  static const _keyCustomLng = 'namaz_custom_lng';
   static const _keyMethod = 'namaz_calc_method';
   static const _keyMadhab = 'namaz_madhab';
   static const _keyUse24Hour = 'namaz_use_24h';
@@ -54,10 +49,6 @@ class NamazController extends GetxController with WidgetsBindingObserver {
   final RxInt scheduledNotificationsCount = 0.obs;
   final RxBool canScheduleExactAlarms = true.obs;
 
-  final RxString cityName = ''.obs;
-  final RxString areaName = ''.obs;
-  final RxString selectedCityId = ''.obs;
-  final RxBool useCustomCoordinates = false.obs;
   final RxDouble latitude = 31.5204.obs;
   final RxDouble longitude = 74.3587.obs;
   final Rx<NamazCalculationPreset> calculationMethod =
@@ -133,18 +124,10 @@ class NamazController extends GetxController with WidgetsBindingObserver {
 
   void _applyDefaultCity() {
     final preset = NamazTimeCalculator.defaultCityForTimezone();
-    selectedCityId.value = preset.id;
-    cityName.value = preset.displayName;
     latitude.value = preset.latitude;
     longitude.value = preset.longitude;
     calculationMethod.value = preset.defaultMethod;
     madhab.value = preset.defaultMadhab;
-    _updateAreaSummary();
-  }
-
-  void _updateAreaSummary() {
-    areaName.value =
-        '${calculationMethod.value.shortLabel} • ${madhab.value.label}';
   }
 
   void _prepareWeekDays({bool selectToday = false}) {
@@ -178,7 +161,7 @@ class NamazController extends GetxController with WidgetsBindingObserver {
         if (weekOffset.value == 0) {
           _prepareWeekDays(selectToday: true);
         }
-        recalculatePrayerTimes();
+      recalculatePrayerTimes();
         _rescheduleNotifications();
       }
 
@@ -214,36 +197,14 @@ class NamazController extends GetxController with WidgetsBindingObserver {
     try {
       final prefs = await SharedPreferences.getInstance();
 
-      final savedCustomCoords = prefs.getBool(_keyUseCustomCoords) ?? false;
-      final savedCityId = prefs.getString(_keyCityId);
-      final savedPreset = NamazTimeCalculator.findCityById(savedCityId);
-
-      if (savedCustomCoords) {
-        useCustomCoordinates.value = true;
-        cityName.value =
-            prefs.getString(_keyCustomCityName) ?? 'Custom Location';
-        latitude.value = prefs.getDouble(_keyCustomLat) ?? latitude.value;
-        longitude.value = prefs.getDouble(_keyCustomLng) ?? longitude.value;
-      } else if (savedPreset != null) {
-        useCustomCoordinates.value = false;
-        selectedCityId.value = savedPreset.id;
-        cityName.value = savedPreset.displayName;
-        latitude.value = savedPreset.latitude;
-        longitude.value = savedPreset.longitude;
-      }
-
       final savedMethod = prefs.getString(_keyMethod);
       if (savedMethod != null) {
         calculationMethod.value = NamazCalculationPreset.fromName(savedMethod);
-      } else if (savedPreset != null) {
-        calculationMethod.value = savedPreset.defaultMethod;
       }
 
       final savedMadhab = prefs.getString(_keyMadhab);
       if (savedMadhab != null) {
         madhab.value = NamazMadhab.fromName(savedMadhab);
-      } else if (savedPreset != null) {
-        madhab.value = savedPreset.defaultMadhab;
       }
 
       use24HourFormat.value = prefs.getBool(_keyUse24Hour) ?? false;
@@ -260,7 +221,6 @@ class NamazController extends GetxController with WidgetsBindingObserver {
       _decodeAlarmModeOverrides(prefs.getString(_keyAlarmModeOverrides));
       _decodeCustomPrayers(prefs.getString(_keyCustomPrayers));
 
-      _updateAreaSummary();
       recalculatePrayerTimes();
 
       await _notificationService.init(
@@ -350,11 +310,6 @@ class NamazController extends GetxController with WidgetsBindingObserver {
   Future<void> _persistPreferences() async {
     try {
       final prefs = await SharedPreferences.getInstance();
-      await prefs.setString(_keyCityId, selectedCityId.value);
-      await prefs.setBool(_keyUseCustomCoords, useCustomCoordinates.value);
-      await prefs.setString(_keyCustomCityName, cityName.value);
-      await prefs.setDouble(_keyCustomLat, latitude.value);
-      await prefs.setDouble(_keyCustomLng, longitude.value);
       await prefs.setString(_keyMethod, calculationMethod.value.name);
       await prefs.setString(_keyMadhab, madhab.value.name);
       await prefs.setBool(_keyUse24Hour, use24HourFormat.value);
@@ -804,44 +759,8 @@ class NamazController extends GetxController with WidgetsBindingObserver {
     activeForegroundAlarm.value = null;
   }
 
-  // Location & Calculation settings
-  Future<void> selectCityPreset(NamazCityPreset preset) async {
-    useCustomCoordinates.value = false;
-    selectedCityId.value = preset.id;
-    cityName.value = preset.displayName;
-    latitude.value = preset.latitude;
-    longitude.value = preset.longitude;
-    calculationMethod.value = preset.defaultMethod;
-    madhab.value = preset.defaultMadhab;
-    _updateAreaSummary();
-    recalculatePrayerTimes();
-    await _persistPreferences();
-    await _rescheduleNotifications();
-    _showSuccess('Prayer times updated for ${preset.city}');
-  }
-
-  Future<void> setCustomCoordinates({
-    required String cityLabel,
-    required double lat,
-    required double lng,
-  }) async {
-    useCustomCoordinates.value = true;
-    selectedCityId.value = 'custom';
-    cityName.value = cityLabel.trim().isEmpty
-        ? 'Custom (${lat.toStringAsFixed(2)}, ${lng.toStringAsFixed(2)})'
-        : cityLabel.trim();
-    latitude.value = lat.clamp(-90.0, 90.0);
-    longitude.value = lng.clamp(-180.0, 180.0);
-    _updateAreaSummary();
-    recalculatePrayerTimes();
-    await _persistPreferences();
-    await _rescheduleNotifications();
-    _showSuccess('Custom coordinates applied');
-  }
-
   Future<void> setCalculationMethod(NamazCalculationPreset method) async {
     calculationMethod.value = method;
-    _updateAreaSummary();
     recalculatePrayerTimes();
     await _persistPreferences();
     await _rescheduleNotifications();
@@ -849,7 +768,6 @@ class NamazController extends GetxController with WidgetsBindingObserver {
 
   Future<void> setMadhab(NamazMadhab value) async {
     madhab.value = value;
-    _updateAreaSummary();
     recalculatePrayerTimes();
     await _persistPreferences();
     await _rescheduleNotifications();
