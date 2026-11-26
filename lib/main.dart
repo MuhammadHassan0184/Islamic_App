@@ -53,6 +53,15 @@ const _lightSystemBars = SystemUiOverlayStyle(
   systemNavigationBarIconBrightness: Brightness.dark,
   systemStatusBarContrastEnforced: false,
   systemNavigationBarContrastEnforced: false,
+
+  // statusBarColor: AppColors.primary,
+  // statusBarIconBrightness: Brightness.light,
+  // statusBarBrightness: Brightness.dark,
+  // systemNavigationBarColor: Colors.white,
+  // systemNavigationBarDividerColor: Colors.white,
+  // systemNavigationBarIconBrightness: Brightness.dark,
+  // systemStatusBarContrastEnforced: false,
+  // systemNavigationBarContrastEnforced: false,
 );
 
 void main() {
