@@ -34,17 +34,17 @@ class DuaHeader extends StatelessWidget {
                   //       color: AppColors.white,
                   //     ),
                   //   ),
-                  Expanded(
-                    child: Text(
-                      'Dua',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: AppColors.white,
-                        fontSize: context.scaledFont(18),
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ),
-                  ),
+                  // Expanded(
+                  //   child: Text(
+                  //     'Dua',
+                  //     textAlign: TextAlign.center,
+                  //     style: TextStyle(
+                  //       color: AppColors.white,
+                  //       fontSize: context.scaledFont(18),
+                  //       fontWeight: FontWeight.w700,
+                  //     ),
+                  //   ),
+                  // ),
                   if (Navigator.of(context).canPop())
                     SizedBox(width: context.widthPct(0.12)),
                 ],

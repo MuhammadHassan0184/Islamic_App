@@ -45,23 +45,22 @@ import 'package:zi_core/zi_core_io.dart';
 import 'app_shell/app_shell_io.dart';
 
 const _lightSystemBars = SystemUiOverlayStyle(
-  statusBarColor: Colors.white,
-  statusBarIconBrightness: Brightness.dark,
-  statusBarBrightness: Brightness.light,
-  systemNavigationBarColor: Colors.white,
-  systemNavigationBarDividerColor: Colors.white,
-  systemNavigationBarIconBrightness: Brightness.dark,
-  systemStatusBarContrastEnforced: false,
-  systemNavigationBarContrastEnforced: false,
-
-  // statusBarColor: AppColors.primary,
-  // statusBarIconBrightness: Brightness.light,
-  // statusBarBrightness: Brightness.dark,
+  // statusBarColor: Colors.white,
+  // statusBarIconBrightness: Brightness.dark,
+  // statusBarBrightness: Brightness.light,
   // systemNavigationBarColor: Colors.white,
   // systemNavigationBarDividerColor: Colors.white,
   // systemNavigationBarIconBrightness: Brightness.dark,
   // systemStatusBarContrastEnforced: false,
   // systemNavigationBarContrastEnforced: false,
+  statusBarColor: AppColors.primary,
+  statusBarIconBrightness: Brightness.light,
+  statusBarBrightness: Brightness.dark,
+  systemNavigationBarColor: Colors.white,
+  systemNavigationBarDividerColor: Colors.white,
+  systemNavigationBarIconBrightness: Brightness.dark,
+  systemStatusBarContrastEnforced: false,
+  systemNavigationBarContrastEnforced: false,
 );
 
 void main() {
@@ -93,10 +92,25 @@ class MyApp extends StatelessWidget {
       home: ZiSplashScreen(),
 
       getPages: AppRoutes.pages,
-      builder: (context, child) => ColoredBox(
-        color: Colors.white,
-        child: SafeArea(child: child ?? const SizedBox.shrink()),
-      ),
+      builder: (context, child) {
+        final topInset = MediaQuery.paddingOf(context).top;
+        return Stack(
+          fit: StackFit.expand,
+          children: [
+            const ColoredBox(color: Colors.white),
+            // Android edge-to-edge makes the status bar transparent, so color
+            // only the top inset. The navigation bar area stays white.
+            Positioned(
+              top: 0,
+              left: 0,
+              right: 0,
+              height: topInset,
+              child: const ColoredBox(color: AppColors.primary),
+            ),
+            SafeArea(child: child ?? const SizedBox.shrink()),
+          ],
+        );
+      },
     );
   }
 }
