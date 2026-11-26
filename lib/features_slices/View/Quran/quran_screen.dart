@@ -205,37 +205,40 @@ class _QuranScreenState extends State<QuranScreen> {
       },
       child: Scaffold(
         backgroundColor: AppColors.background,
-        appBar: AppBar(
-          automaticallyImplyLeading: false,
-          backgroundColor: AppColors.primary,
-          foregroundColor: AppColors.white,
-          elevation: 0,
-          leading: _selectedPara == null
-              ? null
-              : IconButton(
-                  tooltip: 'All Paras',
-                  onPressed: _returnToParaList,
-                  icon: const Icon(Icons.arrow_back_rounded),
+        appBar: _selectedPara == null
+            ? null
+            : AppBar(
+                automaticallyImplyLeading: false,
+                backgroundColor: AppColors.primary,
+                foregroundColor: AppColors.white,
+                elevation: 0,
+                leading: _selectedPara == null
+                    ? null
+                    : IconButton(
+                        tooltip: 'All Paras',
+                        onPressed: _returnToParaList,
+                        icon: const Icon(Icons.arrow_back_rounded),
+                      ),
+                title: Text(
+                  _selectedPara == null
+                      ? 'Quran Pak'
+                      : 'Para ${_selectedPara!.label}',
+                  style: TextStyle(
+                    fontSize: context.scaledFont(18).clamp(16, 21),
+                    fontWeight: FontWeight.w700,
+                  ),
                 ),
-          title: Text(
-            _selectedPara == null
-                ? 'Quran Pak'
-                : 'Para ${_selectedPara!.label}',
-            style: TextStyle(
-              fontSize: context.scaledFont(18).clamp(16, 21),
-              fontWeight: FontWeight.w700,
-            ),
-          ),
-          centerTitle: true,
-          actions: [
-            if (_selectedPara != null)
-              IconButton(
-                tooltip: 'Reload Para',
-                onPressed: () => _checkConnectionAndOpen(forceReload: true),
-                icon: const Icon(Icons.refresh_rounded),
+                centerTitle: true,
+                actions: [
+                  if (_selectedPara != null)
+                    IconButton(
+                      tooltip: 'Reload Para',
+                      onPressed: () =>
+                          _checkConnectionAndOpen(forceReload: true),
+                      icon: const Icon(Icons.refresh_rounded),
+                    ),
+                ],
               ),
-          ],
-        ),
         body: Stack(
           fit: StackFit.expand,
           children: [

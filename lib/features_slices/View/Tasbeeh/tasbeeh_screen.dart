@@ -135,10 +135,7 @@ class TasbeehScreen extends StatelessWidget {
       child: SafeArea(
         bottom: false,
         child: Padding(
-          padding: context.responsivePadding(
-            horizontal: 0.04,
-            vertical: 0.016,
-          ),
+          padding: context.responsivePadding(horizontal: 0.04, vertical: 0.016),
           child: Row(
             children: [
               if (canGoBack)
@@ -178,30 +175,32 @@ class TasbeehScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              Obx(() {
-                final sound = controller.soundEnabled.value;
-                return IconButton(
-                  tooltip: sound ? 'Mute Sound' : 'Enable Sound',
-                  padding: EdgeInsets.zero,
-                  constraints:
-                      const BoxConstraints(minWidth: 36, minHeight: 36),
-                  onPressed: controller.toggleSound,
-                  icon: Icon(
-                    sound
-                        ? Icons.volume_up_rounded
-                        : Icons.volume_off_rounded,
-                    color: AppColors.white,
-                    size: 20,
-                  ),
-                );
-              }),
+              // Obx(() {
+              //   final sound = controller.soundEnabled.value;
+              //   return IconButton(
+              //     tooltip: sound ? 'Mute Sound' : 'Enable Sound',
+              //     padding: EdgeInsets.zero,
+              //     constraints:
+              //         const BoxConstraints(minWidth: 36, minHeight: 36),
+              //     onPressed: controller.toggleSound,
+              //     icon: Icon(
+              //       sound
+              //           ? Icons.volume_up_rounded
+              //           : Icons.volume_off_rounded,
+              //       color: AppColors.white,
+              //       size: 20,
+              //     ),
+              //   );
+              // }),
               Obx(() {
                 final vib = controller.vibrationEnabled.value;
                 return IconButton(
                   tooltip: vib ? 'Disable Vibration' : 'Enable Vibration',
                   padding: EdgeInsets.zero,
-                  constraints:
-                      const BoxConstraints(minWidth: 36, minHeight: 36),
+                  constraints: const BoxConstraints(
+                    minWidth: 36,
+                    minHeight: 36,
+                  ),
                   onPressed: controller.toggleVibration,
                   icon: Icon(
                     vib
@@ -215,8 +214,7 @@ class TasbeehScreen extends StatelessWidget {
               IconButton(
                 tooltip: 'Reset All',
                 padding: EdgeInsets.zero,
-                constraints:
-                    const BoxConstraints(minWidth: 36, minHeight: 36),
+                constraints: const BoxConstraints(minWidth: 36, minHeight: 36),
                 onPressed: () => _confirmResetAll(context),
                 icon: const Icon(
                   Icons.restart_alt_rounded,
@@ -236,7 +234,7 @@ class TasbeehScreen extends StatelessWidget {
       final dhikr = controller.selectedDhikr.value;
 
       return Material(
-        color: AppColors.white,
+        color: Colors.transparent,
         borderRadius: BorderRadius.circular(ZiRadius.card),
         elevation: 0,
         child: InkWell(
@@ -247,7 +245,7 @@ class TasbeehScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(ZiRadius.card),
-              border: Border.all(color: AppColors.cardBorder),
+              border: Border.all(color: Colors.transparent),
               boxShadow: [
                 BoxShadow(
                   color: AppColors.black.withValues(alpha: 0.03),
@@ -259,64 +257,64 @@ class TasbeehScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 10,
-                        vertical: 4,
-                      ),
-                      decoration: BoxDecoration(
-                        color: AppColors.softGreenGradient.colors.first,
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          const Icon(
-                            Icons.auto_awesome_rounded,
-                            color: AppColors.primary,
-                            size: 14,
-                          ),
-                          ziGap(4),
-                          Text(
-                            'Active Dhikr',
-                            style: TextStyle(
-                              fontSize: context
-                                  .scaledFont(11)
-                                  .clamp(10.0, 12.5),
-                              fontWeight: FontWeight.w700,
-                              color: AppColors.primaryDark,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    TextButton.icon(
-                      style: TextButton.styleFrom(
-                        visualDensity: VisualDensity.compact,
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 8,
-                          vertical: 4,
-                        ),
-                        foregroundColor: AppColors.primary,
-                      ),
-                      onPressed: () =>
-                          showDhikrSelectionSheet(context, controller),
-                      icon: const Icon(Icons.swap_horiz_rounded, size: 16),
-                      label: Text(
-                        'Change',
-                        style: TextStyle(
-                          fontSize: context
-                              .scaledFont(12)
-                              .clamp(11.0, 13.5),
-                          fontWeight: FontWeight.w700,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
+                // Row(
+                //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //   children: [
+                //     // Container(
+                //     //   padding: const EdgeInsets.symmetric(
+                //     //     horizontal: 10,
+                //     //     vertical: 4,
+                //     //   ),
+                //     //   decoration: BoxDecoration(
+                //     //     color: AppColors.softGreenGradient.colors.first,
+                //     //     borderRadius: BorderRadius.circular(20),
+                //     //   ),
+                //     //   child: Row(
+                //     //     mainAxisSize: MainAxisSize.min,
+                //     //     children: [
+                //     //       const Icon(
+                //     //         Icons.auto_awesome_rounded,
+                //     //         color: AppColors.primary,
+                //     //         size: 14,
+                //     //       ),
+                //     //       ziGap(4),
+                //     //       Text(
+                //     //         'Active Dhikr',
+                //     //         style: TextStyle(
+                //     //           fontSize: context
+                //     //               .scaledFont(11)
+                //     //               .clamp(10.0, 12.5),
+                //     //           fontWeight: FontWeight.w700,
+                //     //           color: AppColors.primaryDark,
+                //     //         ),
+                //     //       ),
+                //     //     ],
+                //     //   ),
+                //     // ),
+                //     TextButton.icon(
+                //       style: TextButton.styleFrom(
+                //         visualDensity: VisualDensity.compact,
+                //         padding: const EdgeInsets.symmetric(
+                //           horizontal: 8,
+                //           vertical: 4,
+                //         ),
+                //         foregroundColor: AppColors.primary,
+                //       ),
+                //       onPressed: () =>
+                //           showDhikrSelectionSheet(context, controller),
+                //       icon: const Icon(Icons.swap_horiz_rounded, size: 16),
+                //       label: Text(
+                //         'Change',
+                //         style: TextStyle(
+                //           fontSize: context
+                //               .scaledFont(12)
+                //               .clamp(11.0, 13.5),
+                //           fontWeight: FontWeight.w700,
+                //         ),
+                //       ),
+                //     ),
+                //   ],
+                // ),
                 ziGap(10),
                 Text(
                   dhikr.arabic,
@@ -375,24 +373,24 @@ class TasbeehScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
-              children: [
-                const Icon(
-                  Icons.flag_rounded,
-                  color: AppColors.primary,
-                  size: 16,
-                ),
-                ziGap(6),
-                Text(
-                  'Target Count',
-                  style: TextStyle(
-                    fontSize: context.scaledFont(12.5).clamp(11.5, 14.0),
-                    fontWeight: FontWeight.w700,
-                    color: AppColors.textPrimary,
-                  ),
-                ),
-              ],
-            ),
+            // Row(
+            //   children: [
+            //     const Icon(
+            //       Icons.flag_rounded,
+            //       color: AppColors.primary,
+            //       size: 16,
+            //     ),
+            //     ziGap(6),
+            //     Text(
+            //       'Target Count',
+            //       style: TextStyle(
+            //         fontSize: context.scaledFont(12.5).clamp(11.5, 14.0),
+            //         fontWeight: FontWeight.w700,
+            //         color: AppColors.textPrimary,
+            //       ),
+            //     ),
+            //   ],
+            // ),
             ziGap(8),
             Row(
               children: targets.map((t) {

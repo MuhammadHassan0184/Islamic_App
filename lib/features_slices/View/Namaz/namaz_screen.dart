@@ -102,6 +102,7 @@ class _NamazScreenState extends State<NamazScreen> with WidgetsBindingObserver {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
+                            SizedBox(height: context.heightPct(0.025)),
                             NamazLocationHeader(
                               controller: controller,
                               onLocationTap: () => showLocationAndMethodSheet(
@@ -109,18 +110,6 @@ class _NamazScreenState extends State<NamazScreen> with WidgetsBindingObserver {
                                 controller,
                               ),
                               onAlarmTap: () =>
-                                  showAlarmSettingsSheet(context, controller),
-                            ),
-
-                            SizedBox(height: context.heightPct(0.016)),
-
-                            NamazWeekStrip(controller: controller),
-
-                            SizedBox(height: context.heightPct(0.018)),
-
-                            NextPrayerCard(
-                              controller: controller,
-                              onAlarmModeTap: () =>
                                   showAlarmSettingsSheet(context, controller),
                             ),
 
@@ -202,7 +191,6 @@ class _NamazScreenState extends State<NamazScreen> with WidgetsBindingObserver {
                               );
                             }),
                             */
-
                             SizedBox(height: context.heightPct(0.024)),
 
                             // Section Header + Add Custom Timing Button
@@ -362,9 +350,7 @@ class _NamazScreenState extends State<NamazScreen> with WidgetsBindingObserver {
                                 borderRadius: BorderRadius.circular(
                                   ZiRadius.md,
                                 ),
-                                border: Border.all(
-                                  color: AppColors.cardBorder,
-                                ),
+                                border: Border.all(color: AppColors.cardBorder),
                               ),
                               child: Row(
                                 children: [
@@ -388,8 +374,17 @@ class _NamazScreenState extends State<NamazScreen> with WidgetsBindingObserver {
                                 ],
                               ),
                             ),
+                            SizedBox(height: context.heightPct(0.018)),
 
-                            SizedBox(height: context.heightPct(0.025)),
+                            NextPrayerCard(
+                              controller: controller,
+                              onAlarmModeTap: () =>
+                                  showAlarmSettingsSheet(context, controller),
+                            ),
+
+                            SizedBox(height: context.heightPct(0.016)),
+
+                            NamazWeekStrip(controller: controller),
                           ],
                         ),
                       ),

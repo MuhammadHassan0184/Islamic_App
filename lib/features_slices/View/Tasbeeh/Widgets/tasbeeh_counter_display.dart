@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:islam786/Config/Colors/app_colors.dart';
 import 'package:islam786/Utils/mediaquery_extension.dart';
+import 'package:islam786/features_slices/View/Tasbeeh/Widgets/tasbeeh_dhikr_sheet.dart';
 import 'package:zi_core/zi_core_io.dart';
 import '../Controller/tasbeeh_controller.dart';
 
@@ -18,6 +19,7 @@ class _TasbeehCounterDisplayState extends State<TasbeehCounterDisplay>
     with SingleTickerProviderStateMixin {
   late final AnimationController _animCtrl;
   late final Animation<double> _scaleAnimation;
+  TasbeehController get controller => Get.find<TasbeehController>();
 
   @override
   void initState() {
@@ -28,9 +30,10 @@ class _TasbeehCounterDisplayState extends State<TasbeehCounterDisplay>
       lowerBound: 0.0,
       upperBound: 1.0,
     );
-    _scaleAnimation = Tween<double>(begin: 1.0, end: 0.94).animate(
-      CurvedAnimation(parent: _animCtrl, curve: Curves.easeInOut),
-    );
+    _scaleAnimation = Tween<double>(
+      begin: 1.0,
+      end: 0.94,
+    ).animate(CurvedAnimation(parent: _animCtrl, curve: Curves.easeInOut));
   }
 
   @override
@@ -56,8 +59,10 @@ class _TasbeehCounterDisplayState extends State<TasbeehCounterDisplay>
   Widget build(BuildContext context) {
     final widthBound = context.widthPct(context.isMobile ? 0.64 : 0.42);
     final heightBound = context.heightPct(0.33);
-    final size = (widthBound < heightBound ? widthBound : heightBound)
-        .clamp(190.0, 290.0);
+    final size = (widthBound < heightBound ? widthBound : heightBound).clamp(
+      190.0,
+      290.0,
+    );
 
     return Obx(() {
       final count = widget.controller.currentCount.value;
@@ -75,6 +80,7 @@ class _TasbeehCounterDisplayState extends State<TasbeehCounterDisplay>
             runSpacing: 8,
             children: [
               Container(
+                margin: const EdgeInsets.only(top: 3),
                 padding: const EdgeInsets.symmetric(
                   horizontal: 14,
                   vertical: 7,
@@ -111,41 +117,23 @@ class _TasbeehCounterDisplayState extends State<TasbeehCounterDisplay>
                   ],
                 ),
               ),
-              Container(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 14,
-                  vertical: 7,
+              TextButton.icon(
+                style: TextButton.styleFrom(
+                  visualDensity: VisualDensity.compact,
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 8,
+                    vertical: 0,
+                  ),
+                  foregroundColor: AppColors.primary,
                 ),
-                decoration: BoxDecoration(
-                  color: AppColors.white,
-                  borderRadius: BorderRadius.circular(30),
-                  border: Border.all(color: AppColors.cardBorder),
-                  boxShadow: [
-                    BoxShadow(
-                      color: AppColors.black.withValues(alpha: 0.03),
-                      blurRadius: 8,
-                      offset: const Offset(0, 2),
-                    ),
-                  ],
-                ),
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    const Icon(
-                      Icons.all_inclusive_rounded,
-                      color: AppColors.darkGreen,
-                      size: 16,
-                    ),
-                    ziGap(6),
-                    Text(
-                      'Total: ${widget.controller.totalCount.value}',
-                      style: TextStyle(
-                        fontSize: context.scaledFont(12).clamp(11.0, 14.0),
-                        fontWeight: FontWeight.w700,
-                        color: AppColors.textPrimary,
-                      ),
-                    ),
-                  ],
+                onPressed: () => showDhikrSelectionSheet(context, controller),
+                icon: const Icon(Icons.swap_horiz_rounded, size: 16),
+                label: Text(
+                  'Change',
+                  style: TextStyle(
+                    fontSize: context.scaledFont(12).clamp(11.0, 13.5),
+                    fontWeight: FontWeight.w700,
+                  ),
                 ),
               ),
             ],
@@ -249,7 +237,9 @@ class _TasbeehCounterDisplayState extends State<TasbeehCounterDisplay>
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 16),
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 16,
+                              ),
                               child: FittedBox(
                                 fit: BoxFit.scaleDown,
                                 child: Text(
@@ -269,7 +259,9 @@ class _TasbeehCounterDisplayState extends State<TasbeehCounterDisplay>
                               target > 0 ? '/ $target' : 'FREE MODE',
                               style: TextStyle(
                                 color: AppColors.white.withValues(alpha: 0.85),
-                                fontSize: context.scaledFont(14).clamp(12.0, 16.0),
+                                fontSize: context
+                                    .scaledFont(14)
+                                    .clamp(12.0, 16.0),
                                 fontWeight: FontWeight.w700,
                                 letterSpacing: 0.6,
                               ),
@@ -287,8 +279,12 @@ class _TasbeehCounterDisplayState extends State<TasbeehCounterDisplay>
                               child: Text(
                                 'TAP TO COUNT',
                                 style: TextStyle(
-                                  color: AppColors.white.withValues(alpha: 0.90),
-                                  fontSize: context.scaledFont(10).clamp(9.0, 11.5),
+                                  color: AppColors.white.withValues(
+                                    alpha: 0.90,
+                                  ),
+                                  fontSize: context
+                                      .scaledFont(10)
+                                      .clamp(9.0, 11.5),
                                   fontWeight: FontWeight.w800,
                                   letterSpacing: 1.0,
                                 ),
