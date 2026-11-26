@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:islam786/features_slices/View/Duas/duas_screen.dart';
 import 'package:islam786/features_slices/View/Home/home_screen.dart';
+import 'package:islam786/features_slices/View/Quran/quran_screen.dart';
 import 'package:islam786/features_slices/View/Namaz/namaz_screen.dart';
 import 'package:islam786/features_slices/View/Tasbeeh/tasbeeh_screen.dart';
 import 'package:zi_core/zi_core_io.dart';
@@ -15,6 +16,7 @@ class NameAppView extends GetView<AppShellController> {
   static final List<TabItem> _mainPages = [
     TabItem(icon: Icons.home, title: 'Home'),
     TabItem(icon: Icons.mosque_rounded, title: 'Dua'),
+    TabItem(icon: Icons.menu_book_rounded, title: 'Quran'),
     TabItem(icon: Icons.access_time_filled_rounded, title: 'Namaz'),
     TabItem(icon: Icons.fingerprint_rounded, title: 'Tasbeeh'),
     TabItem(icon: Icons.menu, title: 'Menu'),
@@ -23,6 +25,7 @@ class NameAppView extends GetView<AppShellController> {
   static final List<Widget> _pages = [
     const HomeScreen(),
     const DuaScreen(),
+    const SizedBox.shrink(),
     NamazScreen(),
     const TasbeehScreen(),
     MenuView(),
@@ -32,9 +35,11 @@ class NameAppView extends GetView<AppShellController> {
   Widget build(BuildContext context) {
     return Obx(() {
       final selectedIndex = controller.selectedIndex.value;
+      final pages = List<Widget>.of(_pages);
+      pages[2] = QuranScreen(isActive: selectedIndex == 2);
       return ZiScaffoldB(
         showPagePadding: false,
-        body: IndexedStack(index: selectedIndex, children: _pages),
+        body: IndexedStack(index: selectedIndex, children: pages),
         bottomNavigationBar: ZiBottomBar(
           items: _mainPages,
           currentIndex: selectedIndex,

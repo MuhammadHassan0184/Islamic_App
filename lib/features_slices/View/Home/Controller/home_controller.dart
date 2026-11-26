@@ -5,6 +5,8 @@ import 'package:islam786/Data/Models/quiz_model.dart';
 import 'package:islam786/Data/Repositories/quiz_repository.dart';
 import 'package:islam786/Data/Sources/asset_data_source.dart';
 import 'package:islam786/Widgets/app_snack_bar.dart';
+import 'package:islam786/features_slices/View/Quran/quran_reading_progress.dart';
+import 'package:islam786/features_slices/app_shell_controller.dart';
 
 class HomeController extends GetxController {
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
@@ -19,6 +21,7 @@ class HomeController extends GetxController {
   @override
   void onInit() {
     super.onInit();
+    QuranReadingProgress.load();
     loadQuizHighlights();
   }
 
@@ -65,7 +68,7 @@ class HomeController extends GetxController {
   }
 
   void continueReading() {
-    openFeature('Quran reading');
+    Get.find<AppShellController>().selectTab(2);
   }
 
   void openFeature(String feature) {

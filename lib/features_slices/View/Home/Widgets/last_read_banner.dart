@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:islam786/features_slices/View/Quran/quran_reading_progress.dart';
 
 import '../Controller/home_controller.dart';
 
@@ -110,39 +112,42 @@ class LastReadBanner extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        // Row(
-                        //   mainAxisSize: MainAxisSize.min,
-                        //   children: [
-                        //     Icon(
-                        //       Icons.bookmark_rounded,
-                        //       color: Colors.white.withValues(alpha: 0.9),
-                        //       size: width * 0.043,
-                        //     ),
-                        //     SizedBox(width: width * 0.015),
-                        //     Text(
-                        //       'Last Read',
-                        //       style: TextStyle(
-                        //         color: Colors.white.withValues(alpha: 0.94),
-                        //         fontSize: compact ? 10 : 11.5,
-                        //         fontWeight: FontWeight.w600,
-                        //         letterSpacing: 0.2,
-                        //       ),
-                        //     ),
-                        //   ],
-                        // ),
+                        Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Icon(
+                              Icons.bookmark_rounded,
+                              color: Colors.white.withValues(alpha: 0.9),
+                              size: width * 0.043,
+                            ),
+                            SizedBox(width: width * 0.015),
+                            Text(
+                              'Last Read',
+                              style: TextStyle(
+                                color: Colors.white.withValues(alpha: 0.94),
+                                fontSize: compact ? 10 : 11.5,
+                                fontWeight: FontWeight.w600,
+                                letterSpacing: 0.2,
+                              ),
+                            ),
+                          ],
+                        ),
                         const Spacer(),
 
                         FittedBox(
                           fit: BoxFit.scaleDown,
                           alignment: Alignment.centerLeft,
-                          child: Text(
-                            'الْفَاتِحَة',
-                            textDirection: TextDirection.rtl,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: (width * 0.068).clamp(20.0, 27.0),
-                              fontWeight: FontWeight.w700,
-                              height: 1.35,
+                          child: Obx(
+                            () => Text(
+                              QuranReadingProgress.lastReadTitle.value,
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: (width * 0.068).clamp(20.0, 27.0),
+                                fontWeight: FontWeight.w700,
+                                height: 1.35,
+                              ),
                             ),
                           ),
                         ),
@@ -165,7 +170,7 @@ class LastReadBanner extends StatelessWidget {
                             ),
                             SizedBox(width: width * 0.018),
                             Text(
-                              'Ayah no. 1',
+                              'Tap to resume reading',
                               style: TextStyle(
                                 color: Colors.white.withValues(alpha: 0.95),
                                 fontSize: compact ? 9 : 10.5,
