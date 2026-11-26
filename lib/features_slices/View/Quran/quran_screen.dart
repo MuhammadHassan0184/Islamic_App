@@ -236,12 +236,30 @@ class _QuranScreenState extends State<QuranScreen> {
               ),
           ],
         ),
-        body: _selectedPara == null ? _buildParaList(context) : _buildReader(),
+        body: Stack(
+          fit: StackFit.expand,
+          children: [
+            Image.asset(
+              'assets/Home_bg_image.png',
+              fit: BoxFit.cover,
+              alignment: Alignment.center,
+              errorBuilder: (context, error, stackTrace) =>
+                  const ColoredBox(color: AppColors.background),
+            ),
+            ColoredBox(color: Colors.white.withValues(alpha: 0.2)),
+            _selectedPara == null ? _buildParaList(context) : _buildReader(),
+          ],
+        ),
       ),
     );
   }
 
   Widget _buildParaList(BuildContext context) {
+    final textScale = MediaQuery.textScalerOf(context).scale(1);
+    final tileExtent = (100.0 + ((textScale - 1) * 24))
+        .clamp(100.0, 132.0)
+        .toDouble();
+
     return Column(
       children: [
         Padding(
@@ -333,9 +351,9 @@ class _QuranScreenState extends State<QuranScreen> {
               vertical: 0.012,
             ),
             itemCount: _paras.length,
-            gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+            gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
               maxCrossAxisExtent: 440,
-              mainAxisExtent: 100,
+              mainAxisExtent: tileExtent,
               crossAxisSpacing: 12,
               mainAxisSpacing: 10,
             ),
@@ -443,8 +461,10 @@ class _ParaListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: AppColors.white,
+      color: const Color(0xF7FFFFFF),
       borderRadius: BorderRadius.circular(18),
+      elevation: 2,
+      shadowColor: AppColors.primaryDark.withValues(alpha: 0.12),
       clipBehavior: Clip.antiAlias,
       child: InkWell(
         onTap: onTap,
