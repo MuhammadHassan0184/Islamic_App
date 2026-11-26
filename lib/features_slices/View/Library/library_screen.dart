@@ -69,10 +69,15 @@ class LibraryScreen extends GetView<LibraryController> {
                         vertical: 0.008,
                       ),
                       itemCount: collections.length,
+                      // Keep cards compact while allowing some extra height
+                      // for larger text settings.
                       gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
                         maxCrossAxisExtent: 220,
                         childAspectRatio:
-                            0.95 / MediaQuery.textScalerOf(context).scale(1),
+                            1.12 /
+                            MediaQuery.textScalerOf(
+                              context,
+                            ).scale(1).clamp(1.0, 1.25),
                         crossAxisSpacing: 12,
                         mainAxisSpacing: 12,
                       ),
@@ -80,11 +85,6 @@ class LibraryScreen extends GetView<LibraryController> {
                         final collection = collections[index];
                         return LibraryCollectionCard(
                           collection: collection,
-                          itemCount:
-                              controller
-                                  .contents[collection.fileName]
-                                  ?.length ??
-                              0,
                           onTap: () {
                             controller.itemSearchQuery.value = '';
                             Get.toNamed(

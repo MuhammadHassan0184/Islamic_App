@@ -463,6 +463,13 @@ class _ParaListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final horizontalPadding = context
+        .widthPct(0.035)
+        .clamp(10.0, 16.0)
+        .toDouble();
+    final badgeSize = context.widthPct(0.13).clamp(42.0, 56.0).toDouble();
+    final arabicFontSize = context.scaledFont(17).clamp(15.0, 21.0);
+
     return Material(
       color: const Color(0xF7FFFFFF),
       borderRadius: BorderRadius.circular(18),
@@ -472,7 +479,11 @@ class _ParaListTile extends StatelessWidget {
       child: InkWell(
         onTap: onTap,
         child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 13, vertical: 11),
+          width: double.infinity,
+          padding: EdgeInsets.symmetric(
+            horizontal: horizontalPadding,
+            vertical: context.heightPct(0.007).clamp(9.0, 14.0).toDouble(),
+          ),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(18),
             border: Border.all(color: const Color(0xFFE3EBDD)),
@@ -480,49 +491,32 @@ class _ParaListTile extends StatelessWidget {
           child: Row(
             children: [
               Container(
-                width: 48,
-                height: 48,
+                width: badgeSize,
+                height: badgeSize,
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
                   gradient: AppColors.primaryGradient,
                   borderRadius: BorderRadius.circular(14),
                 ),
-                child: Text(
-                  para.label,
-                  style: const TextStyle(
-                    color: AppColors.white,
-                    fontSize: 16,
-                    fontWeight: FontWeight.w800,
-                  ),
+                child: Icon(
+                  Icons.menu_book_rounded,
+                  color: AppColors.white,
+                  size: context.scaledFont(23).clamp(20.0, 28.0),
                 ),
               ),
-              const SizedBox(width: 13),
+              SizedBox(width: context.widthPct(0.03).clamp(9.0, 14.0)),
               Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Para ${para.label}',
-                      style: const TextStyle(
-                        color: AppColors.textPrimary,
-                        fontSize: 15,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ),
-                    const SizedBox(height: 5),
-                    Text(
-                      para.arabicName,
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      textDirection: TextDirection.rtl,
-                      textAlign: TextAlign.right,
-                      style: const TextStyle(
-                        color: AppColors.primaryDark,
-                        fontSize: 17,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ),
-                  ],
+                child: Text(
+                  para.arabicName,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                  textDirection: TextDirection.rtl,
+                  textAlign: TextAlign.left,
+                  style: TextStyle(
+                    color: AppColors.primaryDark,
+                    fontSize: arabicFontSize,
+                    fontWeight: FontWeight.w700,
+                  ),
                 ),
               ),
               const Icon(

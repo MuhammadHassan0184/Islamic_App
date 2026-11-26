@@ -6,12 +6,10 @@ class LibraryCollectionCard extends StatelessWidget {
   const LibraryCollectionCard({
     super.key,
     required this.collection,
-    required this.itemCount,
     required this.onTap,
   });
 
   final LibraryCollectionModel collection;
-  final int itemCount;
   final VoidCallback onTap;
 
   @override
@@ -128,63 +126,15 @@ class LibraryCollectionCard extends StatelessWidget {
                           ),
                         ),
                         SizedBox(height: 5.0 * scale),
-                        Expanded(
-                          child: Text(
-                            collection.description,
-                            maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
-                            style: TextStyle(
-                              color: AppColors.textSecondary,
-                              fontSize: 11.5 * scale,
-                              height: 1.35,
-                            ),
+                        Text(
+                          collection.description,
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(
+                            color: AppColors.textSecondary,
+                            fontSize: 11.5 * scale,
+                            height: 1.35,
                           ),
-                        ),
-                        SizedBox(height: 9.0 * scale),
-                        Row(
-                          children: [
-                            Flexible(
-                              child: Container(
-                                padding: EdgeInsets.symmetric(
-                                  horizontal: 9.0 * scale,
-                                  vertical: 6.0 * scale,
-                                ),
-                                decoration: BoxDecoration(
-                                  color: AppColors.white.withValues(alpha: 0.8),
-                                  borderRadius: BorderRadius.circular(20),
-                                  border: Border.all(
-                                    color: AppColors.primary.withValues(
-                                      alpha: 0.12,
-                                    ),
-                                  ),
-                                ),
-                                child: Text(
-                                  '$itemCount ${itemCount == 1 ? 'item' : 'items'}',
-                                  maxLines: 1,
-                                  overflow: TextOverflow.ellipsis,
-                                  style: TextStyle(
-                                    color: AppColors.primaryDark,
-                                    fontSize: 10.5 * scale,
-                                    fontWeight: FontWeight.w700,
-                                  ),
-                                ),
-                              ),
-                            ),
-                            SizedBox(width: 8.0 * scale),
-                            Container(
-                              width: 30.0 * scale,
-                              height: 30.0 * scale,
-                              decoration: BoxDecoration(
-                                color: AppColors.primary,
-                                borderRadius: BorderRadius.circular(11),
-                              ),
-                              child: Icon(
-                                Icons.arrow_forward_rounded,
-                                color: AppColors.white,
-                                size: 16.0 * scale,
-                              ),
-                            ),
-                          ],
                         ),
                       ],
                     ),

@@ -178,7 +178,7 @@ class AsmaUlHusnaDetailScreen extends StatelessWidget {
             ...item.steps.map(
               (step) => Card(
                 color: AppColors.white,
-                elevation: 2,
+                // elevation: 2,
                 margin: EdgeInsets.only(bottom: context.heightPct(0.012)),
                 // shape: RoundedRectangleBorder(
                 //   borderRadius: BorderRadius.circular(context.widthPct(0.035)),

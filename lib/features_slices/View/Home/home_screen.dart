@@ -41,7 +41,7 @@ class HomeScreen extends GetView<HomeController> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   HomeHeader(controller: controller),
-                  SizedBox(height: context.heightPct(0.027)),
+                  SizedBox(height: context.heightPct(0.015)),
                   LastReadBanner(controller: controller),
                   SizedBox(height: context.heightPct(0.034)),
                   const HomeSectionTitle(title: 'Popular'),
