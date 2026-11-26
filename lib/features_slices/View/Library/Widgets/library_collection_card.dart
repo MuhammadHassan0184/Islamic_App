@@ -19,81 +19,174 @@ class LibraryCollectionCard extends StatelessWidget {
     return LayoutBuilder(
       builder: (context, constraints) {
         final cardWidth = constraints.maxWidth;
-        final contentScale = (cardWidth / 180).clamp(0.9, 1.1);
-        final iconBoxSize = (cardWidth * 0.27).clamp(40.0, 52.0);
-        final padding = (cardWidth * 0.075).clamp(12.0, 17.0);
+        final scale = (cardWidth / 180).clamp(0.9, 1.1).toDouble();
+        final iconSize = (cardWidth * 0.25).clamp(42.0, 50.0).toDouble();
+        final padding = (cardWidth * 0.075).clamp(12.0, 16.0).toDouble();
 
-        return Card(
+        return Material(
           color: AppColors.white,
-          margin: EdgeInsets.zero,
+          borderRadius: BorderRadius.circular(22),
           elevation: 2,
+          shadowColor: AppColors.primaryDark.withValues(alpha: 0.12),
+          clipBehavior: Clip.antiAlias,
           child: InkWell(
             onTap: onTap,
-            borderRadius: BorderRadius.circular(14),
-            child: Padding(
-              padding: EdgeInsets.all(padding),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
+            child: Ink(
+              decoration: BoxDecoration(
+                gradient: const LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [
+                    AppColors.white,
+                    Color(0xFFF5F9F1),
+                    Color(0xFFEAF3E5),
+                  ],
+                ),
+                borderRadius: BorderRadius.circular(22),
+                border: Border.all(color: const Color(0xFFDCE9D5)),
+                boxShadow: [
+                  BoxShadow(
+                    color: AppColors.primaryDark.withValues(alpha: 0.08),
+                    blurRadius: 14,
+                    offset: const Offset(0, 5),
+                  ),
+                ],
+              ),
+              child: Stack(
                 children: [
-                  Align(
-                    alignment: Alignment.centerLeft,
+                  Positioned(
+                    top: -34,
+                    right: -26,
                     child: Container(
-                      width: iconBoxSize,
-                      height: iconBoxSize,
+                      width: cardWidth * 0.55,
+                      height: cardWidth * 0.55,
                       decoration: BoxDecoration(
-                        gradient: AppColors.softGreenGradient,
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      alignment: Alignment.center,
-                      child: Icon(
-                        collection.icon,
-                        color: AppColors.primary,
-                        size: iconBoxSize * 0.52,
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 8),
-                  Text(
-                    collection.title,
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                    style: TextStyle(
-                      color: AppColors.textPrimary,
-                      fontSize: 15 * contentScale,
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                  const SizedBox(height: 4),
-                  Text(
-                    collection.description,
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                    style: TextStyle(
-                      color: AppColors.textSecondary,
-                      fontSize: 12 * contentScale,
-                      height: 1.35,
-                    ),
-                  ),
-                  const Spacer(),
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: Container(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 10,
-                        vertical: 4,
-                      ),
-                      decoration: BoxDecoration(
-                        color: AppColors.softGreenGradient.colors.first,
-                        borderRadius: BorderRadius.circular(18),
-                      ),
-                      child: Text(
-                        '$itemCount ${itemCount == 1 ? 'item' : 'items'}',
-                        style: TextStyle(
-                          color: AppColors.primary,
-                          fontSize: 11 * contentScale,
-                          fontWeight: FontWeight.w600,
+                        shape: BoxShape.circle,
+                        border: Border.all(
+                          color: AppColors.primary.withValues(alpha: 0.055),
+                          width: 18,
                         ),
                       ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(padding),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: [
+                            Container(
+                              width: iconSize,
+                              height: iconSize,
+                              decoration: BoxDecoration(
+                                gradient: AppColors.primaryGradient,
+                                borderRadius: BorderRadius.circular(16),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: AppColors.primaryDark.withValues(
+                                      alpha: 0.18,
+                                    ),
+                                    blurRadius: 9,
+                                    offset: const Offset(0, 4),
+                                  ),
+                                ],
+                              ),
+                              alignment: Alignment.center,
+                              child: Icon(
+                                collection.icon,
+                                color: AppColors.white,
+                                size: iconSize * 0.48,
+                              ),
+                            ),
+                            const Spacer(),
+                            Container(
+                              width: 27.0 * scale,
+                              height: 27.0 * scale,
+                              decoration: BoxDecoration(
+                                color: const Color(0xFFFFF4D9),
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              child: Icon(
+                                Icons.auto_awesome_rounded,
+                                color: const Color(0xFFB58A38),
+                                size: 15.0 * scale,
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: 12.0 * scale),
+                        Text(
+                          collection.title,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(
+                            color: AppColors.primaryDark,
+                            fontSize: 15.0 * scale,
+                            fontWeight: FontWeight.w800,
+                            letterSpacing: -0.15,
+                          ),
+                        ),
+                        SizedBox(height: 5.0 * scale),
+                        Expanded(
+                          child: Text(
+                            collection.description,
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(
+                              color: AppColors.textSecondary,
+                              fontSize: 11.5 * scale,
+                              height: 1.35,
+                            ),
+                          ),
+                        ),
+                        SizedBox(height: 9.0 * scale),
+                        Row(
+                          children: [
+                            Flexible(
+                              child: Container(
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: 9.0 * scale,
+                                  vertical: 6.0 * scale,
+                                ),
+                                decoration: BoxDecoration(
+                                  color: AppColors.white.withValues(alpha: 0.8),
+                                  borderRadius: BorderRadius.circular(20),
+                                  border: Border.all(
+                                    color: AppColors.primary.withValues(
+                                      alpha: 0.12,
+                                    ),
+                                  ),
+                                ),
+                                child: Text(
+                                  '$itemCount ${itemCount == 1 ? 'item' : 'items'}',
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: TextStyle(
+                                    color: AppColors.primaryDark,
+                                    fontSize: 10.5 * scale,
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            SizedBox(width: 8.0 * scale),
+                            Container(
+                              width: 30.0 * scale,
+                              height: 30.0 * scale,
+                              decoration: BoxDecoration(
+                                color: AppColors.primary,
+                                borderRadius: BorderRadius.circular(11),
+                              ),
+                              child: Icon(
+                                Icons.arrow_forward_rounded,
+                                color: AppColors.white,
+                                size: 16.0 * scale,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
                     ),
                   ),
                 ],
