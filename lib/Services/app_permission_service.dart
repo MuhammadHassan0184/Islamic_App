@@ -46,11 +46,10 @@ class AppPermissionService {
     }
   }
 
-  /// Request all necessary app permissions:
-  /// 1. POST_NOTIFICATIONS (Android 13+ & iOS)
-  /// 2. SCHEDULE_EXACT_ALARM / AlarmClock (Android 12/13/14+)
-  /// 3. Arms active daily prayer notifications immediately.
-  static Future<bool> requestAllPermissions({bool markPrompted = true}) async {
+  /// Request notification permission and schedule prayer notifications.
+  static Future<bool> requestNotificationPermission({
+    bool markPrompted = true,
+  }) async {
     if (kIsWeb || Get.testMode) {
       if (markPrompted) await markFirstLaunchDone();
       return true;
@@ -66,7 +65,6 @@ class AppPermissionService {
       if (Get.isRegistered<NamazController>()) {
         try {
           final namazController = Get.find<NamazController>();
-          await namazController.checkExactAlarmPermission();
           await namazController.scheduleAllPrayers();
         } catch (error) {
           debugPrint('Failed to trigger namaz controller schedule: $error');
@@ -116,15 +114,13 @@ class AppPermissionService {
           onGrant: () async {
             Navigator.of(modalContext).pop();
             completed = true;
-            final granted = await requestAllPermissions(markPrompted: true);
+            final granted = await requestNotificationPermission(
+              markPrompted: true,
+            );
             if (granted) {
-              AppSnackbar.success(
-                'Prayer alerts and exact alarms have been enabled.',
-              );
+              AppSnackbar.success('Prayer notifications have been enabled.');
             } else {
-              AppSnackbar.info(
-                'Notifications enabled. You can adjust exact alarm settings anytime in Namaz.',
-              );
+              AppSnackbar.info('You can enable notifications later in Namaz.');
             }
             onCompleted?.call();
           },

@@ -258,11 +258,6 @@ class NamazNotificationService {
         if (notifGranted != null) {
           granted = notifGranted;
         }
-        try {
-          await androidPlugin.requestExactAlarmsPermission();
-        } catch (error) {
-          debugPrint('Exact alarm permission check skipped: $error');
-        }
       }
 
       final iosPlugin = _plugin

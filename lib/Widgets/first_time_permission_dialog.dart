@@ -86,7 +86,7 @@ class FirstTimePermissionSheet extends StatelessWidget {
             const SizedBox(height: 8),
 
             Text(
-              'Grant notifications and exact alarm permissions so Islam786 can deliver accurate Adhan and prayer alarms on time, even when your phone is locked or the app is closed.',
+              'Allow notifications to receive prayer time reminders and app updates.',
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: isMobile ? 13 : 14.5,
@@ -100,39 +100,17 @@ class FirstTimePermissionSheet extends StatelessWidget {
             _buildPermissionFeatureCard(
               context: context,
               icon: Icons.access_time_filled_rounded,
-              title: 'Adhan & Prayer Times',
+              title: 'Prayer Time Notifications',
               subtitle:
-                  'Accurate alerts for Fajr, Dhuhr, Asr, Maghrib, and Isha based on your city.',
+                  'Receive reminders for Fajr, Dhuhr, Asr, Maghrib, and Isha.',
               badgeText: 'Essential',
               badgeColor: AppColors.primary,
-            ),
-            const SizedBox(height: 12),
-
-            _buildPermissionFeatureCard(
-              context: context,
-              icon: Icons.alarm_on_rounded,
-              title: 'Exact Alarms & Off-Screen Wakeup',
-              subtitle:
-                  'Rings at the exact second even when Doze mode is active and screen is off.',
-              badgeText: 'Reliable',
-              badgeColor: const Color(0xFF1E88E5),
-            ),
-            const SizedBox(height: 12),
-
-            _buildPermissionFeatureCard(
-              context: context,
-              icon: Icons.auto_stories_rounded,
-              title: 'Daily Azkar & Remembrances',
-              subtitle:
-                  'Gentle morning, evening, and Sunnah Azkar reminders to keep you blessed.',
-              badgeText: 'Sunnah',
-              badgeColor: const Color(0xFF8E24AA),
             ),
             const SizedBox(height: 24),
 
             // Primary Grant Button
             ZiButtonB(
-              label: 'Allow Alerts & Exact Alarms',
+              label: 'Allow Notifications',
               variant: ZiButtonVariantB.primary,
               expand: true,
               action: () async {
