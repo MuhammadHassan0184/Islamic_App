@@ -1002,7 +1002,7 @@ class _AlarmSettingsSheetBody extends StatelessWidget {
                 ziGap(10),
                 Expanded(
                   child: Text(
-                    'Tip: For screen-off alarms to ring without delay, set Battery to "Unrestricted" for Islam786 in your phone\'s App Info settings.',
+                    'Tip: For screen-off alarms to ring without delay, set Battery to "Unrestricted" for Islam101 in your phone\'s App Info settings.',
                     style: ZiTypoStyles.caption.copyWith(
                       color: AppColors.textSecondary,
                       fontSize: 11,

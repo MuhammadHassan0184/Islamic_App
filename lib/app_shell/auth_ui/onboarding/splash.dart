@@ -96,7 +96,7 @@ class _ZiSplashScreenState extends State<ZiSplashScreen>
                 ),
                 const SizedBox(height: 20),
                 const Text(
-                  'Islam 786',
+                  'Islam 101',
                   style: TextStyle(
                     fontSize: 26,
                     fontWeight: FontWeight.w800,

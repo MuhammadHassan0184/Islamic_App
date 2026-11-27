@@ -74,7 +74,7 @@ class NamazNotificationService {
         defaultActionName: 'Open Namaz',
       );
       const windowsSettings = WindowsInitializationSettings(
-        appName: 'Islam786',
+        appName: 'Islam101',
         appUserModelId: 'com.example.islam786',
         guid: 'b8d9a3e4-8e2f-4c4b-9b7a-7d1e2f4a8c90',
       );

@@ -29,7 +29,7 @@ abstract class ShellData {
   // ─── App Identity ─────────────────────────────────────────
   static const ShellContent appInfo = ShellContent(
     image: ShellImages.logo,
-    title: 'Islam786',
+    title: 'Islam101',
     info: 'Quran Pak & Namaz Time',
     description:
         'Your daily Islamic companion for Quran Pak, Namaz times, prayer notifications, daily Duas and Azkar, and a digital Tasbeeh counter.',
@@ -67,7 +67,7 @@ abstract class ShellData {
 
   // ─── ZGate ────────────────────────────────────────────────
   static const ShellContent zGate = ShellContent(
-    title: 'Welcome to Islam786',
+    title: 'Welcome to Islam101',
     info:
         'Your comprehensive companion for daily prayers, authentic Duas, Azkar, and Islamic guidance.',
   );
@@ -104,7 +104,7 @@ abstract class ShellData {
   // ─── About App ────────────────────────────────────────────
   static const ShellContent appAbout = ShellContent(
     image: ShellImages.logo,
-    title: 'Islam786',
+    title: 'Islam101',
     info: 'Our Vision',
     description:
         'To provide a clean, simple Islamic companion that helps Muslims maintain regular Salah, connect with the Holy Quran, and engage in daily Dhikr.',
@@ -118,7 +118,7 @@ abstract class ShellData {
 
   // ─── Features (MVP Scope) ─────────────────────────────────
   static const ShellContent appFeatures = ShellContent(
-    title: 'Islam786 Features & Tools',
+    title: 'Islam101 Features & Tools',
     info: 'Features & Tools',
     description: 'Upcoming Releases',
     items: [
@@ -139,9 +139,9 @@ abstract class ShellData {
   static const ShellContent appTermsConditions = ShellContent(
     title: 'Terms & Conditions',
     info:
-        'By using Islam786, you agree to these terms. Please review them before using the application.',
+        'By using Islam101, you agree to these terms. Please review them before using the application.',
     items: [
-      'Islam786 is provided for personal religious use, reference, and daily worship.',
+      'Islam101 is provided for personal religious use, reference, and daily worship.',
       'Namaz times are calculated using an app-provided location preset selected by the device time zone. Verify timings with your local mosque when needed.',
       'Prayer notifications require notification permission. Delivery can also depend on device settings.',
       'Quran pages may require an internet connection because they are loaded from an online source.',
@@ -154,14 +154,14 @@ abstract class ShellData {
   static const ShellContent appPrivacyPolicy = ShellContent(
     title: 'Privacy Policy',
     info:
-        'Islam786 is designed to keep app preferences and reading progress on your device where supported. Some content requires an internet connection.',
+        'Islam101 is designed to keep app preferences and reading progress on your device where supported. Some content requires an internet connection.',
     items: [
       'Namaz does not request GPS location permission. Prayer times use an app-provided city preset selected according to the device time zone.',
       'Notification permission is used for local prayer reminders. Notification scheduling is handled on the device.',
       'Quran pages are loaded from an online source; the provider may receive a request when you open those pages.',
       'Reading progress, Tasbeeh counts, favorites, and preferences are stored locally where supported by the app.',
       'The app does not include third-party advertising or user-tracking analytics.',
-      'For privacy questions, contact support@islam786app.com.',
+      'For privacy questions, contact muhammadhassanappconsolegmail.com',
     ],
   );
 

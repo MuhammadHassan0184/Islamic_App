@@ -11,7 +11,7 @@
     <!-- <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/> -->
 
     <application
-        android:label="islam786"
+        android:label="Islam101"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

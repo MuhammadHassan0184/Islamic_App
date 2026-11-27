@@ -32,7 +32,7 @@ class HomeHeader extends StatelessWidget {
               else ...[
                 const Spacer(),
                 Text(
-                  'Islam786',
+                  'Islam101',
                   style: TextStyle(
                     color: AppColors.darkGreen,
                     fontSize: context.scaledFont(19),
