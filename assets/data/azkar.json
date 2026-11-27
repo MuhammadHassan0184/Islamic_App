@@ -135,20 +135,20 @@
       }
     ]
   },
-  {
+{
     "id": "zikr_durood_shareef",
     "category": "tasbeeh_preset",
     "title": "Durood Shareef",
-    "arabic": "صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ",
-    "urdu": "اللہ ان پر رحمت اور سلامتی نازل فرمائے۔",
-    "english": "May Allah send peace and blessings upon him (the Prophet Muhammad).",
+    "arabic": "صَلَّى اللَّهُ عَلَيْهِ وَآلِهِ وَسَلَّمَ",
+    "urdu": "اللہ ان پر اور ان کی آل پر رحمت اور سلامتی نازل فرمائے۔",
+    "english": "May Allah send peace and blessings upon him and his family (the Prophet Muhammad).",
     "reference": "Surah Al-Ahzab 33:56",
     "default_target": 100,
     "steps": [
       {
         "step_no": 1,
         "title": "Muhabbat Aur Adab Ke Sath",
-        "detail": "Nabi Kareem (S.A.W) ki muhabbat, itaat aur adab ke sath durood parhein."
+        "detail": "Nabi Kareem (S.A.W) aur aap ki Aal ki muhabbat, itaat aur adab ke sath durood parhein."
       },
       {
         "step_no": 2,
@@ -162,7 +162,7 @@
       }
     ]
   },
-  {
+    {
     "id": "zikr_la_hawla_wa_la_quwwata",
     "category": "tasbeeh_preset",
     "title": "La hawla wa la quwwata illa billah",
@@ -294,6 +294,249 @@
         "step_no": 3,
         "title": "Yaqeen Ke Sath Dohrayein",
         "detail": "Is dua ko sirf rasm nahi balke dil ki sachai aur tawakkul ke sath parhein."
+      }
+    ]
+  },
+  {
+    "id": "zikr_ya_fattah",
+    "category": "tasbeeh_preset",
+    "title": "Ya Fattah",
+    "arabic": "يَا فَتَّاحُ",
+    "urdu": "اے تمام بند دروازوں اور مشکلات کو کھولنے والے۔",
+    "english": "O Opener (of doors, relief, provision, and solutions).",
+    "reference": "Quranic Attribute (Al-Fattah)",
+    "default_target": 100,
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Band Raston Ke Liye Dua",
+        "detail": "Jab kaam, rizq ya kisi faisle mein rukawat nazar aaye to 'Ya Fattah' keh kar Allah se asaani aur khushadgi maangein."
+      },
+      {
+        "step_no": 2,
+        "title": "Dil Aur Samajh Ki Kushadgi",
+        "detail": "Sirf dunyawi kaam hi nahi balke ilm, hikmat aur hidayat ke darwaze khulne ki niyyat bhi rakhein."
+      },
+      {
+        "step_no": 3,
+        "title": "Yaqeen Ke Sath Tasbeeh",
+        "detail": "Har tap ke sath yeh yaqeen rakhein ke har mushkil ki kunji Allah ke haath mein hai."
+      }
+    ]
+  },
+  {
+    "id": "zikr_ya_razzaq",
+    "category": "tasbeeh_preset",
+    "title": "Ya Razzaq",
+    "arabic": "يَا رَزَّاقُ",
+    "urdu": "اے ہر مخلوق کو بے شمار اور بہترین رزق دینے والے۔",
+    "english": "O Ever-Providing Sustainer.",
+    "reference": "Surah Adh-Dhariyat 51:58",
+    "default_target": 100,
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Halal Aur Barkat Wale Rizq Ki Niyyat",
+        "detail": "Dil mein halal, paak aur ba-barkat rizq ki niyyat ke sath 'Ya Razzaq' parhein."
+      },
+      {
+        "step_no": 2,
+        "title": "Tawakkul Aur Mehnat",
+        "detail": "Apni jaiz koshish aur mehnat ke sath sath rizq ki zimmedari Allah ke supurd karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Har Naimat Par Shukr",
+        "detail": "Jo rizq aur sahulat pehle se mil rahi hai us par dil mein shukar ka jazba rakhein."
+      }
+    ]
+  },
+  {
+    "id": "zikr_ya_allah",
+    "category": "tasbeeh_preset",
+    "title": "Ya Allah",
+    "arabic": "يَا اللَّهُ",
+    "urdu": "اے اللہ (تمام صفاتِ کمال کا جامع اسمِ اعظم)۔",
+    "english": "O Allah (the Supreme Name encompassing all attributes of perfection).",
+    "reference": "Surah Al-A'raf 7:180",
+    "default_target": 100,
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Seedhi Pukar Aur Hazri-e-Qalb",
+        "detail": "Bina kisi takalluf ke apne Rab ko seedha 'Ya Allah' keh kar pukarein aur dil ko un ki taraf mutawajjah karein."
+      },
+      {
+        "step_no": 2,
+        "title": "Khamosh Ya Aahista Zikar",
+        "detail": "Sukoon aur itminan ke sath 'Ya Allah' ka wird karein taake dil ki be-chaini kam ho."
+      },
+      {
+        "step_no": 3,
+        "title": "Har Haal Mein Rab Ka Sahारा",
+        "detail": "Khushi, fikr, safar ya aaram har waqt is ism-e-mubarak ke zariye apna rabta mazboot rakhein."
+      }
+    ]
+  },
+  {
+    "id": "zikr_ya_musabbib_al_asbab",
+    "category": "tasbeeh_preset",
+    "title": "Ya Musabbib al-Asbab",
+    "arabic": "يَا مُسَبِّبَ الْأَسْبَابِ",
+    "urdu": "اے تمام اسباب اور وسائل پیدا کرنے والے۔",
+    "english": "O Causer of all causes and Creator of means.",
+    "reference": "Classical Supplication & Divine Attributes",
+    "default_target": 100,
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Asbab Ke Khaliq Ko Pehchanein",
+        "detail": "Yeh samajhte hue parhein ke asbab aur wasail khud-ba-khud kaam nahi karte balke Allah unhein asar deta hai."
+      },
+      {
+        "step_no": 2,
+        "title": "Ghaib Se Behtareen Wasail Ki Dua",
+        "detail": "Jab zahiri wasail mehdood hon to Allah se aise asbab aur madad paida karne ki dua karein jo aap ke haq mein behtar hon."
+      },
+      {
+        "step_no": 3,
+        "title": "Wasile Par Nahi, Allah Par Bharosa",
+        "detail": "Asbab ko apnayein zaroor, magar asli bharosa aur ummeed 'Musabbib al-Asbab' par rakhein."
+      }
+    ]
+  },
+  {
+    "id": "zikr_ya_hayyu_ya_qayyum",
+    "category": "tasbeeh_preset",
+    "title": "Ya Hayyu Ya Qayyum",
+    "arabic": "يَا حَيُّ يَا قَيُّومُ",
+    "urdu": "اے ہمیشہ زندہ اور ہر چیز کو قائم رکھنے والے۔",
+    "english": "O Ever-Living, O Sustainer of all that exists.",
+    "reference": "Jami at-Tirmidhi & Hisn al-Muslim",
+    "default_target": 33,
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Madad Aur Istighasa",
+        "detail": "Hadees ke mutabiq Nabi Kareem (S.A.W) mushkil waqt mein 'Ya Hayyu Ya Qayyum bi-rahmatika astagheeth' ke zariye madad talab farmate."
+      },
+      {
+        "step_no": 2,
+        "title": "Hidayat Aur Thabat Ki Niyyat",
+        "detail": "Dil, deen aur kaam mein sabit qadmi aur istiqamat ke liye is zikr ko parhein."
+      },
+      {
+        "step_no": 3,
+        "title": "Itminan Ke Sath Dohrayein",
+        "detail": "Har tap ke sath is yaqeen ko taza karein ke poori kainat ka nizam Allah ke qaim rakhne se chal raha hai."
+      }
+    ]
+  },
+  {
+    "id": "zikr_rabbighfir_li",
+    "category": "tasbeeh_preset",
+    "title": "Rabbighfir li",
+    "arabic": "رَبِّ اغْفِرْ لِي",
+    "urdu": "اے میرے رب! مجھے معاف فرما دے۔",
+    "english": "My Lord, forgive me.",
+    "reference": "Sunan Abi Dawud & Sunan Ibn Majah",
+    "default_target": 100,
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Aajizi Ke Sath Maghfirat",
+        "detail": "Apne Rab ko 'Rabb' (parwarish karne wala) keh kar nihayat aajizi aur inkisari se maghfirat maangein."
+      },
+      {
+        "step_no": 2,
+        "title": "Aahista Aur Dil Se Parhein",
+        "detail": "Jald bazi ke bajaye har lafz ko samajh kar aur dil ki tawajjah ke sath dohrayein."
+      },
+      {
+        "step_no": 3,
+        "title": "Rozana Tauba Ka Mamool",
+        "detail": "Is ko apni rozana ki aadat mein shamil karein taake dil par zamne wali kotahiyon ki gard dhulti rahe."
+      }
+    ]
+  },
+  {
+    "id": "zikr_durood_e_kareem",
+    "category": "tasbeeh_preset",
+    "title": "Durood-e-Kareem",
+    "arabic": "صَلَّى اللَّهُ عَلَى سَيِّدِنَا وَنَبِيِّنَا مُحَمَّدٍ الْكَرِيمِ وَعَلَى آلِهِ وَصَحْبِهِ وَسَلَّمَ",
+    "urdu": "اللہ رحمت اور سلامتی نازل فرمائے ہمارے سردار اور نبی محمد کریم پر، اور آپ کی آل اور اصحاب پر۔",
+    "english": "May Allah send peace and blessings upon our Master and Prophet Muhammad, the Generous, and upon his family and companions.",
+    "reference": "Traditional Salawat & Durood Collection",
+    "default_target": 100,
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Adab Aur Aqeedat Ke Sath",
+        "detail": "Nabi Kareem (S.A.W) ki karam nawazi aur shan ko dil mein rakhte hue adab ke sath parhein."
+      },
+      {
+        "step_no": 2,
+        "title": "Safar Ya Rozana Ke Mamool Mein",
+        "detail": "Rozana ke zikar ya safar aur kaam ke dauran sukoon ke sath is durood ko dohrayein."
+      },
+      {
+        "step_no": 3,
+        "title": "Barkat Aur Rahmat Ki Niyyat",
+        "detail": "Apni zindagi, rizq aur aamal mein barkat aur rahmat ke husool ki niyyat rakhein."
+      }
+    ]
+  },
+  {
+    "id": "zikr_durood_e_ghousia",
+    "category": "tasbeeh_preset",
+    "title": "Durood-e-Ghousia",
+    "arabic": "اللَّهُمَّ صَلِّ عَلَى سَيِّدِنَا مُحَمَّدٍ مَعْدِنِ الْجُودِ وَالْكَرَمِ وَآلِهِ وَبَارِكْ وَسَلِّمْ",
+    "urdu": "اے اللہ! رحمت نازل فرما ہمارے سردار محمد پر جو جود و کرم کی کان ہیں، اور ان کی آل پر، اور برکت اور سلامتی عطا فرما۔",
+    "english": "O Allah, send blessings upon our Master Muhammad, the mine of generosity and nobility, and upon his family, and grant blessing and peace.",
+    "reference": "Devotional Durood Collection (Durood-e-Ghousia)",
+    "default_target": 100,
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Niyyat Aur Hazri-e-Qalb",
+        "detail": "Tawajjah aur adab ke sath 'Durood-e-Ghousia' parhne ki niyyat karein."
+      },
+      {
+        "step_no": 2,
+        "title": "Mutayyan Ginti Mukammal Karein",
+        "detail": "100 ya apni marzi ke mutabiq target set kar ke itminan se ginti poori karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Khair O Barkat Ki Dua",
+        "detail": "Durood mukammal karne ke baad apne aur ahl-e-khana ke liye khair, asaani aur barkat ki dua karein."
+      }
+    ]
+  },
+  {
+    "id": "zikr_sayyiduna_karim_salallahu_alayhi_wa_aalihi_wasallam",
+    "category": "tasbeeh_preset",
+    "title": "Sayyiduna Karim Sallallahu Alayhi Wa Aalihi Wasallam",
+    "arabic": "سَيِّدُنَا كَرِيمٌ صَلَّى اللَّهُ عَلَيْهِ وَآلِهِ وَسَلَّمَ",
+    "urdu": "ہمارے سردار کریم ہیں، اللہ ان پر اور ان کی آل پر رحمت اور سلامتی نازل فرمائے۔",
+    "english": "Our Master is Generous; may Allah send peace and blessings upon him and his family.",
+    "reference": "Devotional Salawat & Durood Collection",
+    "default_target": 100,
+    "steps": [
+      {
+        "step_no": 1,
+        "title": "Adab Aur Aqeedat Ke Sath",
+        "detail": "Nabi Kareem (S.A.W) aur aap ki Aal ki shan aur karam ko dil mein rakhte hue adab ke sath dohrayein."
+      },
+      {
+        "step_no": 2,
+        "title": "Rozana Ya Farigh Auqat Mein",
+        "detail": "100 ya apni marzi ka target select kar ke sukoon aur tawajjah ke sath tasbeeh mukammal karein."
+      },
+      {
+        "step_no": 3,
+        "title": "Rahmat Aur Barkat Ki Niyyat",
+        "detail": "Apne aamal, rizq aur zindagi mein rahmat aur barkat ke husool ki niyyat rakhein."
       }
     ]
   }
