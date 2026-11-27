@@ -106,12 +106,6 @@ class AppRoutes {
       binding: LibraryBinding(),
     ),
     GetPage(name: libraryDetail, page: () => const LibraryDetailScreen()),
-    GetPage(
-      name: quiz,
-      page: () => const QuizScreen(),
-      binding: QuizBinding(),
-    ),
+    GetPage(name: quiz, page: () => const QuizScreen(), binding: QuizBinding()),
   ];
-
-  
 }
