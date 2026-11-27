@@ -498,10 +498,16 @@ class _ParaListTile extends StatelessWidget {
                   gradient: AppColors.primaryGradient,
                   borderRadius: BorderRadius.circular(14),
                 ),
-                child: Icon(
-                  Icons.menu_book_rounded,
-                  color: AppColors.white,
-                  size: context.scaledFont(23).clamp(20.0, 28.0),
+                child: Text(
+                  para.label,
+                  style: TextStyle(
+                    color: AppColors.white,
+                    fontSize: context
+                        .scaledFont(16)
+                        .clamp(14.0, 19.0)
+                        .toDouble(),
+                    fontWeight: FontWeight.w800,
+                  ),
                 ),
               ),
               SizedBox(width: context.widthPct(0.03).clamp(9.0, 14.0)),

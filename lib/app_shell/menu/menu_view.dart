@@ -1,8 +1,10 @@
 // ignore_for_file: use_build_context_synchronously
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:islam786/Config/Colors/app_colors.dart';
 import 'package:islam786/Utils/mediaquery_extension.dart';
+import 'package:islam786/features_slices/app_shell_controller.dart';
 import 'package:zi_core/zi_core_io.dart';
 import '../app_shell_io.dart';
 
@@ -95,66 +97,71 @@ class MenuView extends StatelessWidget {
               horizontal: 0.045,
               vertical: 0.018,
             ),
-            child: Container(
-              width: double.infinity,
-              padding: EdgeInsets.all(
-                context.widthPct(0.045).clamp(14.0, 20.0).toDouble(),
-              ),
-              decoration: BoxDecoration(
-                gradient: AppColors.primaryGradient,
-                borderRadius: BorderRadius.circular(22),
-                boxShadow: [
-                  BoxShadow(
-                    color: AppColors.primaryDark.withValues(alpha: 0.16),
-                    blurRadius: 14,
-                    offset: const Offset(0, 6),
-                  ),
-                ],
-              ),
-              child: Row(
-                children: [
-                  Container(
-                    width: 48,
-                    height: 48,
-                    decoration: BoxDecoration(
-                      color: AppColors.white.withValues(alpha: 0.14),
-                      borderRadius: BorderRadius.circular(15),
-                      border: Border.all(
-                        color: AppColors.white.withValues(alpha: 0.22),
+            child: InkWell(
+              onTap: () {
+                Get.find<AppShellController>().selectTab(2);
+              },
+              child: Container(
+                width: double.infinity,
+                padding: EdgeInsets.all(
+                  context.widthPct(0.045).clamp(14.0, 20.0).toDouble(),
+                ),
+                decoration: BoxDecoration(
+                  gradient: AppColors.primaryGradient,
+                  borderRadius: BorderRadius.circular(22),
+                  boxShadow: [
+                    BoxShadow(
+                      color: AppColors.primaryDark.withValues(alpha: 0.16),
+                      blurRadius: 14,
+                      offset: const Offset(0, 6),
+                    ),
+                  ],
+                ),
+                child: Row(
+                  children: [
+                    Container(
+                      width: 48,
+                      height: 48,
+                      decoration: BoxDecoration(
+                        color: AppColors.white.withValues(alpha: 0.14),
+                        borderRadius: BorderRadius.circular(15),
+                        border: Border.all(
+                          color: AppColors.white.withValues(alpha: 0.22),
+                        ),
+                      ),
+                      child: Image.asset('assets/Quran_image.png'),
+                    ),
+                    const SizedBox(width: 13),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Read Quran Pak',
+                            style: TextStyle(
+                              color: AppColors.white,
+                              fontSize: context.scaledFont(17),
+                              fontWeight: FontWeight.w800,
+                            ),
+                          ),
+                          const SizedBox(height: 4),
+                          Text(
+                            'Choose from all 30 Paras',
+                            style: TextStyle(
+                              color: AppColors.white.withValues(alpha: 0.82),
+                              fontSize: context.scaledFont(12),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
-                    child: Image.asset('assets/Quran_image.png'),
-                  ),
-                  const SizedBox(width: 13),
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Read Quran Pak',
-                          style: TextStyle(
-                            color: AppColors.white,
-                            fontSize: context.scaledFont(17),
-                            fontWeight: FontWeight.w800,
-                          ),
-                        ),
-                        const SizedBox(height: 4),
-                        Text(
-                          'Choose from all 30 Paras',
-                          style: TextStyle(
-                            color: AppColors.white.withValues(alpha: 0.82),
-                            fontSize: context.scaledFont(12),
-                          ),
-                        ),
-                      ],
+                    const Icon(
+                      Icons.auto_awesome_rounded,
+                      color: Color(0xFFFFD36A),
+                      size: 22,
                     ),
-                  ),
-                  const Icon(
-                    Icons.auto_awesome_rounded,
-                    color: Color(0xFFFFD36A),
-                    size: 22,
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ),

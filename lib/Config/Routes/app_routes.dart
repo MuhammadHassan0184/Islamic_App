@@ -112,4 +112,6 @@ class AppRoutes {
       binding: QuizBinding(),
     ),
   ];
+
+  
 }
