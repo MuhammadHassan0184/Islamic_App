@@ -95,7 +95,7 @@ class AppRoutes {
       page: () => const DuaDetailScreen(),
       binding: DuaBinding(),
     ),
-    GetPage(
+    GetPage( 
       name: library,
       page: () => const LibraryScreen(),
       binding: LibraryBinding(),
