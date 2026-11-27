@@ -94,21 +94,24 @@ class MyApp extends StatelessWidget {
       getPages: AppRoutes.pages,
       builder: (context, child) {
         final topInset = MediaQuery.paddingOf(context).top;
-        return Stack(
-          fit: StackFit.expand,
-          children: [
-            const ColoredBox(color: Colors.white),
-            // Android edge-to-edge makes the status bar transparent, so color
-            // only the top inset. The navigation bar area stays white.
-            Positioned(
-              top: 0,
-              left: 0,
-              right: 0,
-              height: topInset,
-              child: const ColoredBox(color: AppColors.primary),
-            ),
-            SafeArea(child: child ?? const SizedBox.shrink()),
-          ],
+        return AnnotatedRegion<SystemUiOverlayStyle>(
+          value: _lightSystemBars,
+          child: Stack(
+            fit: StackFit.expand,
+            children: [
+              const ColoredBox(color: Colors.white),
+              // Android edge-to-edge makes the status bar transparent, so color
+              // only the top inset. The navigation bar area stays white.
+              Positioned(
+                top: 0,
+                left: 0,
+                right: 0,
+                height: topInset,
+                child: const ColoredBox(color: AppColors.primary),
+              ),
+              SafeArea(child: child ?? const SizedBox.shrink()),
+            ],
+          ),
         );
       },
     );
