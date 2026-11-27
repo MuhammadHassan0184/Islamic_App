@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import 'package:islam786/features_slices/View/Namaz/Controller/namaz_controller.dart';
 import 'package:islam786/features_slices/View/Namaz/Model/prayer_time_model.dart';
 import 'package:islam786/features_slices/View/Namaz/Services/namaz_notification_service.dart';
-import 'package:islam786/features_slices/View/Namaz/Services/namaz_time_calculator.dart';
 import 'package:islam786/features_slices/View/Namaz/namaz_screen.dart';
 import 'package:islam786/features_slices/app_shell_binding.dart';
 import 'package:islam786/features_slices/name_app.dart';
@@ -34,43 +33,47 @@ void main() {
     expect(Get.isRegistered<NamazController>(), isTrue);
   });
 
-  test('NamazController calculates daily prayer times and updates on city/madhab change', () async {
-    final controller = NamazController(
-      notificationService: NamazNotificationService(enabled: false),
-      enableTicker: false,
-    );
-    controller.onInit();
-
-    expect(controller.prayerTimes, hasLength(6));
-    expect(
-      controller.prayerTimes.map((p) => p.name).toList(),
-      ['Fajr', 'Sunrise', 'Dhuhr', 'Asr', 'Maghrib', 'Isha'],
-    );
-
-    // Ensure chronological order
-    for (var i = 1; i < controller.prayerTimes.length; i++) {
-      expect(
-        controller.prayerTimes[i].dateTime.isAfter(
-          controller.prayerTimes[i - 1].dateTime,
-        ),
-        isTrue,
+  test(
+    'NamazController calculates daily prayer times and updates on method/madhab change',
+    () async {
+      final controller = NamazController(
+        notificationService: NamazNotificationService(enabled: false),
+        enableTicker: false,
       );
-    }
+      controller.onInit();
 
-    final makkah = NamazTimeCalculator.findCityById('makkah')!;
-    await controller.selectCityPreset(makkah);
-    expect(controller.cityName.value, 'Makkah, Saudi Arabia');
-    expect(controller.calculationMethod.value, NamazCalculationPreset.ummAlQura);
+      expect(controller.prayerTimes, hasLength(6));
+      expect(
+        controller.prayerTimes.map((p) => p.name).toList(),
+        ['Fajr', 'Sunrise', 'Dhuhr', 'Asr', 'Maghrib', 'Isha'],
+      );
 
-    final shafiAsr =
-        controller.prayerTimes.firstWhere((p) => p.id == 'asr').dateTime;
-    await controller.setMadhab(NamazMadhab.hanafi);
-    final hanafiAsr =
-        controller.prayerTimes.firstWhere((p) => p.id == 'asr').dateTime;
-    expect(hanafiAsr.isAfter(shafiAsr), isTrue);
+      // Ensure chronological order
+      for (var i = 1; i < controller.prayerTimes.length; i++) {
+        expect(
+          controller.prayerTimes[i].dateTime.isAfter(
+            controller.prayerTimes[i - 1].dateTime,
+          ),
+          isTrue,
+        );
+      }
 
-    controller.onClose();
-  });
+      await controller.setCalculationMethod(NamazCalculationPreset.ummAlQura);
+      expect(
+        controller.calculationMethod.value,
+        NamazCalculationPreset.ummAlQura,
+      );
+
+      final shafiAsr =
+          controller.prayerTimes.firstWhere((p) => p.id == 'asr').dateTime;
+      await controller.setMadhab(NamazMadhab.hanafi);
+      final hanafiAsr =
+          controller.prayerTimes.firstWhere((p) => p.id == 'asr').dateTime;
+      expect(hanafiAsr.isAfter(shafiAsr), isTrue);
+
+      controller.onClose();
+    },
+  );
 
   test('NamazController persists custom prayers, time overrides, and alarm settings', () async {
     final controller = NamazController(
