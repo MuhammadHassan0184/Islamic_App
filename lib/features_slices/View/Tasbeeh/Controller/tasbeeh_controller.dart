@@ -1,11 +1,19 @@
 import 'dart:convert';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:islam786/Data/Repositories/azkar_repository.dart';
+import 'package:islam786/Data/Sources/asset_data_source.dart';
 import 'package:islam786/Widgets/app_snack_bar.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../Model/tasbeeh_model.dart';
 
 class TasbeehController extends GetxController {
+  TasbeehController({AzkarRepository? azkarRepository})
+    : _azkarRepository = azkarRepository ?? AzkarRepository(AssetDataSource());
+
+  final AzkarRepository _azkarRepository;
+
   static const _keyCount = 'tasbeeh_current_count';
   static const _keyTarget = 'tasbeeh_target_count';
   static const _keyRounds = 'tasbeeh_round_count';
@@ -24,9 +32,14 @@ class TasbeehController extends GetxController {
   final RxBool soundEnabled = true.obs;
 
   final Rx<DhikrItem> selectedDhikr = DhikrItem.presets.first.obs;
+  final RxList<DhikrItem> azkarDhikrList = <DhikrItem>[].obs;
   final RxList<DhikrItem> customDhikrList = <DhikrItem>[].obs;
 
-  List<DhikrItem> get allDhikrs => [...DhikrItem.presets, ...customDhikrList];
+  List<DhikrItem> get allDhikrs => [
+    ...DhikrItem.presets,
+    ...azkarDhikrList,
+    ...customDhikrList,
+  ];
 
   double get progress {
     if (targetCount.value <= 0) return 0.0;
@@ -42,7 +55,32 @@ class TasbeehController extends GetxController {
   @override
   void onInit() {
     super.onInit();
-    _loadState();
+    _initialize();
+  }
+
+  Future<void> _initialize() async {
+    await _loadAzkarDhikrs();
+    await _loadState();
+  }
+
+  Future<void> _loadAzkarDhikrs() async {
+    try {
+      final records = await _azkarRepository.getAzkar();
+      azkarDhikrList.assignAll(
+        records.map(
+          (zikr) => DhikrItem(
+            id: zikr.id,
+            arabic: zikr.arabic,
+            transliteration: zikr.title,
+            meaning: zikr.english,
+            defaultTarget: zikr.defaultTarget,
+          ),
+        ),
+      );
+    } catch (error, stackTrace) {
+      debugPrint('Unable to load Azkar into Tasbeeh: $error');
+      debugPrintStack(stackTrace: stackTrace);
+    }
   }
 
   Future<void> _loadState() async {

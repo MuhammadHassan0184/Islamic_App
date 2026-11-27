@@ -23,6 +23,9 @@ class ShellContent {
 abstract class ShellData {
   ShellData._();
 
+  static const privacyPolicyUrl =
+      'https://sites.google.com/view/islam786-privacypolicy/home';
+
   // ─── App Identity ─────────────────────────────────────────
   static const ShellContent appInfo = ShellContent(
     image: ShellImages.logo,

@@ -167,11 +167,18 @@ class _DhikrSheetBodyState extends State<_DhikrSheetBody> {
       final selectedId = widget.controller.selectedDhikr.value.id;
       final bottomInset = MediaQuery.of(context).viewInsets.bottom;
       final screenHeight = MediaQuery.of(context).size.height;
-      final maxAvailableHeight = (screenHeight - bottomInset) * 0.72;
+      final availableHeight = (screenHeight - bottomInset)
+          .clamp(0.0, screenHeight)
+          .toDouble();
+      final maxAvailableHeight = (bottomInset > 0
+              ? availableHeight * 0.9
+              : screenHeight * 0.72)
+          .clamp(0.0, screenHeight)
+          .toDouble();
 
       return ConstrainedBox(
         constraints: BoxConstraints(
-          maxHeight: maxAvailableHeight.clamp(260.0, screenHeight),
+          maxHeight: maxAvailableHeight,
         ),
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -251,91 +258,88 @@ class _DhikrSheetBodyState extends State<_DhikrSheetBody> {
                             width: isSelected ? 1.5 : 1.0,
                           ),
                         ),
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.center,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: [
-                            Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Row(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: [
-                                      Expanded(
-                                        child: Text(
-                                          dhikr.transliteration,
-                                          maxLines: 1,
-                                          overflow: TextOverflow.ellipsis,
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.w700,
-                                            fontSize: context
-                                                .scaledFont(13.5)
-                                                .clamp(12.0, 15.5),
-                                            color: isSelected
-                                                ? AppColors.primaryDark
-                                                : AppColors.textPrimary,
-                                          ),
-                                        ),
-                                      ),
-                                      const SizedBox(width: 8),
-                                      Text(
-                                        dhikr.arabic,
-                                        style: TextStyle(
-                                          fontSize: context
-                                              .scaledFont(15)
-                                              .clamp(13.0, 18.0),
-                                          fontWeight: FontWeight.w800,
-                                          color: AppColors.primary,
-                                          height: 1.2,
-                                        ),
-                                        textDirection: TextDirection.rtl,
-                                      ),
-                                    ],
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Expanded(
+                                  child: Text(
+                                    dhikr.transliteration,
+                                    maxLines: 2,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w700,
+                                      fontSize: context
+                                          .scaledFont(13.5)
+                                          .clamp(12.0, 15.5)
+                                          .toDouble(),
+                                      color: isSelected
+                                          ? AppColors.primaryDark
+                                          : AppColors.textPrimary,
+                                    ),
                                   ),
-                                  if (dhikr.meaning.isNotEmpty) ...[
-                                    ziGap(3),
-                                    Text(
-                                      dhikr.meaning,
-                                      style: TextStyle(
-                                        fontSize: context
-                                            .scaledFont(11.5)
-                                            .clamp(10.5, 13.0),
+                                ),
+                                const SizedBox(width: 8),
+                                Wrap(
+                                  crossAxisAlignment: WrapCrossAlignment.center,
+                                  spacing: 4,
+                                  children: [
+                                    if (dhikr.defaultTarget > 0)
+                                      ZiBadge(
+                                        label: '${dhikr.defaultTarget}x',
+                                        color: isSelected
+                                            ? AppColors.primary
+                                            : AppColors.textSecondary,
+                                      )
+                                    else
+                                      const ZiBadge(
+                                        label: '∞',
                                         color: AppColors.textSecondary,
                                       ),
-                                      maxLines: 2,
-                                      overflow: TextOverflow.ellipsis,
-                                    ),
+                                    if (isSelected)
+                                      const Icon(
+                                        Icons.check_circle_rounded,
+                                        color: AppColors.primary,
+                                        size: 18,
+                                      ),
                                   ],
-                                ],
-                              ),
-                            ),
-                            ziGap(8),
-                            Row(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                if (dhikr.defaultTarget > 0)
-                                  ZiBadge(
-                                    label: '${dhikr.defaultTarget}x',
-                                    color: isSelected
-                                        ? AppColors.primary
-                                        : AppColors.textSecondary,
-                                  )
-                                else
-                                  const ZiBadge(
-                                    label: '∞',
-                                    color: AppColors.textSecondary,
-                                  ),
-                                if (isSelected) ...[
-                                  ziGap(4),
-                                  const Icon(
-                                    Icons.check_circle_rounded,
-                                    color: AppColors.primary,
-                                    size: 18,
-                                  ),
-                                ],
+                                ),
                               ],
                             ),
+                            SizedBox(height: context.heightPct(0.006)),
+                            Text(
+                              dhikr.arabic,
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                              style: TextStyle(
+                                fontSize: context
+                                    .scaledFont(15)
+                                    .clamp(13.0, 18.0)
+                                    .toDouble(),
+                                fontWeight: FontWeight.w800,
+                                color: AppColors.primary,
+                                height: 1.35,
+                              ),
+                              textAlign: TextAlign.right,
+                              textDirection: TextDirection.rtl,
+                            ),
+                            if (dhikr.meaning.isNotEmpty) ...[
+                              SizedBox(height: context.heightPct(0.004)),
+                              Text(
+                                dhikr.meaning,
+                                style: TextStyle(
+                                  fontSize: context
+                                      .scaledFont(11.5)
+                                      .clamp(10.5, 13.0)
+                                      .toDouble(),
+                                  color: AppColors.textSecondary,
+                                ),
+                                maxLines: 3,
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                            ],
                           ],
                         ),
                       ),
