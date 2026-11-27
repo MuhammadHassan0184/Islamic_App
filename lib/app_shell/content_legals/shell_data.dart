@@ -26,10 +26,10 @@ abstract class ShellData {
   // ─── App Identity ─────────────────────────────────────────
   static const ShellContent appInfo = ShellContent(
     image: ShellImages.logo,
-    title: 'ZitoKit (Zi_6)',
-    info: 'Instant Digital Store Builder',
+    title: 'Islam786',
+    info: 'Quran Pak & Namaz Time',
     description:
-        'A rapid digitization tool for small businesses to create online stores in minutes, manage orders, and replace WhatsApp-based selling with structured commerce.',
+        'Your daily Islamic companion for Quran Pak, Namaz times, prayer notifications, daily Duas and Azkar, and a digital Tasbeeh counter.',
   );
 
   // ─── Splash ───────────────────────────────────────────────
@@ -101,69 +101,75 @@ abstract class ShellData {
   // ─── About App ────────────────────────────────────────────
   static const ShellContent appAbout = ShellContent(
     image: ShellImages.logo,
-    title: 'ZitoKit (Zi_3)',
-    info: 'Our Mission',
+    title: 'Islam786',
+    info: 'Our Vision',
     description:
-        'To help small businesses move from informal selling (WhatsApp-based) to structured digital stores in minutes with zero complexity.',
+        'To provide a clean, simple Islamic companion that helps Muslims maintain regular Salah, connect with the Holy Quran, and engage in daily Dhikr.',
     items: [
-      '1: Enable instant online store creation for SMEs.',
-      '2: Replace manual ordering with structured digital workflows.',
-      '3: Help sellers share a single store link for all products/services.',
+      'Provide prayer times using the app’s default calculation location and support local prayer reminders.',
+      'Offer access to Quran Pak and Urdu translation; an internet connection may be needed to load Quran pages.',
+      'Keep daily Duas, Azkar, and Tasbeeh tools easy to use.',
+      'Keep app preferences and reading progress on the device where supported.',
     ],
   );
 
   // ─── Features (MVP Scope) ─────────────────────────────────
   static const ShellContent appFeatures = ShellContent(
-    title: 'ZitoKit MVP Features',
-    info: 'Core System (April 2026)',
+    title: 'Islam786 Features & Tools',
+    info: 'Features & Tools',
+    description: 'Upcoming Releases',
     items: [
-      '1: Store creation with instant public store link (slug-based).',
-      '2: Category management (Products / Services).',
-      '3: Unified item system (products + services).',
-      '4: Cart-based ordering system (web).',
-      '5: Guest checkout (name + phone only).',
-      '6: Order management with status tracking.',
-      '7: Basic dashboard (orders + items summary).',
-      '8: Firebase Auth-based store owner system.',
+      'Complete Holy Quran (30 Para list) with Quran pages loaded from an online source.',
+      'Namaz times calculated with the app’s default location preset, selected using the device time zone.',
+      'Local prayer notifications controlled by notification permission and device settings.',
+      'Digital Tasbeeh counter with saved counts and daily Dhikr tools.',
+      'Daily Duas and Azkar.',
+      'Urdu translation and additional Quran reading tools (Coming Soon).',
+      'Audio recitation for popular Surahs (Coming Soon).',
+      'Qibla compass (Coming Soon).',
+      'Zakat calculator for savings, gold, and silver (Coming Soon).',
+      'Hijri and Ramadan calendar with Sehri/Iftar timings (Coming Soon).',
     ],
   );
 
   // ─── Terms & Conditions ───────────────────────────────────
   static const ShellContent appTermsConditions = ShellContent(
     title: 'Terms & Conditions',
-    info: 'Please read carefully before using ZitoKit.',
+    info:
+        'By using Islam786, you agree to these terms. Please review them before using the application.',
     items: [
-      '1: ZitoKit is designed for lawful business use only.',
-      '2: Users are responsible for maintaining account security.',
-      '3: Misuse of the platform may result in account suspension.',
-      '4: Data entered remains owned by the store owner.',
-      '5: Service availability may change during MVP phase.',
-      '6: ZitoKit is not responsible for losses due to misuse or downtime.',
+      'Islam786 is provided for personal religious use, reference, and daily worship.',
+      'Namaz times are calculated using an app-provided location preset selected by the device time zone. Verify timings with your local mosque when needed.',
+      'Prayer notifications require notification permission. Delivery can also depend on device settings.',
+      'Quran pages may require an internet connection because they are loaded from an online source.',
+      'Bookmarks, reading progress, and Tasbeeh data may be stored locally on your device. Clearing app data or uninstalling the app can remove them.',
+      'Features and calculation methods may be updated over time.',
     ],
   );
 
   // ─── Privacy Policy ───────────────────────────────────────
   static const ShellContent appPrivacyPolicy = ShellContent(
     title: 'Privacy Policy',
-    info: 'Your data is protected and remains your property.',
+    info:
+        'Islam786 is designed to keep app preferences and reading progress on your device where supported. Some content requires an internet connection.',
     items: [
-      '1: We collect only essential data for store functionality.',
-      '2: All business data is securely stored in Firebase.',
-      '3: We do not sell or share user data with third parties.',
-      '4: Users can request account deletion anytime.',
-      '5: Analytics may be used to improve system performance.',
-      '6: Policy updates will be communicated inside the app.',
+      'Namaz does not request GPS location permission. Prayer times use an app-provided city preset selected according to the device time zone.',
+      'Notification permission is used for local prayer reminders. Notification scheduling is handled on the device.',
+      'Quran pages are loaded from an online source; the provider may receive a request when you open those pages.',
+      'Reading progress, Tasbeeh counts, favorites, and preferences are stored locally where supported by the app.',
+      'The app does not include third-party advertising or user-tracking analytics.',
+      'For privacy questions, contact support@islam786app.com.',
     ],
   );
 
   // ─── Contact ──────────────────────────────────────────────
   static const ShellContent appContact = ShellContent(
-    title: 'Contact Us',
-    info: 'We’re here to support your store journey.',
+    title: 'Support & Community',
+    info: 'Have suggestions, feedback, or need help? Reach out to us directly.',
     items: [
-      'Phone: +92 342 4264494',
-      'Email: support@ZitoKit.app',
-      'Website: www.ZitoKit.app',
+      'Email: support@islam786app.com',
+      'Website: https://islam786app.com',
+      'Privacy Policy: Available inside app settings',
     ],
   );
 
