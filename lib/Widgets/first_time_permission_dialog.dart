@@ -74,7 +74,7 @@ class FirstTimePermissionSheet extends StatelessWidget {
             const SizedBox(height: 16),
 
             Text(
-              'Stay Connected With Every Prayer',
+              'Stay Connected With Your Quran',
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: isMobile ? 20 : 24,
@@ -86,7 +86,7 @@ class FirstTimePermissionSheet extends StatelessWidget {
             const SizedBox(height: 8),
 
             Text(
-              'Allow notifications to receive prayer time reminders and app updates.',
+              'Internet access lets Quran pages load. You can read them whenever your device is online.',
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: isMobile ? 13 : 14.5,
@@ -97,6 +97,16 @@ class FirstTimePermissionSheet extends StatelessWidget {
             const SizedBox(height: 22),
 
             // Feature List Cards
+            _buildPermissionFeatureCard(
+              context: context,
+              icon: Icons.wifi_rounded,
+              title: 'Online Quran Pages',
+              subtitle:
+                  'Quran pages need an internet connection. Internet access is enabled automatically by the app.',
+              badgeText: 'For Quran',
+              badgeColor: AppColors.primary,
+            ),
+            const SizedBox(height: 10),
             _buildPermissionFeatureCard(
               context: context,
               icon: Icons.access_time_filled_rounded,
@@ -110,7 +120,7 @@ class FirstTimePermissionSheet extends StatelessWidget {
 
             // Primary Grant Button
             ZiButtonB(
-              label: 'Allow Notifications',
+              label: 'Enable Notifications',
               variant: ZiButtonVariantB.primary,
               expand: true,
               action: () async {
