@@ -192,25 +192,25 @@ class TasbeehScreen extends StatelessWidget {
               //     ),
               //   );
               // }),
-              Obx(() {
-                final vib = controller.vibrationEnabled.value;
-                return IconButton(
-                  tooltip: vib ? 'Disable Vibration' : 'Enable Vibration',
-                  padding: EdgeInsets.zero,
-                  constraints: const BoxConstraints(
-                    minWidth: 36,
-                    minHeight: 36,
-                  ),
-                  onPressed: controller.toggleVibration,
-                  icon: Icon(
-                    vib
-                        ? Icons.vibration_rounded
-                        : Icons.phonelink_ring_outlined,
-                    color: AppColors.white,
-                    size: 20,
-                  ),
-                );
-              }),
+              // Obx(() {
+              //   final vib = controller.vibrationEnabled.value;
+              //   return IconButton(
+              //     tooltip: vib ? 'Disable Vibration' : 'Enable Vibration',
+              //     padding: EdgeInsets.zero,
+              //     constraints: const BoxConstraints(
+              //       minWidth: 36,
+              //       minHeight: 36,
+              //     ),
+              //     onPressed: controller.toggleVibration,
+              //     icon: Icon(
+              //       vib
+              //           ? Icons.vibration_rounded
+              //           : Icons.phonelink_ring_outlined,
+              //       color: AppColors.white,
+              //       size: 20,
+              //     ),
+              //   );
+              // }),
               IconButton(
                 tooltip: 'Reset All',
                 padding: EdgeInsets.zero,
