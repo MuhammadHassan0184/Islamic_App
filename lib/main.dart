@@ -53,7 +53,7 @@ const _lightSystemBars = SystemUiOverlayStyle(
   // systemNavigationBarIconBrightness: Brightness.dark,
   // systemStatusBarContrastEnforced: false,
   // systemNavigationBarContrastEnforced: false,
-  statusBarColor: Color.fromARGB(255, 122, 161, 78),
+  statusBarColor: Color(0xFF205116),
   statusBarIconBrightness: Brightness.dark,
   statusBarBrightness: Brightness.light,
   systemNavigationBarColor: Colors.white,
@@ -108,7 +108,7 @@ class MyApp extends StatelessWidget {
                 right: 0,
                 height: topInset,
                 child: const ColoredBox(
-                  color: Color.fromARGB(255, 122, 161, 78),
+                  color: Color(0xFF205116),
                 ),
               ),
               SafeArea(child: child ?? const SizedBox.shrink()),
